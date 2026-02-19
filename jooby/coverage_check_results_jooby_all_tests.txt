@@ -1,0 +1,76 @@
+================================================================================
+JACOCO COVERAGE CHECK RESULTS
+================================================================================
+
+================================================================================
+COVERED Call Sites (Dynamically Reachable)
+================================================================================
+Count: 1
+
+1.
+  Caller: io.jooby.Cookie.lambda.create(com.typesafe.config.Config, java.lang.String)
+  Target: com.typesafe.config.Config.getString(java.lang.String)
+  Details: Covered on lines: [570, 584] (method boundary: 569-598)
+
+================================================================================
+NOT COVERED Call Sites
+================================================================================
+Count: 10
+
+1.
+  Caller: io.jooby.Cookie.lambda.create(com.typesafe.config.Config, java.lang.String)
+  Target: com.typesafe.config.Config.getDuration(java.lang.String, java.util.concurrent.TimeUnit)
+  Details: Not covered. Target called on lines [579], but none are covered within method create (boundary: 569-598, covered: [569, 570, 571, 572, 573, 574, 575, 576, 580, 581, 584, 585, 586])
+
+2.
+  Caller: io.jooby.Environment.lambda.getProperties(java.lang.String, java.util.Map, java.util.Map.Entry)
+  Target: com.typesafe.config.ConfigValue.unwrapped()
+  Details: Not covered. Target called on lines [143], but none are covered within method getProperties (boundary: 116-134, covered: [116])
+
+3.
+  Caller: io.jooby.Jooby.lambda.start(java.lang.String, com.typesafe.config.Config)
+  Target: com.typesafe.config.Config.getString(java.lang.String)
+  Details: Method start has no covered lines (lines 890-946)
+
+4.
+  Caller: io.jooby.Jooby.lambda.start(java.lang.String, com.typesafe.config.Config)
+  Target: com.typesafe.config.Config.hasPath(java.lang.String)
+  Details: Method start has no covered lines (lines 890-946)
+
+5.
+  Caller: io.jooby.ServiceRegistry.MapBinder.lambda.get(java.util.Map.Entry)
+  Target: jakarta.inject.Provider.get()
+  Details: Not covered. Target called on lines [64, 161, 173, 410, 414, 418, 423, 428], but none are covered within method get (boundary: 63+, covered: [322])
+
+6.
+  Caller: io.jooby.SslOptions.lambda.from(com.typesafe.config.Config, java.lang.String)
+  Target: com.typesafe.config.Config.getAnyRef(java.lang.String)
+  Details: Not covered. Target called on lines [554], but none are covered within method from (boundary: 480-514, covered: [480])
+
+7.
+  Caller: io.jooby.SslOptions.lambda.from(com.typesafe.config.Config, java.lang.String)
+  Target: com.typesafe.config.Config.getString(java.lang.String)
+  Details: Not covered. Target called on lines [522, 531, 532, 534, 537, 538, 545, 548, 551], but none are covered within method from (boundary: 480-514, covered: [480])
+
+8.
+  Caller: io.jooby.SslOptions.lambda.from(com.typesafe.config.Config, java.lang.String)
+  Target: com.typesafe.config.Config.hasPath(java.lang.String)
+  Details: Not covered. Target called on lines [521, 533, 543, 547, 550, 553], but none are covered within method from (boundary: 480-514, covered: [480])
+
+9.
+  Caller: io.jooby.StartupSummary.lambda.static(io.jooby.Jooby, io.jooby.Server)
+  Target: com.typesafe.config.Config.getString(java.lang.String)
+  Details: Method static not found in XML for class io.jooby.StartupSummary
+
+10.
+  Caller: io.jooby.StartupSummary.lambda.static(io.jooby.Jooby, io.jooby.Server)
+  Target: com.typesafe.config.Config.hasPath(java.lang.String)
+  Details: Method static not found in XML for class io.jooby.StartupSummary
+
+================================================================================
+SUMMARY
+================================================================================
+Total Potentially Unreachable: 11
+Actually Covered (False Positives): 1
+Not Covered : 10
+Errors: 0
