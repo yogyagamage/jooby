@@ -1,0 +1,922 @@
+{
+  "version": "1.153.0",
+  "results": [
+    {
+      "check_id": "ssc-646edd60-542f-3518-0c76-38258974a8f4",
+      "path": "pom.xml",
+      "start": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "extra": {
+        "metavars": {},
+        "message": "Affected versions of org.assertj:assertj-core are vulnerable to Improper Restriction of XML External Entity Reference. An XXE vulnerability exists in AssertJ's XmlStringPrettyFormatter.toXmlDocument(String), which initializes DocumentBuilderFactory with default settings (DTD and external entities enabled). If untrusted XML is passed to isXmlEqualTo(CharSequence) or xmlPrettyFormat(String), an attacker can read local files, perform SSRF, or trigger DoS via entity expansion.",
+        "metadata": {
+          "confidence": "HIGH",
+          "category": "security",
+          "cve": "CVE-2026-24400",
+          "cwe": [
+            "CWE-611: Improper Restriction of XML External Entity Reference"
+          ],
+          "ghsa": "GHSA-rqfh-9r24-8c9r",
+          "owasp": [
+            "A02:2025 - Security Misconfiguration",
+            "A04:2017 - XML External Entities (XXE)",
+            "A05:2021 - Security Misconfiguration",
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2026-01-26T21:31:41Z",
+          "references": [
+            "https://github.com/advisories/GHSA-rqfh-9r24-8c9r",
+            "https://nvd.nist.gov/vuln/detail/CVE-2026-24400"
+          ],
+          "sca-fix-versions": [
+            {
+              "org.assertj:assertj-core": "3.27.7"
+            }
+          ],
+          "sca-kind": "reachable",
+          "sca-schema": 20230302,
+          "sca-severity": "HIGH",
+          "sca-vuln-database-identifier": "CVE-2026-24400",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "XML Injection"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 275566,
+              "rv_id": 1267631,
+              "rule_id": "L1U2zkK",
+              "version_id": "LjTkK8e",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-646edd60-542f-3518-0c76-38258974a8f4",
+              "origin": "custom",
+              "rule_name": "ssc-646edd60-542f-3518-0c76-38258974a8f4"
+            },
+            "src": "new-rule"
+          },
+          "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-646edd60-542f-3518-0c76-38258974a8f4",
+          "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-646edd60-542f-3518-0c76-38258974a8f4",
+          "dev.semgrep.actions": []
+        },
+        "severity": "ERROR",
+        "fingerprint": "c834f40018e9f6bd8be676b0cfedb15ba87ec9bc4611369d92f4786c43c3fd0e3e391777bd0d250fd28110c92a89c7ad657387852c57d786468cda3d14fcc7ac_0",
+        "lines": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+        "is_ignored": false,
+        "sca_info": {
+          "reachability_rule": true,
+          "sca_finding_schema": 20220913,
+          "dependency_match": {
+            "dependency_pattern": {
+              "ecosystem": "maven",
+              "package": "org.assertj:assertj-core",
+              "semver_range": ">=1.4.0, <=3.27.6"
+            },
+            "found_dependency": {
+              "package": "org.assertj:assertj-core",
+              "version": "3.27.6",
+              "ecosystem": "maven",
+              "allowed_hashes": {},
+              "transitivity": "direct",
+              "manifest_path": "pom.xml",
+              "lockfile_path": "pom.xml",
+              "line_number": 1,
+              "children": [
+                {
+                  "package": "net.bytebuddy:byte-buddy",
+                  "version": "1.17.7"
+                }
+              ]
+            },
+            "lockfile": "pom.xml"
+          },
+          "reachable": false
+        },
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "java.servlets.security.cookie-issecure-false.cookie-issecure-false",
+      "path": "src/main/java/io/jooby/Cookie.java",
+      "start": {
+        "line": 570,
+        "col": 7,
+        "offset": 15924
+      },
+      "end": {
+        "line": 570,
+        "col": 71,
+        "offset": 15988
+      },
+      "extra": {
+        "metavars": {
+          "$COOKIE": {
+            "start": {
+              "line": 570,
+              "col": 14,
+              "offset": 15931
+            },
+            "end": {
+              "line": 570,
+              "col": 20,
+              "offset": 15937
+            },
+            "abstract_content": "cookie"
+          },
+          "$...ARGS": {
+            "start": {
+              "line": 570,
+              "col": 34,
+              "offset": 15951
+            },
+            "end": {
+              "line": 570,
+              "col": 69,
+              "offset": 15986
+            },
+            "abstract_content": "conf.getString(namespace+\".name\")"
+          }
+        },
+        "message": "Default session middleware settings: `setSecure` not set to true. This ensures that the cookie is sent only over HTTPS to prevent cross-site scripting attacks.",
+        "fix": "cookie = new Cookie(conf.getString(namespace + \".name\"));\n      cookie.setSecure(true);",
+        "metadata": {
+          "vulnerability": "Insecure Transport",
+          "owasp": [
+            "A03:2017 - Sensitive Data Exposure",
+            "A02:2021 - Cryptographic Failures",
+            "A04:2025 - Cryptographic Failures"
+          ],
+          "cwe": [
+            "CWE-319: Cleartext Transmission of Sensitive Information"
+          ],
+          "references": [
+            "https://docs.oracle.com/javaee/6/api/javax/servlet/http/Cookie.html#setSecure(boolean)",
+            "https://owasp.org/www-community/controls/SecureCookieAttribute"
+          ],
+          "category": "security",
+          "technology": [
+            "java",
+            "cookie"
+          ],
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "LOW",
+          "confidence": "LOW",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Mishandled Sensitive Information"
+          ],
+          "source": "https://semgrep.dev/r/java.servlets.security.cookie-issecure-false.cookie-issecure-false",
+          "shortlink": "https://sg.run/pxn0",
+          "semgrep.dev": {
+            "rule": {
+              "origin": "community",
+              "r_id": 9218,
+              "rule_id": "kxUkn9",
+              "rule_name": "java.servlets.security.cookie-issecure-false.cookie-issecure-false",
+              "rv_id": 1263073,
+              "url": "https://semgrep.dev/playground/r/bZT53lB/java.servlets.security.cookie-issecure-false.cookie-issecure-false",
+              "version_id": "bZT53lB"
+            },
+            "src": "new-rule"
+          },
+          "dev.semgrep.actions": [
+            "monitor"
+          ],
+          "semgrep.policy": {
+            "id": 271716,
+            "name": "Rule Board - Audit column",
+            "slug": "rule-board-audit"
+          },
+          "semgrep.url": "https://semgrep.dev/r/java.servlets.security.cookie-issecure-false.cookie-issecure-false",
+          "semgrep.ruleset": "default",
+          "semgrep.ruleset_id": 3471
+        },
+        "severity": "WARNING",
+        "fingerprint": "2a32d52959c30293b26a9c0abb6db62aca52754129b1d5e5f4170f634cd1456ff1e7e1b03b4a3b2da864b7cf7fb7b963ab0ae14557d0974dadd1ee5c966593f3_0",
+        "lines": "      Cookie cookie = new Cookie(conf.getString(namespace + \".name\"));",
+        "is_ignored": false,
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "PRO"
+      }
+    },
+    {
+      "check_id": "java.lang.security.audit.crypto.unencrypted-socket.unencrypted-socket",
+      "path": "src/main/java/io/jooby/ServerOptions.java",
+      "start": {
+        "line": 662,
+        "col": 32,
+        "offset": 19602
+      },
+      "end": {
+        "line": 662,
+        "col": 51,
+        "offset": 19621
+      },
+      "extra": {
+        "metavars": {},
+        "message": "Detected use of a Java socket that is not encrypted. As a result, the traffic could be read by an attacker intercepting the network traffic. Use an SSLSocket created by 'SSLSocketFactory' or 'SSLServerSocketFactory' instead.",
+        "metadata": {
+          "functional-categories": [
+            "net::search::crypto-config::java.net"
+          ],
+          "cwe": [
+            "CWE-319: Cleartext Transmission of Sensitive Information"
+          ],
+          "owasp": [
+            "A03:2017 - Sensitive Data Exposure",
+            "A02:2021 - Cryptographic Failures",
+            "A04:2025 - Cryptographic Failures"
+          ],
+          "source-rule-url": "https://find-sec-bugs.github.io/bugs.htm#UNENCRYPTED_SOCKET",
+          "asvs": {
+            "control_id": "6.2.5 Insecure Algorithm",
+            "control_url": "https://github.com/OWASP/ASVS/blob/master/4.0/en/0x14-V6-Cryptography.md#v62-algorithms",
+            "section": "V6 Stored Cryptography Verification Requirements",
+            "version": "4"
+          },
+          "category": "security",
+          "technology": [
+            "java"
+          ],
+          "references": [
+            "https://owasp.org/Top10/A02_2021-Cryptographic_Failures"
+          ],
+          "subcategory": [
+            "vuln"
+          ],
+          "likelihood": "MEDIUM",
+          "impact": "MEDIUM",
+          "confidence": "HIGH",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Mishandled Sensitive Information"
+          ],
+          "source": "https://semgrep.dev/r/java.lang.security.audit.crypto.unencrypted-socket.unencrypted-socket",
+          "shortlink": "https://sg.run/W8zA",
+          "semgrep.dev": {
+            "rule": {
+              "origin": "community",
+              "r_id": 9197,
+              "rule_id": "BYUN3X",
+              "rule_name": "java.lang.security.audit.crypto.unencrypted-socket.unencrypted-socket",
+              "rv_id": 1263008,
+              "url": "https://semgrep.dev/playground/r/RGT0LEj/java.lang.security.audit.crypto.unencrypted-socket.unencrypted-socket",
+              "version_id": "RGT0LEj"
+            },
+            "src": "new-rule"
+          },
+          "dev.semgrep.actions": [
+            "monitor"
+          ],
+          "semgrep.policy": {
+            "id": 271716,
+            "name": "Rule Board - Audit column",
+            "slug": "rule-board-audit"
+          },
+          "semgrep.url": "https://semgrep.dev/r/java.lang.security.audit.crypto.unencrypted-socket.unencrypted-socket",
+          "semgrep.ruleset": "default",
+          "semgrep.ruleset_id": 3471
+        },
+        "severity": "WARNING",
+        "fingerprint": "758bcea4da43814fbf9b9c3003475172767606009f1cbf44b7e86327467ae6e3235d8387080264df11f8fafd34d5f60448fc82546d373b549fe6a2c961b911c2_0",
+        "lines": "    try (ServerSocket socket = new ServerSocket(0)) {",
+        "is_ignored": false,
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "PRO"
+      }
+    },
+    {
+      "check_id": "java.lang.security.audit.weak-ssl-context.weak-ssl-context",
+      "path": "src/main/java/io/jooby/internal/SslPkcs12Provider.java",
+      "start": {
+        "line": 37,
+        "col": 17,
+        "offset": 1119
+      },
+      "end": {
+        "line": 37,
+        "col": 46,
+        "offset": 1148
+      },
+      "extra": {
+        "metavars": {},
+        "message": "An insecure SSL context was detected. TLS versions 1.0, 1.1, and all SSL versions are considered weak encryption and are deprecated. Use SSLContext.getInstance(\"TLSv1.2\") for the best security.",
+        "fix": "SSLContext.getInstance(\"TLSv1.2\")",
+        "metadata": {
+          "cwe": [
+            "CWE-326: Inadequate Encryption Strength"
+          ],
+          "owasp": [
+            "A03:2017 - Sensitive Data Exposure",
+            "A02:2021 - Cryptographic Failures",
+            "A04:2025 - Cryptographic Failures"
+          ],
+          "source_rule_url": "https://find-sec-bugs.github.io/bugs.htm#SSL_CONTEXT",
+          "references": [
+            "https://tools.ietf.org/html/rfc7568",
+            "https://tools.ietf.org/id/draft-ietf-tls-oldversions-deprecate-02.html"
+          ],
+          "category": "security",
+          "technology": [
+            "java"
+          ],
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "confidence": "HIGH",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cryptographic Issues"
+          ],
+          "source": "https://semgrep.dev/r/java.lang.security.audit.weak-ssl-context.weak-ssl-context",
+          "shortlink": "https://sg.run/4x7E",
+          "semgrep.dev": {
+            "rule": {
+              "origin": "community",
+              "r_id": 9188,
+              "rule_id": "KxUb1k",
+              "rule_name": "java.lang.security.audit.weak-ssl-context.weak-ssl-context",
+              "rv_id": 1263050,
+              "url": "https://semgrep.dev/playground/r/5PTo1rW/java.lang.security.audit.weak-ssl-context.weak-ssl-context",
+              "version_id": "5PTo1rW"
+            },
+            "src": "new-rule"
+          },
+          "dev.semgrep.actions": [
+            "monitor"
+          ],
+          "semgrep.policy": {
+            "id": 271716,
+            "name": "Rule Board - Audit column",
+            "slug": "rule-board-audit"
+          },
+          "semgrep.url": "https://semgrep.dev/r/java.lang.security.audit.weak-ssl-context.weak-ssl-context",
+          "semgrep.ruleset": "default",
+          "semgrep.ruleset_id": 3471
+        },
+        "severity": "WARNING",
+        "fingerprint": "bcc6942990537362b40be6052730c4e3601566d1e771e1672c3d9a8e7e8704cc51c28d388a7bc454472f10ba05e3e153e7ca9195b250bdf0025cc5c4651422ec_0",
+        "lines": "              ? SSLContext.getInstance(\"TLS\")",
+        "is_ignored": false,
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "PRO"
+      }
+    },
+    {
+      "check_id": "java.lang.security.audit.weak-ssl-context.weak-ssl-context",
+      "path": "src/main/java/io/jooby/internal/x509/JdkSslContext.java",
+      "start": {
+        "line": 56,
+        "col": 17,
+        "offset": 1606
+      },
+      "end": {
+        "line": 56,
+        "col": 49,
+        "offset": 1638
+      },
+      "extra": {
+        "metavars": {},
+        "message": "An insecure SSL context was detected. TLS versions 1.0, 1.1, and all SSL versions are considered weak encryption and are deprecated. Use SSLContext.getInstance(\"TLSv1.2\") for the best security.",
+        "fix": "SSLContext.getInstance(\"TLSv1.2\")",
+        "metadata": {
+          "cwe": [
+            "CWE-326: Inadequate Encryption Strength"
+          ],
+          "owasp": [
+            "A03:2017 - Sensitive Data Exposure",
+            "A02:2021 - Cryptographic Failures",
+            "A04:2025 - Cryptographic Failures"
+          ],
+          "source_rule_url": "https://find-sec-bugs.github.io/bugs.htm#SSL_CONTEXT",
+          "references": [
+            "https://tools.ietf.org/html/rfc7568",
+            "https://tools.ietf.org/id/draft-ietf-tls-oldversions-deprecate-02.html"
+          ],
+          "category": "security",
+          "technology": [
+            "java"
+          ],
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "confidence": "HIGH",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Cryptographic Issues"
+          ],
+          "source": "https://semgrep.dev/r/java.lang.security.audit.weak-ssl-context.weak-ssl-context",
+          "shortlink": "https://sg.run/4x7E",
+          "semgrep.dev": {
+            "rule": {
+              "origin": "community",
+              "r_id": 9188,
+              "rule_id": "KxUb1k",
+              "rule_name": "java.lang.security.audit.weak-ssl-context.weak-ssl-context",
+              "rv_id": 1263050,
+              "url": "https://semgrep.dev/playground/r/5PTo1rW/java.lang.security.audit.weak-ssl-context.weak-ssl-context",
+              "version_id": "5PTo1rW"
+            },
+            "src": "new-rule"
+          },
+          "dev.semgrep.actions": [
+            "monitor"
+          ],
+          "semgrep.policy": {
+            "id": 271716,
+            "name": "Rule Board - Audit column",
+            "slug": "rule-board-audit"
+          },
+          "semgrep.url": "https://semgrep.dev/r/java.lang.security.audit.weak-ssl-context.weak-ssl-context",
+          "semgrep.ruleset": "default",
+          "semgrep.ruleset_id": 3471
+        },
+        "severity": "WARNING",
+        "fingerprint": "6a1cae7dc2eb3bf54f47e027aca5d0df8f2390548109b417e346221bfa5a3349ea5e5f39cc80767269a3f9fb2f02318dd17fe31874a7aa41ea45cfdf3a21ae5c_0",
+        "lines": "      context = SSLContext.getInstance(PROTOCOL);",
+        "is_ignored": false,
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "PRO"
+      }
+    },
+    {
+      "check_id": "generic.secrets.security.detected-private-key.detected-private-key",
+      "path": "src/main/resources/io/jooby/ssl/localhost.key",
+      "start": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 2,
+        "col": 77,
+        "offset": 104
+      },
+      "extra": {
+        "metavars": {
+          "$KEY": {
+            "start": {
+              "line": 2,
+              "col": 1,
+              "offset": 28
+            },
+            "end": {
+              "line": 2,
+              "col": 77,
+              "offset": 104
+            },
+            "abstract_content": "MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCqOzITX7jQkwRdN5nnx99JznNp"
+          }
+        },
+        "message": "Private Key detected. This is a sensitive credential and should not be hardcoded here. Instead, store this in a separate, private file.",
+        "metadata": {
+          "cwe": [
+            "CWE-798: Use of Hard-coded Credentials"
+          ],
+          "source-rule-url": "https://github.com/grab/secret-scanner/blob/master/scanner/signatures/pattern.go",
+          "category": "security",
+          "technology": [
+            "secrets"
+          ],
+          "confidence": "LOW",
+          "owasp": [
+            "A07:2021 - Identification and Authentication Failures",
+            "A07:2025 - Authentication Failures"
+          ],
+          "references": [
+            "https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures"
+          ],
+          "cwe2022-top25": true,
+          "cwe2021-top25": true,
+          "subcategory": [
+            "audit"
+          ],
+          "likelihood": "LOW",
+          "impact": "MEDIUM",
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Hard-coded Secrets"
+          ],
+          "source": "https://semgrep.dev/r/generic.secrets.security.detected-private-key.detected-private-key",
+          "shortlink": "https://sg.run/b7dr",
+          "semgrep.dev": {
+            "rule": {
+              "origin": "community",
+              "r_id": 9070,
+              "rule_id": "7KUQ0p",
+              "rule_name": "generic.secrets.security.detected-private-key.detected-private-key",
+              "rv_id": 1262888,
+              "url": "https://semgrep.dev/playground/r/3ZT4X4Y/generic.secrets.security.detected-private-key.detected-private-key",
+              "version_id": "3ZT4X4Y"
+            },
+            "src": "new-rule"
+          },
+          "dev.semgrep.actions": [
+            "monitor"
+          ],
+          "semgrep.policy": {
+            "id": 271716,
+            "name": "Rule Board - Audit column",
+            "slug": "rule-board-audit"
+          },
+          "semgrep.url": "https://semgrep.dev/r/generic.secrets.security.detected-private-key.detected-private-key",
+          "semgrep.ruleset": "default",
+          "semgrep.ruleset_id": 3471
+        },
+        "severity": "ERROR",
+        "fingerprint": "a9e6fe1b0bf890cccac5119b0db7829deeef36ead2bd83ba0cf08f3ea22c5de1715c657c4bd564dc256bae45de96227678123d833d988968437d903d762ac201_0",
+        "lines": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCqOzITX7jQkwRdN5nnx99JznNp",
+        "is_ignored": false,
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "PRO"
+      }
+    }
+  ],
+  "errors": [],
+  "paths": {
+    "scanned": [
+      "all_pipeline_logs/jooby/agent_jooby.log",
+      "all_pipeline_logs/jooby/jooby.log",
+      "all_pipeline_logs/jooby/prompts.log",
+      "all_third_party_call_pairs_all_third_party_calls.json",
+      "coverage.json",
+      "coverage_check_results_jooby_all_tests.txt",
+      "coverage_check_results_jooby_existing_tests.txt",
+      "package-map.json",
+      "pom.xml",
+      "src/main/java/io/jooby/AttachedFile.java",
+      "src/main/java/io/jooby/AvailableSettings.java",
+      "src/main/java/io/jooby/Body.java",
+      "src/main/java/io/jooby/ByteRange.java",
+      "src/main/java/io/jooby/CompletionListeners.java",
+      "src/main/java/io/jooby/Context.java",
+      "src/main/java/io/jooby/Cookie.java",
+      "src/main/java/io/jooby/DefaultContext.java",
+      "src/main/java/io/jooby/DefaultErrorHandler.java",
+      "src/main/java/io/jooby/Environment.java",
+      "src/main/java/io/jooby/EnvironmentOptions.java",
+      "src/main/java/io/jooby/ErrorHandler.java",
+      "src/main/java/io/jooby/ExecutionMode.java",
+      "src/main/java/io/jooby/Extension.java",
+      "src/main/java/io/jooby/FileDownload.java",
+      "src/main/java/io/jooby/FileUpload.java",
+      "src/main/java/io/jooby/FlashMap.java",
+      "src/main/java/io/jooby/Formdata.java",
+      "src/main/java/io/jooby/ForwardingContext.java",
+      "src/main/java/io/jooby/GracefulShutdown.java",
+      "src/main/java/io/jooby/InlineFile.java",
+      "src/main/java/io/jooby/Jooby.java",
+      "src/main/java/io/jooby/LoggingService.java",
+      "src/main/java/io/jooby/MapModelAndView.java",
+      "src/main/java/io/jooby/MediaType.java",
+      "src/main/java/io/jooby/MessageDecoder.java",
+      "src/main/java/io/jooby/MessageEncoder.java",
+      "src/main/java/io/jooby/ModelAndView.java",
+      "src/main/java/io/jooby/OpenAPIModule.java",
+      "src/main/java/io/jooby/ParamLookup.java",
+      "src/main/java/io/jooby/ParamSource.java",
+      "src/main/java/io/jooby/QueryString.java",
+      "src/main/java/io/jooby/ReactiveSupport.java",
+      "src/main/java/io/jooby/Registry.java",
+      "src/main/java/io/jooby/Reified.java",
+      "src/main/java/io/jooby/RequestScope.java",
+      "src/main/java/io/jooby/Route.java",
+      "src/main/java/io/jooby/Router.java",
+      "src/main/java/io/jooby/RouterOptions.java",
+      "src/main/java/io/jooby/SameSite.java",
+      "src/main/java/io/jooby/Sender.java",
+      "src/main/java/io/jooby/Server.java",
+      "src/main/java/io/jooby/ServerOptions.java",
+      "src/main/java/io/jooby/ServerSentEmitter.java",
+      "src/main/java/io/jooby/ServerSentMessage.java",
+      "src/main/java/io/jooby/ServiceKey.java",
+      "src/main/java/io/jooby/ServiceRegistry.java",
+      "src/main/java/io/jooby/Session.java",
+      "src/main/java/io/jooby/SessionStore.java",
+      "src/main/java/io/jooby/SessionToken.java",
+      "src/main/java/io/jooby/SneakyThrows.java",
+      "src/main/java/io/jooby/SslOptions.java",
+      "src/main/java/io/jooby/SslProvider.java",
+      "src/main/java/io/jooby/StartupSummary.java",
+      "src/main/java/io/jooby/StatusCode.java",
+      "src/main/java/io/jooby/TemplateEngine.java",
+      "src/main/java/io/jooby/Usage.java",
+      "src/main/java/io/jooby/WebSocket.java",
+      "src/main/java/io/jooby/WebSocketCloseStatus.java",
+      "src/main/java/io/jooby/WebSocketConfigurer.java",
+      "src/main/java/io/jooby/WebSocketMessage.java",
+      "src/main/java/io/jooby/XSS.java",
+      "src/main/java/io/jooby/annotation/BindParam.java",
+      "src/main/java/io/jooby/annotation/CONNECT.java",
+      "src/main/java/io/jooby/annotation/Consumes.java",
+      "src/main/java/io/jooby/annotation/ContextParam.java",
+      "src/main/java/io/jooby/annotation/CookieParam.java",
+      "src/main/java/io/jooby/annotation/DELETE.java",
+      "src/main/java/io/jooby/annotation/Dispatch.java",
+      "src/main/java/io/jooby/annotation/FlashParam.java",
+      "src/main/java/io/jooby/annotation/FormParam.java",
+      "src/main/java/io/jooby/annotation/GET.java",
+      "src/main/java/io/jooby/annotation/Generated.java",
+      "src/main/java/io/jooby/annotation/HEAD.java",
+      "src/main/java/io/jooby/annotation/HeaderParam.java",
+      "src/main/java/io/jooby/annotation/OPTIONS.java",
+      "src/main/java/io/jooby/annotation/OpenApiRegister.java",
+      "src/main/java/io/jooby/annotation/PATCH.java",
+      "src/main/java/io/jooby/annotation/POST.java",
+      "src/main/java/io/jooby/annotation/PUT.java",
+      "src/main/java/io/jooby/annotation/Param.java",
+      "src/main/java/io/jooby/annotation/Path.java",
+      "src/main/java/io/jooby/annotation/PathParam.java",
+      "src/main/java/io/jooby/annotation/Produces.java",
+      "src/main/java/io/jooby/annotation/QueryParam.java",
+      "src/main/java/io/jooby/annotation/SessionParam.java",
+      "src/main/java/io/jooby/annotation/TRACE.java",
+      "src/main/java/io/jooby/annotation/Transactional.java",
+      "src/main/java/io/jooby/annotation/package-info.java",
+      "src/main/java/io/jooby/exception/BadRequestException.java",
+      "src/main/java/io/jooby/exception/ForbiddenException.java",
+      "src/main/java/io/jooby/exception/InvalidCsrfToken.java",
+      "src/main/java/io/jooby/exception/MethodNotAllowedException.java",
+      "src/main/java/io/jooby/exception/MissingValueException.java",
+      "src/main/java/io/jooby/exception/NotAcceptableException.java",
+      "src/main/java/io/jooby/exception/NotFoundException.java",
+      "src/main/java/io/jooby/exception/ProvisioningException.java",
+      "src/main/java/io/jooby/exception/RegistryException.java",
+      "src/main/java/io/jooby/exception/StartupException.java",
+      "src/main/java/io/jooby/exception/StatusCodeException.java",
+      "src/main/java/io/jooby/exception/TypeMismatchException.java",
+      "src/main/java/io/jooby/exception/UnauthorizedException.java",
+      "src/main/java/io/jooby/exception/UnsupportedMediaType.java",
+      "src/main/java/io/jooby/exception/package-info.java",
+      "src/main/java/io/jooby/handler/AccessLogHandler.java",
+      "src/main/java/io/jooby/handler/Asset.java",
+      "src/main/java/io/jooby/handler/AssetHandler.java",
+      "src/main/java/io/jooby/handler/AssetSource.java",
+      "src/main/java/io/jooby/handler/CacheControl.java",
+      "src/main/java/io/jooby/handler/Cors.java",
+      "src/main/java/io/jooby/handler/CorsHandler.java",
+      "src/main/java/io/jooby/handler/CsrfHandler.java",
+      "src/main/java/io/jooby/handler/HeadHandler.java",
+      "src/main/java/io/jooby/handler/RateLimitHandler.java",
+      "src/main/java/io/jooby/handler/SSLHandler.java",
+      "src/main/java/io/jooby/handler/TraceHandler.java",
+      "src/main/java/io/jooby/handler/WebVariables.java",
+      "src/main/java/io/jooby/handler/package-info.java",
+      "src/main/java/io/jooby/internal/ArrayValue.java",
+      "src/main/java/io/jooby/internal/ByteArrayBody.java",
+      "src/main/java/io/jooby/internal/Chi.java",
+      "src/main/java/io/jooby/internal/ClassPathAssetSource.java",
+      "src/main/java/io/jooby/internal/ContextAsServiceInitializer.java",
+      "src/main/java/io/jooby/internal/ContextInitializer.java",
+      "src/main/java/io/jooby/internal/ContextInitializerList.java",
+      "src/main/java/io/jooby/internal/CurrentUserInitializer.java",
+      "src/main/java/io/jooby/internal/DefaultHiddenMethodLookup.java",
+      "src/main/java/io/jooby/internal/FileAsset.java",
+      "src/main/java/io/jooby/internal/FileBody.java",
+      "src/main/java/io/jooby/internal/FileDiskAssetSource.java",
+      "src/main/java/io/jooby/internal/FlashMapImpl.java",
+      "src/main/java/io/jooby/internal/FolderDiskAssetSource.java",
+      "src/main/java/io/jooby/internal/ForwardingExecutor.java",
+      "src/main/java/io/jooby/internal/GracefulShutdownHandler.java",
+      "src/main/java/io/jooby/internal/HashValue.java",
+      "src/main/java/io/jooby/internal/HeadContext.java",
+      "src/main/java/io/jooby/internal/HeadersValue.java",
+      "src/main/java/io/jooby/internal/HiddenMethodInitializer.java",
+      "src/main/java/io/jooby/internal/HttpMessageEncoder.java",
+      "src/main/java/io/jooby/internal/IOUtils.java",
+      "src/main/java/io/jooby/internal/InputStreamBody.java",
+      "src/main/java/io/jooby/internal/JarAsset.java",
+      "src/main/java/io/jooby/internal/LocaleUtils.java",
+      "src/main/java/io/jooby/internal/MemorySessionStore.java",
+      "src/main/java/io/jooby/internal/MissingValue.java",
+      "src/main/java/io/jooby/internal/MultipartNode.java",
+      "src/main/java/io/jooby/internal/MultipleSessionToken.java",
+      "src/main/java/io/jooby/internal/MutedServer.java",
+      "src/main/java/io/jooby/internal/NoByteRange.java",
+      "src/main/java/io/jooby/internal/NotSatisfiableByteRange.java",
+      "src/main/java/io/jooby/internal/ParamLookupImpl.java",
+      "src/main/java/io/jooby/internal/Pipeline.java",
+      "src/main/java/io/jooby/internal/ProxyPeerAddress.java",
+      "src/main/java/io/jooby/internal/QueryStringValue.java",
+      "src/main/java/io/jooby/internal/ReadOnlyContext.java",
+      "src/main/java/io/jooby/internal/RegistryRef.java",
+      "src/main/java/io/jooby/internal/RouteTree.java",
+      "src/main/java/io/jooby/internal/RouteTreeForwarding.java",
+      "src/main/java/io/jooby/internal/RouteTreeIgnoreTrailingSlash.java",
+      "src/main/java/io/jooby/internal/RouteTreeLowerCasePath.java",
+      "src/main/java/io/jooby/internal/RouteTreeNormPath.java",
+      "src/main/java/io/jooby/internal/RouterImpl.java",
+      "src/main/java/io/jooby/internal/RouterMatch.java",
+      "src/main/java/io/jooby/internal/ServiceRegistryImpl.java",
+      "src/main/java/io/jooby/internal/SessionImpl.java",
+      "src/main/java/io/jooby/internal/SignedSessionStore.java",
+      "src/main/java/io/jooby/internal/SingleByteRange.java",
+      "src/main/java/io/jooby/internal/SingleValue.java",
+      "src/main/java/io/jooby/internal/SslContextProvider.java",
+      "src/main/java/io/jooby/internal/SslPkcs12Provider.java",
+      "src/main/java/io/jooby/internal/SslX509Provider.java",
+      "src/main/java/io/jooby/internal/StaticRouterMatch.java",
+      "src/main/java/io/jooby/internal/URLAsset.java",
+      "src/main/java/io/jooby/internal/UrlParser.java",
+      "src/main/java/io/jooby/internal/WebSocketMessageImpl.java",
+      "src/main/java/io/jooby/internal/WebSocketSender.java",
+      "src/main/java/io/jooby/internal/handler/ChunkedSubscriber.java",
+      "src/main/java/io/jooby/internal/handler/ConcurrentHandler.java",
+      "src/main/java/io/jooby/internal/handler/DefaultHandler.java",
+      "src/main/java/io/jooby/internal/handler/DispatchHandler.java",
+      "src/main/java/io/jooby/internal/handler/PostDispatchInitializerHandler.java",
+      "src/main/java/io/jooby/internal/handler/SendDirect.java",
+      "src/main/java/io/jooby/internal/handler/ServerSentEventHandler.java",
+      "src/main/java/io/jooby/internal/handler/WebSocketHandler.java",
+      "src/main/java/io/jooby/internal/handler/WorkerHandler.java",
+      "src/main/java/io/jooby/internal/output/CompositeOutput.java",
+      "src/main/java/io/jooby/internal/output/OutputOutputStream.java",
+      "src/main/java/io/jooby/internal/output/OutputStatic.java",
+      "src/main/java/io/jooby/internal/output/OutputWriter.java",
+      "src/main/java/io/jooby/internal/output/WrappedOutput.java",
+      "src/main/java/io/jooby/internal/output/package-info.java",
+      "src/main/java/io/jooby/internal/reflect/$Types.java",
+      "src/main/java/io/jooby/internal/unbescape/html/Html5EscapeSymbolsInitializer.java",
+      "src/main/java/io/jooby/internal/unbescape/html/HtmlEscapeLevel.java",
+      "src/main/java/io/jooby/internal/unbescape/html/HtmlEscapeSymbols.java",
+      "src/main/java/io/jooby/internal/unbescape/html/HtmlEscapeType.java",
+      "src/main/java/io/jooby/internal/unbescape/html/HtmlEscapeUtil.java",
+      "src/main/java/io/jooby/internal/unbescape/json/JsonEscapeLevel.java",
+      "src/main/java/io/jooby/internal/unbescape/json/JsonEscapeType.java",
+      "src/main/java/io/jooby/internal/unbescape/json/JsonEscapeUtil.java",
+      "src/main/java/io/jooby/internal/unbescape/uri/UriEscapeUtil.java",
+      "src/main/java/io/jooby/internal/x509/JdkSslContext.java",
+      "src/main/java/io/jooby/internal/x509/JdkSslServerContext.java",
+      "src/main/java/io/jooby/internal/x509/PemReader.java",
+      "src/main/java/io/jooby/internal/x509/SslContext.java",
+      "src/main/java/io/jooby/output/BufferedOutput.java",
+      "src/main/java/io/jooby/output/ByteBufferedOutput.java",
+      "src/main/java/io/jooby/output/ByteBufferedOutputFactory.java",
+      "src/main/java/io/jooby/output/Output.java",
+      "src/main/java/io/jooby/output/OutputFactory.java",
+      "src/main/java/io/jooby/output/OutputOptions.java",
+      "src/main/java/io/jooby/output/package-info.java",
+      "src/main/java/io/jooby/package-info.java",
+      "src/main/java/io/jooby/problem/HttpProblem.java",
+      "src/main/java/io/jooby/problem/HttpProblemMappable.java",
+      "src/main/java/io/jooby/problem/ProblemDetailsHandler.java",
+      "src/main/java/io/jooby/validation/BeanValidator.java",
+      "src/main/java/io/jooby/validation/JsonPointer.java",
+      "src/main/java/io/jooby/validation/ValidationContext.java",
+      "src/main/java/io/jooby/validation/ValidationResult.java",
+      "src/main/java/io/jooby/value/ConversionHint.java",
+      "src/main/java/io/jooby/value/Converter.java",
+      "src/main/java/io/jooby/value/ReflectiveBeanConverter.java",
+      "src/main/java/io/jooby/value/StandardConverter.java",
+      "src/main/java/io/jooby/value/Value.java",
+      "src/main/java/io/jooby/value/ValueFactory.java",
+      "src/main/java/module-info.java",
+      "src/main/resources/io/jooby/ssl/localhost.crt",
+      "src/main/resources/io/jooby/ssl/localhost.key",
+      "src/main/resources/io/jooby/ssl/localhost.p12",
+      "third_party_apis_full_methods.json"
+    ]
+  },
+  "time": {
+    "rules": [],
+    "rules_parse_time": 12.528496026992798,
+    "profiling_times": {
+      "config_time": 35.028252840042114,
+      "core_time": 44.047054052352905,
+      "ignores_time": 0.14746308326721191,
+      "total_time": 79.25085997581482
+    },
+    "parsing_time": {
+      "total_time": 0.0,
+      "per_file_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_files": []
+    },
+    "scanning_time": {
+      "total_time": 0.0,
+      "per_file_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_files": []
+    },
+    "matching_time": {
+      "total_time": 0.0,
+      "per_file_and_rule_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_rules_on_files": []
+    },
+    "tainting_time": {
+      "total_time": 0.0,
+      "per_def_and_rule_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_rules_on_defs": []
+    },
+    "fixpoint_timeouts": [
+      {
+        "error_type": "Fixpoint timeout",
+        "severity": "warn",
+        "message": "Fixpoint timeout while performing taint analysis at src/main/java/io/jooby/internal/unbescape/html/Html5EscapeSymbolsInitializer.java:18:27 [rules: 1, first: java.spring.security.spring-sqli-deepsemgrep.spring-sqli-deepsemgrep]",
+        "location": {
+          "path": "src/main/java/io/jooby/internal/unbescape/html/Html5EscapeSymbolsInitializer.java",
+          "start": {
+            "line": 18,
+            "col": 28,
+            "offset": 407
+          },
+          "end": {
+            "line": 18,
+            "col": 43,
+            "offset": 422
+          }
+        }
+      },
+      {
+        "error_type": "Fixpoint timeout",
+        "severity": "warn",
+        "message": "Fixpoint timeout while performing taint analysis at src/main/java/io/jooby/value/Value.java:160:17 [rules: 1, first: java.spring.security.injection.tainted-system-command.tainted-system-command]",
+        "location": {
+          "path": "src/main/java/io/jooby/value/Value.java",
+          "start": {
+            "line": 160,
+            "col": 18,
+            "offset": 4563
+          },
+          "end": {
+            "line": 160,
+            "col": 25,
+            "offset": 4570
+          }
+        }
+      }
+    ],
+    "prefiltering": {
+      "project_level_time": 0.0,
+      "file_level_time": 0.0,
+      "rules_with_project_prefilters_ratio": 0.0,
+      "rules_with_file_prefilters_ratio": 0.0,
+      "rules_selected_ratio": 0.0,
+      "rules_matched_ratio": 0.0
+    },
+    "targets": [],
+    "total_bytes": 0,
+    "max_memory_bytes": 10501486528
+  },
+  "engine_requested": "PRO",
+  "interfile_languages_used": [],
+  "skipped_rules": [],
+  "subprojects": [
+    {
+      "dependency_sources": [
+        "pom.xml"
+      ],
+      "resolved": true,
+      "resolved_stats": {
+        "resolution_method": "DynamicResolution",
+        "dependency_count": 53,
+        "ecosystem": "maven"
+      }
+    }
+  ],
+  "profiling_results": []
+}

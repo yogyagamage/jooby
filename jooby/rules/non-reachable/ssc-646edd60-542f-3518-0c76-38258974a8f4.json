@@ -1,0 +1,132 @@
+{
+  "advisories": [
+    {
+      "ruleId": "ssc-646edd60-542f-3518-0c76-38258974a8f4",
+      "title": "Improper Restriction of XML External Entity Reference in org.assertj:assertj-core",
+      "description": "Affected versions of org.assertj:assertj-core are vulnerable to Improper Restriction of XML External Entity Reference. An XXE vulnerability exists in AssertJ's XmlStringPrettyFormatter.toXmlDocument(String), which initializes DocumentBuilderFactory with default settings (DTD and external entities enabled). If untrusted XML is passed to isXmlEqualTo(CharSequence) or xmlPrettyFormat(String), an attacker can read local files, perform SSRF, or trigger DoS via entity expansion.",
+      "ecosystem": "maven",
+      "severity": "HIGH",
+      "references": {
+        "cveIds": [
+          "CVE-2026-24400"
+        ],
+        "cweIds": [
+          "CWE-611: Improper Restriction of XML External Entity Reference"
+        ],
+        "owaspIds": [
+          "A02:2025 - Security Misconfiguration",
+          "A04:2017 - XML External Entities (XXE)",
+          "A05:2021 - Security Misconfiguration",
+          "A06:2021 - Vulnerable and Outdated Components"
+        ],
+        "urls": [
+          "https://github.com/advisories/GHSA-rqfh-9r24-8c9r",
+          "https://nvd.nist.gov/vuln/detail/CVE-2026-24400"
+        ]
+      },
+      "announcedAt": "2026-01-26T21:31:41Z",
+      "ruleText": {
+        "id": "ssc-646edd60-542f-3518-0c76-38258974a8f4",
+        "message": "Affected versions of org.assertj:assertj-core are vulnerable to Improper Restriction of XML External Entity Reference. An XXE vulnerability exists in AssertJ's XmlStringPrettyFormatter.toXmlDocument(String), which initializes DocumentBuilderFactory with default settings (DTD and external entities enabled). If untrusted XML is passed to isXmlEqualTo(CharSequence) or xmlPrettyFormat(String), an attacker can read local files, perform SSRF, or trigger DoS via entity expansion.",
+        "severity": "ERROR",
+        "metadata": {
+          "confidence": "HIGH",
+          "category": "security",
+          "cve": "CVE-2026-24400",
+          "cwe": [
+            "CWE-611: Improper Restriction of XML External Entity Reference"
+          ],
+          "ghsa": "GHSA-rqfh-9r24-8c9r",
+          "owasp": [
+            "A02:2025 - Security Misconfiguration",
+            "A04:2017 - XML External Entities (XXE)",
+            "A05:2021 - Security Misconfiguration",
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2026-01-26T21:31:41Z",
+          "references": [
+            "https://github.com/advisories/GHSA-rqfh-9r24-8c9r",
+            "https://nvd.nist.gov/vuln/detail/CVE-2026-24400"
+          ],
+          "sca-fix-versions": [
+            {
+              "org.assertj:assertj-core": "3.27.7"
+            }
+          ],
+          "sca-kind": "reachable",
+          "sca-schema": 20230302,
+          "sca-severity": "HIGH",
+          "sca-vuln-database-identifier": "CVE-2026-24400",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "XML Injection"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 275566,
+              "rv_id": 1267631,
+              "rule_id": "L1U2zkK",
+              "version_id": "LjTkK8e",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-646edd60-542f-3518-0c76-38258974a8f4",
+              "origin": "custom"
+            }
+          }
+        },
+        "r2c-internal-project-depends-on": {
+          "depends-on-either": [
+            {
+              "namespace": "maven",
+              "package": "org.assertj:assertj-core",
+              "version": ">=1.4.0, <=3.27.6"
+            }
+          ]
+        },
+        "languages": [
+          "java",
+          "kotlin",
+          "scala"
+        ],
+        "pattern-either": [
+          {
+            "pattern": "org.assertj.core.util.xml.XmlStringPrettyFormatter.xmlPrettyFormat(...)"
+          },
+          {
+            "patterns": [
+              {
+                "pattern": "org.assertj.core.api.Assertions.assertThat(...).$FUNC(...)"
+              },
+              {
+                "metavariable-regex": {
+                  "metavariable": "$FUNC",
+                  "regex": "^(isXmlEqualTo|isXmlEqualToContentOf)$"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "reachability": "REACHABILITY",
+      "vulnerableDependencies": [
+        {
+          "name": "org.assertj:assertj-core",
+          "versionSpecifier": ">=1.4.0, <=3.27.6"
+        }
+      ],
+      "safeDependencies": [
+        {
+          "name": "org.assertj:assertj-core",
+          "versionSpecifier": "3.27.7"
+        }
+      ],
+      "cve": "CVE-2026-24400",
+      "ghsa": "GHSA-rqfh-9r24-8c9r",
+      "reachableIf": ""
+    }
+  ],
+  "totalCount": "1"
+}
