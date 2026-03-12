@@ -1,0 +1,123 @@
+{
+  "advisories": [
+    {
+      "ruleId": "ssc-908bdb05-8071-4429-9fe5-0cb6e82f88a2",
+      "title": "Uncontrolled Resource Consumption in io.undertow:undertow-core",
+      "description": "io.undertow:undertow-core versions before 2.3.5.Final are vulnerable to Denial-of-Service (DoS). An attacker can exploit this attack because of an unexpected handshake status in `SslConduit`, causing an endless loop.",
+      "ecosystem": "maven",
+      "severity": "HIGH",
+      "references": {
+        "cveIds": [
+          "CVE-2023-1108"
+        ],
+        "cweIds": [
+          "CWE-400: Uncontrolled Resource Consumption",
+          "CWE-835: Loop with Unreachable Exit Condition ('Infinite Loop')"
+        ],
+        "owaspIds": [
+          "A06:2021 - Vulnerable and Outdated Components"
+        ],
+        "urls": [
+          "https://github.com/advisories/GHSA-m4mm-pg93-fv78",
+          "https://nvd.nist.gov/vuln/detail/CVE-2023-1108"
+        ]
+      },
+      "announcedAt": "2023-09-14T15:31:23Z",
+      "ruleText": {
+        "id": "ssc-908bdb05-8071-4429-9fe5-0cb6e82f88a2",
+        "message": "io.undertow:undertow-core versions before 2.3.5.Final are vulnerable to Denial-of-Service (DoS). An attacker can exploit this attack because of an unexpected handshake status in `SslConduit`, causing an endless loop.",
+        "severity": "ERROR",
+        "metadata": {
+          "confidence": "HIGH",
+          "category": "security",
+          "cve": "CVE-2023-1108",
+          "cwe": [
+            "CWE-400: Uncontrolled Resource Consumption",
+            "CWE-835: Loop with Unreachable Exit Condition ('Infinite Loop')"
+          ],
+          "ghsa": "GHSA-m4mm-pg93-fv78",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2023-09-14T15:31:23Z",
+          "references": [
+            "https://github.com/advisories/GHSA-m4mm-pg93-fv78",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-1108"
+          ],
+          "sca-fix-versions": [
+            {
+              "io.undertow:undertow-core": "2.3.5.Final"
+            },
+            {
+              "io.undertow:undertow-core": "2.2.24.Final"
+            }
+          ],
+          "sca-kind": "upgrade-only",
+          "sca-schema": 20230302,
+          "sca-severity": "HIGH",
+          "sca-vuln-database-identifier": "CVE-2023-1108",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Denial-of-Service (DoS)",
+            "Other"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 94043,
+              "rv_id": 951551,
+              "rule_id": "lBU49wZ",
+              "version_id": "e1T9zwz",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-908bdb05-8071-4429-9fe5-0cb6e82f88a2",
+              "origin": "custom"
+            }
+          }
+        },
+        "r2c-internal-project-depends-on": {
+          "depends-on-either": [
+            {
+              "namespace": "maven",
+              "package": "io.undertow:undertow-core",
+              "version": "<2.2.24.Final"
+            },
+            {
+              "namespace": "maven",
+              "package": "io.undertow:undertow-core",
+              "version": ">=2.3.0, <2.3.5.Final"
+            }
+          ]
+        },
+        "languages": [
+          "java",
+          "kotlin",
+          "scala"
+        ]
+      },
+      "reachability": "ALWAYS_REACHABLE",
+      "vulnerableDependencies": [
+        {
+          "name": "io.undertow:undertow-core",
+          "versionSpecifier": "<2.2.24.Final"
+        }
+      ],
+      "safeDependencies": [
+        {
+          "name": "io.undertow:undertow-core",
+          "versionSpecifier": "2.3.5.Final"
+        },
+        {
+          "name": "io.undertow:undertow-core",
+          "versionSpecifier": "2.2.24.Final"
+        }
+      ],
+      "cve": "CVE-2023-1108",
+      "ghsa": "GHSA-m4mm-pg93-fv78",
+      "reachableIf": ""
+    }
+  ],
+  "totalCount": "1"
+}

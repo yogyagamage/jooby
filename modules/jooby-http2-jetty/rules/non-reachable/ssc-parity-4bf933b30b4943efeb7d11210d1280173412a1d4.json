@@ -1,0 +1,333 @@
+{
+  "advisories": [
+    {
+      "ruleId": "ssc-parity-4bf933b30b4943efeb7d11210d1280173412a1d4",
+      "title": "Uncontrolled Resource Consumption in com.typesafe.akka:akka-http-core",
+      "description": "Affected versions of com.typesafe.akka:akka-http-core, com.typesafe.akka:akka-http-core_2.11, com.typesafe.akka:akka-http-core_2.12, com.typesafe.akka:akka-http-core_2.13, org.apache.tomcat.embed:tomcat-embed-core, org.apache.tomcat:tomcat-coyote, org.eclipse.jetty.http2:http2-common, org.eclipse.jetty.http2:http2-server, org.eclipse.jetty.http2:jetty-http2-common, and org.eclipse.jetty.http2:jetty-http2-server are vulnerable to Uncontrolled Resource Consumption.",
+      "ecosystem": "maven",
+      "severity": "MEDIUM",
+      "references": {
+        "cveIds": [
+          "CVE-2023-44487"
+        ],
+        "cweIds": [
+          "CWE-400: Uncontrolled Resource Consumption"
+        ],
+        "owaspIds": [
+          "A06:2021 - Vulnerable and Outdated Components"
+        ],
+        "urls": [
+          "https://github.com/advisories/GHSA-qppj-fm5r-hxr3",
+          "https://github.com/advisories/GHSA-vx74-f528-fxqg",
+          "https://github.com/advisories/GHSA-xpw8-rcwv-8f8p",
+          "https://nvd.nist.gov/vuln/detail/CVE-2023-44487"
+        ]
+      },
+      "announcedAt": "2023-10-10T21:28:24Z",
+      "ruleText": {
+        "id": "ssc-parity-4bf933b30b4943efeb7d11210d1280173412a1d4",
+        "message": "Affected versions of com.typesafe.akka:akka-http-core, com.typesafe.akka:akka-http-core_2.11, com.typesafe.akka:akka-http-core_2.12, com.typesafe.akka:akka-http-core_2.13, org.apache.tomcat.embed:tomcat-embed-core, org.apache.tomcat:tomcat-coyote, org.eclipse.jetty.http2:http2-common, org.eclipse.jetty.http2:http2-server, org.eclipse.jetty.http2:jetty-http2-common, and org.eclipse.jetty.http2:jetty-http2-server are vulnerable to Uncontrolled Resource Consumption.",
+        "severity": "WARNING",
+        "metadata": {
+          "confidence": "LOW",
+          "category": "security",
+          "cve": "CVE-2023-44487",
+          "cwe": [
+            "CWE-400: Uncontrolled Resource Consumption"
+          ],
+          "ghsa": "GHSA-qppj-fm5r-hxr3",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2023-10-10T21:28:24Z",
+          "references": [
+            "https://github.com/advisories/GHSA-qppj-fm5r-hxr3",
+            "https://github.com/advisories/GHSA-vx74-f528-fxqg",
+            "https://github.com/advisories/GHSA-xpw8-rcwv-8f8p",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-44487"
+          ],
+          "sca-fix-versions": [
+            {
+              "com.typesafe.akka:akka-http-core": "10.5.3"
+            },
+            {
+              "com.typesafe.akka:akka-http-core_2.12": "10.5.3"
+            },
+            {
+              "com.typesafe.akka:akka-http-core_2.13": "10.5.3"
+            },
+            {
+              "org.apache.tomcat.embed:tomcat-embed-core": "9.0.81"
+            },
+            {
+              "org.apache.tomcat.embed:tomcat-embed-core": "8.5.94"
+            },
+            {
+              "org.apache.tomcat.embed:tomcat-embed-core": "11.0.0-M12"
+            },
+            {
+              "org.apache.tomcat.embed:tomcat-embed-core": "10.1.14"
+            },
+            {
+              "org.apache.tomcat:tomcat-coyote": "9.0.81"
+            },
+            {
+              "org.apache.tomcat:tomcat-coyote": "8.5.94"
+            },
+            {
+              "org.apache.tomcat:tomcat-coyote": "11.0.0-M12"
+            },
+            {
+              "org.apache.tomcat:tomcat-coyote": "10.1.14"
+            },
+            {
+              "org.eclipse.jetty.http2:http2-common": "9.4.53"
+            },
+            {
+              "org.eclipse.jetty.http2:http2-common": "11.0.17"
+            },
+            {
+              "org.eclipse.jetty.http2:http2-common": "10.0.17"
+            },
+            {
+              "org.eclipse.jetty.http2:http2-server": "9.4.53"
+            },
+            {
+              "org.eclipse.jetty.http2:http2-server": "11.0.17"
+            },
+            {
+              "org.eclipse.jetty.http2:http2-server": "10.0.17"
+            },
+            {
+              "org.eclipse.jetty.http2:jetty-http2-common": "12.0.2"
+            },
+            {
+              "org.eclipse.jetty.http2:jetty-http2-server": "12.0.2"
+            }
+          ],
+          "sca-kind": "legacy",
+          "sca-schema": 20230302,
+          "sca-severity": "MODERATE",
+          "sca-vuln-database-identifier": "CVE-2023-44487",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Denial-of-Service (DoS)"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 140573,
+              "rv_id": 969212,
+              "rule_id": "L1Uqno3",
+              "version_id": "pZTN2dg",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-4bf933b30b4943efeb7d11210d1280173412a1d4",
+              "origin": "custom"
+            }
+          }
+        },
+        "r2c-internal-project-depends-on": {
+          "depends-on-either": [
+            {
+              "namespace": "maven",
+              "package": "com.typesafe.akka:akka-http-core",
+              "version": "<10.5.3"
+            },
+            {
+              "namespace": "maven",
+              "package": "com.typesafe.akka:akka-http-core_2.11",
+              "version": "<=10.1.15"
+            },
+            {
+              "namespace": "maven",
+              "package": "com.typesafe.akka:akka-http-core_2.12",
+              "version": "<10.5.3"
+            },
+            {
+              "namespace": "maven",
+              "package": "com.typesafe.akka:akka-http-core_2.13",
+              "version": "<10.5.3"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.apache.tomcat.embed:tomcat-embed-core",
+              "version": ">=10.0.0, <10.1.14"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.apache.tomcat.embed:tomcat-embed-core",
+              "version": ">=11.0.0-M1, <11.0.0-M12"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.apache.tomcat.embed:tomcat-embed-core",
+              "version": ">=8.5.0, <8.5.94"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.apache.tomcat.embed:tomcat-embed-core",
+              "version": ">=9.0.0, <9.0.81"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.apache.tomcat:tomcat-coyote",
+              "version": ">=10.0.0, <10.1.14"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.apache.tomcat:tomcat-coyote",
+              "version": ">=11.0.0-M1, <11.0.0-M12"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.apache.tomcat:tomcat-coyote",
+              "version": ">=8.5.0, <8.5.94"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.apache.tomcat:tomcat-coyote",
+              "version": ">=9.0.0, <9.0.81"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty.http2:http2-common",
+              "version": ">=10.0.0, <10.0.17"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty.http2:http2-common",
+              "version": ">=11.0.0, <11.0.17"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty.http2:http2-common",
+              "version": ">=9.3.0, <9.4.53"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty.http2:http2-server",
+              "version": ">=10.0.0, <10.0.17"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty.http2:http2-server",
+              "version": ">=11.0.0, <11.0.17"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty.http2:http2-server",
+              "version": ">=9.3.0, <9.4.53"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty.http2:jetty-http2-common",
+              "version": ">=12.0.0, <12.0.2"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty.http2:jetty-http2-server",
+              "version": ">=12.0.0, <12.0.2"
+            }
+          ]
+        },
+        "languages": [
+          "java",
+          "kotlin",
+          "scala"
+        ]
+      },
+      "reachability": "VERSION_SPECIFIER",
+      "vulnerableDependencies": [
+        {
+          "name": "com.typesafe.akka:akka-http-core",
+          "versionSpecifier": "<10.5.3"
+        }
+      ],
+      "safeDependencies": [
+        {
+          "name": "com.typesafe.akka:akka-http-core",
+          "versionSpecifier": "10.5.3"
+        },
+        {
+          "name": "com.typesafe.akka:akka-http-core_2.12",
+          "versionSpecifier": "10.5.3"
+        },
+        {
+          "name": "com.typesafe.akka:akka-http-core_2.13",
+          "versionSpecifier": "10.5.3"
+        },
+        {
+          "name": "org.apache.tomcat.embed:tomcat-embed-core",
+          "versionSpecifier": "9.0.81"
+        },
+        {
+          "name": "org.apache.tomcat.embed:tomcat-embed-core",
+          "versionSpecifier": "8.5.94"
+        },
+        {
+          "name": "org.apache.tomcat.embed:tomcat-embed-core",
+          "versionSpecifier": "11.0.0-M12"
+        },
+        {
+          "name": "org.apache.tomcat.embed:tomcat-embed-core",
+          "versionSpecifier": "10.1.14"
+        },
+        {
+          "name": "org.apache.tomcat:tomcat-coyote",
+          "versionSpecifier": "9.0.81"
+        },
+        {
+          "name": "org.apache.tomcat:tomcat-coyote",
+          "versionSpecifier": "8.5.94"
+        },
+        {
+          "name": "org.apache.tomcat:tomcat-coyote",
+          "versionSpecifier": "11.0.0-M12"
+        },
+        {
+          "name": "org.apache.tomcat:tomcat-coyote",
+          "versionSpecifier": "10.1.14"
+        },
+        {
+          "name": "org.eclipse.jetty.http2:http2-common",
+          "versionSpecifier": "9.4.53"
+        },
+        {
+          "name": "org.eclipse.jetty.http2:http2-common",
+          "versionSpecifier": "11.0.17"
+        },
+        {
+          "name": "org.eclipse.jetty.http2:http2-common",
+          "versionSpecifier": "10.0.17"
+        },
+        {
+          "name": "org.eclipse.jetty.http2:http2-server",
+          "versionSpecifier": "9.4.53"
+        },
+        {
+          "name": "org.eclipse.jetty.http2:http2-server",
+          "versionSpecifier": "11.0.17"
+        },
+        {
+          "name": "org.eclipse.jetty.http2:http2-server",
+          "versionSpecifier": "10.0.17"
+        },
+        {
+          "name": "org.eclipse.jetty.http2:jetty-http2-common",
+          "versionSpecifier": "12.0.2"
+        },
+        {
+          "name": "org.eclipse.jetty.http2:jetty-http2-server",
+          "versionSpecifier": "12.0.2"
+        }
+      ],
+      "cve": "CVE-2023-44487",
+      "ghsa": "GHSA-qppj-fm5r-hxr3",
+      "reachableIf": ""
+    }
+  ],
+  "totalCount": "1"
+}

@@ -1,0 +1,145 @@
+{
+  "advisories": [
+    {
+      "ruleId": "ssc-80b5ff99-02f7-5855-980f-d062664ea991",
+      "title": "HTTP Request/Response Smuggling in io.netty:netty-codec-http",
+      "description": "Affected versions of io.netty:netty-codec-http are vulnerable to Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling'). Netty's HTTP chunked\u2010encoding parser treats a lone LF in a chunk extension as the end of the size line (instead of requiring CRLF per RFC 9112). If a front\u2010end proxy instead treats that LF as part of the extension, an attacker can craft a \"funky chunks\" payload that the proxy sees as one request but Netty splits into two, enabling standard HTTP request\u2010smuggling attacks\u2014bypassing access controls and corrupting responses to other clients.",
+      "ecosystem": "maven",
+      "severity": "LOW",
+      "references": {
+        "cveIds": [
+          "CVE-2025-58056"
+        ],
+        "cweIds": [
+          "CWE-444: Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling')"
+        ],
+        "owaspIds": [
+          "A04:2021 - Insecure Design",
+          "A06:2021 - Vulnerable and Outdated Components",
+          "A06:2025 - Insecure Design"
+        ],
+        "urls": [
+          "https://github.com/advisories/GHSA-fghv-69vj-qj49",
+          "https://nvd.nist.gov/vuln/detail/CVE-2025-58056"
+        ]
+      },
+      "announcedAt": "2025-09-04T17:35:20Z",
+      "ruleText": {
+        "id": "ssc-80b5ff99-02f7-5855-980f-d062664ea991",
+        "message": "Affected versions of io.netty:netty-codec-http are vulnerable to Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling'). Netty's HTTP chunked\u2010encoding parser treats a lone LF in a chunk extension as the end of the size line (instead of requiring CRLF per RFC 9112). If a front\u2010end proxy instead treats that LF as part of the extension, an attacker can craft a \"funky chunks\" payload that the proxy sees as one request but Netty splits into two, enabling standard HTTP request\u2010smuggling attacks\u2014bypassing access controls and corrupting responses to other clients.",
+        "severity": "INFO",
+        "metadata": {
+          "confidence": "HIGH",
+          "category": "security",
+          "cve": "CVE-2025-58056",
+          "cwe": [
+            "CWE-444: Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling')"
+          ],
+          "ghsa": "GHSA-fghv-69vj-qj49",
+          "owasp": [
+            "A04:2021 - Insecure Design",
+            "A06:2021 - Vulnerable and Outdated Components",
+            "A06:2025 - Insecure Design"
+          ],
+          "publish-date": "2025-09-04T17:35:20Z",
+          "references": [
+            "https://github.com/advisories/GHSA-fghv-69vj-qj49",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-58056"
+          ],
+          "sca-fix-versions": [
+            {
+              "io.netty:netty-codec-http": "4.2.5.Final"
+            },
+            {
+              "io.netty:netty-codec-http": "4.1.125.Final"
+            }
+          ],
+          "sca-kind": "reachable",
+          "sca-schema": 20230302,
+          "sca-severity": "LOW",
+          "sca-vuln-database-identifier": "CVE-2025-58056",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Improper Validation"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 210483,
+              "rv_id": 1240350,
+              "rule_id": "lBUlNEE",
+              "version_id": "kbTzvpl",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-80b5ff99-02f7-5855-980f-d062664ea991",
+              "origin": "custom"
+            }
+          }
+        },
+        "r2c-internal-project-depends-on": {
+          "depends-on-either": [
+            {
+              "namespace": "maven",
+              "package": "io.netty:netty-codec-http",
+              "version": "<4.1.125.Final"
+            },
+            {
+              "namespace": "maven",
+              "package": "io.netty:netty-codec-http",
+              "version": ">=4.2.0.Alpha1, <4.2.5.Final"
+            }
+          ]
+        },
+        "languages": [
+          "java",
+          "kotlin",
+          "scala"
+        ],
+        "patterns": [
+          {
+            "pattern-either": [
+              {
+                "pattern": "new io.netty.handler.codec.http.$CLASS(...)"
+              },
+              {
+                "pattern": "io.netty.handler.codec.http.$CLASS(...)"
+              },
+              {
+                "pattern": "class $ANY extends io.netty.handler.codec.http.$CLASS{...}"
+              }
+            ]
+          },
+          {
+            "metavariable-regex": {
+              "metavariable": "$CLASS",
+              "regex": "^(HttpRequestDecoder|HttpResponseDecoder|HttpClientCodec|HttpServerCodec|HttpObjectDecoder)"
+            }
+          }
+        ]
+      },
+      "reachability": "REACHABILITY",
+      "vulnerableDependencies": [
+        {
+          "name": "io.netty:netty-codec-http",
+          "versionSpecifier": "<4.1.125.Final"
+        }
+      ],
+      "safeDependencies": [
+        {
+          "name": "io.netty:netty-codec-http",
+          "versionSpecifier": "4.2.5.Final"
+        },
+        {
+          "name": "io.netty:netty-codec-http",
+          "versionSpecifier": "4.1.125.Final"
+        }
+      ],
+      "cve": "CVE-2025-58056",
+      "ghsa": "GHSA-fghv-69vj-qj49",
+      "reachableIf": ""
+    }
+  ],
+  "totalCount": "1"
+}

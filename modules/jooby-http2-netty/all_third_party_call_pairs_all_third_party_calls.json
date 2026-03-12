@@ -1,0 +1,69 @@
+{
+  "callPairs" : [ {
+    "caller" : "io.jooby.internal.netty.Http2OrHttp11Handler.<init>(java.util.function.Consumer, java.util.function.Consumer)",
+    "thirdPartyMethod" : "io.netty.handler.ssl.ApplicationProtocolNegotiationHandler.<init>(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.netty.Http2OrHttp11Handler.configurePipeline(io.netty.channel.ChannelHandlerContext, java.lang.String)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.pipeline()"
+  }, {
+    "caller" : "io.jooby.internal.netty.Http2PrefaceOrHttpHandler.<init>(java.util.function.Consumer, java.util.function.Consumer)",
+    "thirdPartyMethod" : "io.netty.handler.codec.ByteToMessageDecoder.<init>()"
+  }, {
+    "caller" : "io.jooby.internal.netty.Http2PrefaceOrHttpHandler.decode(io.netty.channel.ChannelHandlerContext, io.netty.buffer.ByteBuf, java.util.List)",
+    "thirdPartyMethod" : "io.netty.buffer.ByteBuf.readerIndex()"
+  }, {
+    "caller" : "io.jooby.internal.netty.Http2PrefaceOrHttpHandler.decode(io.netty.channel.ChannelHandlerContext, io.netty.buffer.ByteBuf, java.util.List)",
+    "thirdPartyMethod" : "io.netty.buffer.ByteBuf.readableBytes()"
+  }, {
+    "caller" : "io.jooby.internal.netty.Http2PrefaceOrHttpHandler.decode(io.netty.channel.ChannelHandlerContext, io.netty.buffer.ByteBuf, java.util.List)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.pipeline()"
+  }, {
+    "caller" : "io.jooby.internal.netty.Http2PrefaceOrHttpHandler.decode(io.netty.channel.ChannelHandlerContext, io.netty.buffer.ByteBuf, java.util.List)",
+    "thirdPartyMethod" : "io.netty.buffer.ByteBuf.getInt(int)"
+  }, {
+    "caller" : "io.jooby.internal.netty.Http2PrefaceOrHttpHandler.decode(io.netty.channel.ChannelHandlerContext, io.netty.buffer.ByteBuf, java.util.List)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelPipeline.remove(io.netty.channel.ChannelHandler)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHttp2Configurer.lambda.configure(io.jooby.internal.netty.Http2Settings)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http2.Http2ServerUpgradeCodec.<init>(io.netty.handler.codec.http2.Http2ConnectionHandler)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHttp2Configurer.newHttp2Handler(int, io.netty.handler.codec.http.HttpScheme)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http2.HttpToHttp2ConnectionHandlerBuilder.frameLogger(io.netty.handler.codec.http2.Http2FrameLogger)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHttp2Configurer.newHttp2Handler(int, io.netty.handler.codec.http.HttpScheme)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http2.Http2FrameLogger.<init>(io.netty.handler.logging.LogLevel)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHttp2Configurer.newHttp2Handler(int, io.netty.handler.codec.http.HttpScheme)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http2.HttpToHttp2ConnectionHandlerBuilder.frameListener(io.netty.handler.codec.http2.Http2FrameListener)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHttp2Configurer.newHttp2Handler(int, io.netty.handler.codec.http.HttpScheme)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http2.HttpToHttp2ConnectionHandlerBuilder.<init>()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHttp2Configurer.newHttp2Handler(int, io.netty.handler.codec.http.HttpScheme)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http2.HttpToHttp2ConnectionHandlerBuilder.build()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHttp2Configurer.newHttp2Handler(int, io.netty.handler.codec.http.HttpScheme)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http2.HttpToHttp2ConnectionHandlerBuilder.connection(io.netty.handler.codec.http2.Http2Connection)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHttp2Configurer.newHttp2Handler(int, io.netty.handler.codec.http.HttpScheme)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http2.InboundHttp2ToHttpAdapterBuilder.propagateSettings(boolean)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHttp2Configurer.newHttp2Handler(int, io.netty.handler.codec.http.HttpScheme)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http2.InboundHttp2ToHttpAdapterBuilder.maxContentLength(int)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHttp2Configurer.newHttp2Handler(int, io.netty.handler.codec.http.HttpScheme)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http2.InboundHttp2ToHttpAdapterBuilder.validateHttpHeaders(boolean)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHttp2Configurer.newHttp2Handler(int, io.netty.handler.codec.http.HttpScheme)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http2.InboundHttp2ToHttpAdapterBuilder.<init>(io.netty.handler.codec.http2.Http2Connection)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHttp2Configurer.newHttp2Handler(int, io.netty.handler.codec.http.HttpScheme)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http2.DefaultHttp2Connection.<init>(boolean)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHttp2Configurer.newHttp2Handler(int, io.netty.handler.codec.http.HttpScheme)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http2.HttpToHttp2ConnectionHandlerBuilder.httpScheme(io.netty.handler.codec.http.HttpScheme)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHttp2Configurer.newHttp2Handler(int, io.netty.handler.codec.http.HttpScheme)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http2.InboundHttp2ToHttpAdapterBuilder.build()"
+  } ]
+}

@@ -1,0 +1,204 @@
+{
+  "advisories": [
+    {
+      "ruleId": "ssc-cca92d2f-1d3d-4b3e-887a-b9b65c40aa98",
+      "title": "Uncontrolled Resource Consumption in org.eclipse.jetty.http2:http2-common",
+      "description": "Affected versions of org.eclipse.jetty.http3:jetty-http3-common, org.eclipse.jetty.http2:jetty-http2-common, org.eclipse.jetty.http3:http3-common, and org.eclipse.jetty.http2:http2-common are vulnerable to Uncontrolled Resource Consumption. The vulnerability stems from a flaw in managing HTTP/2 and HTTP/3 connections where TCP congestion leads to idle timeouts, potentially resulting in the connection staying open despite being marked as closed",
+      "ecosystem": "maven",
+      "severity": "HIGH",
+      "references": {
+        "cveIds": [
+          "CVE-2024-22201"
+        ],
+        "cweIds": [
+          "CWE-400: Uncontrolled Resource Consumption",
+          "CWE-770: Allocation of Resources Without Limits or Throttling"
+        ],
+        "owaspIds": [
+          "A06:2021 - Vulnerable and Outdated Components"
+        ],
+        "urls": [
+          "https://github.com/advisories/GHSA-rggv-cv7r-mw98",
+          "https://nvd.nist.gov/vuln/detail/CVE-2024-22201"
+        ]
+      },
+      "announcedAt": "2024-02-26T20:13:46Z",
+      "ruleText": {
+        "id": "ssc-cca92d2f-1d3d-4b3e-887a-b9b65c40aa98",
+        "message": "Affected versions of org.eclipse.jetty.http3:jetty-http3-common, org.eclipse.jetty.http2:jetty-http2-common, org.eclipse.jetty.http3:http3-common, and org.eclipse.jetty.http2:http2-common are vulnerable to Uncontrolled Resource Consumption. The vulnerability stems from a flaw in managing HTTP/2 and HTTP/3 connections where TCP congestion leads to idle timeouts, potentially resulting in the connection staying open despite being marked as closed",
+        "severity": "ERROR",
+        "metadata": {
+          "confidence": "HIGH",
+          "category": "security",
+          "cve": "CVE-2024-22201",
+          "cwe": [
+            "CWE-400: Uncontrolled Resource Consumption",
+            "CWE-770: Allocation of Resources Without Limits or Throttling"
+          ],
+          "ghsa": "GHSA-rggv-cv7r-mw98",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2024-02-26T20:13:46Z",
+          "references": [
+            "https://github.com/advisories/GHSA-rggv-cv7r-mw98",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-22201"
+          ],
+          "sca-fix-versions": [
+            {
+              "org.eclipse.jetty.http2:http2-common": "9.4.54"
+            },
+            {
+              "org.eclipse.jetty.http2:http2-common": "11.0.20"
+            },
+            {
+              "org.eclipse.jetty.http2:http2-common": "10.0.20"
+            },
+            {
+              "org.eclipse.jetty.http2:jetty-http2-common": "12.0.6"
+            },
+            {
+              "org.eclipse.jetty.http3:http3-common": "11.0.20"
+            },
+            {
+              "org.eclipse.jetty.http3:http3-common": "10.0.20"
+            },
+            {
+              "org.eclipse.jetty.http3:jetty-http3-common": "12.0.6"
+            }
+          ],
+          "sca-kind": "reachable",
+          "sca-schema": 20230302,
+          "sca-severity": "HIGH",
+          "sca-vuln-database-identifier": "CVE-2024-22201",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Denial-of-Service (DoS)",
+            "Other"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 116794,
+              "rv_id": 979918,
+              "rule_id": "L1UqRkB",
+              "version_id": "pZTNJwW",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-cca92d2f-1d3d-4b3e-887a-b9b65c40aa98",
+              "origin": "custom"
+            }
+          }
+        },
+        "r2c-internal-project-depends-on": {
+          "depends-on-either": [
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty.http2:http2-common",
+              "version": ">=10.0.0, <=10.0.19"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty.http2:http2-common",
+              "version": ">=11.0.0, <=11.0.19"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty.http2:http2-common",
+              "version": ">=9.3.0, <=9.4.53"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty.http2:jetty-http2-common",
+              "version": ">=12.0.0, <=12.0.5"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty.http3:http3-common",
+              "version": ">=10.0.8, <=10.0.19"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty.http3:http3-common",
+              "version": ">=11.0.8, <=11.0.19"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty.http3:jetty-http3-common",
+              "version": ">=12.0.0, <=12.0.5"
+            }
+          ]
+        },
+        "languages": [
+          "java",
+          "kotlin",
+          "scala"
+        ],
+        "patterns": [
+          {
+            "metavariable-regex": {
+              "metavariable": "$PACKAGE",
+              "regex": "(org.eclipse.jetty.http(2|3).server)"
+            }
+          },
+          {
+            "pattern-inside": "import $PACKAGE;\n...\n"
+          },
+          {
+            "pattern-either": [
+              {
+                "pattern": "new Server(...);"
+              },
+              {
+                "pattern": "Server(...);"
+              }
+            ]
+          }
+        ]
+      },
+      "reachability": "REACHABILITY",
+      "vulnerableDependencies": [
+        {
+          "name": "org.eclipse.jetty.http2:http2-common",
+          "versionSpecifier": ">=10.0.0, <=10.0.19"
+        }
+      ],
+      "safeDependencies": [
+        {
+          "name": "org.eclipse.jetty.http2:http2-common",
+          "versionSpecifier": "9.4.54"
+        },
+        {
+          "name": "org.eclipse.jetty.http2:http2-common",
+          "versionSpecifier": "11.0.20"
+        },
+        {
+          "name": "org.eclipse.jetty.http2:http2-common",
+          "versionSpecifier": "10.0.20"
+        },
+        {
+          "name": "org.eclipse.jetty.http2:jetty-http2-common",
+          "versionSpecifier": "12.0.6"
+        },
+        {
+          "name": "org.eclipse.jetty.http3:http3-common",
+          "versionSpecifier": "11.0.20"
+        },
+        {
+          "name": "org.eclipse.jetty.http3:http3-common",
+          "versionSpecifier": "10.0.20"
+        },
+        {
+          "name": "org.eclipse.jetty.http3:jetty-http3-common",
+          "versionSpecifier": "12.0.6"
+        }
+      ],
+      "cve": "CVE-2024-22201",
+      "ghsa": "GHSA-rggv-cv7r-mw98",
+      "reachableIf": ""
+    }
+  ],
+  "totalCount": "1"
+}

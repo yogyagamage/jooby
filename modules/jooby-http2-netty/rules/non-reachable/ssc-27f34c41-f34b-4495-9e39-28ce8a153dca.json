@@ -1,0 +1,132 @@
+{
+  "advisories": [
+    {
+      "ruleId": "ssc-27f34c41-f34b-4495-9e39-28ce8a153dca",
+      "title": "Allocation of Resources Without Limits or Throttling in io.grpc:grpc-netty-shaded",
+      "description": "Affected versions of io.grpc:grpc-netty-shaded and io.netty:netty-codec-http2 are vulnerable to Allocation of Resources Without Limits or Throttling. Netty's HTTP/2 implementation fails to correctly track active streams when sending RST_STREAM in response to certain malformed control frames. An attacker can send, for example, WINDOW_UPDATE frames with a zero or overflow increment, HEADERS/DATA on a half-closed stream, or PRIORITY frames with invalid length to trigger RST_STREAMs; each reset decrements Netty's concurrent-stream counter even though the request is still processed. By repeating this on a single connection, the attacker can open an unbounded number of streams, exhausting CPU and memory and causing a denial of service. This is a protocol level attack.",
+      "ecosystem": "maven",
+      "severity": "HIGH",
+      "references": {
+        "cveIds": [
+          "CVE-2025-55163"
+        ],
+        "cweIds": [
+          "CWE-770: Allocation of Resources Without Limits or Throttling"
+        ],
+        "owaspIds": [
+          "A06:2021 - Vulnerable and Outdated Components"
+        ],
+        "urls": [
+          "https://github.com/advisories/GHSA-prj3-ccx8-p6x4",
+          "https://nvd.nist.gov/vuln/detail/CVE-2025-55163"
+        ]
+      },
+      "announcedAt": "2025-08-13T19:06:56Z",
+      "ruleText": {
+        "id": "ssc-27f34c41-f34b-4495-9e39-28ce8a153dca",
+        "message": "Affected versions of io.grpc:grpc-netty-shaded and io.netty:netty-codec-http2 are vulnerable to Allocation of Resources Without Limits or Throttling. Netty's HTTP/2 implementation fails to correctly track active streams when sending RST_STREAM in response to certain malformed control frames. An attacker can send, for example, WINDOW_UPDATE frames with a zero or overflow increment, HEADERS/DATA on a half-closed stream, or PRIORITY frames with invalid length to trigger RST_STREAMs; each reset decrements Netty's concurrent-stream counter even though the request is still processed. By repeating this on a single connection, the attacker can open an unbounded number of streams, exhausting CPU and memory and causing a denial of service. This is a protocol level attack.",
+        "severity": "ERROR",
+        "metadata": {
+          "confidence": "HIGH",
+          "category": "security",
+          "cve": "CVE-2025-55163",
+          "cwe": [
+            "CWE-770: Allocation of Resources Without Limits or Throttling"
+          ],
+          "ghsa": "GHSA-prj3-ccx8-p6x4",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2025-08-13T19:06:56Z",
+          "references": [
+            "https://github.com/advisories/GHSA-prj3-ccx8-p6x4",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-55163"
+          ],
+          "sca-fix-versions": [
+            {
+              "io.grpc:grpc-netty-shaded": "1.75.0"
+            },
+            {
+              "io.netty:netty-codec-http2": "4.2.4.Final"
+            },
+            {
+              "io.netty:netty-codec-http2": "4.1.124.Final"
+            }
+          ],
+          "sca-kind": "upgrade-only",
+          "sca-schema": 20230302,
+          "sca-severity": "HIGH",
+          "sca-vuln-database-identifier": "CVE-2025-55163",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Other"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 208926,
+              "rv_id": 1153640,
+              "rule_id": "6JUZzL2",
+              "version_id": "X0T2Gb8",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-27f34c41-f34b-4495-9e39-28ce8a153dca",
+              "origin": "custom"
+            }
+          }
+        },
+        "r2c-internal-project-depends-on": {
+          "depends-on-either": [
+            {
+              "namespace": "maven",
+              "package": "io.grpc:grpc-netty-shaded",
+              "version": "<1.75.0"
+            },
+            {
+              "namespace": "maven",
+              "package": "io.netty:netty-codec-http2",
+              "version": "<=4.1.123.Final"
+            },
+            {
+              "namespace": "maven",
+              "package": "io.netty:netty-codec-http2",
+              "version": ">=4.2.0.Alpha1, <=4.2.3.Final"
+            }
+          ]
+        },
+        "languages": [
+          "java",
+          "kotlin",
+          "scala"
+        ]
+      },
+      "reachability": "ALWAYS_REACHABLE",
+      "vulnerableDependencies": [
+        {
+          "name": "io.grpc:grpc-netty-shaded",
+          "versionSpecifier": "<1.75.0"
+        }
+      ],
+      "safeDependencies": [
+        {
+          "name": "io.grpc:grpc-netty-shaded",
+          "versionSpecifier": "1.75.0"
+        },
+        {
+          "name": "io.netty:netty-codec-http2",
+          "versionSpecifier": "4.2.4.Final"
+        },
+        {
+          "name": "io.netty:netty-codec-http2",
+          "versionSpecifier": "4.1.124.Final"
+        }
+      ],
+      "cve": "CVE-2025-55163",
+      "ghsa": "GHSA-prj3-ccx8-p6x4",
+      "reachableIf": ""
+    }
+  ],
+  "totalCount": "1"
+}

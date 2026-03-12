@@ -1,0 +1,124 @@
+{
+  "advisories": [
+    {
+      "ruleId": "ssc-b6eca65a-44c3-4343-b94c-7c0b0b3a9957",
+      "title": "Uncontrolled Resource Consumption in io.netty:netty-common",
+      "description": "Affected versions of io.netty:netty-common are vulnerable to Uncontrolled Resource Consumption.",
+      "ecosystem": "maven",
+      "severity": "MEDIUM",
+      "references": {
+        "cveIds": [
+          "CVE-2024-47535"
+        ],
+        "cweIds": [
+          "CWE-400: Uncontrolled Resource Consumption"
+        ],
+        "owaspIds": [
+          "A06:2021 - Vulnerable and Outdated Components"
+        ],
+        "urls": [
+          "https://github.com/advisories/GHSA-xq3w-v528-46rv",
+          "https://nvd.nist.gov/vuln/detail/CVE-2024-47535"
+        ]
+      },
+      "announcedAt": "2024-11-12T19:53:17Z",
+      "ruleText": {
+        "id": "ssc-b6eca65a-44c3-4343-b94c-7c0b0b3a9957",
+        "message": "Affected versions of io.netty:netty-common are vulnerable to Uncontrolled Resource Consumption.",
+        "severity": "WARNING",
+        "metadata": {
+          "confidence": "HIGH",
+          "category": "security",
+          "cve": "CVE-2024-47535",
+          "cwe": [
+            "CWE-400: Uncontrolled Resource Consumption"
+          ],
+          "ghsa": "GHSA-xq3w-v528-46rv",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2024-11-12T19:53:17Z",
+          "references": [
+            "https://github.com/advisories/GHSA-xq3w-v528-46rv",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-47535"
+          ],
+          "sca-fix-versions": [
+            {
+              "io.netty:netty-common": "4.1.115.Final"
+            }
+          ],
+          "sca-kind": "reachable",
+          "sca-reachable-if": "you run the netty application on a Windows machine",
+          "sca-schema": 20230302,
+          "sca-severity": "MODERATE",
+          "sca-vuln-database-identifier": "CVE-2024-47535",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Denial-of-Service (DoS)"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 147454,
+              "rv_id": 1183218,
+              "rule_id": "DbU6A12",
+              "version_id": "RGTR530",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-b6eca65a-44c3-4343-b94c-7c0b0b3a9957",
+              "origin": "custom"
+            }
+          }
+        },
+        "r2c-internal-project-depends-on": {
+          "depends-on-either": [
+            {
+              "namespace": "maven",
+              "package": "io.netty:netty-common",
+              "version": "<=4.1.114.Final"
+            }
+          ]
+        },
+        "languages": [
+          "java",
+          "kotlin",
+          "scala"
+        ],
+        "patterns": [
+          {
+            "pattern-inside": "import io.netty.$ANY;\n...\n"
+          },
+          {
+            "pattern-either": [
+              {
+                "pattern": "$SERVER. ... .run(...);"
+              },
+              {
+                "pattern": "$SERVER(...). ... .run(...);"
+              }
+            ]
+          }
+        ]
+      },
+      "reachability": "MANUAL_REVIEW_REACHABLE",
+      "vulnerableDependencies": [
+        {
+          "name": "io.netty:netty-common",
+          "versionSpecifier": "<=4.1.114.Final"
+        }
+      ],
+      "safeDependencies": [
+        {
+          "name": "io.netty:netty-common",
+          "versionSpecifier": "4.1.115.Final"
+        }
+      ],
+      "reachableIf": "you run the netty application on a Windows machine",
+      "cve": "CVE-2024-47535",
+      "ghsa": "GHSA-xq3w-v528-46rv"
+    }
+  ],
+  "totalCount": "1"
+}

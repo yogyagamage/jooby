@@ -1,0 +1,960 @@
+{
+  "callPairs" : [ {
+    "caller" : "io.jooby.internal.netty.HttpChunkContentCompressor.<init>(int)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpContentCompressor.<init>(int)"
+  }, {
+    "caller" : "io.jooby.internal.netty.HttpChunkContentCompressor.write(io.netty.channel.ChannelHandlerContext, java.lang.Object, io.netty.channel.ChannelPromise)",
+    "thirdPartyMethod" : "io.netty.buffer.ByteBuf.isReadable()"
+  }, {
+    "caller" : "io.jooby.internal.netty.HttpChunkContentCompressor.write(io.netty.channel.ChannelHandlerContext, java.lang.Object, io.netty.channel.ChannelPromise)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpContentCompressor.write(io.netty.channel.ChannelHandlerContext, java.lang.Object, io.netty.channel.ChannelPromise)"
+  }, {
+    "caller" : "io.jooby.internal.netty.HttpChunkContentCompressor.write(io.netty.channel.ChannelHandlerContext, java.lang.Object, io.netty.channel.ChannelPromise)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.DefaultHttpContent.<init>(io.netty.buffer.ByteBuf)"
+  }, {
+    "caller" : "io.jooby.internal.netty.HttpRawPostRequestDecoder.<init>(io.netty.handler.codec.http.multipart.HttpDataFactory, io.netty.handler.codec.http.HttpRequest)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.HttpDataFactory.createAttribute(io.netty.handler.codec.http.HttpRequest, java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.netty.HttpRawPostRequestDecoder.cleanFiles()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.HttpDataFactory.cleanRequestHttpData(io.netty.handler.codec.http.HttpRequest)"
+  }, {
+    "caller" : "io.jooby.internal.netty.HttpRawPostRequestDecoder.destroy()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.HttpData.delete()"
+  }, {
+    "caller" : "io.jooby.internal.netty.HttpRawPostRequestDecoder.offer(io.netty.handler.codec.http.HttpContent)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.HttpPostRequestDecoder.ErrorDataDecoderException.<init>(java.lang.Throwable)"
+  }, {
+    "caller" : "io.jooby.internal.netty.HttpRawPostRequestDecoder.offer(io.netty.handler.codec.http.HttpContent)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.HttpData.addContent(io.netty.buffer.ByteBuf, boolean)"
+  }, {
+    "caller" : "io.jooby.internal.netty.HttpRawPostRequestDecoder.offer(io.netty.handler.codec.http.HttpContent)",
+    "thirdPartyMethod" : "io.netty.buffer.ByteBuf.copy()"
+  }, {
+    "caller" : "io.jooby.internal.netty.HttpRawPostRequestDecoder.offer(io.netty.handler.codec.http.HttpContent)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpContent.content()"
+  }, {
+    "caller" : "io.jooby.internal.netty.HttpRawPostRequestDecoder.removeHttpDataFromClean(io.netty.handler.codec.http.multipart.InterfaceHttpData)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.HttpDataFactory.removeHttpDataFromClean(io.netty.handler.codec.http.HttpRequest, io.netty.handler.codec.http.multipart.InterfaceHttpData)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyBody.bytes()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.HttpData.isInMemory()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyBody.bytes()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.HttpData.getFile()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyBody.bytes()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.HttpData.get()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyBody.isInMemory()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.HttpData.isInMemory()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyBody.stream()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.HttpData.get()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyBody.stream()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.HttpData.getFile()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyBody.stream()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.HttpData.isInMemory()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.<init>(io.netty.channel.ChannelHandlerContext, io.netty.handler.codec.http.HttpRequest, io.jooby.Router, java.lang.String, int)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpRequest.method()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.<init>(io.netty.channel.ChannelHandlerContext, io.netty.handler.codec.http.HttpRequest, io.jooby.Router, java.lang.String, int)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.DefaultHttpHeaders.<init>(boolean)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.<init>(io.netty.channel.ChannelHandlerContext, io.netty.handler.codec.http.HttpRequest, io.jooby.Router, java.lang.String, int)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpMethod.name()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.body()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpUtil.getContentLength(io.netty.handler.codec.http.HttpMessage, long)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.body()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.InterfaceHttpPostRequestDecoder.hasNext()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.body()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.InterfaceHttpPostRequestDecoder.next()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.cookieMap()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpHeaders.get(java.lang.CharSequence)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.cookieMap()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.cookie.Cookie.name()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.cookieMap()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpRequest.headers()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.cookieMap()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.cookie.Cookie.value()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.cookieMap()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.cookie.ServerCookieDecoder.decode(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.decodeForm(io.netty.handler.codec.http.HttpRequest, io.jooby.Formdata)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.InterfaceHttpPostRequestDecoder.next()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.decodeForm(io.netty.handler.codec.http.HttpRequest, io.jooby.Formdata)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.HttpData.getName()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.decodeForm(io.netty.handler.codec.http.HttpRequest, io.jooby.Formdata)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.HttpData.getHttpDataType()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.decodeForm(io.netty.handler.codec.http.HttpRequest, io.jooby.Formdata)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.HttpData.getString(java.nio.charset.Charset)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.decodeForm(io.netty.handler.codec.http.HttpRequest, io.jooby.Formdata)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.InterfaceHttpPostRequestDecoder.hasNext()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.destroy(java.lang.Throwable)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.InterfaceHttpPostRequestDecoder.destroy()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.flush()",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.flush()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.getClientCertificates()",
+    "thirdPartyMethod" : "io.netty.channel.Channel.pipeline()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.getClientCertificates()",
+    "thirdPartyMethod" : "io.netty.handler.ssl.SslHandler.engine()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.getClientCertificates()",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.channel()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.getClientCertificates()",
+    "thirdPartyMethod" : "io.netty.channel.ChannelPipeline.get(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.getProtocol()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpRequest.protocolVersion()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.getProtocol()",
+    "thirdPartyMethod" : "io.netty.channel.ChannelPipeline.get(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.getProtocol()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpVersion.text()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.getProtocol()",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.pipeline()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.getRemoteAddress()",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.channel()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.getRemoteAddress()",
+    "thirdPartyMethod" : "io.netty.channel.Channel.remoteAddress()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.getResponseCode()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpResponseStatus.code()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.getResponseHeader(java.lang.String)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.DefaultHttpHeaders.get(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.getResponseLength()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.DefaultHttpHeaders.get(java.lang.CharSequence, java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.getScheme()",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.pipeline()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.getScheme()",
+    "thirdPartyMethod" : "io.netty.channel.ChannelPipeline.get(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.header()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpHeaders.getAll(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.header()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpRequest.headers()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.header()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpHeaders.names()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.header(java.lang.String)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpRequest.headers()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.header(java.lang.String)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpHeaders.getAll(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.isInIoThread()",
+    "thirdPartyMethod" : "io.netty.channel.EventLoop.inEventLoop()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.isInIoThread()",
+    "thirdPartyMethod" : "io.netty.channel.Channel.eventLoop()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.isInIoThread()",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.channel()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.lambda.prepareChunked(io.netty.channel.ChannelPipeline, java.lang.String)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelPipeline.get(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.lambda.send(io.netty.handler.codec.http.DefaultHttpResponse, io.netty.handler.codec.http.HttpChunkedInput)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.writeAndFlush(java.lang.Object, io.netty.channel.ChannelPromise)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.lambda.send(io.netty.handler.codec.http.DefaultHttpResponse, io.netty.handler.codec.http.HttpChunkedInput)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.voidPromise()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.lambda.send(io.netty.handler.codec.http.DefaultHttpResponse, io.netty.handler.codec.http.HttpChunkedInput)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.write(java.lang.Object, io.netty.channel.ChannelPromise)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.lambda.send(io.netty.handler.codec.http.DefaultHttpResponse, io.netty.handler.stream.ChunkedStream)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.write(java.lang.Object, io.netty.channel.ChannelPromise)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.lambda.send(io.netty.handler.codec.http.DefaultHttpResponse, io.netty.handler.stream.ChunkedStream)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.writeAndFlush(java.lang.Object, io.netty.channel.ChannelPromise)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.lambda.send(io.netty.handler.codec.http.DefaultHttpResponse, io.netty.handler.stream.ChunkedStream)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.voidPromise()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.lambda.send(io.netty.handler.codec.http.DefaultHttpResponse, java.nio.channels.FileChannel, io.jooby.ByteRange)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.writeAndFlush(java.lang.Object, io.netty.channel.ChannelPromise)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.lambda.send(io.netty.handler.codec.http.DefaultHttpResponse, java.nio.channels.FileChannel, io.jooby.ByteRange)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.voidPromise()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.lambda.send(io.netty.handler.codec.http.DefaultHttpResponse, java.nio.channels.FileChannel, io.jooby.ByteRange)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.write(java.lang.Object, io.netty.channel.ChannelPromise)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.lambda.send(io.netty.handler.codec.http.DefaultHttpResponse, java.nio.channels.FileChannel, io.jooby.ByteRange)",
+    "thirdPartyMethod" : "io.netty.channel.DefaultFileRegion.<init>(java.nio.channels.FileChannel, long, long)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.lambda.send(io.netty.handler.codec.http.DefaultHttpResponse, java.nio.channels.ReadableByteChannel, int)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.write(java.lang.Object, io.netty.channel.ChannelPromise)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.lambda.send(io.netty.handler.codec.http.DefaultHttpResponse, java.nio.channels.ReadableByteChannel, int)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.voidPromise()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.lambda.send(io.netty.handler.codec.http.DefaultHttpResponse, java.nio.channels.ReadableByteChannel, int)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.writeAndFlush(java.lang.Object, io.netty.channel.ChannelPromise)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.lambda.send(io.netty.handler.codec.http.DefaultHttpResponse, java.nio.channels.ReadableByteChannel, int)",
+    "thirdPartyMethod" : "io.netty.handler.stream.ChunkedNioStream.<init>(java.nio.channels.ReadableByteChannel, int)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.newOutputStream()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.DefaultHttpResponse.<init>(io.netty.handler.codec.http.HttpVersion, io.netty.handler.codec.http.HttpResponseStatus, io.netty.handler.codec.http.HttpHeaders)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.newOutputStream()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpRequest.protocolVersion()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.operationComplete(io.netty.channel.ChannelFuture)",
+    "thirdPartyMethod" : "io.netty.channel.Channel.close()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.operationComplete(io.netty.channel.ChannelFuture)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpUtil.isKeepAlive(io.netty.handler.codec.http.HttpMessage)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.operationComplete(io.netty.channel.ChannelFuture)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelFuture.channel()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.operationComplete(io.netty.channel.ChannelFuture)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelFuture.cause()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.prepareChunked()",
+    "thirdPartyMethod" : "io.netty.channel.ChannelPipeline.addAfter(java.lang.String, java.lang.String, io.netty.channel.ChannelHandler)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.prepareChunked()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.DefaultHttpHeaders.set(java.lang.CharSequence, java.lang.Object)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.prepareChunked()",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.pipeline()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.prepareChunked()",
+    "thirdPartyMethod" : "io.netty.handler.stream.ChunkedWriteHandler.<init>()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.prepareChunked()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.DefaultHttpHeaders.contains(java.lang.CharSequence)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.prepareChunked()",
+    "thirdPartyMethod" : "io.netty.channel.ChannelPipeline.get(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.promise(io.netty.channel.ChannelFutureListener)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.voidPromise()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.promise(io.netty.channel.ChannelFutureListener)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelPromise.addListener(io.netty.util.concurrent.GenericFutureListener)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.promise(io.netty.channel.ChannelFutureListener)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.newPromise()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.query()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpRequest.uri()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.release(io.netty.handler.codec.http.HttpRequest)",
+    "thirdPartyMethod" : "io.netty.util.ReferenceCounted.release()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.removeResponseHeader(java.lang.String)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.DefaultHttpHeaders.remove(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.removeResponseHeaders()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.DefaultHttpHeaders.clear()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.responseLength()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.DefaultHttpHeaders.get(java.lang.CharSequence)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.responseSender()",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.write(java.lang.Object)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.responseSender()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.DefaultHttpResponse.<init>(io.netty.handler.codec.http.HttpVersion, io.netty.handler.codec.http.HttpResponseStatus, io.netty.handler.codec.http.HttpHeaders)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.responseSender()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpRequest.protocolVersion()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(byte[])",
+    "thirdPartyMethod" : "io.netty.buffer.Unpooled.wrappedBuffer(byte[])"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(byte[][])",
+    "thirdPartyMethod" : "io.netty.buffer.Unpooled.wrappedBuffer(byte[][])"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(io.jooby.StatusCode)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.DefaultHttpHeaders.set(java.lang.CharSequence, java.lang.Object)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(io.jooby.StatusCode)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.writeAndFlush(java.lang.Object, io.netty.channel.ChannelPromise)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(io.jooby.StatusCode)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.DefaultHttpHeaders.contains(java.lang.CharSequence)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(io.jooby.StatusCode)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.DefaultFullHttpResponse.<init>(io.netty.handler.codec.http.HttpVersion, io.netty.handler.codec.http.HttpResponseStatus, io.netty.buffer.ByteBuf, io.netty.handler.codec.http.HttpHeaders, io.netty.handler.codec.http.HttpHeaders)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(io.netty.buffer.ByteBuf)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.DefaultHttpHeaders.set(java.lang.CharSequence, java.lang.Object)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(io.netty.buffer.ByteBuf)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.writeAndFlush(java.lang.Object, io.netty.channel.ChannelPromise)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(io.netty.buffer.ByteBuf)",
+    "thirdPartyMethod" : "io.netty.buffer.ByteBuf.readableBytes()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(io.netty.buffer.ByteBuf)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.DefaultFullHttpResponse.<init>(io.netty.handler.codec.http.HttpVersion, io.netty.handler.codec.http.HttpResponseStatus, io.netty.buffer.ByteBuf, io.netty.handler.codec.http.HttpHeaders, io.netty.handler.codec.http.HttpHeaders)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(io.netty.buffer.ByteBuf)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.write(java.lang.Object, io.netty.channel.ChannelPromise)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(io.netty.buffer.ByteBuf)",
+    "thirdPartyMethod" : "io.netty.channel.EventLoop.inEventLoop()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(io.netty.buffer.ByteBuf)",
+    "thirdPartyMethod" : "io.netty.channel.Channel.eventLoop()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(io.netty.buffer.ByteBuf)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.channel()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(java.io.InputStream)",
+    "thirdPartyMethod" : "io.netty.channel.EventLoop.execute(java.lang.Runnable)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(java.io.InputStream)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpHeaders.get(java.lang.CharSequence)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(java.io.InputStream)",
+    "thirdPartyMethod" : "io.netty.channel.Channel.eventLoop()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(java.io.InputStream)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpRequest.headers()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(java.io.InputStream)",
+    "thirdPartyMethod" : "io.netty.handler.stream.ChunkedStream.<init>(java.io.InputStream, int)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(java.io.InputStream)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.channel()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(java.io.InputStream)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.DefaultHttpResponse.<init>(io.netty.handler.codec.http.HttpVersion, io.netty.handler.codec.http.HttpResponseStatus, io.netty.handler.codec.http.HttpHeaders)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(java.lang.String)",
+    "thirdPartyMethod" : "io.netty.buffer.Unpooled.copiedBuffer(java.lang.CharSequence, java.nio.charset.Charset)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(java.lang.String, java.nio.charset.Charset)",
+    "thirdPartyMethod" : "io.netty.buffer.Unpooled.copiedBuffer(java.lang.CharSequence, java.nio.charset.Charset)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(java.nio.ByteBuffer)",
+    "thirdPartyMethod" : "io.netty.buffer.Unpooled.wrappedBuffer(java.nio.ByteBuffer)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(java.nio.ByteBuffer[])",
+    "thirdPartyMethod" : "io.netty.buffer.Unpooled.wrappedBuffer(java.nio.ByteBuffer[])"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(java.nio.channels.FileChannel)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.DefaultHttpHeaders.set(java.lang.CharSequence, java.lang.Object)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(java.nio.channels.FileChannel)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpHeaders.get(java.lang.CharSequence)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(java.nio.channels.FileChannel)",
+    "thirdPartyMethod" : "io.netty.channel.EventLoop.execute(java.lang.Runnable)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(java.nio.channels.FileChannel)",
+    "thirdPartyMethod" : "io.netty.handler.stream.ChunkedNioFile.<init>(java.nio.channels.FileChannel, long, long, int)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(java.nio.channels.FileChannel)",
+    "thirdPartyMethod" : "io.netty.channel.Channel.eventLoop()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(java.nio.channels.FileChannel)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpRequest.headers()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(java.nio.channels.FileChannel)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpChunkedInput.<init>(io.netty.handler.stream.ChunkedInput)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(java.nio.channels.FileChannel)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.channel()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(java.nio.channels.FileChannel)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.DefaultHttpResponse.<init>(io.netty.handler.codec.http.HttpVersion, io.netty.handler.codec.http.HttpResponseStatus, io.netty.handler.codec.http.HttpHeaders)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(java.nio.channels.ReadableByteChannel)",
+    "thirdPartyMethod" : "io.netty.channel.Channel.eventLoop()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(java.nio.channels.ReadableByteChannel)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.DefaultHttpResponse.<init>(io.netty.handler.codec.http.HttpVersion, io.netty.handler.codec.http.HttpResponseStatus, io.netty.handler.codec.http.HttpHeaders)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(java.nio.channels.ReadableByteChannel)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.channel()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.send(java.nio.channels.ReadableByteChannel)",
+    "thirdPartyMethod" : "io.netty.channel.EventLoop.execute(java.lang.Runnable)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.setResponseCode(int)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpResponseStatus.valueOf(int)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.setResponseCookie(io.jooby.Cookie)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.DefaultHttpHeaders.add(java.lang.CharSequence, java.lang.Object)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.setResponseCookie(io.jooby.Cookie)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.DefaultHttpHeaders.remove(java.lang.CharSequence)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.setResponseHeader(java.lang.String, java.lang.String)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.DefaultHttpHeaders.set(java.lang.String, java.lang.Object)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.setResponseLength(long)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.DefaultHttpHeaders.set(java.lang.CharSequence, java.lang.Object)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.setResponseType(io.jooby.MediaType, java.nio.charset.Charset)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.DefaultHttpHeaders.set(java.lang.CharSequence, java.lang.Object)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.setResponseType(java.lang.String)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.DefaultHttpHeaders.set(java.lang.CharSequence, java.lang.Object)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.shouldRelease(io.netty.handler.codec.http.HttpRequest)",
+    "thirdPartyMethod" : "io.netty.util.ReferenceCounted.refCnt()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.upgrade(io.jooby.ServerSentEmitter.Handler)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.DefaultHttpResponse.<init>(io.netty.handler.codec.http.HttpVersion, io.netty.handler.codec.http.HttpResponseStatus, io.netty.handler.codec.http.HttpHeaders)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.upgrade(io.jooby.ServerSentEmitter.Handler)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.writeAndFlush(java.lang.Object)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.upgrade(io.jooby.WebSocket.Initializer)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.websocketx.WebSocketDecoderConfig.Builder.allowExtensions(boolean)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.upgrade(io.jooby.WebSocket.Initializer)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.websocketx.WebSocketDecoderConfig.Builder.withUTF8Validator(boolean)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.upgrade(io.jooby.WebSocket.Initializer)",
+    "thirdPartyMethod" : "com.typesafe.config.Config.getBytes(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.upgrade(io.jooby.WebSocket.Initializer)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.websocketx.WebSocketServerHandshaker.handshake(io.netty.channel.Channel, io.netty.handler.codec.http.FullHttpRequest)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.upgrade(io.jooby.WebSocket.Initializer)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.DefaultFullHttpRequest.<init>(io.netty.handler.codec.http.HttpVersion, io.netty.handler.codec.http.HttpMethod, java.lang.String, io.netty.buffer.ByteBuf, io.netty.handler.codec.http.HttpHeaders, io.netty.handler.codec.http.HttpHeaders)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.upgrade(io.jooby.WebSocket.Initializer)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpHeaders.get(java.lang.CharSequence)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.upgrade(io.jooby.WebSocket.Initializer)",
+    "thirdPartyMethod" : "com.typesafe.config.Config.hasPath(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.upgrade(io.jooby.WebSocket.Initializer)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.websocketx.WebSocketDecoderConfig.Builder.build()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.upgrade(io.jooby.WebSocket.Initializer)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpRequest.uri()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.upgrade(io.jooby.WebSocket.Initializer)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.pipeline()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.upgrade(io.jooby.WebSocket.Initializer)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpRequest.method()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.upgrade(io.jooby.WebSocket.Initializer)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.websocketx.WebSocketServerHandshakerFactory.newHandshaker(io.netty.handler.codec.http.HttpRequest)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.upgrade(io.jooby.WebSocket.Initializer)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.websocketx.WebSocketServerHandshakerFactory.<init>(java.lang.String, java.lang.String, io.netty.handler.codec.http.websocketx.WebSocketDecoderConfig)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.upgrade(io.jooby.WebSocket.Initializer)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.websocketx.WebSocketDecoderConfig.Builder.maxFramePayloadLength(int)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.upgrade(io.jooby.WebSocket.Initializer)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpRequest.headers()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.upgrade(io.jooby.WebSocket.Initializer)",
+    "thirdPartyMethod" : "io.netty.handler.timeout.IdleStateHandler.<init>(long, long, long, java.util.concurrent.TimeUnit)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.upgrade(io.jooby.WebSocket.Initializer)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.websocketx.WebSocketDecoderConfig.Builder.allowMaskMismatch(boolean)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.upgrade(io.jooby.WebSocket.Initializer)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.websocketx.WebSocketDecoderConfig.newBuilder()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.upgrade(io.jooby.WebSocket.Initializer)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelPipeline.addBefore(java.lang.String, java.lang.String, io.netty.channel.ChannelHandler)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.upgrade(io.jooby.WebSocket.Initializer)",
+    "thirdPartyMethod" : "com.typesafe.config.Config.getDuration(java.lang.String, java.util.concurrent.TimeUnit)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.upgrade(io.jooby.WebSocket.Initializer)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpRequest.protocolVersion()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyContext.upgrade(io.jooby.WebSocket.Initializer)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.channel()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyFileUpload.bytes()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.FileUpload.isInMemory()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyFileUpload.bytes()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.FileUpload.get()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyFileUpload.destroy()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.FileUpload.release()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyFileUpload.destroy()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.FileUpload.refCnt()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyFileUpload.getContentType()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.FileUpload.getContentType()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyFileUpload.getFileName()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.FileUpload.getFilename()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyFileUpload.getFileSize()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.FileUpload.length()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyFileUpload.getName()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.FileUpload.getName()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyFileUpload.path()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.FileUpload.release()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyFileUpload.path()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.FileUpload.isInMemory()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyFileUpload.path()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.FileUpload.getFile()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyFileUpload.path()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.FileUpload.renameTo(java.io.File)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyFileUpload.stream()",
+    "thirdPartyMethod" : "io.netty.buffer.ByteBufInputStream.<init>(io.netty.buffer.ByteBuf, boolean)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyFileUpload.stream()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.FileUpload.isInMemory()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyFileUpload.stream()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.FileUpload.content()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHandler.<clinit>()",
+    "thirdPartyMethod" : "io.netty.util.AsciiString.cached(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHandler.<init>(java.util.concurrent.ScheduledExecutorService, io.jooby.Router, long, int, io.netty.handler.codec.http.multipart.HttpDataFactory, boolean, boolean)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelInboundHandlerAdapter.<init>()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHandler.channelRead(io.netty.channel.ChannelHandlerContext, java.lang.Object)",
+    "thirdPartyMethod" : "io.netty.util.ReferenceCounted.release()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHandler.channelRead(io.netty.channel.ChannelHandlerContext, java.lang.Object)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpUtil.isTransferEncodingChunked(io.netty.handler.codec.http.HttpMessage)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHandler.channelRead(io.netty.channel.ChannelHandlerContext, java.lang.Object)",
+    "thirdPartyMethod" : "io.netty.util.ReferenceCounted.refCnt()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHandler.channelRead(io.netty.channel.ChannelHandlerContext, java.lang.Object)",
+    "thirdPartyMethod" : "io.netty.buffer.ByteBuf.readableBytes()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHandler.channelRead(io.netty.channel.ChannelHandlerContext, java.lang.Object)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpRequest.uri()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHandler.channelRead(io.netty.channel.ChannelHandlerContext, java.lang.Object)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpContent.content()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHandler.channelRead(io.netty.channel.ChannelHandlerContext, java.lang.Object)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.DefaultHttpHeaders.set(java.lang.CharSequence, java.lang.Object)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHandler.contentLength(io.netty.handler.codec.http.HttpRequest)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpHeaders.get(java.lang.CharSequence)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHandler.contentLength(io.netty.handler.codec.http.HttpRequest)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpRequest.headers()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHandler.exceptionCaught(io.netty.channel.ChannelHandlerContext, java.lang.Throwable)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.close()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHandler.newDecoder(io.netty.handler.codec.http.HttpRequest, io.netty.handler.codec.http.multipart.HttpDataFactory)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpRequest.headers()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHandler.newDecoder(io.netty.handler.codec.http.HttpRequest, io.netty.handler.codec.http.multipart.HttpDataFactory)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.HttpPostStandardRequestDecoder.<init>(io.netty.handler.codec.http.multipart.HttpDataFactory, io.netty.handler.codec.http.HttpRequest, java.nio.charset.Charset)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHandler.newDecoder(io.netty.handler.codec.http.HttpRequest, io.netty.handler.codec.http.multipart.HttpDataFactory)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.HttpPostMultipartRequestDecoder.<init>(io.netty.handler.codec.http.multipart.HttpDataFactory, io.netty.handler.codec.http.HttpRequest, java.nio.charset.Charset)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHandler.newDecoder(io.netty.handler.codec.http.HttpRequest, io.netty.handler.codec.http.multipart.HttpDataFactory)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpHeaders.get(java.lang.CharSequence)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHandler.offer(io.netty.handler.codec.http.HttpContent)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.InterfaceHttpPostRequestDecoder.offer(io.netty.handler.codec.http.HttpContent)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHandler.resetDecoderState(boolean)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.InterfaceHttpPostRequestDecoder.destroy()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHandler.userEventTriggered(io.netty.channel.ChannelHandlerContext, java.lang.Object)",
+    "thirdPartyMethod" : "io.netty.util.Attribute.getAndSet(java.lang.Object)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHandler.userEventTriggered(io.netty.channel.ChannelHandlerContext, java.lang.Object)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.channel()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyHandler.userEventTriggered(io.netty.channel.ChannelHandlerContext, java.lang.Object)",
+    "thirdPartyMethod" : "io.netty.channel.Channel.attr(io.netty.util.AttributeKey)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyOutputStream.<init>(io.jooby.internal.netty.NettyContext, io.netty.channel.ChannelHandlerContext, int, io.netty.handler.codec.http.HttpResponse)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.alloc()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyOutputStream.<init>(io.jooby.internal.netty.NettyContext, io.netty.channel.ChannelHandlerContext, int, io.netty.handler.codec.http.HttpResponse)",
+    "thirdPartyMethod" : "io.netty.buffer.ByteBufAllocator.buffer(int, int)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyOutputStream.flush(io.netty.channel.ChannelFutureListener, io.netty.channel.ChannelFutureListener)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.DefaultHttpContent.<init>(io.netty.buffer.ByteBuf)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyOutputStream.flush(io.netty.channel.ChannelFutureListener, io.netty.channel.ChannelFutureListener)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelFuture.addListener(io.netty.util.concurrent.GenericFutureListener)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyOutputStream.flush(io.netty.channel.ChannelFutureListener, io.netty.channel.ChannelFutureListener)",
+    "thirdPartyMethod" : "io.netty.buffer.ByteBuf.release()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyOutputStream.flush(io.netty.channel.ChannelFutureListener, io.netty.channel.ChannelFutureListener)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.write(java.lang.Object, io.netty.channel.ChannelPromise)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyOutputStream.flush(io.netty.channel.ChannelFutureListener, io.netty.channel.ChannelFutureListener)",
+    "thirdPartyMethod" : "io.netty.buffer.ByteBuf.readableBytes()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyOutputStream.flush(io.netty.channel.ChannelFutureListener, io.netty.channel.ChannelFutureListener)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.write(java.lang.Object)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyOutputStream.flush(io.netty.channel.ChannelFutureListener, io.netty.channel.ChannelFutureListener)",
+    "thirdPartyMethod" : "io.netty.buffer.ByteBuf.clear()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyOutputStream.flush(io.netty.channel.ChannelFutureListener, io.netty.channel.ChannelFutureListener)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.voidPromise()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyOutputStream.flush(io.netty.channel.ChannelFutureListener, io.netty.channel.ChannelFutureListener)",
+    "thirdPartyMethod" : "io.netty.buffer.ByteBuf.copy()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyOutputStream.flush(io.netty.channel.ChannelFutureListener, io.netty.channel.ChannelFutureListener)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.writeAndFlush(java.lang.Object)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyOutputStream.write(byte[], int, int, io.netty.channel.ChannelFutureListener)",
+    "thirdPartyMethod" : "io.netty.buffer.ByteBuf.writeBytes(byte[], int, int)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyOutputStream.write(byte[], int, int, io.netty.channel.ChannelFutureListener)",
+    "thirdPartyMethod" : "io.netty.buffer.ByteBuf.maxWritableBytes()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyOutputStream.write(int)",
+    "thirdPartyMethod" : "io.netty.buffer.ByteBuf.maxWritableBytes()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyOutputStream.write(int)",
+    "thirdPartyMethod" : "io.netty.buffer.ByteBuf.writeByte(int)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyOutputStream.writeHeaders()",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.voidPromise()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyOutputStream.writeHeaders()",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.write(java.lang.Object, io.netty.channel.ChannelPromise)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyPipeline.<init>(java.util.concurrent.ScheduledExecutorService, io.jooby.Router, io.netty.handler.codec.http.multipart.HttpDataFactory, io.netty.handler.ssl.SslContext, io.jooby.Http2Configurer, boolean, java.lang.Integer, int, long, boolean)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelInitializer.<init>()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyPipeline.createServerCodec()",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpServerCodec.<init>(int, int, int, boolean)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyPipeline.http11(io.netty.channel.ChannelPipeline)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpServerExpectContinueHandler.<init>()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyPipeline.http11(io.netty.channel.ChannelPipeline)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelPipeline.addLast(java.lang.String, io.netty.channel.ChannelHandler)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyPipeline.http11Upgrade(io.netty.channel.ChannelPipeline, java.util.function.Supplier)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpServerUpgradeHandler.<init>(io.netty.handler.codec.http.HttpServerUpgradeHandler.SourceCodec, io.netty.handler.codec.http.HttpServerUpgradeHandler.UpgradeCodecFactory, int)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyPipeline.http11Upgrade(io.netty.channel.ChannelPipeline, java.util.function.Supplier)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelPipeline.addAfter(java.lang.String, java.lang.String, io.netty.channel.ChannelHandler)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyPipeline.http2(io.netty.channel.ChannelPipeline, java.util.function.Supplier)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelPipeline.addAfter(java.lang.String, java.lang.String, io.netty.channel.ChannelHandler)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyPipeline.http2c(io.netty.channel.ChannelPipeline, java.util.function.Supplier)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelPipeline.addAfter(java.lang.String, java.lang.String, io.netty.channel.ChannelHandler)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyPipeline.initChannel(io.netty.channel.socket.SocketChannel)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelPipeline.addLast(java.lang.String, io.netty.channel.ChannelHandler)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyPipeline.initChannel(io.netty.channel.socket.SocketChannel)",
+    "thirdPartyMethod" : "io.netty.channel.socket.SocketChannel.pipeline()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyPipeline.initChannel(io.netty.channel.socket.SocketChannel)",
+    "thirdPartyMethod" : "io.netty.channel.socket.SocketChannel.alloc()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyPipeline.initChannel(io.netty.channel.socket.SocketChannel)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.HttpServerExpectContinueHandler.<init>()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyPipeline.initChannel(io.netty.channel.socket.SocketChannel)",
+    "thirdPartyMethod" : "io.netty.handler.ssl.SslContext.newHandler(io.netty.buffer.ByteBufAllocator)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettySender.close()",
+    "thirdPartyMethod" : "io.netty.channel.ChannelFuture.addListener(io.netty.util.concurrent.GenericFutureListener)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettySender.close()",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.writeAndFlush(java.lang.Object)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettySender.lambda.newChannelFutureListener(io.jooby.Sender.Callback, io.jooby.internal.netty.NettyContext, io.netty.channel.ChannelFuture)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelFuture.cause()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettySender.lambda.newChannelFutureListener(io.jooby.Sender.Callback, io.jooby.internal.netty.NettyContext, io.netty.channel.ChannelFuture)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelFuture.isSuccess()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettySender.write(byte[], io.jooby.Sender.Callback)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.writeAndFlush(java.lang.Object)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettySender.write(byte[], io.jooby.Sender.Callback)",
+    "thirdPartyMethod" : "io.netty.buffer.Unpooled.wrappedBuffer(byte[])"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettySender.write(byte[], io.jooby.Sender.Callback)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelFuture.addListener(io.netty.util.concurrent.GenericFutureListener)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettySender.write(byte[], io.jooby.Sender.Callback)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.DefaultHttpContent.<init>(io.netty.buffer.ByteBuf)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyServerSentEmitter.checkOpen()",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.channel()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyServerSentEmitter.checkOpen()",
+    "thirdPartyMethod" : "io.netty.channel.Channel.isOpen()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyServerSentEmitter.close()",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.close()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyServerSentEmitter.keepAlive(long)",
+    "thirdPartyMethod" : "io.netty.channel.EventLoop.schedule(java.lang.Runnable, long, java.util.concurrent.TimeUnit)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyServerSentEmitter.keepAlive(long)",
+    "thirdPartyMethod" : "io.netty.channel.Channel.eventLoop()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyServerSentEmitter.keepAlive(long)",
+    "thirdPartyMethod" : "io.netty.channel.EventLoop.next()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyServerSentEmitter.keepAlive(long)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.channel()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyServerSentEmitter.operationComplete(io.netty.util.concurrent.Future)",
+    "thirdPartyMethod" : "io.netty.util.concurrent.Future.cause()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyServerSentEmitter.operationComplete(io.netty.util.concurrent.Future)",
+    "thirdPartyMethod" : "io.netty.util.concurrent.Future.isSuccess()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyServerSentEmitter.send(io.jooby.ServerSentMessage)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.writeAndFlush(java.lang.Object)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyServerSentEmitter.send(io.jooby.ServerSentMessage)",
+    "thirdPartyMethod" : "io.netty.buffer.Unpooled.wrappedBuffer(byte[])"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyServerSentEmitter.send(io.jooby.ServerSentMessage)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelFuture.addListener(io.netty.util.concurrent.GenericFutureListener)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyTransport.EpollTransport.configure(io.netty.channel.EventLoopGroup, io.netty.channel.EventLoopGroup)",
+    "thirdPartyMethod" : "io.netty.bootstrap.ServerBootstrap.channel(java.lang.Class)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyTransport.EpollTransport.configure(io.netty.channel.EventLoopGroup, io.netty.channel.EventLoopGroup)",
+    "thirdPartyMethod" : "io.netty.bootstrap.ServerBootstrap.option(io.netty.channel.ChannelOption, java.lang.Object)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyTransport.EpollTransport.createEventLoop(int, java.lang.String, int)",
+    "thirdPartyMethod" : "io.netty.util.concurrent.DefaultThreadFactory.<init>(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyTransport.EpollTransport.createEventLoop(int, java.lang.String, int)",
+    "thirdPartyMethod" : "io.netty.channel.epoll.EpollEventLoopGroup.<init>(int, java.util.concurrent.ThreadFactory)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyTransport.JDKTransport.configure(io.netty.channel.EventLoopGroup, io.netty.channel.EventLoopGroup)",
+    "thirdPartyMethod" : "io.netty.bootstrap.ServerBootstrap.channel(java.lang.Class)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyTransport.JDKTransport.createEventLoop(int, java.lang.String, int)",
+    "thirdPartyMethod" : "io.netty.util.concurrent.DefaultThreadFactory.<init>(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyTransport.JDKTransport.createEventLoop(int, java.lang.String, int)",
+    "thirdPartyMethod" : "io.netty.channel.nio.NioEventLoopGroup.<init>(int, java.util.concurrent.ThreadFactory)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyTransport.JDKTransport.createEventLoop(int, java.lang.String, int)",
+    "thirdPartyMethod" : "io.netty.channel.nio.NioEventLoopGroup.setIoRatio(int)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyTransport.KQueueTransport.configure(io.netty.channel.EventLoopGroup, io.netty.channel.EventLoopGroup)",
+    "thirdPartyMethod" : "io.netty.bootstrap.ServerBootstrap.channel(java.lang.Class)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyTransport.KQueueTransport.createEventLoop(int, java.lang.String, int)",
+    "thirdPartyMethod" : "io.netty.util.concurrent.DefaultThreadFactory.<init>(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyTransport.KQueueTransport.createEventLoop(int, java.lang.String, int)",
+    "thirdPartyMethod" : "io.netty.channel.kqueue.KQueueEventLoopGroup.<init>(int, java.util.concurrent.ThreadFactory)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyTransport.KQueueTransport.createEventLoop(int, java.lang.String, int)",
+    "thirdPartyMethod" : "io.netty.channel.kqueue.KQueueEventLoopGroup.setIoRatio(int)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyTransport.configure(io.netty.channel.EventLoopGroup, io.netty.channel.EventLoopGroup)",
+    "thirdPartyMethod" : "io.netty.bootstrap.ServerBootstrap.group(io.netty.channel.EventLoopGroup, io.netty.channel.EventLoopGroup)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyTransport.configure(io.netty.channel.EventLoopGroup, io.netty.channel.EventLoopGroup)",
+    "thirdPartyMethod" : "io.netty.bootstrap.ServerBootstrap.<init>()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyTransport.configure(io.netty.channel.EventLoopGroup, io.netty.channel.EventLoopGroup)",
+    "thirdPartyMethod" : "io.netty.bootstrap.ServerBootstrap.option(io.netty.channel.ChannelOption, java.lang.Object)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyTransport.isEpoll(java.lang.ClassLoader)",
+    "thirdPartyMethod" : "io.netty.channel.epoll.Epoll.isAvailable()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyTransport.isKQueue(java.lang.ClassLoader)",
+    "thirdPartyMethod" : "io.netty.channel.kqueue.KQueue.isAvailable()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.<clinit>()",
+    "thirdPartyMethod" : "io.netty.util.AttributeKey.newInstance(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.<init>(io.jooby.internal.netty.NettyContext)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.channel()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.<init>(io.jooby.internal.netty.NettyContext)",
+    "thirdPartyMethod" : "io.netty.channel.Channel.attr(io.netty.util.AttributeKey)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.<init>(io.jooby.internal.netty.NettyContext)",
+    "thirdPartyMethod" : "io.netty.util.Attribute.set(java.lang.Object)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.array(io.netty.buffer.ByteBuf)",
+    "thirdPartyMethod" : "io.netty.buffer.ByteBuf.readableBytes()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.array(io.netty.buffer.ByteBuf)",
+    "thirdPartyMethod" : "io.netty.buffer.ByteBuf.getBytes(int, byte[])"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.handleClose(io.jooby.WebSocketCloseStatus)",
+    "thirdPartyMethod" : "io.netty.channel.Channel.attr(io.netty.util.AttributeKey)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.handleClose(io.jooby.WebSocketCloseStatus)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelFuture.addListener(io.netty.util.concurrent.GenericFutureListener)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.handleClose(io.jooby.WebSocketCloseStatus)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.websocketx.CloseWebSocketFrame.<init>(int, java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.handleClose(io.jooby.WebSocketCloseStatus)",
+    "thirdPartyMethod" : "io.netty.channel.Channel.writeAndFlush(java.lang.Object)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.handleClose(io.jooby.WebSocketCloseStatus)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.channel()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.handleClose(io.jooby.WebSocketCloseStatus)",
+    "thirdPartyMethod" : "io.netty.util.Attribute.set(java.lang.Object)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.handleError(java.lang.Throwable)",
+    "thirdPartyMethod" : "io.netty.util.Attribute.set(java.lang.Object)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.handleError(java.lang.Throwable)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.channel()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.handleError(java.lang.Throwable)",
+    "thirdPartyMethod" : "io.netty.channel.Channel.attr(io.netty.util.AttributeKey)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.handleMessage(io.netty.handler.codec.http.websocketx.WebSocketFrame)",
+    "thirdPartyMethod" : "io.netty.buffer.Unpooled.copiedBuffer(io.netty.buffer.ByteBuf)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.handleMessage(io.netty.handler.codec.http.websocketx.WebSocketFrame)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.websocketx.WebSocketFrame.isFinalFragment()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.handleMessage(io.netty.handler.codec.http.websocketx.WebSocketFrame)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.websocketx.WebSocketFrame.release()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.handleMessage(io.netty.handler.codec.http.websocketx.WebSocketFrame)",
+    "thirdPartyMethod" : "io.netty.buffer.ByteBuf.writeBytes(io.netty.buffer.ByteBuf)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.handleMessage(io.netty.handler.codec.http.websocketx.WebSocketFrame)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.websocketx.WebSocketFrame.content()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.isOpen()",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.channel()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.isOpen()",
+    "thirdPartyMethod" : "io.netty.channel.Channel.isOpen()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.lambda.toWebSocketCloseStatus(io.netty.handler.codec.http.websocketx.CloseWebSocketFrame)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.websocketx.CloseWebSocketFrame.reasonText()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.lambda.toWebSocketCloseStatus(io.netty.handler.codec.http.websocketx.CloseWebSocketFrame)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.websocketx.CloseWebSocketFrame.statusCode()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.operationComplete(io.netty.channel.ChannelFuture)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelFuture.cause()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.send(byte[], boolean)",
+    "thirdPartyMethod" : "io.netty.buffer.Unpooled.wrappedBuffer(byte[])"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.send(io.netty.buffer.ByteBuf, boolean)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.websocketx.TextWebSocketFrame.<init>(io.netty.buffer.ByteBuf)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.send(io.netty.buffer.ByteBuf, boolean)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.channel()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.send(io.netty.buffer.ByteBuf, boolean)",
+    "thirdPartyMethod" : "io.netty.channel.Channel.writeAndFlush(java.lang.Object)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.send(io.netty.buffer.ByteBuf, boolean)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelFuture.addListener(io.netty.util.concurrent.GenericFutureListener)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.send(java.lang.String, boolean)",
+    "thirdPartyMethod" : "io.netty.buffer.Unpooled.copiedBuffer(java.lang.CharSequence, java.nio.charset.Charset)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.toWebSocketCloseStatus(io.netty.handler.codec.http.websocketx.CloseWebSocketFrame)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.websocketx.CloseWebSocketFrame.release()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocket.toWebSocketCloseStatus(io.netty.handler.codec.http.websocketx.CloseWebSocketFrame)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.websocketx.CloseWebSocketFrame.statusCode()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocketCompressor.<init>(int)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.websocketx.extensions.compression.PerMessageDeflateServerExtensionHandshaker.<init>(int, boolean, int, boolean, boolean)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocketCompressor.<init>(int)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.websocketx.extensions.compression.DeflateFrameServerExtensionHandshaker.<init>(int)"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocketCompressor.<init>(int)",
+    "thirdPartyMethod" : "io.netty.handler.codec.compression.ZlibCodecFactory.isSupportingWindowSizeAndMemLevel()"
+  }, {
+    "caller" : "io.jooby.internal.netty.NettyWebSocketCompressor.<init>(int)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.websocketx.extensions.WebSocketServerExtensionHandler.<init>(io.netty.handler.codec.http.websocketx.extensions.WebSocketServerExtensionHandshaker[])"
+  }, {
+    "caller" : "io.jooby.netty.Netty.newPipeline(io.netty.handler.codec.http.multipart.HttpDataFactory, io.netty.handler.ssl.SslContext, io.jooby.Http2Configurer)",
+    "thirdPartyMethod" : "io.netty.channel.EventLoopGroup.next()"
+  }, {
+    "caller" : "io.jooby.netty.Netty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "io.netty.bootstrap.ServerBootstrap.childOption(io.netty.channel.ChannelOption, java.lang.Object)"
+  }, {
+    "caller" : "io.jooby.netty.Netty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "io.netty.handler.codec.http.multipart.DefaultHttpDataFactory.<init>(long)"
+  }, {
+    "caller" : "io.jooby.netty.Netty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "io.netty.util.concurrent.DefaultThreadFactory.<init>(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.netty.Netty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "io.netty.bootstrap.ServerBootstrap.childHandler(io.netty.channel.ChannelHandler)"
+  }, {
+    "caller" : "io.jooby.netty.Netty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "io.netty.channel.ChannelFuture.get()"
+  }, {
+    "caller" : "io.jooby.netty.Netty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "io.netty.bootstrap.ServerBootstrap.bind(java.lang.String, int)"
+  }, {
+    "caller" : "io.jooby.netty.Netty.stop()",
+    "thirdPartyMethod" : "io.netty.channel.EventLoopGroup.shutdownGracefully()"
+  }, {
+    "caller" : "io.jooby.netty.Netty.wrap(javax.net.ssl.SSLContext, io.netty.handler.ssl.ClientAuth, java.lang.String[], boolean)",
+    "thirdPartyMethod" : "io.netty.handler.ssl.ApplicationProtocolConfig.<init>(io.netty.handler.ssl.ApplicationProtocolConfig.Protocol, io.netty.handler.ssl.ApplicationProtocolConfig.SelectorFailureBehavior, io.netty.handler.ssl.ApplicationProtocolConfig.SelectedListenerFailureBehavior, java.lang.Iterable)"
+  }, {
+    "caller" : "io.jooby.netty.Netty.wrap(javax.net.ssl.SSLContext, io.netty.handler.ssl.ClientAuth, java.lang.String[], boolean)",
+    "thirdPartyMethod" : "io.netty.handler.ssl.JdkSslContext.<init>(javax.net.ssl.SSLContext, boolean, java.lang.Iterable, io.netty.handler.ssl.CipherSuiteFilter, io.netty.handler.ssl.ApplicationProtocolConfig, io.netty.handler.ssl.ClientAuth, java.lang.String[], boolean)"
+  } ]
+}

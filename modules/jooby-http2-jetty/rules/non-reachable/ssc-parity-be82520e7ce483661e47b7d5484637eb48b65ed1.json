@@ -1,0 +1,139 @@
+{
+  "advisories": [
+    {
+      "ruleId": "ssc-parity-be82520e7ce483661e47b7d5484637eb48b65ed1",
+      "title": "Improper Input Validation in org.eclipse.jetty:jetty-http",
+      "description": "Affected versions of org.eclipse.jetty:jetty-http are vulnerable to Improper Input Validation.",
+      "ecosystem": "maven",
+      "severity": "LOW",
+      "references": {
+        "cveIds": [
+          "CVE-2025-11143"
+        ],
+        "cweIds": [
+          "CWE-20: Improper Input Validation"
+        ],
+        "owaspIds": [
+          "A03:2021 - Injection",
+          "A05:2025 - Injection",
+          "A06:2021 - Vulnerable and Outdated Components"
+        ],
+        "urls": [
+          "https://github.com/advisories/GHSA-wjpw-4j6x-6rwh",
+          "https://nvd.nist.gov/vuln/detail/CVE-2025-11143"
+        ]
+      },
+      "announcedAt": "2026-03-05T21:41:25Z",
+      "ruleText": {
+        "id": "ssc-parity-be82520e7ce483661e47b7d5484637eb48b65ed1",
+        "message": "Affected versions of org.eclipse.jetty:jetty-http are vulnerable to Improper Input Validation.",
+        "severity": "INFO",
+        "metadata": {
+          "confidence": "LOW",
+          "category": "security",
+          "cve": "CVE-2025-11143",
+          "cwe": [
+            "CWE-20: Improper Input Validation"
+          ],
+          "ghsa": "GHSA-wjpw-4j6x-6rwh",
+          "owasp": [
+            "A03:2021 - Injection",
+            "A05:2025 - Injection",
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2026-03-05T21:41:25Z",
+          "references": [
+            "https://github.com/advisories/GHSA-wjpw-4j6x-6rwh",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-11143"
+          ],
+          "sca-fix-versions": [
+            {
+              "org.eclipse.jetty:jetty-http": "12.1.5"
+            },
+            {
+              "org.eclipse.jetty:jetty-http": "12.0.31"
+            }
+          ],
+          "sca-kind": "legacy",
+          "sca-schema": 20230302,
+          "sca-severity": "LOW",
+          "sca-vuln-database-identifier": "CVE-2025-11143",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Improper Validation"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 281415,
+              "rv_id": 1280811,
+              "rule_id": "x8UAp8r",
+              "version_id": "e1Te0Xe",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-be82520e7ce483661e47b7d5484637eb48b65ed1",
+              "origin": "custom"
+            }
+          }
+        },
+        "r2c-internal-project-depends-on": {
+          "depends-on-either": [
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty:jetty-http",
+              "version": ">=10.0.0, <=10.0.26"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty:jetty-http",
+              "version": ">=11.0.0, <=11.0.26"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty:jetty-http",
+              "version": ">=12.0.0, <=12.0.30"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty:jetty-http",
+              "version": ">=12.1.0, <=12.1.4"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty:jetty-http",
+              "version": ">=9.4.0, <=9.4.58"
+            }
+          ]
+        },
+        "languages": [
+          "java",
+          "kotlin",
+          "scala"
+        ]
+      },
+      "reachability": "VERSION_SPECIFIER",
+      "vulnerableDependencies": [
+        {
+          "name": "org.eclipse.jetty:jetty-http",
+          "versionSpecifier": ">=10.0.0, <=10.0.26"
+        }
+      ],
+      "safeDependencies": [
+        {
+          "name": "org.eclipse.jetty:jetty-http",
+          "versionSpecifier": "12.1.5"
+        },
+        {
+          "name": "org.eclipse.jetty:jetty-http",
+          "versionSpecifier": "12.0.31"
+        }
+      ],
+      "cve": "CVE-2025-11143",
+      "ghsa": "GHSA-wjpw-4j6x-6rwh",
+      "reachableIf": ""
+    }
+  ],
+  "totalCount": "1"
+}

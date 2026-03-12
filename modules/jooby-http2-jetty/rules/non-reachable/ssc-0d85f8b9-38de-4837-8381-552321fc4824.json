@@ -1,0 +1,156 @@
+{
+  "advisories": [
+    {
+      "ruleId": "ssc-0d85f8b9-38de-4837-8381-552321fc4824",
+      "title": "Integer Overflow or Wraparound in org.eclipse.jetty.http2:http2-hpack",
+      "description": "Affected versions of org.eclipse.jetty.http3:http3-qpack, org.eclipse.jetty:jetty-http, and org.eclipse.jetty.http2:http2-hpack are vulnerable to Integer Overflow Or Wraparound. An attacker can exploit the integer overflow in `MetaDataBuilder.checkSize` to manipulate HTTP/2 HPACK header values, potentially causing buffer overflows and server memory exhaustion by sending crafted headers.",
+      "ecosystem": "maven",
+      "severity": "HIGH",
+      "references": {
+        "cveIds": [
+          "CVE-2023-36478"
+        ],
+        "cweIds": [
+          "CWE-190: Integer Overflow or Wraparound"
+        ],
+        "owaspIds": [
+          "A06:2021 - Vulnerable and Outdated Components"
+        ],
+        "urls": [
+          "https://github.com/advisories/GHSA-wgh7-54f2-x98r",
+          "https://nvd.nist.gov/vuln/detail/CVE-2023-36478"
+        ]
+      },
+      "announcedAt": "2023-10-10T21:16:23Z",
+      "ruleText": {
+        "id": "ssc-0d85f8b9-38de-4837-8381-552321fc4824",
+        "message": "Affected versions of org.eclipse.jetty.http3:http3-qpack, org.eclipse.jetty:jetty-http, and org.eclipse.jetty.http2:http2-hpack are vulnerable to Integer Overflow Or Wraparound. An attacker can exploit the integer overflow in `MetaDataBuilder.checkSize` to manipulate HTTP/2 HPACK header values, potentially causing buffer overflows and server memory exhaustion by sending crafted headers.",
+        "severity": "ERROR",
+        "metadata": {
+          "confidence": "HIGH",
+          "category": "security",
+          "cve": "CVE-2023-36478",
+          "cwe": [
+            "CWE-190: Integer Overflow or Wraparound"
+          ],
+          "ghsa": "GHSA-wgh7-54f2-x98r",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2023-10-10T21:16:23Z",
+          "references": [
+            "https://github.com/advisories/GHSA-wgh7-54f2-x98r",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-36478"
+          ],
+          "sca-fix-versions": [
+            {
+              "org.eclipse.jetty.http2:http2-hpack": "9.4.53"
+            },
+            {
+              "org.eclipse.jetty.http2:http2-hpack": "11.0.16"
+            },
+            {
+              "org.eclipse.jetty.http2:http2-hpack": "10.0.16"
+            },
+            {
+              "org.eclipse.jetty.http3:http3-qpack": "11.0.16"
+            },
+            {
+              "org.eclipse.jetty.http3:http3-qpack": "10.0.16"
+            }
+          ],
+          "sca-kind": "upgrade-only",
+          "sca-schema": 20230302,
+          "sca-severity": "HIGH",
+          "sca-vuln-database-identifier": "CVE-2023-36478",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Other"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 94196,
+              "rv_id": 952483,
+              "rule_id": "j2Ugv85",
+              "version_id": "K3TJ7No",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-0d85f8b9-38de-4837-8381-552321fc4824",
+              "origin": "custom"
+            }
+          }
+        },
+        "r2c-internal-project-depends-on": {
+          "depends-on-either": [
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty.http2:http2-hpack",
+              "version": ">=10.0.0, <=10.0.15"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty.http2:http2-hpack",
+              "version": ">=11.0.0, <=11.0.15"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty.http2:http2-hpack",
+              "version": ">=9.3.0, <=9.4.52"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty.http3:http3-qpack",
+              "version": ">=10.0.0, <=10.0.15"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty.http3:http3-qpack",
+              "version": ">=11.0.0, <=11.0.15"
+            }
+          ]
+        },
+        "languages": [
+          "java",
+          "kotlin",
+          "scala"
+        ]
+      },
+      "reachability": "ALWAYS_REACHABLE",
+      "vulnerableDependencies": [
+        {
+          "name": "org.eclipse.jetty.http2:http2-hpack",
+          "versionSpecifier": ">=10.0.0, <=10.0.15"
+        }
+      ],
+      "safeDependencies": [
+        {
+          "name": "org.eclipse.jetty.http2:http2-hpack",
+          "versionSpecifier": "9.4.53"
+        },
+        {
+          "name": "org.eclipse.jetty.http2:http2-hpack",
+          "versionSpecifier": "11.0.16"
+        },
+        {
+          "name": "org.eclipse.jetty.http2:http2-hpack",
+          "versionSpecifier": "10.0.16"
+        },
+        {
+          "name": "org.eclipse.jetty.http3:http3-qpack",
+          "versionSpecifier": "11.0.16"
+        },
+        {
+          "name": "org.eclipse.jetty.http3:http3-qpack",
+          "versionSpecifier": "10.0.16"
+        }
+      ],
+      "cve": "CVE-2023-36478",
+      "ghsa": "GHSA-wgh7-54f2-x98r",
+      "reachableIf": ""
+    }
+  ],
+  "totalCount": "1"
+}

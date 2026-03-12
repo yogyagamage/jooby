@@ -1,0 +1,17 @@
+{
+  "skippedPaths" : [ {
+    "entryPoint" : "io.jooby.internal.utow.UtowSender.onException(io.undertow.server.HttpServerExchange, io.undertow.io.Sender, java.io.IOException)",
+    "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.endExchange()",
+    "directCaller" : "io.jooby.internal.utow.UtowContext.destroy(java.lang.Exception)",
+    "path" : [ "io.jooby.internal.utow.UtowSender.onException(io.undertow.server.HttpServerExchange, io.undertow.io.Sender, java.io.IOException)", "io.jooby.internal.utow.UtowContext.destroy(java.lang.Exception)", "io.undertow.server.HttpServerExchange.endExchange()" ],
+    "methodSources" : [ null, "void destroy(Exception cause) {\n    try {\n        if (cause != null) {\n            Logger log = router.getLog();\n            if (Server.connectionLost(cause)) {\n                log.debug(\"exception found while sending response {} {}\", getMethod(), getRequestPath(), cause);\n            } else {\n                log.error(\"exception found while sending response {} {}\", getMethod(), getRequestPath(), cause);\n            }\n        }\n    } finally // PATH: Test should invoke the next HttpServerExchange.endExchange(...) [step in execution path]\n    {\n        this.exchange.endExchange();\n    }\n}" ],
+    "constructors" : [ "public UtowSender(UtowContext ctx, HttpServerExchange exchange) {\n    this.ctx = ctx;\n    this.exchange = exchange;\n}", "1() {\n}" ],
+    "fieldDeclarations" : [ "private final UtowContext ctx;", "private final HttpServerExchange exchange;" ],
+    "setters" : [ "@Override\npublic void close() {\n    ctx.destroy(null);\n}" ],
+    "imports" : [ "io.jooby.Router", "io.jooby.Sender", "io.jooby.Sender.Callback", "io.jooby.Server", "io.undertow.io.IoCallback", "io.undertow.io.Sender", "io.undertow.server.HttpServerExchange", "org.slf4j.Logger" ],
+    "testTemplate" : "package io.jooby.internal.utow;\n\npublic class 1_UtowContextdestroy_HttpServerExchangeendExchangeFikaTest {\n\n    @Test\n    public void testOnException() {\n    }\n}",
+    "conditionCount" : 1001,
+    "callCount" : 1,
+    "covered" : false
+  } ]
+}

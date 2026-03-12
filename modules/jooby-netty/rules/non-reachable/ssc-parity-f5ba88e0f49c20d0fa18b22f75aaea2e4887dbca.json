@@ -1,0 +1,108 @@
+{
+  "advisories": [
+    {
+      "ruleId": "ssc-parity-f5ba88e0f49c20d0fa18b22f75aaea2e4887dbca",
+      "title": "Uncontrolled Resource Consumption in io.netty:netty-common",
+      "description": "Affected versions of io.netty:netty-common are vulnerable to Uncontrolled Resource Consumption.",
+      "ecosystem": "maven",
+      "severity": "MEDIUM",
+      "references": {
+        "cveIds": [
+          "CVE-2025-25193"
+        ],
+        "cweIds": [
+          "CWE-400: Uncontrolled Resource Consumption"
+        ],
+        "owaspIds": [
+          "A06:2021 - Vulnerable and Outdated Components"
+        ],
+        "urls": [
+          "https://github.com/advisories/GHSA-389x-839f-4rhx",
+          "https://nvd.nist.gov/vuln/detail/CVE-2025-25193"
+        ]
+      },
+      "announcedAt": "2025-02-10T18:14:47Z",
+      "ruleText": {
+        "id": "ssc-parity-f5ba88e0f49c20d0fa18b22f75aaea2e4887dbca",
+        "message": "Affected versions of io.netty:netty-common are vulnerable to Uncontrolled Resource Consumption.",
+        "severity": "WARNING",
+        "metadata": {
+          "confidence": "LOW",
+          "category": "security",
+          "cve": "CVE-2025-25193",
+          "cwe": [
+            "CWE-400: Uncontrolled Resource Consumption"
+          ],
+          "ghsa": "GHSA-389x-839f-4rhx",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2025-02-10T18:14:47Z",
+          "references": [
+            "https://github.com/advisories/GHSA-389x-839f-4rhx",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-25193"
+          ],
+          "sca-fix-versions": [
+            {
+              "io.netty:netty-common": "4.1.118.Final"
+            }
+          ],
+          "sca-kind": "legacy",
+          "sca-schema": 20230302,
+          "sca-severity": "MODERATE",
+          "sca-vuln-database-identifier": "CVE-2025-25193",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Denial-of-Service (DoS)"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 155093,
+              "rv_id": 983726,
+              "rule_id": "6JUv9jo",
+              "version_id": "PkTQwkb",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-f5ba88e0f49c20d0fa18b22f75aaea2e4887dbca",
+              "origin": "custom"
+            }
+          }
+        },
+        "r2c-internal-project-depends-on": {
+          "depends-on-either": [
+            {
+              "namespace": "maven",
+              "package": "io.netty:netty-common",
+              "version": "<4.1.118.Final"
+            }
+          ]
+        },
+        "languages": [
+          "java",
+          "kotlin",
+          "scala"
+        ]
+      },
+      "reachability": "VERSION_SPECIFIER",
+      "vulnerableDependencies": [
+        {
+          "name": "io.netty:netty-common",
+          "versionSpecifier": "<4.1.118.Final"
+        }
+      ],
+      "safeDependencies": [
+        {
+          "name": "io.netty:netty-common",
+          "versionSpecifier": "4.1.118.Final"
+        }
+      ],
+      "cve": "CVE-2025-25193",
+      "ghsa": "GHSA-389x-839f-4rhx",
+      "reachableIf": ""
+    }
+  ],
+  "totalCount": "1"
+}

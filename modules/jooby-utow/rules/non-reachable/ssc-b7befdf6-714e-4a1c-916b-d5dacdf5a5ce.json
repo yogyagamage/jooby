@@ -1,0 +1,132 @@
+{
+  "advisories": [
+    {
+      "ruleId": "ssc-b7befdf6-714e-4a1c-916b-d5dacdf5a5ce",
+      "title": "Race Condition in io.undertow:undertow-core",
+      "description": "Affected versions of io.undertow:undertow-core are vulnerable to Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition'). The `ProxyProtocolReadListener` reuses the same `StringBuilder` instance across multiple requests. This issue occurs when the `parseProxyProtocolV1` method processes multiple requests on the same HTTP connection. As a result, different requests may share the same `StringBuilder` instance, potentially leading to information leakage between requests or responses.",
+      "ecosystem": "maven",
+      "severity": "HIGH",
+      "references": {
+        "cveIds": [
+          "CVE-2024-7885"
+        ],
+        "cweIds": [
+          "CWE-362: Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')"
+        ],
+        "owaspIds": [
+          "A06:2021 - Vulnerable and Outdated Components"
+        ],
+        "urls": [
+          "https://github.com/advisories/GHSA-9623-mqmm-5rcf",
+          "https://nvd.nist.gov/vuln/detail/CVE-2024-7885"
+        ]
+      },
+      "announcedAt": "2024-08-21T15:30:54Z",
+      "ruleText": {
+        "id": "ssc-b7befdf6-714e-4a1c-916b-d5dacdf5a5ce",
+        "message": "Affected versions of io.undertow:undertow-core are vulnerable to Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition'). The `ProxyProtocolReadListener` reuses the same `StringBuilder` instance across multiple requests. This issue occurs when the `parseProxyProtocolV1` method processes multiple requests on the same HTTP connection. As a result, different requests may share the same `StringBuilder` instance, potentially leading to information leakage between requests or responses.",
+        "severity": "ERROR",
+        "metadata": {
+          "confidence": "HIGH",
+          "category": "security",
+          "cve": "CVE-2024-7885",
+          "cwe": [
+            "CWE-362: Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')"
+          ],
+          "ghsa": "GHSA-9623-mqmm-5rcf",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2024-08-21T15:30:54Z",
+          "references": [
+            "https://github.com/advisories/GHSA-9623-mqmm-5rcf",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-7885"
+          ],
+          "sca-fix-versions": [
+            {
+              "io.undertow:undertow-core": "2.3.17.Final"
+            },
+            {
+              "io.undertow:undertow-core": "2.2.36.Final"
+            }
+          ],
+          "sca-kind": "reachable",
+          "sca-schema": 20230302,
+          "sca-severity": "HIGH",
+          "sca-vuln-database-identifier": "CVE-2024-7885",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Other"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 142630,
+              "rv_id": 950441,
+              "rule_id": "2ZUzeeo",
+              "version_id": "vdTGjZ2",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-b7befdf6-714e-4a1c-916b-d5dacdf5a5ce",
+              "origin": "custom"
+            }
+          }
+        },
+        "r2c-internal-project-depends-on": {
+          "depends-on-either": [
+            {
+              "namespace": "maven",
+              "package": "io.undertow:undertow-core",
+              "version": "<2.2.36.Final"
+            },
+            {
+              "namespace": "maven",
+              "package": "io.undertow:undertow-core",
+              "version": ">=2.3.0.Alpha1, <2.3.17.Final"
+            }
+          ]
+        },
+        "languages": [
+          "java",
+          "kotlin",
+          "scala"
+        ],
+        "patterns": [
+          {
+            "pattern-either": [
+              {
+                "pattern": "(io.undertow.Undertow.ListenerBuilder $_). ... .setUseProxyProtocol(true)"
+              },
+              {
+                "pattern": "io.undertow.Undertow.ListenerBuilder(...). ... .setUseProxyProtocol(true)"
+              }
+            ]
+          }
+        ]
+      },
+      "reachability": "REACHABILITY",
+      "vulnerableDependencies": [
+        {
+          "name": "io.undertow:undertow-core",
+          "versionSpecifier": "<2.2.36.Final"
+        }
+      ],
+      "safeDependencies": [
+        {
+          "name": "io.undertow:undertow-core",
+          "versionSpecifier": "2.3.17.Final"
+        },
+        {
+          "name": "io.undertow:undertow-core",
+          "versionSpecifier": "2.2.36.Final"
+        }
+      ],
+      "cve": "CVE-2024-7885",
+      "ghsa": "GHSA-9623-mqmm-5rcf",
+      "reachableIf": ""
+    }
+  ],
+  "totalCount": "1"
+}

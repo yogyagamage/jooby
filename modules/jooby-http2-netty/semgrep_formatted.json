@@ -1,0 +1,1193 @@
+{
+  "version": "1.153.0",
+  "results": [
+    {
+      "check_id": "ssc-260aea16-d390-49d9-9bba-3606330930d3",
+      "path": "pom.xml",
+      "start": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "extra": {
+        "metavars": {},
+        "message": "Affected versions of io.netty:netty-codec-http2 are vulnerable to Uncontrolled Resource Consumption. The vulnerability arises when a client issues frequent `RST frames`, potentially leading to server overload and facilitating a DDoS attack by imposing a significant load on the remote system.",
+        "metadata": {
+          "confidence": "HIGH",
+          "category": "security",
+          "cve": "",
+          "cwe": [
+            "CWE-400: Uncontrolled Resource Consumption"
+          ],
+          "ghsa": "GHSA-xpw8-rcwv-8f8p",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2023-10-10T22:22:54Z",
+          "references": [
+            "https://github.com/advisories/GHSA-xpw8-rcwv-8f8p",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-44487"
+          ],
+          "sca-fix-versions": [
+            {
+              "io.netty:netty-codec-http2": "4.1.100.Final"
+            }
+          ],
+          "sca-kind": "upgrade-only",
+          "sca-schema": 20230302,
+          "sca-severity": "HIGH",
+          "sca-vuln-database-identifier": "GHSA-xpw8-rcwv-8f8p",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Denial-of-Service (DoS)"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 94232,
+              "rv_id": 952693,
+              "rule_id": "lBU49bg",
+              "version_id": "2KTYLb4",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-260aea16-d390-49d9-9bba-3606330930d3",
+              "origin": "custom",
+              "rule_name": "ssc-260aea16-d390-49d9-9bba-3606330930d3"
+            },
+            "src": "unchanged"
+          },
+          "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-260aea16-d390-49d9-9bba-3606330930d3",
+          "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-260aea16-d390-49d9-9bba-3606330930d3",
+          "dev.semgrep.actions": []
+        },
+        "severity": "ERROR",
+        "fingerprint": "33f820a80e7711f4bdb4843db3e900a50e2d6dce37867ac689d48048c2d56f790e1062585bf2646660bf494fbd47ba2052baec9f63c17d52ed72f1467df4a00d_0",
+        "lines": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+        "is_ignored": false,
+        "sca_info": {
+          "reachability_rule": false,
+          "sca_finding_schema": 20220913,
+          "dependency_match": {
+            "dependency_pattern": {
+              "ecosystem": "maven",
+              "package": "io.netty:netty-codec-http2",
+              "semver_range": "<4.1.100.Final"
+            },
+            "found_dependency": {
+              "package": "io.netty:netty-codec-http2",
+              "version": "4.1.80.Final",
+              "ecosystem": "maven",
+              "allowed_hashes": {},
+              "transitivity": "direct",
+              "manifest_path": "pom.xml",
+              "lockfile_path": "pom.xml",
+              "line_number": 1,
+              "children": [
+                {
+                  "package": "io.netty:netty-buffer",
+                  "version": "4.1.80.Final"
+                },
+                {
+                  "package": "io.netty:netty-codec",
+                  "version": "4.1.80.Final"
+                },
+                {
+                  "package": "io.netty:netty-common",
+                  "version": "4.1.80.Final"
+                },
+                {
+                  "package": "io.netty:netty-transport",
+                  "version": "4.1.80.Final"
+                }
+              ]
+            },
+            "lockfile": "pom.xml"
+          },
+          "reachable": false
+        },
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "ssc-27f34c41-f34b-4495-9e39-28ce8a153dca",
+      "path": "pom.xml",
+      "start": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "extra": {
+        "metavars": {},
+        "message": "Affected versions of io.grpc:grpc-netty-shaded and io.netty:netty-codec-http2 are vulnerable to Allocation of Resources Without Limits or Throttling. Netty's HTTP/2 implementation fails to correctly track active streams when sending RST_STREAM in response to certain malformed control frames. An attacker can send, for example, WINDOW_UPDATE frames with a zero or overflow increment, HEADERS/DATA on a half-closed stream, or PRIORITY frames with invalid length to trigger RST_STREAMs; each reset decrements Netty's concurrent-stream counter even though the request is still processed. By repeating this on a single connection, the attacker can open an unbounded number of streams, exhausting CPU and memory and causing a denial of service. This is a protocol level attack.",
+        "metadata": {
+          "confidence": "HIGH",
+          "category": "security",
+          "cve": "CVE-2025-55163",
+          "cwe": [
+            "CWE-770: Allocation of Resources Without Limits or Throttling"
+          ],
+          "ghsa": "GHSA-prj3-ccx8-p6x4",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2025-08-13T19:06:56Z",
+          "references": [
+            "https://github.com/advisories/GHSA-prj3-ccx8-p6x4",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-55163"
+          ],
+          "sca-fix-versions": [
+            {
+              "io.grpc:grpc-netty-shaded": "1.75.0"
+            },
+            {
+              "io.netty:netty-codec-http2": "4.2.4.Final"
+            },
+            {
+              "io.netty:netty-codec-http2": "4.1.124.Final"
+            }
+          ],
+          "sca-kind": "upgrade-only",
+          "sca-schema": 20230302,
+          "sca-severity": "HIGH",
+          "sca-vuln-database-identifier": "CVE-2025-55163",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Other"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 208926,
+              "rv_id": 1153640,
+              "rule_id": "6JUZzL2",
+              "version_id": "X0T2Gb8",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-27f34c41-f34b-4495-9e39-28ce8a153dca",
+              "origin": "custom",
+              "rule_name": "ssc-27f34c41-f34b-4495-9e39-28ce8a153dca"
+            },
+            "src": "unchanged"
+          },
+          "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-27f34c41-f34b-4495-9e39-28ce8a153dca",
+          "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-27f34c41-f34b-4495-9e39-28ce8a153dca",
+          "dev.semgrep.actions": []
+        },
+        "severity": "ERROR",
+        "fingerprint": "c22786d10dbd97fcd438a4ceac50553973f01a8fbd5953ffaf00e34ca3cbc0d65714c116c01fdc3d782c50722858bfb36de5088236370a9c2876314f6222bdc6_0",
+        "lines": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+        "is_ignored": false,
+        "sca_info": {
+          "reachability_rule": false,
+          "sca_finding_schema": 20220913,
+          "dependency_match": {
+            "dependency_pattern": {
+              "ecosystem": "maven",
+              "package": "io.netty:netty-codec-http2",
+              "semver_range": "<=4.1.123.Final"
+            },
+            "found_dependency": {
+              "package": "io.netty:netty-codec-http2",
+              "version": "4.1.80.Final",
+              "ecosystem": "maven",
+              "allowed_hashes": {},
+              "transitivity": "direct",
+              "manifest_path": "pom.xml",
+              "lockfile_path": "pom.xml",
+              "line_number": 1,
+              "children": [
+                {
+                  "package": "io.netty:netty-buffer",
+                  "version": "4.1.80.Final"
+                },
+                {
+                  "package": "io.netty:netty-codec",
+                  "version": "4.1.80.Final"
+                },
+                {
+                  "package": "io.netty:netty-common",
+                  "version": "4.1.80.Final"
+                },
+                {
+                  "package": "io.netty:netty-transport",
+                  "version": "4.1.80.Final"
+                }
+              ]
+            },
+            "lockfile": "pom.xml"
+          },
+          "reachable": false
+        },
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "ssc-80b5ff99-02f7-5855-980f-d062664ea991",
+      "path": "pom.xml",
+      "start": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "extra": {
+        "metavars": {},
+        "message": "Affected versions of io.netty:netty-codec-http are vulnerable to Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling'). Netty's HTTP chunked‐encoding parser treats a lone LF in a chunk extension as the end of the size line (instead of requiring CRLF per RFC 9112). If a front‐end proxy instead treats that LF as part of the extension, an attacker can craft a \"funky chunks\" payload that the proxy sees as one request but Netty splits into two, enabling standard HTTP request‐smuggling attacks—bypassing access controls and corrupting responses to other clients.",
+        "metadata": {
+          "confidence": "HIGH",
+          "category": "security",
+          "cve": "CVE-2025-58056",
+          "cwe": [
+            "CWE-444: Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling')"
+          ],
+          "ghsa": "GHSA-fghv-69vj-qj49",
+          "owasp": [
+            "A04:2021 - Insecure Design",
+            "A06:2021 - Vulnerable and Outdated Components",
+            "A06:2025 - Insecure Design"
+          ],
+          "publish-date": "2025-09-04T17:35:20Z",
+          "references": [
+            "https://github.com/advisories/GHSA-fghv-69vj-qj49",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-58056"
+          ],
+          "sca-fix-versions": [
+            {
+              "io.netty:netty-codec-http": "4.2.5.Final"
+            },
+            {
+              "io.netty:netty-codec-http": "4.1.125.Final"
+            }
+          ],
+          "sca-kind": "reachable",
+          "sca-schema": 20230302,
+          "sca-severity": "LOW",
+          "sca-vuln-database-identifier": "CVE-2025-58056",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Improper Validation"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 210483,
+              "rv_id": 1240350,
+              "rule_id": "lBUlNEE",
+              "version_id": "kbTzvpl",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-80b5ff99-02f7-5855-980f-d062664ea991",
+              "origin": "custom",
+              "rule_name": "ssc-80b5ff99-02f7-5855-980f-d062664ea991"
+            },
+            "src": "unchanged"
+          },
+          "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-80b5ff99-02f7-5855-980f-d062664ea991",
+          "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-80b5ff99-02f7-5855-980f-d062664ea991",
+          "dev.semgrep.actions": []
+        },
+        "severity": "INFO",
+        "fingerprint": "1ce2623c8715f3e2f74b2a41f448a2220de2a159e3a73d3b53e99c678e21d4cd0796cb999f553dcea93f620f3cb9a6615bb06933dc5274e3bd5a008864609afb_0",
+        "lines": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+        "is_ignored": false,
+        "sca_info": {
+          "reachability_rule": true,
+          "sca_finding_schema": 20220913,
+          "dependency_match": {
+            "dependency_pattern": {
+              "ecosystem": "maven",
+              "package": "io.netty:netty-codec-http",
+              "semver_range": "<4.1.125.Final"
+            },
+            "found_dependency": {
+              "package": "io.netty:netty-codec-http",
+              "version": "4.1.80.Final",
+              "ecosystem": "maven",
+              "allowed_hashes": {},
+              "transitivity": "transitive",
+              "manifest_path": "pom.xml",
+              "lockfile_path": "pom.xml",
+              "line_number": 1,
+              "children": []
+            },
+            "lockfile": "pom.xml"
+          },
+          "reachable": false
+        },
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "ssc-b6eca65a-44c3-4343-b94c-7c0b0b3a9957",
+      "path": "pom.xml",
+      "start": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "extra": {
+        "metavars": {},
+        "message": "Affected versions of io.netty:netty-common are vulnerable to Uncontrolled Resource Consumption.",
+        "metadata": {
+          "confidence": "HIGH",
+          "category": "security",
+          "cve": "CVE-2024-47535",
+          "cwe": [
+            "CWE-400: Uncontrolled Resource Consumption"
+          ],
+          "ghsa": "GHSA-xq3w-v528-46rv",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2024-11-12T19:53:17Z",
+          "references": [
+            "https://github.com/advisories/GHSA-xq3w-v528-46rv",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-47535"
+          ],
+          "sca-fix-versions": [
+            {
+              "io.netty:netty-common": "4.1.115.Final"
+            }
+          ],
+          "sca-kind": "reachable",
+          "sca-reachable-if": "you run the netty application on a Windows machine",
+          "sca-schema": 20230302,
+          "sca-severity": "MODERATE",
+          "sca-vuln-database-identifier": "CVE-2024-47535",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Denial-of-Service (DoS)"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 147454,
+              "rv_id": 1183218,
+              "rule_id": "DbU6A12",
+              "version_id": "RGTR530",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-b6eca65a-44c3-4343-b94c-7c0b0b3a9957",
+              "origin": "custom",
+              "rule_name": "ssc-b6eca65a-44c3-4343-b94c-7c0b0b3a9957"
+            },
+            "src": "unchanged"
+          },
+          "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-b6eca65a-44c3-4343-b94c-7c0b0b3a9957",
+          "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-b6eca65a-44c3-4343-b94c-7c0b0b3a9957",
+          "dev.semgrep.actions": []
+        },
+        "severity": "WARNING",
+        "fingerprint": "d07b22777666bce0f5300cf6e6b0a2a6e53b9580b2dfa74d13b15755d2f15b4f3afc2c0b1eac1ffd2a4fe1a5ab3a4a919a1e0c9d898634face03215589341638_0",
+        "lines": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+        "is_ignored": false,
+        "sca_info": {
+          "reachability_rule": true,
+          "sca_finding_schema": 20220913,
+          "dependency_match": {
+            "dependency_pattern": {
+              "ecosystem": "maven",
+              "package": "io.netty:netty-common",
+              "semver_range": "<=4.1.114.Final"
+            },
+            "found_dependency": {
+              "package": "io.netty:netty-common",
+              "version": "4.1.80.Final",
+              "ecosystem": "maven",
+              "allowed_hashes": {},
+              "transitivity": "transitive",
+              "manifest_path": "pom.xml",
+              "lockfile_path": "pom.xml",
+              "line_number": 1,
+              "children": []
+            },
+            "lockfile": "pom.xml"
+          },
+          "reachable": false
+        },
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "ssc-parity-1654a647e21e1e7f8bb0f9853315cb44b75ffa8d",
+      "path": "pom.xml",
+      "start": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "extra": {
+        "metavars": {},
+        "message": "Affected versions of io.netty:netty-codec and io.netty:netty-codec-compression are vulnerable to Improper Handling of Highly Compressed Data (Data Amplification).",
+        "metadata": {
+          "confidence": "LOW",
+          "category": "security",
+          "cve": "CVE-2025-58057",
+          "cwe": [
+            "CWE-409: Improper Handling of Highly Compressed Data (Data Amplification)"
+          ],
+          "ghsa": "GHSA-3p8m-j85q-pgmj",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2025-09-03T18:00:55Z",
+          "references": [
+            "https://github.com/advisories/GHSA-3p8m-j85q-pgmj",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-58057"
+          ],
+          "sca-fix-versions": [
+            {
+              "io.netty:netty-codec": "4.1.125.Final"
+            },
+            {
+              "io.netty:netty-codec-compression": "4.2.5.Final"
+            }
+          ],
+          "sca-kind": "legacy",
+          "sca-schema": 20230302,
+          "sca-severity": "MODERATE",
+          "sca-vuln-database-identifier": "CVE-2025-58057",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Other"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 210155,
+              "rv_id": 1142566,
+              "rule_id": "eqUgAP9",
+              "version_id": "qkTBJXJ",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-1654a647e21e1e7f8bb0f9853315cb44b75ffa8d",
+              "origin": "custom",
+              "rule_name": "ssc-parity-1654a647e21e1e7f8bb0f9853315cb44b75ffa8d"
+            },
+            "src": "unchanged"
+          },
+          "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-1654a647e21e1e7f8bb0f9853315cb44b75ffa8d",
+          "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-1654a647e21e1e7f8bb0f9853315cb44b75ffa8d",
+          "dev.semgrep.actions": []
+        },
+        "severity": "WARNING",
+        "fingerprint": "ab1588c69109cb7fb9427dfa2baddc065864a839dd508857089e9efe17bb34a4ef09c537903217aa06cf77cab17aa90fede78111df026a18a3190a33c978f5a4_0",
+        "lines": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+        "is_ignored": false,
+        "sca_info": {
+          "reachability_rule": false,
+          "sca_finding_schema": 20220913,
+          "dependency_match": {
+            "dependency_pattern": {
+              "ecosystem": "maven",
+              "package": "io.netty:netty-codec",
+              "semver_range": "<4.1.125.Final"
+            },
+            "found_dependency": {
+              "package": "io.netty:netty-codec",
+              "version": "4.1.80.Final",
+              "ecosystem": "maven",
+              "allowed_hashes": {},
+              "transitivity": "transitive",
+              "manifest_path": "pom.xml",
+              "lockfile_path": "pom.xml",
+              "line_number": 1,
+              "children": []
+            },
+            "lockfile": "pom.xml"
+          },
+          "reachable": false
+        },
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "ssc-parity-3334c2fc9a45501aa84e80c4a30c31741937aab9",
+      "path": "pom.xml",
+      "start": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "extra": {
+        "metavars": {},
+        "message": "Affected versions of io.netty:netty-codec-http are vulnerable to Improper Neutralization of CRLF Sequences ('CRLF Injection').",
+        "metadata": {
+          "confidence": "LOW",
+          "category": "security",
+          "cve": "CVE-2025-67735",
+          "cwe": [
+            "CWE-93: Improper Neutralization of CRLF Sequences ('CRLF Injection')"
+          ],
+          "ghsa": "GHSA-84h7-rjj3-6jx4",
+          "owasp": [
+            "A03:2021 - Injection",
+            "A05:2025 - Injection",
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2025-12-15T23:28:49Z",
+          "references": [
+            "https://github.com/advisories/GHSA-84h7-rjj3-6jx4",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-67735"
+          ],
+          "sca-fix-versions": [
+            {
+              "io.netty:netty-codec-http": "4.2.8.Final"
+            },
+            {
+              "io.netty:netty-codec-http": "4.1.129.Final"
+            }
+          ],
+          "sca-kind": "legacy",
+          "sca-schema": 20230302,
+          "sca-severity": "MODERATE",
+          "sca-vuln-database-identifier": "CVE-2025-67735",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Improper Validation"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 272030,
+              "rv_id": 1248918,
+              "rule_id": "7KU1Www",
+              "version_id": "K3TKebR",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-3334c2fc9a45501aa84e80c4a30c31741937aab9",
+              "origin": "custom",
+              "rule_name": "ssc-parity-3334c2fc9a45501aa84e80c4a30c31741937aab9"
+            },
+            "src": "unchanged"
+          },
+          "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-3334c2fc9a45501aa84e80c4a30c31741937aab9",
+          "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-3334c2fc9a45501aa84e80c4a30c31741937aab9",
+          "dev.semgrep.actions": []
+        },
+        "severity": "WARNING",
+        "fingerprint": "3bcdb838b8766deb1a4f5eed61b4816c6d6513ae416a401e890448ba7c02288f0c739ea78663aa56b6400db42f85e86be035d872642cad8b09f0f32cbea0e5a9_0",
+        "lines": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+        "is_ignored": false,
+        "sca_info": {
+          "reachability_rule": false,
+          "sca_finding_schema": 20220913,
+          "dependency_match": {
+            "dependency_pattern": {
+              "ecosystem": "maven",
+              "package": "io.netty:netty-codec-http",
+              "semver_range": "<4.1.129.Final"
+            },
+            "found_dependency": {
+              "package": "io.netty:netty-codec-http",
+              "version": "4.1.80.Final",
+              "ecosystem": "maven",
+              "allowed_hashes": {},
+              "transitivity": "transitive",
+              "manifest_path": "pom.xml",
+              "lockfile_path": "pom.xml",
+              "line_number": 1,
+              "children": []
+            },
+            "lockfile": "pom.xml"
+          },
+          "reachable": false
+        },
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "ssc-parity-7eb62e73d6781e6a752c03b961a7d3e7c0d0b068",
+      "path": "pom.xml",
+      "start": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "extra": {
+        "metavars": {},
+        "message": "Affected versions of io.netty:netty-codec-http are vulnerable to Allocation of Resources Without Limits or Throttling.",
+        "metadata": {
+          "confidence": "LOW",
+          "category": "security",
+          "cve": "CVE-2024-29025",
+          "cwe": [
+            "CWE-770: Allocation of Resources Without Limits or Throttling"
+          ],
+          "ghsa": "GHSA-5jpm-x58v-624v",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2024-03-25T19:40:50Z",
+          "references": [
+            "https://github.com/advisories/GHSA-5jpm-x58v-624v",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-29025"
+          ],
+          "sca-fix-versions": [
+            {
+              "io.netty:netty-codec-http": "4.1.108.Final"
+            }
+          ],
+          "sca-kind": "legacy",
+          "sca-schema": 20230302,
+          "sca-severity": "MODERATE",
+          "sca-vuln-database-identifier": "CVE-2024-29025",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Other"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 121916,
+              "rv_id": 956541,
+              "rule_id": "0oULqOz",
+              "version_id": "w8TKkzd",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-7eb62e73d6781e6a752c03b961a7d3e7c0d0b068",
+              "origin": "custom",
+              "rule_name": "ssc-parity-7eb62e73d6781e6a752c03b961a7d3e7c0d0b068"
+            },
+            "src": "unchanged"
+          },
+          "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-7eb62e73d6781e6a752c03b961a7d3e7c0d0b068",
+          "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-7eb62e73d6781e6a752c03b961a7d3e7c0d0b068",
+          "dev.semgrep.actions": []
+        },
+        "severity": "WARNING",
+        "fingerprint": "c998e04f9aeea039fcb79a2c22b8eb6c7d62e6ab39806b5b60c115d49affa8c3ff4bb245777ee55782ab7ed0a05a8def6fade2a1b9a118cf78e5392f11bc029d_0",
+        "lines": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+        "is_ignored": false,
+        "sca_info": {
+          "reachability_rule": false,
+          "sca_finding_schema": 20220913,
+          "dependency_match": {
+            "dependency_pattern": {
+              "ecosystem": "maven",
+              "package": "io.netty:netty-codec-http",
+              "semver_range": "<4.1.108.Final"
+            },
+            "found_dependency": {
+              "package": "io.netty:netty-codec-http",
+              "version": "4.1.80.Final",
+              "ecosystem": "maven",
+              "allowed_hashes": {},
+              "transitivity": "transitive",
+              "manifest_path": "pom.xml",
+              "lockfile_path": "pom.xml",
+              "line_number": 1,
+              "children": []
+            },
+            "lockfile": "pom.xml"
+          },
+          "reachable": false
+        },
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "ssc-parity-d614c0fbdf4a6394ff2c4255b0719e3d83ddb802",
+      "path": "pom.xml",
+      "start": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "extra": {
+        "metavars": {},
+        "message": "Affected versions of io.netty:netty-handler are vulnerable to Allocation of Resources Without Limits or Throttling / Uncontrolled Resource Consumption.",
+        "metadata": {
+          "confidence": "LOW",
+          "category": "security",
+          "cve": "CVE-2023-34462",
+          "cwe": [
+            "CWE-400: Uncontrolled Resource Consumption",
+            "CWE-770: Allocation of Resources Without Limits or Throttling"
+          ],
+          "ghsa": "GHSA-6mjq-h674-j845",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2023-06-20T16:33:22Z",
+          "references": [
+            "https://github.com/advisories/GHSA-6mjq-h674-j845",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-34462"
+          ],
+          "sca-fix-versions": [
+            {
+              "io.netty:netty-handler": "4.1.94.Final"
+            }
+          ],
+          "sca-kind": "legacy",
+          "sca-schema": 20230302,
+          "sca-severity": "MODERATE",
+          "sca-vuln-database-identifier": "CVE-2023-34462",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Denial-of-Service (DoS)",
+            "Other"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 109913,
+              "rv_id": 957656,
+              "rule_id": "bwUb1eb",
+              "version_id": "vdTGvEZ",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-d614c0fbdf4a6394ff2c4255b0719e3d83ddb802",
+              "origin": "custom",
+              "rule_name": "ssc-parity-d614c0fbdf4a6394ff2c4255b0719e3d83ddb802"
+            },
+            "src": "unchanged"
+          },
+          "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-d614c0fbdf4a6394ff2c4255b0719e3d83ddb802",
+          "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-d614c0fbdf4a6394ff2c4255b0719e3d83ddb802",
+          "dev.semgrep.actions": []
+        },
+        "severity": "WARNING",
+        "fingerprint": "57e70189fe1908f4b24b190ae386ee6afc7c41e164a1ca65673df076d1f8c75b5ff01cbac3bb704a6040ba83dd99666a7fdd275c1a01333615a9208e5c117329_0",
+        "lines": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+        "is_ignored": false,
+        "sca_info": {
+          "reachability_rule": false,
+          "sca_finding_schema": 20220913,
+          "dependency_match": {
+            "dependency_pattern": {
+              "ecosystem": "maven",
+              "package": "io.netty:netty-handler",
+              "semver_range": "<4.1.94.Final"
+            },
+            "found_dependency": {
+              "package": "io.netty:netty-handler",
+              "version": "4.1.80.Final",
+              "ecosystem": "maven",
+              "allowed_hashes": {},
+              "transitivity": "transitive",
+              "manifest_path": "pom.xml",
+              "lockfile_path": "pom.xml",
+              "line_number": 1,
+              "children": [
+                {
+                  "package": "io.netty:netty-resolver",
+                  "version": "4.1.80.Final"
+                },
+                {
+                  "package": "io.netty:netty-transport-native-unix-common",
+                  "version": "4.1.80.Final"
+                }
+              ]
+            },
+            "lockfile": "pom.xml"
+          },
+          "reachable": false
+        },
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "ssc-parity-f5ba88e0f49c20d0fa18b22f75aaea2e4887dbca",
+      "path": "pom.xml",
+      "start": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "extra": {
+        "metavars": {},
+        "message": "Affected versions of io.netty:netty-common are vulnerable to Uncontrolled Resource Consumption.",
+        "metadata": {
+          "confidence": "LOW",
+          "category": "security",
+          "cve": "CVE-2025-25193",
+          "cwe": [
+            "CWE-400: Uncontrolled Resource Consumption"
+          ],
+          "ghsa": "GHSA-389x-839f-4rhx",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2025-02-10T18:14:47Z",
+          "references": [
+            "https://github.com/advisories/GHSA-389x-839f-4rhx",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-25193"
+          ],
+          "sca-fix-versions": [
+            {
+              "io.netty:netty-common": "4.1.118.Final"
+            }
+          ],
+          "sca-kind": "legacy",
+          "sca-schema": 20230302,
+          "sca-severity": "MODERATE",
+          "sca-vuln-database-identifier": "CVE-2025-25193",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Denial-of-Service (DoS)"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 155093,
+              "rv_id": 983726,
+              "rule_id": "6JUv9jo",
+              "version_id": "PkTQwkb",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-f5ba88e0f49c20d0fa18b22f75aaea2e4887dbca",
+              "origin": "custom",
+              "rule_name": "ssc-parity-f5ba88e0f49c20d0fa18b22f75aaea2e4887dbca"
+            },
+            "src": "unchanged"
+          },
+          "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-f5ba88e0f49c20d0fa18b22f75aaea2e4887dbca",
+          "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-f5ba88e0f49c20d0fa18b22f75aaea2e4887dbca",
+          "dev.semgrep.actions": []
+        },
+        "severity": "WARNING",
+        "fingerprint": "a79a8dc0a3870bbc378f2ecda6025ce55134109f66ba62664f5e99fdcaeef47b376922a41fa012fe15bebc7ca481276c2b26d0ba7ca39033389b90a2018e344e_0",
+        "lines": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+        "is_ignored": false,
+        "sca_info": {
+          "reachability_rule": false,
+          "sca_finding_schema": 20220913,
+          "dependency_match": {
+            "dependency_pattern": {
+              "ecosystem": "maven",
+              "package": "io.netty:netty-common",
+              "semver_range": "<4.1.118.Final"
+            },
+            "found_dependency": {
+              "package": "io.netty:netty-common",
+              "version": "4.1.80.Final",
+              "ecosystem": "maven",
+              "allowed_hashes": {},
+              "transitivity": "transitive",
+              "manifest_path": "pom.xml",
+              "lockfile_path": "pom.xml",
+              "line_number": 1,
+              "children": []
+            },
+            "lockfile": "pom.xml"
+          },
+          "reachable": false
+        },
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "ssc-15b7893d-13ce-4ced-6896-e6ce5da4de9b",
+      "path": "src/main/java/io/jooby/internal/netty/NettyHttp2Configurer.java",
+      "start": {
+        "line": 57,
+        "col": 12,
+        "offset": 2167
+      },
+      "end": {
+        "line": 57,
+        "col": 53,
+        "offset": 2208
+      },
+      "extra": {
+        "metavars": {
+          "$1": {
+            "start": {
+              "line": 1,
+              "col": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "col": 36,
+              "offset": 35
+            },
+            "abstract_content": "HttpToHttp2ConnectionHandlerBuilder"
+          },
+          "$FUNC": {
+            "start": {
+              "line": 57,
+              "col": 16,
+              "offset": 2171
+            },
+            "end": {
+              "line": 57,
+              "col": 51,
+              "offset": 2206
+            },
+            "abstract_content": "HttpToHttp2ConnectionHandlerBuilder"
+          }
+        },
+        "message": "Affected versions of io.grpc:grpc-netty-shaded and io.netty:netty-codec-http2 are vulnerable to Allocation of Resources Without Limits or Throttling. Netty's HTTP/2 implementation fails to correctly track active streams when sending RST_STREAM in response to certain malformed control frames. An attacker can send, for example, WINDOW_UPDATE frames with a zero or overflow increment, HEADERS/DATA on a half-closed stream, or PRIORITY frames with invalid length to trigger RST_STREAMs; each reset decrements Netty's concurrent-stream counter even though the request is still processed. By repeating this on a single connection, the attacker can open an unbounded number of streams, exhausting CPU and memory and causing a denial of service.",
+        "metadata": {
+          "confidence": "HIGH",
+          "category": "security",
+          "cve": "CVE-2025-55163",
+          "cwe": [
+            "CWE-770: Allocation of Resources Without Limits or Throttling"
+          ],
+          "ghsa": "GHSA-prj3-ccx8-p6x4",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2025-08-13T19:06:56Z",
+          "references": [
+            "https://github.com/advisories/GHSA-prj3-ccx8-p6x4",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-55163"
+          ],
+          "sca-fix-versions": [
+            {
+              "io.grpc:grpc-netty-shaded": "1.75.0"
+            },
+            {
+              "io.netty:netty-codec-http2": "4.2.4.Final"
+            },
+            {
+              "io.netty:netty-codec-http2": "4.1.124.Final"
+            }
+          ],
+          "sca-kind": "reachable",
+          "sca-schema": 20230302,
+          "sca-severity": "HIGH",
+          "sca-vuln-database-identifier": "CVE-2025-55163",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Other"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "origin": "custom",
+              "r_id": 208927,
+              "rule_id": "oqUkR7d",
+              "rule_name": "ssc-15b7893d-13ce-4ced-6896-e6ce5da4de9b",
+              "rv_id": 1153641,
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-15b7893d-13ce-4ced-6896-e6ce5da4de9b",
+              "version_id": "jQTyGbq"
+            },
+            "src": "unchanged"
+          },
+          "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-15b7893d-13ce-4ced-6896-e6ce5da4de9b",
+          "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-15b7893d-13ce-4ced-6896-e6ce5da4de9b",
+          "dev.semgrep.actions": []
+        },
+        "severity": "ERROR",
+        "fingerprint": "9ef137cc03b6c6602560ee62d57e9adbc30d182147c49041b3aea719ef5f2b185fe291d2ca7284124caeef6dfc59565b708fdd8784ce6c2a7043cb630e0f372b_0",
+        "lines": "    return new HttpToHttp2ConnectionHandlerBuilder()",
+        "is_ignored": false,
+        "sca_info": {
+          "reachability_rule": true,
+          "sca_finding_schema": 20220913,
+          "dependency_match": {
+            "dependency_pattern": {
+              "ecosystem": "maven",
+              "package": "io.netty:netty-codec-http2",
+              "semver_range": "<=4.1.123.Final"
+            },
+            "found_dependency": {
+              "package": "io.netty:netty-codec-http2",
+              "version": "4.1.80.Final",
+              "ecosystem": "maven",
+              "allowed_hashes": {},
+              "transitivity": "direct",
+              "manifest_path": "pom.xml",
+              "lockfile_path": "pom.xml",
+              "line_number": 1,
+              "children": [
+                {
+                  "package": "io.netty:netty-buffer",
+                  "version": "4.1.80.Final"
+                },
+                {
+                  "package": "io.netty:netty-codec",
+                  "version": "4.1.80.Final"
+                },
+                {
+                  "package": "io.netty:netty-common",
+                  "version": "4.1.80.Final"
+                },
+                {
+                  "package": "io.netty:netty-transport",
+                  "version": "4.1.80.Final"
+                }
+              ]
+            },
+            "lockfile": "pom.xml"
+          },
+          "reachable": true
+        },
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "PRO"
+      }
+    }
+  ],
+  "errors": [],
+  "paths": {
+    "scanned": [
+      "all_third_party_call_pairs_all_third_party_calls.json",
+      "coverage.json",
+      "package-map.json",
+      "pom.xml",
+      "spoon.classpath-app.tmp",
+      "src/main/java/io/jooby/internal/netty/Http2OrHttp11Handler.java",
+      "src/main/java/io/jooby/internal/netty/Http2PrefaceOrHttpHandler.java",
+      "src/main/java/io/jooby/internal/netty/NettyHttp2Configurer.java",
+      "src/main/resources/META-INF/services/io.jooby.Http2Configurer",
+      "third_party_apis_full_methods.json"
+    ]
+  },
+  "time": {
+    "rules": [],
+    "rules_parse_time": 16.56991195678711,
+    "profiling_times": {
+      "config_time": 39.41010808944702,
+      "core_time": 32.649455070495605,
+      "ignores_time": 0.14743876457214355,
+      "total_time": 72.23551297187805
+    },
+    "parsing_time": {
+      "total_time": 0.0,
+      "per_file_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_files": []
+    },
+    "scanning_time": {
+      "total_time": 0.0,
+      "per_file_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_files": []
+    },
+    "matching_time": {
+      "total_time": 0.0,
+      "per_file_and_rule_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_rules_on_files": []
+    },
+    "tainting_time": {
+      "total_time": 0.0,
+      "per_def_and_rule_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_rules_on_defs": []
+    },
+    "fixpoint_timeouts": [],
+    "prefiltering": {
+      "project_level_time": 0.0,
+      "file_level_time": 0.0,
+      "rules_with_project_prefilters_ratio": 0.0,
+      "rules_with_file_prefilters_ratio": 0.0,
+      "rules_selected_ratio": 0.0,
+      "rules_matched_ratio": 0.0
+    },
+    "targets": [],
+    "total_bytes": 0,
+    "max_memory_bytes": 11807074816
+  },
+  "engine_requested": "PRO",
+  "interfile_languages_used": [],
+  "skipped_rules": [],
+  "subprojects": [
+    {
+      "dependency_sources": [
+        "pom.xml"
+      ],
+      "resolved": true,
+      "resolved_stats": {
+        "resolution_method": "DynamicResolution",
+        "dependency_count": 28,
+        "ecosystem": "maven"
+      }
+    }
+  ],
+  "profiling_results": []
+}

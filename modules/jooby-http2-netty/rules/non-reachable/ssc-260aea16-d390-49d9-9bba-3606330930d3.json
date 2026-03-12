@@ -1,0 +1,108 @@
+{
+  "advisories": [
+    {
+      "ruleId": "ssc-260aea16-d390-49d9-9bba-3606330930d3",
+      "title": "Uncontrolled Resource Consumption in io.netty:netty-codec-http2",
+      "description": "Affected versions of io.netty:netty-codec-http2 are vulnerable to Uncontrolled Resource Consumption. The vulnerability arises when a client issues frequent `RST frames`, potentially leading to server overload and facilitating a DDoS attack by imposing a significant load on the remote system.",
+      "ecosystem": "maven",
+      "severity": "HIGH",
+      "references": {
+        "cveIds": [
+          "CVE-2023-44487"
+        ],
+        "cweIds": [
+          "CWE-400: Uncontrolled Resource Consumption"
+        ],
+        "owaspIds": [
+          "A06:2021 - Vulnerable and Outdated Components"
+        ],
+        "urls": [
+          "https://github.com/advisories/GHSA-xpw8-rcwv-8f8p",
+          "https://nvd.nist.gov/vuln/detail/CVE-2023-44487"
+        ]
+      },
+      "announcedAt": "2023-10-10T22:22:54Z",
+      "ruleText": {
+        "id": "ssc-260aea16-d390-49d9-9bba-3606330930d3",
+        "message": "Affected versions of io.netty:netty-codec-http2 are vulnerable to Uncontrolled Resource Consumption. The vulnerability arises when a client issues frequent `RST frames`, potentially leading to server overload and facilitating a DDoS attack by imposing a significant load on the remote system.",
+        "severity": "ERROR",
+        "metadata": {
+          "confidence": "HIGH",
+          "category": "security",
+          "cve": "",
+          "cwe": [
+            "CWE-400: Uncontrolled Resource Consumption"
+          ],
+          "ghsa": "GHSA-xpw8-rcwv-8f8p",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2023-10-10T22:22:54Z",
+          "references": [
+            "https://github.com/advisories/GHSA-xpw8-rcwv-8f8p",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-44487"
+          ],
+          "sca-fix-versions": [
+            {
+              "io.netty:netty-codec-http2": "4.1.100.Final"
+            }
+          ],
+          "sca-kind": "upgrade-only",
+          "sca-schema": 20230302,
+          "sca-severity": "HIGH",
+          "sca-vuln-database-identifier": "GHSA-xpw8-rcwv-8f8p",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Denial-of-Service (DoS)"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 94232,
+              "rv_id": 952693,
+              "rule_id": "lBU49bg",
+              "version_id": "2KTYLb4",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-260aea16-d390-49d9-9bba-3606330930d3",
+              "origin": "custom"
+            }
+          }
+        },
+        "r2c-internal-project-depends-on": {
+          "depends-on-either": [
+            {
+              "namespace": "maven",
+              "package": "io.netty:netty-codec-http2",
+              "version": "<4.1.100.Final"
+            }
+          ]
+        },
+        "languages": [
+          "java",
+          "kotlin",
+          "scala"
+        ]
+      },
+      "reachability": "ALWAYS_REACHABLE",
+      "vulnerableDependencies": [
+        {
+          "name": "io.netty:netty-codec-http2",
+          "versionSpecifier": "<4.1.100.Final"
+        }
+      ],
+      "safeDependencies": [
+        {
+          "name": "io.netty:netty-codec-http2",
+          "versionSpecifier": "4.1.100.Final"
+        }
+      ],
+      "ghsa": "GHSA-xpw8-rcwv-8f8p",
+      "reachableIf": "",
+      "cve": ""
+    }
+  ],
+  "totalCount": "1"
+}

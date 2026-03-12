@@ -1,0 +1,116 @@
+{
+  "advisories": [
+    {
+      "ruleId": "ssc-a8c50cd9-da57-443c-a801-926eb13e3ac4",
+      "title": "Reliance on Uncontrolled Component in org.jboss.xnio:xnio-api",
+      "description": "Affected versions of org.jboss.xnio:xnio-api are vulnerable to Uncontrolled Resource Consumption. The XNIO NotifierState can cause a Stack Overflow Exception when the chain of notifier states becomes problematically large.",
+      "ecosystem": "maven",
+      "severity": "HIGH",
+      "references": {
+        "cveIds": [
+          "CVE-2023-5685"
+        ],
+        "cweIds": [
+          "CWE-1357: Reliance on Uncontrolled Component",
+          "CWE-400: Uncontrolled Resource Consumption"
+        ],
+        "owaspIds": [
+          "A06:2021 - Vulnerable and Outdated Components"
+        ],
+        "urls": [
+          "https://github.com/advisories/GHSA-7f88-5hhx-67m2",
+          "https://nvd.nist.gov/vuln/detail/CVE-2023-5685"
+        ]
+      },
+      "announcedAt": "2024-03-22T21:30:56Z",
+      "ruleText": {
+        "id": "ssc-a8c50cd9-da57-443c-a801-926eb13e3ac4",
+        "message": "Affected versions of org.jboss.xnio:xnio-api are vulnerable to Uncontrolled Resource Consumption. The XNIO NotifierState can cause a Stack Overflow Exception when the chain of notifier states becomes problematically large.",
+        "severity": "ERROR",
+        "metadata": {
+          "confidence": "HIGH",
+          "category": "security",
+          "cve": "CVE-2023-5685",
+          "cwe": [
+            "CWE-1357: Reliance on Uncontrolled Component",
+            "CWE-400: Uncontrolled Resource Consumption"
+          ],
+          "ghsa": "GHSA-7f88-5hhx-67m2",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2024-03-22T21:30:56Z",
+          "references": [
+            "https://github.com/advisories/GHSA-7f88-5hhx-67m2",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-5685"
+          ],
+          "sca-fix-versions": [
+            {
+              "org.jboss.xnio:xnio-api": "3.8.14.Final"
+            }
+          ],
+          "sca-kind": "reachable",
+          "sca-schema": 20230302,
+          "sca-severity": "HIGH",
+          "sca-vuln-database-identifier": "CVE-2023-5685",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Denial-of-Service (DoS)",
+            "Other"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 121960,
+              "rv_id": 950111,
+              "rule_id": "0oULqWz",
+              "version_id": "A8TJGoL",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-a8c50cd9-da57-443c-a801-926eb13e3ac4",
+              "origin": "custom"
+            }
+          }
+        },
+        "r2c-internal-project-depends-on": {
+          "depends-on-either": [
+            {
+              "namespace": "maven",
+              "package": "org.jboss.xnio:xnio-api",
+              "version": "<=3.8.13.Final"
+            }
+          ]
+        },
+        "languages": [
+          "java",
+          "kotlin",
+          "scala"
+        ],
+        "patterns": [
+          {
+            "pattern": "(org.jboss.xnio.IoFuture $VALUE)"
+          }
+        ]
+      },
+      "reachability": "REACHABILITY",
+      "vulnerableDependencies": [
+        {
+          "name": "org.jboss.xnio:xnio-api",
+          "versionSpecifier": "<=3.8.13.Final"
+        }
+      ],
+      "safeDependencies": [
+        {
+          "name": "org.jboss.xnio:xnio-api",
+          "versionSpecifier": "3.8.14.Final"
+        }
+      ],
+      "cve": "CVE-2023-5685",
+      "ghsa": "GHSA-7f88-5hhx-67m2",
+      "reachableIf": ""
+    }
+  ],
+  "totalCount": "1"
+}

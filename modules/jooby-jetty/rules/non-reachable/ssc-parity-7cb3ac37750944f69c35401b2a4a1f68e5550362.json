@@ -1,0 +1,135 @@
+{
+  "advisories": [
+    {
+      "ruleId": "ssc-parity-7cb3ac37750944f69c35401b2a4a1f68e5550362",
+      "title": "Uncontrolled Resource Consumption in org.eclipse.jetty:jetty-server",
+      "description": "Affected versions of org.eclipse.jetty:jetty-server are vulnerable to Allocation of Resources Without Limits or Throttling / Uncontrolled Resource Consumption.",
+      "ecosystem": "maven",
+      "severity": "MEDIUM",
+      "references": {
+        "cveIds": [
+          "CVE-2023-26048"
+        ],
+        "cweIds": [
+          "CWE-400: Uncontrolled Resource Consumption",
+          "CWE-770: Allocation of Resources Without Limits or Throttling"
+        ],
+        "owaspIds": [
+          "A06:2021 - Vulnerable and Outdated Components"
+        ],
+        "urls": [
+          "https://github.com/advisories/GHSA-qw69-rqj8-6qw8",
+          "https://nvd.nist.gov/vuln/detail/CVE-2023-26048"
+        ]
+      },
+      "announcedAt": "2023-04-19T18:15:45Z",
+      "ruleText": {
+        "id": "ssc-parity-7cb3ac37750944f69c35401b2a4a1f68e5550362",
+        "message": "Affected versions of org.eclipse.jetty:jetty-server are vulnerable to Allocation of Resources Without Limits or Throttling / Uncontrolled Resource Consumption.",
+        "severity": "WARNING",
+        "metadata": {
+          "confidence": "LOW",
+          "category": "security",
+          "cve": "CVE-2023-26048",
+          "cwe": [
+            "CWE-400: Uncontrolled Resource Consumption",
+            "CWE-770: Allocation of Resources Without Limits or Throttling"
+          ],
+          "ghsa": "GHSA-qw69-rqj8-6qw8",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2023-04-19T18:15:45Z",
+          "references": [
+            "https://github.com/advisories/GHSA-qw69-rqj8-6qw8",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-26048"
+          ],
+          "sca-fix-versions": [
+            {
+              "org.eclipse.jetty:jetty-server": "9.4.51.v20230217"
+            },
+            {
+              "org.eclipse.jetty:jetty-server": "11.0.14"
+            },
+            {
+              "org.eclipse.jetty:jetty-server": "10.0.14"
+            }
+          ],
+          "sca-kind": "legacy",
+          "sca-schema": 20230302,
+          "sca-severity": "MODERATE",
+          "sca-vuln-database-identifier": "CVE-2023-26048",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Denial-of-Service (DoS)",
+            "Other"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 109312,
+              "rv_id": 969394,
+              "rule_id": "OrUNOZQ",
+              "version_id": "K3TJgxE",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-7cb3ac37750944f69c35401b2a4a1f68e5550362",
+              "origin": "custom"
+            }
+          }
+        },
+        "r2c-internal-project-depends-on": {
+          "depends-on-either": [
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty:jetty-server",
+              "version": "<9.4.51.v20230217"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty:jetty-server",
+              "version": ">=10.0.0, <10.0.14"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty:jetty-server",
+              "version": ">=11.0.0, <11.0.14"
+            }
+          ]
+        },
+        "languages": [
+          "java",
+          "kotlin",
+          "scala"
+        ]
+      },
+      "reachability": "VERSION_SPECIFIER",
+      "vulnerableDependencies": [
+        {
+          "name": "org.eclipse.jetty:jetty-server",
+          "versionSpecifier": "<9.4.51.v20230217"
+        }
+      ],
+      "safeDependencies": [
+        {
+          "name": "org.eclipse.jetty:jetty-server",
+          "versionSpecifier": "9.4.51.v20230217"
+        },
+        {
+          "name": "org.eclipse.jetty:jetty-server",
+          "versionSpecifier": "11.0.14"
+        },
+        {
+          "name": "org.eclipse.jetty:jetty-server",
+          "versionSpecifier": "10.0.14"
+        }
+      ],
+      "cve": "CVE-2023-26048",
+      "ghsa": "GHSA-qw69-rqj8-6qw8",
+      "reachableIf": ""
+    }
+  ],
+  "totalCount": "1"
+}

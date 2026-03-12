@@ -1,0 +1,904 @@
+{
+  "version": "1.153.0",
+  "results": [
+    {
+      "check_id": "ssc-parity-0bccbc8113fbef489de50b882bb5939d605f3259",
+      "path": "pom.xml",
+      "start": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "extra": {
+        "metavars": {},
+        "message": "Affected versions of org.eclipse.jetty:jetty-server are vulnerable to Allocation of Resources Without Limits or Throttling / Uncontrolled Resource Consumption.",
+        "metadata": {
+          "confidence": "LOW",
+          "category": "security",
+          "cve": "CVE-2024-8184",
+          "cwe": [
+            "CWE-400: Uncontrolled Resource Consumption",
+            "CWE-770: Allocation of Resources Without Limits or Throttling"
+          ],
+          "ghsa": "GHSA-g8m5-722r-8whq",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2024-10-14T21:08:38Z",
+          "references": [
+            "https://github.com/advisories/GHSA-g8m5-722r-8whq",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-8184"
+          ],
+          "sca-fix-versions": [
+            {
+              "org.eclipse.jetty:jetty-server": "9.4.56"
+            },
+            {
+              "org.eclipse.jetty:jetty-server": "12.0.9"
+            },
+            {
+              "org.eclipse.jetty:jetty-server": "11.0.24"
+            },
+            {
+              "org.eclipse.jetty:jetty-server": "10.0.24"
+            }
+          ],
+          "sca-kind": "legacy",
+          "sca-schema": 20230302,
+          "sca-severity": "MODERATE",
+          "sca-vuln-database-identifier": "CVE-2024-8184",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Denial-of-Service (DoS)",
+            "Other"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 144895,
+              "rv_id": 963606,
+              "rule_id": "pKU1ZY6",
+              "version_id": "yeT0ZKy",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-0bccbc8113fbef489de50b882bb5939d605f3259",
+              "origin": "custom",
+              "rule_name": "ssc-parity-0bccbc8113fbef489de50b882bb5939d605f3259"
+            },
+            "src": "unchanged"
+          },
+          "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-0bccbc8113fbef489de50b882bb5939d605f3259",
+          "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-0bccbc8113fbef489de50b882bb5939d605f3259",
+          "dev.semgrep.actions": []
+        },
+        "severity": "WARNING",
+        "fingerprint": "0c2d91f1923393f6a566c64281a224c54ae59b677ce532ae4ff328cbd6fd4149a01fabc77430cc81ccf81e247460af38d83dac1426d673e484bfbff4cb22d3e0_0",
+        "lines": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+        "is_ignored": false,
+        "sca_info": {
+          "reachability_rule": false,
+          "sca_finding_schema": 20220913,
+          "dependency_match": {
+            "dependency_pattern": {
+              "ecosystem": "maven",
+              "package": "org.eclipse.jetty:jetty-server",
+              "semver_range": ">=9.3.12, <=9.4.55"
+            },
+            "found_dependency": {
+              "package": "org.eclipse.jetty:jetty-server",
+              "version": "9.4.48.v20220622",
+              "ecosystem": "maven",
+              "allowed_hashes": {},
+              "transitivity": "direct",
+              "manifest_path": "pom.xml",
+              "lockfile_path": "pom.xml",
+              "line_number": 1,
+              "children": [
+                {
+                  "package": "javax.servlet:javax.servlet-api",
+                  "version": "3.1.0"
+                },
+                {
+                  "package": "org.eclipse.jetty:jetty-http",
+                  "version": "9.4.48.v20220622"
+                },
+                {
+                  "package": "org.eclipse.jetty:jetty-io",
+                  "version": "9.4.48.v20220622"
+                }
+              ]
+            },
+            "lockfile": "pom.xml"
+          },
+          "reachable": false
+        },
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "ssc-parity-315e604650eca273f747f54464a69a8b4d6d246e",
+      "path": "pom.xml",
+      "start": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "extra": {
+        "metavars": {},
+        "message": "Affected versions of org.eclipse.jetty:jetty-http are vulnerable to Improper Validation of Syntactic Correctness of Input.",
+        "metadata": {
+          "confidence": "LOW",
+          "category": "security",
+          "cve": "CVE-2024-6763",
+          "cwe": [
+            "CWE-1286: Improper Validation of Syntactic Correctness of Input"
+          ],
+          "ghsa": "GHSA-qh8g-58pp-2wxh",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2024-10-14T21:11:43Z",
+          "references": [
+            "https://github.com/advisories/GHSA-qh8g-58pp-2wxh",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-6763"
+          ],
+          "sca-fix-versions": [
+            {
+              "org.eclipse.jetty:jetty-http": "12.0.12"
+            }
+          ],
+          "sca-kind": "legacy",
+          "sca-schema": 20230302,
+          "sca-severity": "MODERATE",
+          "sca-vuln-database-identifier": "CVE-2024-6763",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Other"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 144906,
+              "rv_id": 969038,
+              "rule_id": "wdU9XLR",
+              "version_id": "JdTDnOY",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-315e604650eca273f747f54464a69a8b4d6d246e",
+              "origin": "custom",
+              "rule_name": "ssc-parity-315e604650eca273f747f54464a69a8b4d6d246e"
+            },
+            "src": "unchanged"
+          },
+          "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-315e604650eca273f747f54464a69a8b4d6d246e",
+          "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-315e604650eca273f747f54464a69a8b4d6d246e",
+          "dev.semgrep.actions": []
+        },
+        "severity": "WARNING",
+        "fingerprint": "a0fb76d4c541f85492105970e59dff1537117c41894a369c9ec225c5787054bdb094e703ace4ffed3a83f6ce7a90d3e756d792f8ff2dfbb6cf55a49555acc676_0",
+        "lines": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+        "is_ignored": false,
+        "sca_info": {
+          "reachability_rule": false,
+          "sca_finding_schema": 20220913,
+          "dependency_match": {
+            "dependency_pattern": {
+              "ecosystem": "maven",
+              "package": "org.eclipse.jetty:jetty-http",
+              "semver_range": ">=7.0.0, <=12.0.11"
+            },
+            "found_dependency": {
+              "package": "org.eclipse.jetty:jetty-http",
+              "version": "9.4.48.v20220622",
+              "ecosystem": "maven",
+              "allowed_hashes": {},
+              "transitivity": "transitive",
+              "manifest_path": "pom.xml",
+              "lockfile_path": "pom.xml",
+              "line_number": 1,
+              "children": [
+                {
+                  "package": "org.eclipse.jetty:jetty-util",
+                  "version": "9.4.48.v20220622"
+                }
+              ]
+            },
+            "lockfile": "pom.xml"
+          },
+          "reachable": false
+        },
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "ssc-parity-5cf32fb0afa4a0410d71bbf9209014b271312966",
+      "path": "pom.xml",
+      "start": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "extra": {
+        "metavars": {},
+        "message": "Affected versions of org.eclipse.jetty:jetty-server are vulnerable to Exposure of Sensitive Information to an Unauthorized Actor.",
+        "metadata": {
+          "confidence": "LOW",
+          "category": "security",
+          "cve": "CVE-2023-26049",
+          "cwe": [
+            "CWE-200: Exposure of Sensitive Information to an Unauthorized Actor"
+          ],
+          "ghsa": "GHSA-p26g-97m4-6q7c",
+          "owasp": [
+            "A01:2021 - Broken Access Control",
+            "A01:2025 - Broken Access Control",
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2023-04-18T22:19:57Z",
+          "references": [
+            "https://github.com/advisories/GHSA-p26g-97m4-6q7c",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-26049"
+          ],
+          "sca-fix-versions": [
+            {
+              "org.eclipse.jetty:jetty-server": "9.4.51.v20230217"
+            },
+            {
+              "org.eclipse.jetty:jetty-server": "12.0.0.beta0"
+            },
+            {
+              "org.eclipse.jetty:jetty-server": "11.0.14"
+            },
+            {
+              "org.eclipse.jetty:jetty-server": "10.0.14"
+            }
+          ],
+          "sca-kind": "legacy",
+          "sca-schema": 20230302,
+          "sca-severity": "LOW",
+          "sca-vuln-database-identifier": "CVE-2023-26049",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Mishandled Sensitive Information"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 109275,
+              "rv_id": 1256238,
+              "rule_id": "BYUXr84",
+              "version_id": "JdTz8WW",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-5cf32fb0afa4a0410d71bbf9209014b271312966",
+              "origin": "custom",
+              "rule_name": "ssc-parity-5cf32fb0afa4a0410d71bbf9209014b271312966"
+            },
+            "src": "unchanged"
+          },
+          "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-5cf32fb0afa4a0410d71bbf9209014b271312966",
+          "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-5cf32fb0afa4a0410d71bbf9209014b271312966",
+          "dev.semgrep.actions": []
+        },
+        "severity": "INFO",
+        "fingerprint": "d7a7446a6a7fb6cca9f2efa5b37325fc947e018aa8aaca74c491773652892ec2e1ebdb1bd3985338627f00971bb6f9b2238b22a936242bceba44fdebfaf177d9_0",
+        "lines": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+        "is_ignored": false,
+        "sca_info": {
+          "reachability_rule": false,
+          "sca_finding_schema": 20220913,
+          "dependency_match": {
+            "dependency_pattern": {
+              "ecosystem": "maven",
+              "package": "org.eclipse.jetty:jetty-server",
+              "semver_range": "<9.4.51.v20230217"
+            },
+            "found_dependency": {
+              "package": "org.eclipse.jetty:jetty-server",
+              "version": "9.4.48.v20220622",
+              "ecosystem": "maven",
+              "allowed_hashes": {},
+              "transitivity": "direct",
+              "manifest_path": "pom.xml",
+              "lockfile_path": "pom.xml",
+              "line_number": 1,
+              "children": [
+                {
+                  "package": "javax.servlet:javax.servlet-api",
+                  "version": "3.1.0"
+                },
+                {
+                  "package": "org.eclipse.jetty:jetty-http",
+                  "version": "9.4.48.v20220622"
+                },
+                {
+                  "package": "org.eclipse.jetty:jetty-io",
+                  "version": "9.4.48.v20220622"
+                }
+              ]
+            },
+            "lockfile": "pom.xml"
+          },
+          "reachable": false
+        },
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "ssc-parity-6e0ec11a1069c41d0232079e66f7b9758ff8b2d8",
+      "path": "pom.xml",
+      "start": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "extra": {
+        "metavars": {},
+        "message": "Affected versions of org.eclipse.jetty:jetty-http are vulnerable to Improper Handling of Length Parameter Inconsistency.",
+        "metadata": {
+          "confidence": "LOW",
+          "category": "security",
+          "cve": "CVE-2023-40167",
+          "cwe": [
+            "CWE-130: Improper Handling of Length Parameter Inconsistency"
+          ],
+          "ghsa": "GHSA-hmr7-m48g-48f6",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2023-09-14T16:17:27Z",
+          "references": [
+            "https://github.com/advisories/GHSA-hmr7-m48g-48f6",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-40167"
+          ],
+          "sca-fix-versions": [
+            {
+              "org.eclipse.jetty:jetty-http": "9.4.52"
+            },
+            {
+              "org.eclipse.jetty:jetty-http": "12.0.1"
+            },
+            {
+              "org.eclipse.jetty:jetty-http": "11.0.16"
+            },
+            {
+              "org.eclipse.jetty:jetty-http": "10.0.16"
+            }
+          ],
+          "sca-kind": "legacy",
+          "sca-schema": 20230302,
+          "sca-severity": "MODERATE",
+          "sca-vuln-database-identifier": "CVE-2023-40167",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Other"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 110551,
+              "rv_id": 1034226,
+              "rule_id": "YGUpnRg",
+              "version_id": "PkT1BxB",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-6e0ec11a1069c41d0232079e66f7b9758ff8b2d8",
+              "origin": "custom",
+              "rule_name": "ssc-parity-6e0ec11a1069c41d0232079e66f7b9758ff8b2d8"
+            },
+            "src": "unchanged"
+          },
+          "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-6e0ec11a1069c41d0232079e66f7b9758ff8b2d8",
+          "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-6e0ec11a1069c41d0232079e66f7b9758ff8b2d8",
+          "dev.semgrep.actions": []
+        },
+        "severity": "WARNING",
+        "fingerprint": "538dc77f2aaf91eefb7e8f666229d5693fcc5d211421b1b6bf1b4083af19e96bbede3d140e82f0dfb623d45d0a57e6530c5a0001c350cfc421b6c0594394133e_0",
+        "lines": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+        "is_ignored": false,
+        "sca_info": {
+          "reachability_rule": false,
+          "sca_finding_schema": 20220913,
+          "dependency_match": {
+            "dependency_pattern": {
+              "ecosystem": "maven",
+              "package": "org.eclipse.jetty:jetty-http",
+              "semver_range": ">=9.0.0, <=9.4.51"
+            },
+            "found_dependency": {
+              "package": "org.eclipse.jetty:jetty-http",
+              "version": "9.4.48.v20220622",
+              "ecosystem": "maven",
+              "allowed_hashes": {},
+              "transitivity": "transitive",
+              "manifest_path": "pom.xml",
+              "lockfile_path": "pom.xml",
+              "line_number": 1,
+              "children": [
+                {
+                  "package": "org.eclipse.jetty:jetty-util",
+                  "version": "9.4.48.v20220622"
+                }
+              ]
+            },
+            "lockfile": "pom.xml"
+          },
+          "reachable": false
+        },
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "ssc-parity-7cb3ac37750944f69c35401b2a4a1f68e5550362",
+      "path": "pom.xml",
+      "start": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "extra": {
+        "metavars": {},
+        "message": "Affected versions of org.eclipse.jetty:jetty-server are vulnerable to Allocation of Resources Without Limits or Throttling / Uncontrolled Resource Consumption.",
+        "metadata": {
+          "confidence": "LOW",
+          "category": "security",
+          "cve": "CVE-2023-26048",
+          "cwe": [
+            "CWE-400: Uncontrolled Resource Consumption",
+            "CWE-770: Allocation of Resources Without Limits or Throttling"
+          ],
+          "ghsa": "GHSA-qw69-rqj8-6qw8",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2023-04-19T18:15:45Z",
+          "references": [
+            "https://github.com/advisories/GHSA-qw69-rqj8-6qw8",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-26048"
+          ],
+          "sca-fix-versions": [
+            {
+              "org.eclipse.jetty:jetty-server": "9.4.51.v20230217"
+            },
+            {
+              "org.eclipse.jetty:jetty-server": "11.0.14"
+            },
+            {
+              "org.eclipse.jetty:jetty-server": "10.0.14"
+            }
+          ],
+          "sca-kind": "legacy",
+          "sca-schema": 20230302,
+          "sca-severity": "MODERATE",
+          "sca-vuln-database-identifier": "CVE-2023-26048",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Denial-of-Service (DoS)",
+            "Other"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 109312,
+              "rv_id": 969394,
+              "rule_id": "OrUNOZQ",
+              "version_id": "K3TJgxE",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-7cb3ac37750944f69c35401b2a4a1f68e5550362",
+              "origin": "custom",
+              "rule_name": "ssc-parity-7cb3ac37750944f69c35401b2a4a1f68e5550362"
+            },
+            "src": "unchanged"
+          },
+          "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-7cb3ac37750944f69c35401b2a4a1f68e5550362",
+          "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-7cb3ac37750944f69c35401b2a4a1f68e5550362",
+          "dev.semgrep.actions": []
+        },
+        "severity": "WARNING",
+        "fingerprint": "49303ab0ad063beafd8003075768178063a5a9c4e0789984edc9385390deed8f97a6d59d5597081f563199920ebc80d12ce209e33903c18c1a63152c0ea5368f_0",
+        "lines": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+        "is_ignored": false,
+        "sca_info": {
+          "reachability_rule": false,
+          "sca_finding_schema": 20220913,
+          "dependency_match": {
+            "dependency_pattern": {
+              "ecosystem": "maven",
+              "package": "org.eclipse.jetty:jetty-server",
+              "semver_range": "<9.4.51.v20230217"
+            },
+            "found_dependency": {
+              "package": "org.eclipse.jetty:jetty-server",
+              "version": "9.4.48.v20220622",
+              "ecosystem": "maven",
+              "allowed_hashes": {},
+              "transitivity": "direct",
+              "manifest_path": "pom.xml",
+              "lockfile_path": "pom.xml",
+              "line_number": 1,
+              "children": [
+                {
+                  "package": "javax.servlet:javax.servlet-api",
+                  "version": "3.1.0"
+                },
+                {
+                  "package": "org.eclipse.jetty:jetty-http",
+                  "version": "9.4.48.v20220622"
+                },
+                {
+                  "package": "org.eclipse.jetty:jetty-io",
+                  "version": "9.4.48.v20220622"
+                }
+              ]
+            },
+            "lockfile": "pom.xml"
+          },
+          "reachable": false
+        },
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "ssc-parity-be82520e7ce483661e47b7d5484637eb48b65ed1",
+      "path": "pom.xml",
+      "start": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 1,
+        "col": 1,
+        "offset": 0
+      },
+      "extra": {
+        "metavars": {},
+        "message": "Affected versions of org.eclipse.jetty:jetty-http are vulnerable to Improper Input Validation.",
+        "metadata": {
+          "confidence": "LOW",
+          "category": "security",
+          "cve": "CVE-2025-11143",
+          "cwe": [
+            "CWE-20: Improper Input Validation"
+          ],
+          "ghsa": "GHSA-wjpw-4j6x-6rwh",
+          "owasp": [
+            "A03:2021 - Injection",
+            "A05:2025 - Injection",
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2026-03-05T21:41:25Z",
+          "references": [
+            "https://github.com/advisories/GHSA-wjpw-4j6x-6rwh",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-11143"
+          ],
+          "sca-fix-versions": [
+            {
+              "org.eclipse.jetty:jetty-http": "12.1.5"
+            },
+            {
+              "org.eclipse.jetty:jetty-http": "12.0.31"
+            }
+          ],
+          "sca-kind": "legacy",
+          "sca-schema": 20230302,
+          "sca-severity": "LOW",
+          "sca-vuln-database-identifier": "CVE-2025-11143",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Improper Validation"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 281415,
+              "rv_id": 1280811,
+              "rule_id": "x8UAp8r",
+              "version_id": "e1Te0Xe",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-be82520e7ce483661e47b7d5484637eb48b65ed1",
+              "origin": "custom",
+              "rule_name": "ssc-parity-be82520e7ce483661e47b7d5484637eb48b65ed1"
+            },
+            "src": "unchanged"
+          },
+          "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-be82520e7ce483661e47b7d5484637eb48b65ed1",
+          "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-be82520e7ce483661e47b7d5484637eb48b65ed1",
+          "dev.semgrep.actions": []
+        },
+        "severity": "INFO",
+        "fingerprint": "d007e702af6966e9207e4c6ef2e2f5890c36d7d349c1e0ea425d83bd96d264090b192367b4241221f7a27c217418b787cea4352b78fffe34ad7bf55bbb954753_0",
+        "lines": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+        "is_ignored": false,
+        "sca_info": {
+          "reachability_rule": false,
+          "sca_finding_schema": 20220913,
+          "dependency_match": {
+            "dependency_pattern": {
+              "ecosystem": "maven",
+              "package": "org.eclipse.jetty:jetty-http",
+              "semver_range": ">=9.4.0, <=9.4.58"
+            },
+            "found_dependency": {
+              "package": "org.eclipse.jetty:jetty-http",
+              "version": "9.4.48.v20220622",
+              "ecosystem": "maven",
+              "allowed_hashes": {},
+              "transitivity": "transitive",
+              "manifest_path": "pom.xml",
+              "lockfile_path": "pom.xml",
+              "line_number": 1,
+              "children": [
+                {
+                  "package": "org.eclipse.jetty:jetty-util",
+                  "version": "9.4.48.v20220622"
+                }
+              ]
+            },
+            "lockfile": "pom.xml"
+          },
+          "reachable": false
+        },
+        "engine_kind": "OSS"
+      }
+    },
+    {
+      "check_id": "ssc-63f1fe3c-fb4e-48e0-a606-951a8a7c49dc",
+      "path": "src/main/java/io/jooby/jetty/Jetty.java",
+      "start": {
+        "line": 211,
+        "col": 7,
+        "offset": 8329
+      },
+      "end": {
+        "line": 211,
+        "col": 21,
+        "offset": 8343
+      },
+      "extra": {
+        "metavars": {},
+        "message": "Affected versions of org.eclipse.jetty:jetty-server are vulnerable to Improper Resource Shutdown or Release. Eclipse Jetty improperly handles gzip decompression errors in request bodies, leading to an incorrect buffer release. This flaw can result in data corruption and unintended data sharing between requests.",
+        "metadata": {
+          "confidence": "HIGH",
+          "category": "security",
+          "cve": "CVE-2024-13009",
+          "cwe": [
+            "CWE-404: Improper Resource Shutdown or Release"
+          ],
+          "ghsa": "GHSA-q4rv-gq96-w7c5",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2025-05-08T19:28:34Z",
+          "references": [
+            "https://github.com/advisories/GHSA-q4rv-gq96-w7c5",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-13009"
+          ],
+          "sca-fix-versions": [
+            {
+              "org.eclipse.jetty:jetty-server": "9.4.57.v20241219"
+            }
+          ],
+          "sca-kind": "reachable",
+          "sca-schema": 20230302,
+          "sca-severity": "HIGH",
+          "sca-vuln-database-identifier": "CVE-2024-13009",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Other"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "origin": "custom",
+              "r_id": 196751,
+              "rule_id": "GdUj8nn",
+              "rule_name": "ssc-63f1fe3c-fb4e-48e0-a606-951a8a7c49dc",
+              "rv_id": 1038412,
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-63f1fe3c-fb4e-48e0-a606-951a8a7c49dc",
+              "version_id": "vdTN4LN"
+            },
+            "src": "unchanged"
+          },
+          "source": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-63f1fe3c-fb4e-48e0-a606-951a8a7c49dc",
+          "semgrep.url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-63f1fe3c-fb4e-48e0-a606-951a8a7c49dc",
+          "dev.semgrep.actions": []
+        },
+        "severity": "ERROR",
+        "fingerprint": "d0be3b60d4f0c6ca674b164b6b9309d61bc898f419b23ff73dfd362bae22fc6110d5102a59786c726cc60f6506e5c31cf47bd16bf334c5542ce0d78f133b9fd1_0",
+        "lines": "      server.start();",
+        "is_ignored": false,
+        "sca_info": {
+          "reachability_rule": true,
+          "sca_finding_schema": 20220913,
+          "dependency_match": {
+            "dependency_pattern": {
+              "ecosystem": "maven",
+              "package": "org.eclipse.jetty:jetty-server",
+              "semver_range": ">=9.4.0, <=9.4.56"
+            },
+            "found_dependency": {
+              "package": "org.eclipse.jetty:jetty-server",
+              "version": "9.4.48.v20220622",
+              "ecosystem": "maven",
+              "allowed_hashes": {},
+              "transitivity": "direct",
+              "manifest_path": "pom.xml",
+              "lockfile_path": "pom.xml",
+              "line_number": 1,
+              "children": [
+                {
+                  "package": "javax.servlet:javax.servlet-api",
+                  "version": "3.1.0"
+                },
+                {
+                  "package": "org.eclipse.jetty:jetty-http",
+                  "version": "9.4.48.v20220622"
+                },
+                {
+                  "package": "org.eclipse.jetty:jetty-io",
+                  "version": "9.4.48.v20220622"
+                }
+              ]
+            },
+            "lockfile": "pom.xml"
+          },
+          "reachable": true
+        },
+        "validation_state": "NO_VALIDATOR",
+        "engine_kind": "PRO"
+      }
+    }
+  ],
+  "errors": [],
+  "paths": {
+    "scanned": [
+      "all_third_party_call_pairs_all_third_party_calls.json",
+      "coverage.json",
+      "package-map.json",
+      "pom.xml",
+      "spoon.classpath-app.tmp",
+      "src/main/java/io/jooby/internal/jetty/JettyContext.java",
+      "src/main/java/io/jooby/internal/jetty/JettyFileUpload.java",
+      "src/main/java/io/jooby/internal/jetty/JettyHandler.java",
+      "src/main/java/io/jooby/internal/jetty/JettyOutputStream.java",
+      "src/main/java/io/jooby/internal/jetty/JettySender.java",
+      "src/main/java/io/jooby/internal/jetty/JettyServerSentEmitter.java",
+      "src/main/java/io/jooby/internal/jetty/JettyWebSocket.java",
+      "src/main/java/io/jooby/internal/jetty/LimitedInputStream.java",
+      "src/main/java/io/jooby/jetty/Jetty.java",
+      "src/main/resources/META-INF/services/io.jooby.Server",
+      "third_party_apis_skipped_paths.json"
+    ]
+  },
+  "time": {
+    "rules": [],
+    "rules_parse_time": 15.431204080581665,
+    "profiling_times": {
+      "config_time": 39.21314191818237,
+      "core_time": 32.97364902496338,
+      "ignores_time": 0.14668965339660645,
+      "total_time": 72.36163306236267
+    },
+    "parsing_time": {
+      "total_time": 0.0,
+      "per_file_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_files": []
+    },
+    "scanning_time": {
+      "total_time": 0.0,
+      "per_file_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_files": []
+    },
+    "matching_time": {
+      "total_time": 0.0,
+      "per_file_and_rule_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_rules_on_files": []
+    },
+    "tainting_time": {
+      "total_time": 0.0,
+      "per_def_and_rule_time": {
+        "mean": 0.0,
+        "std_dev": 0.0
+      },
+      "very_slow_stats": {
+        "time_ratio": 0.0,
+        "count_ratio": 0.0
+      },
+      "very_slow_rules_on_defs": []
+    },
+    "fixpoint_timeouts": [],
+    "prefiltering": {
+      "project_level_time": 0.0,
+      "file_level_time": 0.0,
+      "rules_with_project_prefilters_ratio": 0.0,
+      "rules_with_file_prefilters_ratio": 0.0,
+      "rules_selected_ratio": 0.0,
+      "rules_matched_ratio": 0.0
+    },
+    "targets": [],
+    "total_bytes": 0,
+    "max_memory_bytes": 12468628032
+  },
+  "engine_requested": "PRO",
+  "interfile_languages_used": [],
+  "skipped_rules": [],
+  "subprojects": [
+    {
+      "dependency_sources": [
+        "pom.xml"
+      ],
+      "resolved": true,
+      "resolved_stats": {
+        "resolution_method": "DynamicResolution",
+        "dependency_count": 26,
+        "ecosystem": "maven"
+      }
+    }
+  ],
+  "profiling_results": []
+}

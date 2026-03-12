@@ -1,0 +1,108 @@
+{
+  "advisories": [
+    {
+      "ruleId": "ssc-parity-7eb62e73d6781e6a752c03b961a7d3e7c0d0b068",
+      "title": "Allocation of Resources Without Limits or Throttling in io.netty:netty-codec-http",
+      "description": "Affected versions of io.netty:netty-codec-http are vulnerable to Allocation of Resources Without Limits or Throttling.",
+      "ecosystem": "maven",
+      "severity": "MEDIUM",
+      "references": {
+        "cveIds": [
+          "CVE-2024-29025"
+        ],
+        "cweIds": [
+          "CWE-770: Allocation of Resources Without Limits or Throttling"
+        ],
+        "owaspIds": [
+          "A06:2021 - Vulnerable and Outdated Components"
+        ],
+        "urls": [
+          "https://github.com/advisories/GHSA-5jpm-x58v-624v",
+          "https://nvd.nist.gov/vuln/detail/CVE-2024-29025"
+        ]
+      },
+      "announcedAt": "2024-03-25T19:40:50Z",
+      "ruleText": {
+        "id": "ssc-parity-7eb62e73d6781e6a752c03b961a7d3e7c0d0b068",
+        "message": "Affected versions of io.netty:netty-codec-http are vulnerable to Allocation of Resources Without Limits or Throttling.",
+        "severity": "WARNING",
+        "metadata": {
+          "confidence": "LOW",
+          "category": "security",
+          "cve": "CVE-2024-29025",
+          "cwe": [
+            "CWE-770: Allocation of Resources Without Limits or Throttling"
+          ],
+          "ghsa": "GHSA-5jpm-x58v-624v",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2024-03-25T19:40:50Z",
+          "references": [
+            "https://github.com/advisories/GHSA-5jpm-x58v-624v",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-29025"
+          ],
+          "sca-fix-versions": [
+            {
+              "io.netty:netty-codec-http": "4.1.108.Final"
+            }
+          ],
+          "sca-kind": "legacy",
+          "sca-schema": 20230302,
+          "sca-severity": "MODERATE",
+          "sca-vuln-database-identifier": "CVE-2024-29025",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Other"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 121916,
+              "rv_id": 956541,
+              "rule_id": "0oULqOz",
+              "version_id": "w8TKkzd",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-7eb62e73d6781e6a752c03b961a7d3e7c0d0b068",
+              "origin": "custom"
+            }
+          }
+        },
+        "r2c-internal-project-depends-on": {
+          "depends-on-either": [
+            {
+              "namespace": "maven",
+              "package": "io.netty:netty-codec-http",
+              "version": "<4.1.108.Final"
+            }
+          ]
+        },
+        "languages": [
+          "java",
+          "kotlin",
+          "scala"
+        ]
+      },
+      "reachability": "VERSION_SPECIFIER",
+      "vulnerableDependencies": [
+        {
+          "name": "io.netty:netty-codec-http",
+          "versionSpecifier": "<4.1.108.Final"
+        }
+      ],
+      "safeDependencies": [
+        {
+          "name": "io.netty:netty-codec-http",
+          "versionSpecifier": "4.1.108.Final"
+        }
+      ],
+      "cve": "CVE-2024-29025",
+      "ghsa": "GHSA-5jpm-x58v-624v",
+      "reachableIf": ""
+    }
+  ],
+  "totalCount": "1"
+}

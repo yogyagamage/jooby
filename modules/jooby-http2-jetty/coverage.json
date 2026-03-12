@@ -1,0 +1,21 @@
+[ {
+  "caller" : "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
+  "covered" : false,
+  "thirdPartyMethod" : "org.eclipse.jetty.server.HttpConfiguration.getCustomizer(java.lang.Class)"
+}, {
+  "caller" : "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
+  "covered" : false,
+  "thirdPartyMethod" : "org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory.<init>(java.lang.String[])"
+}, {
+  "caller" : "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
+  "covered" : false,
+  "thirdPartyMethod" : "org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory.setDefaultProtocol(java.lang.String)"
+}, {
+  "caller" : "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
+  "covered" : false,
+  "thirdPartyMethod" : "org.eclipse.jetty.http2.server.HTTP2ServerConnectionFactory.<init>(org.eclipse.jetty.server.HttpConfiguration)"
+}, {
+  "caller" : "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
+  "covered" : false,
+  "thirdPartyMethod" : "org.eclipse.jetty.http2.server.HTTP2CServerConnectionFactory.<init>(org.eclipse.jetty.server.HttpConfiguration)"
+} ]

@@ -1,0 +1,13 @@
+[ {
+  "caller" : "io.jooby.internal.netty.Http2OrHttp11Handler.<init>(java.util.function.Consumer, java.util.function.Consumer)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.netty.handler.ssl.ApplicationProtocolNegotiationHandler.<init>(java.lang.String)"
+}, {
+  "caller" : "io.jooby.internal.netty.Http2OrHttp11Handler.configurePipeline(io.netty.channel.ChannelHandlerContext, java.lang.String)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.pipeline()"
+}, {
+  "caller" : "io.jooby.internal.netty.Http2PrefaceOrHttpHandler.<init>(java.util.function.Consumer, java.util.function.Consumer)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.netty.handler.codec.ByteToMessageDecoder.<init>()"
+} ]

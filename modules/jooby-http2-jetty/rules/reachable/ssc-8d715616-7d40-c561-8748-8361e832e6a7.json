@@ -1,0 +1,187 @@
+{
+  "advisories": [
+    {
+      "ruleId": "ssc-8d715616-7d40-c561-8748-8361e832e6a7",
+      "title": "Uncontrolled Resource Consumption in org.eclipse.jetty.http2:http2-common",
+      "description": "Affected versions of org.eclipse.jetty.http2:http2-common and org.eclipse.jetty.http2:jetty-http2-common are vulnerable to Allocation of Resources Without Limits or Throttling / Uncontrolled Resource Consumption. A malicious HTTP/2 client can send malformed control frames (for example, WINDOW_UPDATE frames with a zero or overflow increment, HEADERS/DATA on half-closed streams, or mis-framed PRIORITY frames) to Eclipse Jetty's HTTP/2 server, triggering RST_STREAM responses that prematurely decrement the active\u2010stream counter. This lets an attacker repeatedly open new streams on a single connection without ever hitting the max-concurrent-streams limit, exhausting CPU and/or memory and resulting in denial of service. This is a protocol level attack.",
+      "ecosystem": "maven",
+      "severity": "HIGH",
+      "references": {
+        "cveIds": [
+          "CVE-2025-5115"
+        ],
+        "cweIds": [
+          "CWE-400: Uncontrolled Resource Consumption",
+          "CWE-770: Allocation of Resources Without Limits or Throttling"
+        ],
+        "owaspIds": [
+          "A06:2021 - Vulnerable and Outdated Components"
+        ],
+        "urls": [
+          "https://github.com/advisories/GHSA-mmxm-8w33-wc4h",
+          "https://nvd.nist.gov/vuln/detail/CVE-2025-5115"
+        ]
+      },
+      "announcedAt": "2025-08-20T20:52:17Z",
+      "ruleText": {
+        "id": "ssc-8d715616-7d40-c561-8748-8361e832e6a7",
+        "message": "Affected versions of org.eclipse.jetty.http2:http2-common and org.eclipse.jetty.http2:jetty-http2-common are vulnerable to Allocation of Resources Without Limits or Throttling / Uncontrolled Resource Consumption. A malicious HTTP/2 client can send malformed control frames (for example, WINDOW_UPDATE frames with a zero or overflow increment, HEADERS/DATA on half-closed streams, or mis-framed PRIORITY frames) to Eclipse Jetty's HTTP/2 server, triggering RST_STREAM responses that prematurely decrement the active\u2010stream counter. This lets an attacker repeatedly open new streams on a single connection without ever hitting the max-concurrent-streams limit, exhausting CPU and/or memory and resulting in denial of service. This is a protocol level attack.",
+        "severity": "ERROR",
+        "metadata": {
+          "confidence": "HIGH",
+          "category": "security",
+          "cve": "CVE-2025-5115",
+          "cwe": [
+            "CWE-400: Uncontrolled Resource Consumption",
+            "CWE-770: Allocation of Resources Without Limits or Throttling"
+          ],
+          "ghsa": "GHSA-mmxm-8w33-wc4h",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2025-08-20T20:52:17Z",
+          "references": [
+            "https://github.com/advisories/GHSA-mmxm-8w33-wc4h",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-5115"
+          ],
+          "sca-fix-versions": [
+            {
+              "org.eclipse.jetty.http2:http2-common": "9.4.58"
+            },
+            {
+              "org.eclipse.jetty.http2:http2-common": "11.0.26"
+            },
+            {
+              "org.eclipse.jetty.http2:http2-common": "10.0.26"
+            },
+            {
+              "org.eclipse.jetty.http2:jetty-http2-common": "12.1.0.beta3"
+            },
+            {
+              "org.eclipse.jetty.http2:jetty-http2-common": "12.0.25"
+            }
+          ],
+          "sca-kind": "reachable",
+          "sca-schema": 20230302,
+          "sca-severity": "HIGH",
+          "sca-vuln-database-identifier": "CVE-2025-5115",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Denial-of-Service (DoS)",
+            "Other"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 209213,
+              "rv_id": 1139910,
+              "rule_id": "3qUlxl1",
+              "version_id": "bZT9EoR",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-8d715616-7d40-c561-8748-8361e832e6a7",
+              "origin": "custom"
+            }
+          }
+        },
+        "r2c-internal-project-depends-on": {
+          "depends-on-either": [
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty.http2:http2-common",
+              "version": ">=10.0.0, <=10.0.25"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty.http2:http2-common",
+              "version": ">=11.0.0, <=11.0.25"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty.http2:http2-common",
+              "version": ">=9.3.0, <=9.4.57"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty.http2:jetty-http2-common",
+              "version": ">=12.0.0, <=12.0.24"
+            },
+            {
+              "namespace": "maven",
+              "package": "org.eclipse.jetty.http2:jetty-http2-common",
+              "version": ">=12.1.0.alpha0, <=12.1.0.beta2"
+            }
+          ]
+        },
+        "languages": [
+          "java",
+          "kotlin",
+          "scala"
+        ],
+        "pattern-either": [
+          {
+            "pattern": "new org.eclipse.jetty.http2.api.server.ServerSessionListener(...);"
+          },
+          {
+            "pattern": "org.eclipse.jetty.http2.api.server.ServerSessionListener(...);"
+          },
+          {
+            "patterns": [
+              {
+                "pattern-either": [
+                  {
+                    "pattern": "new org.eclipse.jetty.http2.server.$FUNC(...);"
+                  },
+                  {
+                    "pattern": "org.eclipse.jetty.http2.server.$FUNC(...);"
+                  }
+                ]
+              },
+              {
+                "metavariable-regex": {
+                  "metavariable": "$FUNC",
+                  "regex": "^(HTTP2ServerConnectionFactory|HTTP2CServerConnectionFactory)$"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "reachability": "REACHABILITY",
+      "vulnerableDependencies": [
+        {
+          "name": "org.eclipse.jetty.http2:http2-common",
+          "versionSpecifier": ">=10.0.0, <=10.0.25"
+        }
+      ],
+      "safeDependencies": [
+        {
+          "name": "org.eclipse.jetty.http2:http2-common",
+          "versionSpecifier": "9.4.58"
+        },
+        {
+          "name": "org.eclipse.jetty.http2:http2-common",
+          "versionSpecifier": "11.0.26"
+        },
+        {
+          "name": "org.eclipse.jetty.http2:http2-common",
+          "versionSpecifier": "10.0.26"
+        },
+        {
+          "name": "org.eclipse.jetty.http2:jetty-http2-common",
+          "versionSpecifier": "12.1.0.beta3"
+        },
+        {
+          "name": "org.eclipse.jetty.http2:jetty-http2-common",
+          "versionSpecifier": "12.0.25"
+        }
+      ],
+      "cve": "CVE-2025-5115",
+      "ghsa": "GHSA-mmxm-8w33-wc4h",
+      "reachableIf": ""
+    }
+  ],
+  "totalCount": "1"
+}

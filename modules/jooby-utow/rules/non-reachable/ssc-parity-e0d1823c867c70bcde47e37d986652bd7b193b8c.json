@@ -1,0 +1,120 @@
+{
+  "advisories": [
+    {
+      "ruleId": "ssc-parity-e0d1823c867c70bcde47e37d986652bd7b193b8c",
+      "title": "../filedir in io.undertow:undertow-core",
+      "description": "Affected versions of io.undertow:undertow-core are vulnerable to Path Traversal.",
+      "ecosystem": "maven",
+      "severity": "MEDIUM",
+      "references": {
+        "cveIds": [
+          "CVE-2024-1459"
+        ],
+        "cweIds": [
+          "CWE-24: Path Traversal: '../filedir'"
+        ],
+        "owaspIds": [
+          "A06:2021 - Vulnerable and Outdated Components"
+        ],
+        "urls": [
+          "https://github.com/advisories/GHSA-v76w-3ph8-vm66",
+          "https://nvd.nist.gov/vuln/detail/CVE-2024-1459"
+        ]
+      },
+      "announcedAt": "2024-02-12T21:30:55Z",
+      "ruleText": {
+        "id": "ssc-parity-e0d1823c867c70bcde47e37d986652bd7b193b8c",
+        "message": "Affected versions of io.undertow:undertow-core are vulnerable to Path Traversal.",
+        "severity": "WARNING",
+        "metadata": {
+          "confidence": "LOW",
+          "category": "security",
+          "cve": "CVE-2024-1459",
+          "cwe": [
+            "CWE-24: Path Traversal: '../filedir'"
+          ],
+          "ghsa": "GHSA-v76w-3ph8-vm66",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2024-02-12T21:30:55Z",
+          "references": [
+            "https://github.com/advisories/GHSA-v76w-3ph8-vm66",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-1459"
+          ],
+          "sca-fix-versions": [
+            {
+              "io.undertow:undertow-core": "2.3.12.Final"
+            },
+            {
+              "io.undertow:undertow-core": "2.2.31.Final"
+            }
+          ],
+          "sca-kind": "legacy",
+          "sca-schema": 20230302,
+          "sca-severity": "MODERATE",
+          "sca-vuln-database-identifier": "CVE-2024-1459",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Other"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 128192,
+              "rv_id": 970756,
+              "rule_id": "yyURzNd",
+              "version_id": "5PT9rEQ",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-e0d1823c867c70bcde47e37d986652bd7b193b8c",
+              "origin": "custom"
+            }
+          }
+        },
+        "r2c-internal-project-depends-on": {
+          "depends-on-either": [
+            {
+              "namespace": "maven",
+              "package": "io.undertow:undertow-core",
+              "version": "<2.2.31.Final"
+            },
+            {
+              "namespace": "maven",
+              "package": "io.undertow:undertow-core",
+              "version": ">=2.3.0.Alpha1, <2.3.12.Final"
+            }
+          ]
+        },
+        "languages": [
+          "java",
+          "kotlin",
+          "scala"
+        ]
+      },
+      "reachability": "VERSION_SPECIFIER",
+      "vulnerableDependencies": [
+        {
+          "name": "io.undertow:undertow-core",
+          "versionSpecifier": "<2.2.31.Final"
+        }
+      ],
+      "safeDependencies": [
+        {
+          "name": "io.undertow:undertow-core",
+          "versionSpecifier": "2.3.12.Final"
+        },
+        {
+          "name": "io.undertow:undertow-core",
+          "versionSpecifier": "2.2.31.Final"
+        }
+      ],
+      "cve": "CVE-2024-1459",
+      "ghsa": "GHSA-v76w-3ph8-vm66",
+      "reachableIf": ""
+    }
+  ],
+  "totalCount": "1"
+}

@@ -1,0 +1,120 @@
+{
+  "advisories": [
+    {
+      "ruleId": "ssc-parity-1654a647e21e1e7f8bb0f9853315cb44b75ffa8d",
+      "title": "Improper Handling of Highly Compressed Data (Data Amplification) in io.netty:netty-codec",
+      "description": "Affected versions of io.netty:netty-codec and io.netty:netty-codec-compression are vulnerable to Improper Handling of Highly Compressed Data (Data Amplification).",
+      "ecosystem": "maven",
+      "severity": "MEDIUM",
+      "references": {
+        "cveIds": [
+          "CVE-2025-58057"
+        ],
+        "cweIds": [
+          "CWE-409: Improper Handling of Highly Compressed Data (Data Amplification)"
+        ],
+        "owaspIds": [
+          "A06:2021 - Vulnerable and Outdated Components"
+        ],
+        "urls": [
+          "https://github.com/advisories/GHSA-3p8m-j85q-pgmj",
+          "https://nvd.nist.gov/vuln/detail/CVE-2025-58057"
+        ]
+      },
+      "announcedAt": "2025-09-03T18:00:55Z",
+      "ruleText": {
+        "id": "ssc-parity-1654a647e21e1e7f8bb0f9853315cb44b75ffa8d",
+        "message": "Affected versions of io.netty:netty-codec and io.netty:netty-codec-compression are vulnerable to Improper Handling of Highly Compressed Data (Data Amplification).",
+        "severity": "WARNING",
+        "metadata": {
+          "confidence": "LOW",
+          "category": "security",
+          "cve": "CVE-2025-58057",
+          "cwe": [
+            "CWE-409: Improper Handling of Highly Compressed Data (Data Amplification)"
+          ],
+          "ghsa": "GHSA-3p8m-j85q-pgmj",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2025-09-03T18:00:55Z",
+          "references": [
+            "https://github.com/advisories/GHSA-3p8m-j85q-pgmj",
+            "https://nvd.nist.gov/vuln/detail/CVE-2025-58057"
+          ],
+          "sca-fix-versions": [
+            {
+              "io.netty:netty-codec": "4.1.125.Final"
+            },
+            {
+              "io.netty:netty-codec-compression": "4.2.5.Final"
+            }
+          ],
+          "sca-kind": "legacy",
+          "sca-schema": 20230302,
+          "sca-severity": "MODERATE",
+          "sca-vuln-database-identifier": "CVE-2025-58057",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Other"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 210155,
+              "rv_id": 1142566,
+              "rule_id": "eqUgAP9",
+              "version_id": "qkTBJXJ",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-parity-1654a647e21e1e7f8bb0f9853315cb44b75ffa8d",
+              "origin": "custom"
+            }
+          }
+        },
+        "r2c-internal-project-depends-on": {
+          "depends-on-either": [
+            {
+              "namespace": "maven",
+              "package": "io.netty:netty-codec",
+              "version": "<4.1.125.Final"
+            },
+            {
+              "namespace": "maven",
+              "package": "io.netty:netty-codec-compression",
+              "version": ">=4.2.0.Alpha1, <4.2.5.Final"
+            }
+          ]
+        },
+        "languages": [
+          "java",
+          "kotlin",
+          "scala"
+        ]
+      },
+      "reachability": "VERSION_SPECIFIER",
+      "vulnerableDependencies": [
+        {
+          "name": "io.netty:netty-codec",
+          "versionSpecifier": "<4.1.125.Final"
+        }
+      ],
+      "safeDependencies": [
+        {
+          "name": "io.netty:netty-codec",
+          "versionSpecifier": "4.1.125.Final"
+        },
+        {
+          "name": "io.netty:netty-codec-compression",
+          "versionSpecifier": "4.2.5.Final"
+        }
+      ],
+      "cve": "CVE-2025-58057",
+      "ghsa": "GHSA-3p8m-j85q-pgmj",
+      "reachableIf": ""
+    }
+  ],
+  "totalCount": "1"
+}

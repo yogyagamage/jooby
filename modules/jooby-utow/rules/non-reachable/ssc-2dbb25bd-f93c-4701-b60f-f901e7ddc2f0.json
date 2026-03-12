@@ -1,0 +1,132 @@
+{
+  "advisories": [
+    {
+      "ruleId": "ssc-2dbb25bd-f93c-4701-b60f-f901e7ddc2f0",
+      "title": "Improper Certificate Validation in io.undertow:undertow-core",
+      "description": "io.undertow:undertow-core versions before 2.2.24.Final, >= 2.3.0 before 2.3.5.Final are vulnerable to improper certificate validation. The undertow client does not check the server identity presented by the server certificate in https connections.",
+      "ecosystem": "maven",
+      "severity": "CRITICAL",
+      "references": {
+        "cveIds": [
+          "CVE-2022-4492"
+        ],
+        "cweIds": [
+          "CWE-295: Improper Certificate Validation",
+          "CWE-918: Server-Side Request Forgery (SSRF)"
+        ],
+        "owaspIds": [
+          "A01:2025 - Broken Access Control",
+          "A06:2021 - Vulnerable and Outdated Components",
+          "A10:2021 - Server-Side Request Forgery (SSRF)"
+        ],
+        "urls": [
+          "https://github.com/advisories/GHSA-pfcc-3g6r-8rg8",
+          "https://nvd.nist.gov/vuln/detail/CVE-2022-4492"
+        ]
+      },
+      "announcedAt": "2023-02-23T21:30:16Z",
+      "ruleText": {
+        "id": "ssc-2dbb25bd-f93c-4701-b60f-f901e7ddc2f0",
+        "message": "io.undertow:undertow-core versions before 2.2.24.Final, >= 2.3.0 before 2.3.5.Final are vulnerable to improper certificate validation. The undertow client does not check the server identity presented by the server certificate in https connections.",
+        "severity": "CRITICAL",
+        "metadata": {
+          "confidence": "HIGH",
+          "category": "security",
+          "cve": "CVE-2022-4492",
+          "cwe": [
+            "CWE-295: Improper Certificate Validation",
+            "CWE-918: Server-Side Request Forgery (SSRF)"
+          ],
+          "ghsa": "GHSA-pfcc-3g6r-8rg8",
+          "owasp": [
+            "A01:2025 - Broken Access Control",
+            "A06:2021 - Vulnerable and Outdated Components",
+            "A10:2021 - Server-Side Request Forgery (SSRF)"
+          ],
+          "publish-date": "2023-02-23T21:30:16Z",
+          "references": [
+            "https://github.com/advisories/GHSA-pfcc-3g6r-8rg8",
+            "https://nvd.nist.gov/vuln/detail/CVE-2022-4492"
+          ],
+          "sca-fix-versions": [
+            {
+              "io.undertow:undertow-core": "2.3.5.Final"
+            },
+            {
+              "io.undertow:undertow-core": "2.2.24.Final"
+            }
+          ],
+          "sca-kind": "reachable",
+          "sca-schema": 20230302,
+          "sca-severity": "CRITICAL",
+          "sca-vuln-database-identifier": "CVE-2022-4492",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Improper Authentication",
+            "Server-Side Request Forgery (SSRF)"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 94079,
+              "rv_id": 1241665,
+              "rule_id": "ReUDgZ3",
+              "version_id": "xyTjy8O",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-2dbb25bd-f93c-4701-b60f-f901e7ddc2f0",
+              "origin": "custom"
+            }
+          }
+        },
+        "r2c-internal-project-depends-on": {
+          "depends-on-either": [
+            {
+              "namespace": "maven",
+              "package": "io.undertow:undertow-core",
+              "version": "<2.2.24.Final"
+            },
+            {
+              "namespace": "maven",
+              "package": "io.undertow:undertow-core",
+              "version": ">=2.3.0, <2.3.5.Final"
+            }
+          ]
+        },
+        "languages": [
+          "java",
+          "kotlin",
+          "scala"
+        ],
+        "patterns": [
+          {
+            "pattern": "(io.undertow.client.UndertowClient $M).connect(...)"
+          }
+        ]
+      },
+      "reachability": "REACHABILITY",
+      "vulnerableDependencies": [
+        {
+          "name": "io.undertow:undertow-core",
+          "versionSpecifier": "<2.2.24.Final"
+        }
+      ],
+      "safeDependencies": [
+        {
+          "name": "io.undertow:undertow-core",
+          "versionSpecifier": "2.3.5.Final"
+        },
+        {
+          "name": "io.undertow:undertow-core",
+          "versionSpecifier": "2.2.24.Final"
+        }
+      ],
+      "cve": "CVE-2022-4492",
+      "ghsa": "GHSA-pfcc-3g6r-8rg8",
+      "reachableIf": ""
+    }
+  ],
+  "totalCount": "1"
+}

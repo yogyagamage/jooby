@@ -1,0 +1,483 @@
+{
+  "callPairs" : [ {
+    "caller" : "io.jooby.internal.jetty.JettyContext.<init>(org.eclipse.jetty.server.Request, io.jooby.Router, int, long)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.getRequestURI()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.<init>(org.eclipse.jetty.server.Request, io.jooby.Router, int, long)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.getResponse()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.<init>(org.eclipse.jetty.server.Request, io.jooby.Router, int, long)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.getMethod()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.body()",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.getInputStream()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.body()",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.getContentLengthLong()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.cookieMap()",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.getCookies()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.cookieMap()",
+    "thirdPartyMethod" : "javax.servlet.http.Cookie.getName()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.cookieMap()",
+    "thirdPartyMethod" : "javax.servlet.http.Cookie.getValue()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.formParam(org.eclipse.jetty.server.Request, io.jooby.Formdata)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.getQueryParameters()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.formParam(org.eclipse.jetty.server.Request, io.jooby.Formdata)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.getParameterValues(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.formParam(org.eclipse.jetty.server.Request, io.jooby.Formdata)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.getParameterNames()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.formParam(org.eclipse.jetty.server.Request, io.jooby.Formdata)",
+    "thirdPartyMethod" : "org.eclipse.jetty.util.MultiMap.containsKey(java.lang.Object)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.getClientCertificates()",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.getAttribute(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.getProtocol()",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.getProtocol()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.getRemoteAddress()",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.getRemoteAddr()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.getResponseCode()",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Response.getStatus()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.getResponseHeader(java.lang.String)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Response.getHeader(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.getResponseLength()",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Response.getHeader(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.getResponseLength()",
+    "thirdPartyMethod" : "org.eclipse.jetty.http.HttpHeader.asString()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.getResponseLength()",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Response.getContentLength()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.getScheme()",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.isSecure()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.header()",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.getHeaders(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.header()",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.getHeaderNames()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.ifSetChunked()",
+    "thirdPartyMethod" : "org.eclipse.jetty.http.HttpHeaderValue.asString()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.ifSetChunked()",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Response.getContentLength()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.ifSetChunked()",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Response.setHeader(org.eclipse.jetty.http.HttpHeader, java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.ifStartAsync()",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.isAsyncStarted()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.ifStartAsync()",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.startAsync()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.multipart()",
+    "thirdPartyMethod" : "javax.servlet.MultipartConfigElement.<init>(java.lang.String, long, long, int)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.multipart()",
+    "thirdPartyMethod" : "org.eclipse.jetty.http.HttpFields.valueParameters(java.lang.String, java.util.Map)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.multipart()",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.setAttribute(java.lang.String, java.lang.Object)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.multipart()",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.getContentType()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.multipart()",
+    "thirdPartyMethod" : "javax.servlet.http.Part.getSubmittedFileName()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.multipart()",
+    "thirdPartyMethod" : "org.eclipse.jetty.http.MimeTypes.Type.is(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.multipart()",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.getParts()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.multipart()",
+    "thirdPartyMethod" : "javax.servlet.http.Part.getName()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.onError(java.lang.Throwable)",
+    "thirdPartyMethod" : "javax.servlet.AsyncContext.complete()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.onWritePossible()",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.HttpOutput.isReady()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.onWritePossible()",
+    "thirdPartyMethod" : "javax.servlet.AsyncContext.complete()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.onWritePossible()",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.HttpOutput.write(java.nio.ByteBuffer)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.query()",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.getQueryString()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.removeResponseHeader(java.lang.String)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Response.setHeader(java.lang.String, java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.removeResponseHeaders()",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Response.reset()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.responseDone()",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.getAsyncContext()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.responseDone()",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.isAsyncStarted()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.responseDone()",
+    "thirdPartyMethod" : "javax.servlet.AsyncContext.complete()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.responseSender()",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Response.getHttpOutput()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.responseStream()",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Response.getOutputStream()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.send(io.jooby.StatusCode)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Response.setStatus(int)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.send(java.io.InputStream)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Response.setLongContentLength(long)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.send(java.nio.ByteBuffer)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Response.getContentLength()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.send(java.nio.ByteBuffer)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.HttpOutput.sendContent(java.nio.ByteBuffer)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.send(java.nio.ByteBuffer)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Response.setContentLengthLong(long)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.send(java.nio.ByteBuffer)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Response.getHttpOutput()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.send(java.nio.ByteBuffer[])",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Response.getHttpOutput()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.send(java.nio.ByteBuffer[])",
+    "thirdPartyMethod" : "org.eclipse.jetty.util.BufferUtil.remaining(java.nio.ByteBuffer[])"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.send(java.nio.ByteBuffer[])",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.HttpOutput.setWriteListener(javax.servlet.WriteListener)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.send(java.nio.ByteBuffer[])",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Response.getContentLength()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.send(java.nio.ByteBuffer[])",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.getAsyncContext()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.send(java.nio.channels.FileChannel)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Response.setLongContentLength(long)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.sendStreamInternal(java.io.InputStream)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Response.setHeader(org.eclipse.jetty.http.HttpHeader, java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.sendStreamInternal(java.io.InputStream)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Response.getContentLength()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.sendStreamInternal(java.io.InputStream)",
+    "thirdPartyMethod" : "org.eclipse.jetty.http.HttpHeader.asString()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.sendStreamInternal(java.io.InputStream)",
+    "thirdPartyMethod" : "org.eclipse.jetty.http.HttpHeaderValue.asString()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.sendStreamInternal(java.io.InputStream)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.HttpOutput.sendContent(java.io.InputStream)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.sendStreamInternal(java.io.InputStream)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Response.getHttpOutput()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.sendStreamInternal(java.io.InputStream)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.getHeader(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.setResponseCode(int)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Response.setStatus(int)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.setResponseCookie(io.jooby.Cookie)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Response.setHeader(org.eclipse.jetty.http.HttpHeader, java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.setResponseCookie(io.jooby.Cookie)",
+    "thirdPartyMethod" : "org.eclipse.jetty.http.HttpHeader.asString()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.setResponseCookie(io.jooby.Cookie)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Response.addHeader(java.lang.String, java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.setResponseHeader(java.lang.String, java.lang.String)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Response.setHeader(java.lang.String, java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.setResponseLength(long)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Response.setContentLengthLong(long)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.setResponseType(io.jooby.MediaType, java.nio.charset.Charset)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Response.setHeader(org.eclipse.jetty.http.HttpHeader, java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.setResponseType(java.lang.String)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Response.setHeader(org.eclipse.jetty.http.HttpHeader, java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.upgrade(io.jooby.ServerSentEmitter.Handler)",
+    "thirdPartyMethod" : "javax.servlet.AsyncContext.setTimeout(long)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.upgrade(io.jooby.ServerSentEmitter.Handler)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.startAsync()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.upgrade(io.jooby.ServerSentEmitter.Handler)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.getAsyncContext()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.upgrade(io.jooby.ServerSentEmitter.Handler)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Response.flushBuffer()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.upgrade(io.jooby.ServerSentEmitter.Handler)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.isAsyncStarted()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.upgrade(io.jooby.WebSocket.Initializer)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.getContext()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.upgrade(io.jooby.WebSocket.Initializer)",
+    "thirdPartyMethod" : "org.eclipse.jetty.websocket.server.WebSocketServerFactory.acceptWebSocket(org.eclipse.jetty.websocket.servlet.WebSocketCreator, javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.upgrade(io.jooby.WebSocket.Initializer)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.handler.ContextHandler.Context.getAttribute(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyContext.upgrade(io.jooby.WebSocket.Initializer)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.setAttribute(java.lang.String, java.lang.Object)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyFileUpload.bytes()",
+    "thirdPartyMethod" : "org.eclipse.jetty.http.MultiPartFormInputStream.MultiPart.getBytes()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyFileUpload.bytes()",
+    "thirdPartyMethod" : "org.eclipse.jetty.http.MultiPartFormInputStream.MultiPart.getFile()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyFileUpload.destroy()",
+    "thirdPartyMethod" : "org.eclipse.jetty.http.MultiPartFormInputStream.MultiPart.cleanUp()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyFileUpload.destroy()",
+    "thirdPartyMethod" : "org.eclipse.jetty.http.MultiPartFormInputStream.MultiPart.delete()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyFileUpload.getContentType()",
+    "thirdPartyMethod" : "org.eclipse.jetty.http.MultiPartFormInputStream.MultiPart.getContentType()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyFileUpload.getFileName()",
+    "thirdPartyMethod" : "org.eclipse.jetty.http.MultiPartFormInputStream.MultiPart.getSubmittedFileName()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyFileUpload.getFileSize()",
+    "thirdPartyMethod" : "org.eclipse.jetty.http.MultiPartFormInputStream.MultiPart.getSize()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyFileUpload.getName()",
+    "thirdPartyMethod" : "org.eclipse.jetty.http.MultiPartFormInputStream.MultiPart.getName()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyFileUpload.path()",
+    "thirdPartyMethod" : "org.eclipse.jetty.http.MultiPartFormInputStream.MultiPart.getFile()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyFileUpload.path()",
+    "thirdPartyMethod" : "org.eclipse.jetty.http.MultiPartFormInputStream.MultiPart.write(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyFileUpload.stream()",
+    "thirdPartyMethod" : "org.eclipse.jetty.http.MultiPartFormInputStream.MultiPart.getInputStream()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyHandler.<init>(io.jooby.Router, int, long, boolean)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.handler.AbstractHandler.<init>()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyHandler.handle(java.lang.String, org.eclipse.jetty.server.Request, javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)",
+    "thirdPartyMethod" : "javax.servlet.http.HttpServletResponse.setHeader(java.lang.String, java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyHandler.handle(java.lang.String, org.eclipse.jetty.server.Request, javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)",
+    "thirdPartyMethod" : "org.eclipse.jetty.http.HttpHeader.asString()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyHandler.handle(java.lang.String, org.eclipse.jetty.server.Request, javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.setHandled(boolean)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyHandler.handle(java.lang.String, org.eclipse.jetty.server.Request, javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)",
+    "thirdPartyMethod" : "javax.servlet.http.HttpServletResponse.setContentType(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettySender.write(byte[], io.jooby.Sender.Callback)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.HttpOutput.write(byte[])"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettySender.write(byte[], io.jooby.Sender.Callback)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.HttpOutput.flush()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyServerSentEmitter.close()",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Response.closeOutput()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyServerSentEmitter.keepAlive(long)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Request.getHttpChannel()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyServerSentEmitter.keepAlive(long)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.HttpChannel.getConnector()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyServerSentEmitter.keepAlive(long)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Connector.getScheduler()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyServerSentEmitter.keepAlive(long)",
+    "thirdPartyMethod" : "org.eclipse.jetty.util.thread.Scheduler.schedule(java.lang.Runnable, long, java.util.concurrent.TimeUnit)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyServerSentEmitter.send(io.jooby.ServerSentMessage)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Response.getHttpOutput()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyServerSentEmitter.send(io.jooby.ServerSentMessage)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.HttpOutput.flush()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyServerSentEmitter.send(io.jooby.ServerSentMessage)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.HttpOutput.write(byte[])"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyWebSocket.handleClose(io.jooby.WebSocketCloseStatus)",
+    "thirdPartyMethod" : "org.eclipse.jetty.websocket.api.Session.close(int, java.lang.String)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyWebSocket.isOpen()",
+    "thirdPartyMethod" : "org.eclipse.jetty.websocket.api.Session.isOpen()"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyWebSocket.send(java.lang.String, boolean)",
+    "thirdPartyMethod" : "org.eclipse.jetty.websocket.api.RemoteEndpoint.sendString(java.lang.String, org.eclipse.jetty.websocket.api.WriteCallback)"
+  }, {
+    "caller" : "io.jooby.internal.jetty.JettyWebSocket.send(java.lang.String, boolean)",
+    "thirdPartyMethod" : "org.eclipse.jetty.websocket.api.Session.getRemote()"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.lambda.start(org.eclipse.jetty.util.ssl.SslContextFactory.Server, java.lang.String)",
+    "thirdPartyMethod" : "org.eclipse.jetty.util.ssl.SslContextFactory.Server.addExcludeProtocols(java.lang.String[])"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.util.ssl.SslContextFactory.Server.setSslContext(javax.net.ssl.SSLContext)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.handler.ContextHandler.<init>()"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.handler.gzip.GzipHandler.<init>()"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.util.ssl.SslContextFactory.Server.setIncludeProtocols(java.lang.String[])"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Server.setHandler(org.eclipse.jetty.server.Handler)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.SslConnectionFactory.<init>(org.eclipse.jetty.util.ssl.SslContextFactory, java.lang.String)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.SecureRequestCustomizer.<init>()"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.util.ssl.SslContextFactory.Server.setNeedClientAuth(boolean)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.util.thread.QueuedThreadPool.setName(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.HttpConfiguration.setSendServerVersion(boolean)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.websocket.api.WebSocketPolicy.setIdleTimeout(long)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.websocket.api.WebSocketPolicy.setMaxTextMessageSize(int)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.handler.ContextHandler.setHandler(org.eclipse.jetty.server.Handler)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.handler.gzip.GzipHandler.setCompressionLevel(int)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Server.setStopAtShutdown(boolean)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.util.ssl.SslContextFactory.Server.setWantClientAuth(boolean)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Server.start()"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.ServerConnector.setPort(int)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.HttpConfiguration.setSendDateHeader(boolean)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "com.typesafe.config.Config.getDuration(java.lang.String, java.util.concurrent.TimeUnit)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "com.typesafe.config.Config.hasPath(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.handler.gzip.GzipHandler.setHandler(org.eclipse.jetty.server.Handler)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.handler.ContextHandler.setAttribute(java.lang.String, java.lang.Object)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.HttpConfiguration.setOutputBufferSize(int)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.ServerConnector.<init>(org.eclipse.jetty.server.Server, org.eclipse.jetty.server.ConnectionFactory[])"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.ServerConnector.setHost(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.websocket.api.WebSocketPolicy.setMaxTextMessageBufferSize(int)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.HttpConfiguration.<init>(org.eclipse.jetty.server.HttpConfiguration)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.HttpConfiguration.<init>()"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Server.addConnector(org.eclipse.jetty.server.Connector)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.HttpConfiguration.setOutputAggregationSize(int)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.HttpConnectionFactory.<init>(org.eclipse.jetty.server.HttpConfiguration)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.HttpConfiguration.setMultiPartFormDataCompliance(org.eclipse.jetty.server.MultiPartFormDataCompliance)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.util.DecoratedObjectFactory.<init>()"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.util.thread.QueuedThreadPool.<init>(int)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.handler.ContextHandler.getServletContext()"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.HttpConfiguration.addCustomizer(org.eclipse.jetty.server.HttpConfiguration.Customizer)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.websocket.api.WebSocketPolicy.<init>(org.eclipse.jetty.websocket.api.WebSocketBehavior)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.websocket.server.WebSocketServerFactory.<init>(javax.servlet.ServletContext, org.eclipse.jetty.websocket.api.WebSocketPolicy)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Server.<init>(org.eclipse.jetty.util.thread.ThreadPool)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.handler.ContextHandler.addManaged(org.eclipse.jetty.util.component.LifeCycle)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "com.typesafe.config.Config.getBytes(java.lang.String)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.util.ssl.SslContextFactory.Server.<init>()"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.HttpConfiguration.setSendXPoweredBy(boolean)"
+  }, {
+    "caller" : "io.jooby.jetty.Jetty.stop()",
+    "thirdPartyMethod" : "org.eclipse.jetty.server.Server.stop()"
+  } ]
+}

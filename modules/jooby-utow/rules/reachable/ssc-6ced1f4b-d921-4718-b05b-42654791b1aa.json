@@ -1,0 +1,127 @@
+{
+  "advisories": [
+    {
+      "ruleId": "ssc-6ced1f4b-d921-4718-b05b-42654791b1aa",
+      "title": "HTTP Request/Response Smuggling in io.undertow:undertow-core",
+      "description": "Affected versions of io.undertow:undertow-core are vulnerable to Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling'). A flaw was found in Undertow, which incorrectly parses cookies with certain value-delimiting characters in incoming requests. This issue could allow an attacker to construct a cookie value to exfiltrate HttpOnly cookie values or spoof arbitrary additional cookie values, leading to unauthorized data access or modification.",
+      "ecosystem": "maven",
+      "severity": "HIGH",
+      "references": {
+        "cveIds": [
+          "CVE-2023-4639"
+        ],
+        "cweIds": [
+          "CWE-444: Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling')"
+        ],
+        "owaspIds": [
+          "A04:2021 - Insecure Design",
+          "A06:2021 - Vulnerable and Outdated Components",
+          "A06:2025 - Insecure Design"
+        ],
+        "urls": [
+          "https://github.com/advisories/GHSA-3jrv-jgp8-45v3",
+          "https://nvd.nist.gov/vuln/detail/CVE-2023-4639"
+        ]
+      },
+      "announcedAt": "2024-11-17T12:30:29Z",
+      "ruleText": {
+        "id": "ssc-6ced1f4b-d921-4718-b05b-42654791b1aa",
+        "message": "Affected versions of io.undertow:undertow-core are vulnerable to Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling'). A flaw was found in Undertow, which incorrectly parses cookies with certain value-delimiting characters in incoming requests. This issue could allow an attacker to construct a cookie value to exfiltrate HttpOnly cookie values or spoof arbitrary additional cookie values, leading to unauthorized data access or modification.",
+        "severity": "ERROR",
+        "metadata": {
+          "confidence": "HIGH",
+          "category": "security",
+          "cve": "CVE-2023-4639",
+          "cwe": [
+            "CWE-444: Inconsistent Interpretation of HTTP Requests ('HTTP Request/Response Smuggling')"
+          ],
+          "ghsa": "GHSA-3jrv-jgp8-45v3",
+          "owasp": [
+            "A04:2021 - Insecure Design",
+            "A06:2021 - Vulnerable and Outdated Components",
+            "A06:2025 - Insecure Design"
+          ],
+          "publish-date": "2024-11-17T12:30:29Z",
+          "references": [
+            "https://github.com/advisories/GHSA-3jrv-jgp8-45v3",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-4639"
+          ],
+          "sca-fix-versions": [
+            {
+              "io.undertow:undertow-core": "2.3.11.Final"
+            },
+            {
+              "io.undertow:undertow-core": "2.2.30.Final"
+            }
+          ],
+          "sca-kind": "reachable",
+          "sca-schema": 20230302,
+          "sca-severity": "HIGH",
+          "sca-vuln-database-identifier": "CVE-2023-4639",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Improper Validation"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 148079,
+              "rv_id": 1238167,
+              "rule_id": "YGUpdzO",
+              "version_id": "0bTK0k2",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-6ced1f4b-d921-4718-b05b-42654791b1aa",
+              "origin": "custom"
+            }
+          }
+        },
+        "r2c-internal-project-depends-on": {
+          "depends-on-either": [
+            {
+              "namespace": "maven",
+              "package": "io.undertow:undertow-core",
+              "version": "<2.2.30.Final"
+            },
+            {
+              "namespace": "maven",
+              "package": "io.undertow:undertow-core",
+              "version": ">=2.3.0.Alpha1, <2.3.11.Final"
+            }
+          ]
+        },
+        "languages": [
+          "java"
+        ],
+        "patterns": [
+          {
+            "pattern": "(io.undertow.Undertow $ANY).start(...)"
+          }
+        ]
+      },
+      "reachability": "REACHABILITY",
+      "vulnerableDependencies": [
+        {
+          "name": "io.undertow:undertow-core",
+          "versionSpecifier": "<2.2.30.Final"
+        }
+      ],
+      "safeDependencies": [
+        {
+          "name": "io.undertow:undertow-core",
+          "versionSpecifier": "2.3.11.Final"
+        },
+        {
+          "name": "io.undertow:undertow-core",
+          "versionSpecifier": "2.2.30.Final"
+        }
+      ],
+      "cve": "CVE-2023-4639",
+      "ghsa": "GHSA-3jrv-jgp8-45v3",
+      "reachableIf": ""
+    }
+  ],
+  "totalCount": "1"
+}

@@ -1,0 +1,132 @@
+{
+  "advisories": [
+    {
+      "ruleId": "ssc-cce98871-974d-4473-abec-e07054e241bb",
+      "title": "Allocation of Resources Without Limits or Throttling in io.undertow:undertow-core",
+      "description": "Affected versions of io.undertow:undertow-core are vulnerable to Allocation of Resources Without Limits or Throttling. Attackers may exploit uncontrolled resource consumption to degrade performance or cause service disruption.",
+      "ecosystem": "maven",
+      "severity": "HIGH",
+      "references": {
+        "cveIds": [
+          "CVE-2024-4027"
+        ],
+        "cweIds": [
+          "CWE-770: Allocation of Resources Without Limits or Throttling"
+        ],
+        "owaspIds": [
+          "A06:2021 - Vulnerable and Outdated Components"
+        ],
+        "urls": [
+          "https://github.com/advisories/GHSA-33hj-rcmx-86mv",
+          "https://nvd.nist.gov/vuln/detail/CVE-2024-4027"
+        ]
+      },
+      "announcedAt": "2026-01-30T15:31:14Z",
+      "ruleText": {
+        "id": "ssc-cce98871-974d-4473-abec-e07054e241bb",
+        "message": "Affected versions of io.undertow:undertow-core are vulnerable to Allocation of Resources Without Limits or Throttling. Attackers may exploit uncontrolled resource consumption to degrade performance or cause service disruption.",
+        "severity": "ERROR",
+        "metadata": {
+          "confidence": "HIGH",
+          "category": "security",
+          "cve": "CVE-2024-4027",
+          "cwe": [
+            "CWE-770: Allocation of Resources Without Limits or Throttling"
+          ],
+          "ghsa": "GHSA-33hj-rcmx-86mv",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2026-01-30T15:31:14Z",
+          "references": [
+            "https://github.com/advisories/GHSA-33hj-rcmx-86mv",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-4027"
+          ],
+          "sca-fix-versions": [
+            {
+              "io.undertow:undertow-core": "2.4.0.Beta1"
+            },
+            {
+              "io.undertow:undertow-core": "2.3.21.Final"
+            },
+            {
+              "io.undertow:undertow-core": "2.2.39.Final"
+            }
+          ],
+          "sca-kind": "upgrade-only",
+          "sca-schema": 20230302,
+          "sca-severity": "HIGH",
+          "sca-vuln-database-identifier": "CVE-2024-4027",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Other"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 276728,
+              "rv_id": 1274153,
+              "rule_id": "JDU3oqp",
+              "version_id": "8KT52xQ",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-cce98871-974d-4473-abec-e07054e241bb",
+              "origin": "custom"
+            }
+          }
+        },
+        "r2c-internal-project-depends-on": {
+          "depends-on-either": [
+            {
+              "namespace": "maven",
+              "package": "io.undertow:undertow-core",
+              "version": "<2.2.39.Final"
+            },
+            {
+              "namespace": "maven",
+              "package": "io.undertow:undertow-core",
+              "version": "==2.4.0.Alpha1"
+            },
+            {
+              "namespace": "maven",
+              "package": "io.undertow:undertow-core",
+              "version": ">=2.3.0.Alpha1, <2.3.21.Final"
+            }
+          ]
+        },
+        "languages": [
+          "java",
+          "kotlin",
+          "scala"
+        ]
+      },
+      "reachability": "ALWAYS_REACHABLE",
+      "vulnerableDependencies": [
+        {
+          "name": "io.undertow:undertow-core",
+          "versionSpecifier": "<2.2.39.Final"
+        }
+      ],
+      "safeDependencies": [
+        {
+          "name": "io.undertow:undertow-core",
+          "versionSpecifier": "2.4.0.Beta1"
+        },
+        {
+          "name": "io.undertow:undertow-core",
+          "versionSpecifier": "2.3.21.Final"
+        },
+        {
+          "name": "io.undertow:undertow-core",
+          "versionSpecifier": "2.2.39.Final"
+        }
+      ],
+      "cve": "CVE-2024-4027",
+      "ghsa": "GHSA-33hj-rcmx-86mv",
+      "reachableIf": ""
+    }
+  ],
+  "totalCount": "1"
+}

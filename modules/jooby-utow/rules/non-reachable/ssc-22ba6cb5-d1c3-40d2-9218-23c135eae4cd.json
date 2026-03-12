@@ -1,0 +1,121 @@
+{
+  "advisories": [
+    {
+      "ruleId": "ssc-22ba6cb5-d1c3-40d2-9218-23c135eae4cd",
+      "title": "Uncontrolled Resource Consumption in io.undertow:undertow-core",
+      "description": "Affected versions of io.undertow:undertow-core are vulnerable to Uncontrolled Resource Consumption. Under specific conditions during an HTTP upgrade to a remoting connection, Undertow fails to clean up a timeout task when a connection is abruptly closed. This results in lingering references in the worker thread, leading to both memory and file descriptor leaks that can exhaust server resources. An attacker could repeatedly open and close connections to trigger resource exhaustion and potentially cause a denial-of-service.",
+      "ecosystem": "maven",
+      "severity": "HIGH",
+      "references": {
+        "cveIds": [
+          "CVE-2024-1635"
+        ],
+        "cweIds": [
+          "CWE-400: Uncontrolled Resource Consumption"
+        ],
+        "owaspIds": [
+          "A06:2021 - Vulnerable and Outdated Components"
+        ],
+        "urls": [
+          "https://github.com/advisories/GHSA-w6qf-42m7-vh68",
+          "https://nvd.nist.gov/vuln/detail/CVE-2024-1635"
+        ]
+      },
+      "announcedAt": "2024-02-20T00:30:36Z",
+      "ruleText": {
+        "id": "ssc-22ba6cb5-d1c3-40d2-9218-23c135eae4cd",
+        "message": "Affected versions of io.undertow:undertow-core are vulnerable to Uncontrolled Resource Consumption. Under specific conditions during an HTTP upgrade to a remoting connection, Undertow fails to clean up a timeout task when a connection is abruptly closed. This results in lingering references in the worker thread, leading to both memory and file descriptor leaks that can exhaust server resources. An attacker could repeatedly open and close connections to trigger resource exhaustion and potentially cause a denial-of-service.",
+        "severity": "ERROR",
+        "metadata": {
+          "confidence": "HIGH",
+          "category": "security",
+          "cve": "CVE-2024-1635",
+          "cwe": [
+            "CWE-400: Uncontrolled Resource Consumption"
+          ],
+          "ghsa": "GHSA-w6qf-42m7-vh68",
+          "owasp": [
+            "A06:2021 - Vulnerable and Outdated Components"
+          ],
+          "publish-date": "2024-02-20T00:30:36Z",
+          "references": [
+            "https://github.com/advisories/GHSA-w6qf-42m7-vh68",
+            "https://nvd.nist.gov/vuln/detail/CVE-2024-1635"
+          ],
+          "sca-fix-versions": [
+            {
+              "io.undertow:undertow-core": "2.3.12.Final"
+            },
+            {
+              "io.undertow:undertow-core": "2.2.31.Final"
+            }
+          ],
+          "sca-kind": "upgrade-only",
+          "sca-reachable-if": "you have an Undertow server that accepts requests from untrusted sources, such as the open internet",
+          "sca-schema": 20230302,
+          "sca-severity": "HIGH",
+          "sca-vuln-database-identifier": "CVE-2024-1635",
+          "technology": [
+            "java",
+            "kotlin",
+            "scala"
+          ],
+          "license": "Semgrep Rules License v1.0. For more details, visit semgrep.dev/legal/rules-license",
+          "vulnerability_class": [
+            "Denial-of-Service (DoS)"
+          ],
+          "semgrep.dev": {
+            "rule": {
+              "r_id": 204554,
+              "rv_id": 1093579,
+              "rule_id": "x8Uv0EB",
+              "version_id": "0bTlzd7",
+              "url": "https://semgrep.dev/orgs/-/supply-chain/advisories?q=ssc-22ba6cb5-d1c3-40d2-9218-23c135eae4cd",
+              "origin": "custom"
+            }
+          }
+        },
+        "r2c-internal-project-depends-on": {
+          "depends-on-either": [
+            {
+              "namespace": "maven",
+              "package": "io.undertow:undertow-core",
+              "version": "<2.2.31.Final"
+            },
+            {
+              "namespace": "maven",
+              "package": "io.undertow:undertow-core",
+              "version": ">=2.3.0.Final, <2.3.12.Final"
+            }
+          ]
+        },
+        "languages": [
+          "java",
+          "kotlin",
+          "scala"
+        ]
+      },
+      "reachability": "MANUAL_REVIEW_REACHABLE",
+      "vulnerableDependencies": [
+        {
+          "name": "io.undertow:undertow-core",
+          "versionSpecifier": "<2.2.31.Final"
+        }
+      ],
+      "safeDependencies": [
+        {
+          "name": "io.undertow:undertow-core",
+          "versionSpecifier": "2.3.12.Final"
+        },
+        {
+          "name": "io.undertow:undertow-core",
+          "versionSpecifier": "2.2.31.Final"
+        }
+      ],
+      "reachableIf": "you have an Undertow server that accepts requests from untrusted sources, such as the open internet",
+      "cve": "CVE-2024-1635",
+      "ghsa": "GHSA-w6qf-42m7-vh68"
+    }
+  ],
+  "totalCount": "1"
+}

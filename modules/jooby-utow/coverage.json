@@ -1,0 +1,629 @@
+[ {
+  "caller" : "io.jooby.internal.utow.UtowWebSocket.handleClose(io.jooby.WebSocketCloseStatus)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.websockets.core.WebSockets.sendClose(int, java.lang.String, io.undertow.websockets.core.WebSocketChannel, io.undertow.websockets.core.WebSocketCallback, java.lang.Object)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.header()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getRequestHeaders()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.header()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.util.HeaderMap.getHeaderNames()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.header()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.util.HeaderMap.get(io.undertow.util.HttpString)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.header()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.util.HttpString.toString()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.setResponseType(io.jooby.MediaType, java.nio.charset.Charset)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getResponseHeaders()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.setResponseType(io.jooby.MediaType, java.nio.charset.Charset)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.util.HeaderMap.put(io.undertow.util.HttpString, java.lang.String)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.send(java.nio.channels.FileChannel)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.setResponseContentLength(long)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.send(java.nio.channels.FileChannel)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getRequestHeaders()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.send(java.nio.channels.FileChannel)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.util.HeaderMap.getFirst(io.undertow.util.HttpString)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.upgrade(io.jooby.WebSocket$Initializer)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.Handlers.websocket(io.undertow.websockets.WebSocketConnectionCallback)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.upgrade(io.jooby.WebSocket$Initializer)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.websockets.WebSocketProtocolHandshakeHandler.handleRequest(io.undertow.server.HttpServerExchange)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.query()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getQueryString()"
+}, {
+  "caller" : "io.jooby.internal.undertow.ConscriptAlpnProvider.Impl.getSelectedProtocol(javax.net.ssl.SSLEngine)",
+  "covered" : false,
+  "thirdPartyMethod" : "org.conscrypt.Conscrypt.getApplicationProtocol(javax.net.ssl.SSLEngine)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowFileUpload.path()",
+  "covered" : true,
+  "thirdPartyMethod" : "io.undertow.server.handlers.form.FormData.FormValue.getFileItem()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowFileUpload.path()",
+  "covered" : true,
+  "thirdPartyMethod" : "io.undertow.server.handlers.form.FormData.FileItem.getFile()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowBodyHandler.exchangeEvent(io.undertow.server.HttpServerExchange, io.undertow.server.ExchangeCompletionListener$NextListener)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.ExchangeCompletionListener.NextListener.proceed()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.setScheme(java.lang.String)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.setRequestScheme(java.lang.String)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowFileUpload.destroy()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.handlers.form.FormData.FileItem.delete()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.cookieMap()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getRequestCookies()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.cookieMap()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.handlers.Cookie.getName()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.cookieMap()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.handlers.Cookie.getValue()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.removeResponseHeaders()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getResponseHeaders()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.removeResponseHeaders()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.util.HeaderMap.clear()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.detach(io.jooby.Route$Handler)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.dispatch(java.util.concurrent.Executor, java.lang.Runnable)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowWebSocket.isOpen()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.websockets.core.WebSocketChannel.isOpen()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.getRemoteAddress()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getSourceAddress()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.onComplete(io.undertow.server.HttpServerExchange, io.undertow.io.Sender)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.endExchange()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.send(io.jooby.StatusCode)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.setStatusCode(int)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.send(io.jooby.StatusCode)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getResponseSender()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.send(io.jooby.StatusCode)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.io.Sender.send(java.nio.ByteBuffer, io.undertow.io.IoCallback)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowFileUpload.getContentType()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.handlers.form.FormData.FormValue.getHeaders()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowFileUpload.getContentType()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.util.HeaderMap.getFirst(io.undertow.util.HttpString)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.removeResponseHeader(java.lang.String)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getResponseHeaders()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.removeResponseHeader(java.lang.String)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.util.HeaderMap.remove(java.lang.String)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.isInIoThread()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.isInIoThread()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.isResponseStarted()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.isResponseStarted()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowBodyHandler.handle(io.undertow.server.HttpServerExchange, byte[], boolean)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.endExchange()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowBodyHandler.handle(io.undertow.server.HttpServerExchange, byte[], boolean)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.addExchangeCompleteListener(io.undertow.server.ExchangeCompletionListener)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.getClientCertificates()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getConnection()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.getClientCertificates()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.ServerConnection.getSslSessionInfo()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.getClientCertificates()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.SSLSessionInfo.getPeerCertificates()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowSeverSentEmitter.send(io.jooby.ServerSentMessage)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getResponseSender()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowSeverSentEmitter.send(io.jooby.ServerSentMessage)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.io.Sender.send(java.nio.ByteBuffer, io.undertow.io.IoCallback)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.setResponseType(java.lang.String)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.util.HeaderMap.put(io.undertow.util.HttpString, java.lang.String)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowChunkedStream.onException(io.undertow.server.HttpServerExchange, io.undertow.io.Sender, java.io.IOException)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.io.IoCallback.onException(io.undertow.server.HttpServerExchange, io.undertow.io.Sender, java.io.IOException)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowSeverSentEmitter.keepAlive(long)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getIoThread()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowSeverSentEmitter.keepAlive(long)",
+  "covered" : false,
+  "thirdPartyMethod" : "org.xnio.XnioIoThread.executeAfter(java.lang.Runnable, long, java.util.concurrent.TimeUnit)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.getScheme()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getRequestScheme()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.send(java.nio.channels.ReadableByteChannel)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getRequestContentLength()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.formData(io.jooby.Formdata, io.undertow.server.handlers.form.FormData)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.handlers.form.FormData.iterator()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.formData(io.jooby.Formdata, io.undertow.server.handlers.form.FormData)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.handlers.form.FormData.get(java.lang.String)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.formData(io.jooby.Formdata, io.undertow.server.handlers.form.FormData)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.handlers.form.FormData.FormValue.isFileItem()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.formData(io.jooby.Formdata, io.undertow.server.handlers.form.FormData)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.handlers.form.FormData.FormValue.getValue()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.getResponseHeader(java.lang.String)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.util.HeaderMap.getFirst(java.lang.String)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.onComplete(io.jooby.Route$Complete)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.addExchangeCompleteListener(io.undertow.server.ExchangeCompletionListener)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.send(java.io.InputStream)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getResponseContentLength()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.send(java.io.InputStream)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getRequestHeaders()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.send(java.io.InputStream)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.util.HeaderMap.getFirst(io.undertow.util.HttpString)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowChunkedStream.done()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.connector.PooledByteBuffer.close()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowChunkedStream.done()",
+  "covered" : false,
+  "thirdPartyMethod" : "org.xnio.IoUtils.safeClose(java.io.Closeable)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.header(java.lang.String)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getRequestHeaders()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.header(java.lang.String)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.util.HeaderMap.get(java.lang.String)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.send(java.nio.ByteBuffer[])",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getResponseHeaders()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.send(java.nio.ByteBuffer[])",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.util.HeaderMap.contains(io.undertow.util.HttpString)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.send(java.nio.ByteBuffer[])",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.util.HeaderMap.put(io.undertow.util.HttpString, java.lang.String)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.send(java.nio.ByteBuffer[])",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getResponseSender()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.send(java.nio.ByteBuffer[])",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.io.Sender.send(java.nio.ByteBuffer[], io.undertow.io.IoCallback)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.setResponseHeader(java.lang.String, java.lang.String)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getResponseHeaders()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.setResponseHeader(java.lang.String, java.lang.String)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.util.HttpString.tryFromString(java.lang.String)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.setResponseHeader(java.lang.String, java.lang.String)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.util.HeaderMap.put(io.undertow.util.HttpString, java.lang.String)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.getProtocol()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getProtocol()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.responseWriter(io.jooby.MediaType, java.nio.charset.Charset)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getOutputStream()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.setResponseLength(long)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getResponseHeaders()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.setResponseLength(long)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.util.HeaderMap.put(io.undertow.util.HttpString, java.lang.String)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.setResponseCode(int)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.setStatusCode(int)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowWebSocket.complete(io.undertow.websockets.core.WebSocketChannel, io.jooby.internal.utow.UtowWebSocket)",
+  "covered" : false,
+  "thirdPartyMethod" : "org.xnio.IoUtils.safeClose(java.io.Closeable)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowFileUpload.getFileName()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.handlers.form.FormData.FormValue.getFileName()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowChunkedStream.run()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.connector.PooledByteBuffer.getBuffer()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowChunkedStream.run()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.io.IoCallback.onComplete(io.undertow.server.HttpServerExchange, io.undertow.io.Sender)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowChunkedStream.run()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.io.Sender.send(java.nio.ByteBuffer, io.undertow.io.IoCallback)"
+}, {
+  "caller" : "io.jooby.utow.Utow.start(io.jooby.Jooby)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.handlers.encoding.ContentEncodingRepository.<init>()"
+}, {
+  "caller" : "io.jooby.utow.Utow.start(io.jooby.Jooby)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.handlers.encoding.GzipEncodingProvider.<init>(int)"
+}, {
+  "caller" : "io.jooby.utow.Utow.start(io.jooby.Jooby)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.handlers.encoding.ContentEncodingRepository.addEncodingHandler(java.lang.String, io.undertow.server.handlers.encoding.ContentEncodingProvider, int)"
+}, {
+  "caller" : "io.jooby.utow.Utow.start(io.jooby.Jooby)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.handlers.encoding.DeflateEncodingProvider.<init>(int)"
+}, {
+  "caller" : "io.jooby.utow.Utow.start(io.jooby.Jooby)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.handlers.encoding.EncodingHandler.<init>(io.undertow.server.HttpHandler, io.undertow.server.handlers.encoding.ContentEncodingRepository)"
+}, {
+  "caller" : "io.jooby.utow.Utow.start(io.jooby.Jooby)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.handlers.HttpContinueReadHandler.<init>(io.undertow.server.HttpHandler)"
+}, {
+  "caller" : "io.jooby.utow.Utow.start(io.jooby.Jooby)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.Undertow.builder()"
+}, {
+  "caller" : "io.jooby.utow.Utow.start(io.jooby.Jooby)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.Undertow.Builder.setBufferSize(int)"
+}, {
+  "caller" : "io.jooby.utow.Utow.start(io.jooby.Jooby)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.Undertow.Builder.setSocketOption(org.xnio.Option, java.lang.Object)"
+}, {
+  "caller" : "io.jooby.utow.Utow.start(io.jooby.Jooby)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.Undertow.Builder.setServerOption(org.xnio.Option, java.lang.Object)"
+}, {
+  "caller" : "io.jooby.utow.Utow.start(io.jooby.Jooby)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.Undertow.Builder.setIoThreads(int)"
+}, {
+  "caller" : "io.jooby.utow.Utow.start(io.jooby.Jooby)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.Undertow.Builder.setWorkerOption(org.xnio.Option, java.lang.Object)"
+}, {
+  "caller" : "io.jooby.utow.Utow.start(io.jooby.Jooby)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.Undertow.Builder.setWorkerThreads(int)"
+}, {
+  "caller" : "io.jooby.utow.Utow.start(io.jooby.Jooby)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.Undertow.Builder.setHandler(io.undertow.server.HttpHandler)"
+}, {
+  "caller" : "io.jooby.utow.Utow.start(io.jooby.Jooby)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.Undertow.Builder.addHttpListener(int, java.lang.String)"
+}, {
+  "caller" : "io.jooby.utow.Utow.start(io.jooby.Jooby)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.Undertow.Builder.addHttpsListener(int, java.lang.String, javax.net.ssl.SSLContext)"
+}, {
+  "caller" : "io.jooby.utow.Utow.start(io.jooby.Jooby)",
+  "covered" : false,
+  "thirdPartyMethod" : "org.xnio.Sequence.of(java.util.Collection)"
+}, {
+  "caller" : "io.jooby.utow.Utow.start(io.jooby.Jooby)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.Undertow.Builder.build()"
+}, {
+  "caller" : "io.jooby.utow.Utow.start(io.jooby.Jooby)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.Undertow.start()"
+}, {
+  "caller" : "io.jooby.utow.Utow.start(io.jooby.Jooby)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.Undertow.getWorker()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.getResponseLength()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getResponseContentLength()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowHandler.handleRequest(io.undertow.server.HttpServerExchange)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getResponseHeaders()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowHandler.handleRequest(io.undertow.server.HttpServerExchange)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.util.HeaderMap.put(io.undertow.util.HttpString, java.lang.String)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowHandler.handleRequest(io.undertow.server.HttpServerExchange)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getRequestHeaders()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowHandler.handleRequest(io.undertow.server.HttpServerExchange)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.util.HeaderMap.getFirst(io.undertow.util.HttpString)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowHandler.handleRequest(io.undertow.server.HttpServerExchange)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.handlers.form.FormParserFactory.builder(boolean)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowHandler.handleRequest(io.undertow.server.HttpServerExchange)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.handlers.form.MultiPartParserDefinition.<init>(java.nio.file.Path)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowHandler.handleRequest(io.undertow.server.HttpServerExchange)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.handlers.form.MultiPartParserDefinition.setDefaultEncoding(java.lang.String)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowHandler.handleRequest(io.undertow.server.HttpServerExchange)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.handlers.form.FormParserFactory.Builder.addParser(io.undertow.server.handlers.form.FormParserFactory$ParserDefinition)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowHandler.handleRequest(io.undertow.server.HttpServerExchange)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.handlers.form.FormEncodedDataDefinition.<init>()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowHandler.handleRequest(io.undertow.server.HttpServerExchange)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.handlers.form.FormEncodedDataDefinition.setDefaultEncoding(java.lang.String)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowHandler.handleRequest(io.undertow.server.HttpServerExchange)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.handlers.form.FormParserFactory.Builder.build()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowHandler.handleRequest(io.undertow.server.HttpServerExchange)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.handlers.form.FormParserFactory.createParser(io.undertow.server.HttpServerExchange)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowHandler.handleRequest(io.undertow.server.HttpServerExchange)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getRequestReceiver()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowHandler.handleRequest(io.undertow.server.HttpServerExchange)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.io.Receiver.receiveFullBytes(io.undertow.io.Receiver$FullBytesCallback)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowHandler.handleRequest(io.undertow.server.HttpServerExchange)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.io.Receiver.receivePartialBytes(io.undertow.io.Receiver$PartialBytesCallback)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowHandler.handleRequest(io.undertow.server.HttpServerExchange)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.handlers.form.FormDataParser.parse(io.undertow.server.HttpHandler)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowSeverSentEmitter.close()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.endExchange()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.send(java.nio.ByteBuffer)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getResponseHeaders()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.send(java.nio.ByteBuffer)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.util.HeaderMap.put(io.undertow.util.HttpString, java.lang.String)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.send(java.nio.ByteBuffer)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getResponseSender()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.send(java.nio.ByteBuffer)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.io.Sender.send(java.nio.ByteBuffer, io.undertow.io.IoCallback)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowFileUpload.getFileSize()",
+  "covered" : true,
+  "thirdPartyMethod" : "io.undertow.server.handlers.form.FormData.FileItem.getFileSize()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.ifSetChunked()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.util.HeaderMap.contains(io.undertow.util.HttpString)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.ifSetChunked()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.util.HeaderMap.put(io.undertow.util.HttpString, java.lang.String)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowWebSocket.send(byte[], boolean)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.websockets.core.WebSockets.sendText(java.nio.ByteBuffer, io.undertow.websockets.core.WebSocketChannel, io.undertow.websockets.core.WebSocketCallback)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowCompletionListener.exchangeEvent(io.undertow.server.HttpServerExchange, io.undertow.server.ExchangeCompletionListener$NextListener)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.ExchangeCompletionListener.NextListener.proceed()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowSender.write(byte[], io.jooby.Sender$Callback)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getResponseSender()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowSender.write(byte[], io.jooby.Sender$Callback)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.io.Sender.send(java.nio.ByteBuffer, io.undertow.io.IoCallback)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.dispatch(java.util.concurrent.Executor, java.lang.Runnable)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.dispatch(java.util.concurrent.Executor, java.lang.Runnable)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.responseStream()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getOutputStream()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.ifStartBlocking()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.isBlocking()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.ifStartBlocking()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.startBlocking()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowFileUpload.stream()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.handlers.form.FormData.FileItem.getInputStream()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.getResponseCode()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getStatusCode()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowWebSocket.onError(io.undertow.websockets.core.WebSocketChannel, io.jooby.internal.utow.UtowWebSocket, java.lang.Throwable)",
+  "covered" : false,
+  "thirdPartyMethod" : "org.xnio.IoUtils.safeClose(java.io.Closeable)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.multipart()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getAttachment(io.undertow.util.AttachmentKey)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowSeverSentEmitter.checkOpen()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.isComplete()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowChunkedStream.onComplete(io.undertow.server.HttpServerExchange, io.undertow.io.Sender)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.isInIoThread()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowChunkedStream.onComplete(io.undertow.server.HttpServerExchange, io.undertow.io.Sender)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.dispatch(java.lang.Runnable)"
+}, {
+  "caller" : "io.jooby.utow.Utow.shutdownServer()",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.Undertow.stop()"
+}, {
+  "caller" : "io.jooby.internal.undertow.ConscriptAlpnProvider.Impl.setProtocols(javax.net.ssl.SSLEngine, java.lang.String[])",
+  "covered" : false,
+  "thirdPartyMethod" : "org.conscrypt.Conscrypt.setApplicationProtocols(javax.net.ssl.SSLEngine, java.lang.String[])"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.setResponseCookie(io.jooby.Cookie)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getResponseHeaders()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.setResponseCookie(io.jooby.Cookie)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.util.HeaderMap.remove(io.undertow.util.HttpString)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.setResponseCookie(io.jooby.Cookie)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.util.HeaderMap.add(io.undertow.util.HttpString, java.lang.String)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowChunkedStream.send(java.nio.channels.ReadableByteChannel, io.undertow.server.HttpServerExchange, io.undertow.io.IoCallback)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getResponseSender()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowChunkedStream.send(java.nio.channels.ReadableByteChannel, io.undertow.server.HttpServerExchange, io.undertow.io.IoCallback)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getConnection()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowChunkedStream.send(java.nio.channels.ReadableByteChannel, io.undertow.server.HttpServerExchange, io.undertow.io.IoCallback)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.ServerConnection.getByteBufferPool()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowChunkedStream.send(java.nio.channels.ReadableByteChannel, io.undertow.server.HttpServerExchange, io.undertow.io.IoCallback)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.connector.ByteBufferPool.allocate()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.destroy(java.lang.Exception)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.endExchange()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.<init>(io.undertow.server.HttpServerExchange, io.jooby.Router)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getRequestMethod()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.<init>(io.undertow.server.HttpServerExchange, io.jooby.Router)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.util.HttpString.toString()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowContext.<init>(io.undertow.server.HttpServerExchange, io.jooby.Router)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.server.HttpServerExchange.getRequestPath()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowWebSocket.<init>(io.jooby.internal.utow.UtowContext, io.undertow.websockets.core.WebSocketChannel)",
+  "covered" : false,
+  "thirdPartyMethod" : "io.undertow.websockets.core.AbstractReceiveListener.<init>()"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowWebSocket.<init>(io.jooby.internal.utow.UtowContext, io.undertow.websockets.core.WebSocketChannel)",
+  "covered" : false,
+  "thirdPartyMethod" : "com.typesafe.config.Config.hasPath(java.lang.String)"
+}, {
+  "caller" : "io.jooby.internal.utow.UtowWebSocket.<init>(io.jooby.internal.utow.UtowContext, io.undertow.websockets.core.WebSocketChannel)",
+  "covered" : false,
+  "thirdPartyMethod" : "com.typesafe.config.Config.getBytes(java.lang.String)"
+} ]
