@@ -1,0 +1,56 @@
+package io.jooby.internal.netty;
+
+import io.netty.buffer.ByteBuf;
+import io.netty.buffer.ByteBufAllocator;
+import io.netty.channel.ChannelFuture;
+import io.netty.channel.ChannelFutureListener;
+import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelOutboundInvoker;
+import io.netty.channel.ChannelPromise;
+import io.netty.handler.codec.http.DefaultHttpContent;
+import io.netty.handler.codec.http.HttpResponse;
+import io.netty.handler.codec.http.LastHttpContent;
+import io.netty.util.ReferenceCounted;
+import io.netty.util.concurrent.Future;
+import io.netty.util.concurrent.GenericFutureListener;
+import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
+
+import java.io.IOException;
+
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.when;
+
+class NettyOutputStreamflush_ChannelHandlerContextwriteAndFlushFikaTest {
+
+    @Test
+    void test() throws IOException {
+        // Mock dependencies for constructor
+        NettyContext nettyContext = Mockito.mock(NettyContext.class);
+        ChannelHandlerContext channelHandlerContext = Mockito.mock(ChannelHandlerContext.class);
+        HttpResponse httpResponse = Mockito.mock(HttpResponse.class);
+        ByteBufAllocator allocator = Mockito.mock(ByteBufAllocator.class);
+        ByteBuf buffer = Mockito.mock(ByteBuf.class);
+        ChannelFuture channelFuture = Mockito.mock(ChannelFuture.class);
+
+        // Setup buffer behavior
+        when(channelHandlerContext.alloc()).thenReturn(allocator);
+        when(allocator.buffer(0, 8192)).thenReturn(buffer);
+        when(buffer.readableBytes()).thenReturn(0); // Force the else branch in flush(...)
+        when(buffer.maxWritableBytes()).thenReturn(1024);
+
+        // Setup context.writeAndFlush to return a mock ChannelFuture
+        when(channelHandlerContext.writeAndFlush(any(LastHttpContent.class))).thenReturn(channelFuture);
+
+        // Create instance
+        NettyOutputStream outputStream = new NettyOutputStream(
+                nettyContext,
+                channelHandlerContext,
+                8192,
+                httpResponse
+        );
+
+        // Call entry point
+        outputStream.flush();
+    }
+}
