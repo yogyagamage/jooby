@@ -1,0 +1,366 @@
+
+====================================================================================================
+PROMPTS LOG SESSION STARTED: 2026-03-14T10:55:21.124960
+====================================================================================================
+
+====================================================================================================
+TEST CASE 1/5 — ITERATION 1
+Entry Point: io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)
+Third Party Method: org.eclipse.jetty.server.HttpConfiguration.getCustomizer(java.lang.Class)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the full chain of method calls starting from the specified entry point method and reaching the specified third-party method. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+entryPoint: Fully qualified public method where execution must begin.
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+path: Ordered list of method calls that must be traversed during execution.
+methodSources: Complete and exact source code for all methods in the call chain.
+constructors: All constructors of the class containing the entryPoint. Use one of these constructors to instantiate the class in the test. Then use that instance to call the entryPoint method.
+fieldDeclarations: Instance variables and class variables of the class containing the entryPoint. These are the fields that can be accessed or set when creating the test.
+setters: All setters of the entryPoint class that can modify the declared fields.
+imports: All non-core-java imports that may be required by the test.
+
+entryPoint: io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)
+thirdPartyMethod: org.eclipse.jetty.server.HttpConfiguration.getCustomizer(java.lang.Class)
+path: io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration) -> org.eclipse.jetty.server.HttpConfiguration.getCustomizer(java.lang.Class)
+methodSources:
+```java
+@Override
+public List<ConnectionFactory> configure(HttpConfiguration input) {
+    // PATH: Test should invoke the next HttpConfiguration.getCustomizer(...) [step in execution path]
+    if (input.getCustomizer(SecureRequestCustomizer.class) != null) {
+        ALPNServerConnectionFactory alpn = new ALPNServerConnectionFactory(H2, H2_17, HTTP_1_1);
+        alpn.setDefaultProtocol(HTTP_1_1);
+        HTTP2ServerConnectionFactory https2 = new HTTP2ServerConnectionFactory(input);
+        return Arrays.asList(alpn, https2);
+    } else {
+        return Collections.singletonList(new HTTP2CServerConnectionFactory(input));
+    }
+}
+```
+constructors:
+```java
+JettyHttp2Configurer() {
+}
+```
+fieldDeclarations:
+```java
+private static final String H2 = "h2";
+private static final String H2_17 = "h2-17";
+private static final String HTTP_1_1 = "http/1.1";
+```
+setters:
+
+imports: org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory, org.eclipse.jetty.http2.server.HTTP2CServerConnectionFactory, org.eclipse.jetty.http2.server.HTTP2ServerConnectionFactory, org.eclipse.jetty.server.ConnectionFactory, org.eclipse.jetty.server.HttpConfiguration, org.eclipse.jetty.server.NegotiatingServerConnectionFactory, org.eclipse.jetty.server.SecureRequestCustomizer
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, and ONLY for objects required as constructor parameters when instantiating the class that contains the entry-point method, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: io.jooby.internal.jetty
+- class name MUST be: JettyHttp2Configurerconfigure_HttpConfigurationgetCustomizerFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 2/5 — ITERATION 1
+Entry Point: io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)
+Third Party Method: org.eclipse.jetty.http2.server.HTTP2CServerConnectionFactory.<init>(org.eclipse.jetty.server.HttpConfiguration)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the full chain of method calls starting from the specified entry point method and reaching the specified third-party method. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+entryPoint: Fully qualified public method where execution must begin.
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+path: Ordered list of method calls that must be traversed during execution.
+methodSources: Complete and exact source code for all methods in the call chain.
+constructors: All constructors of the class containing the entryPoint. Use one of these constructors to instantiate the class in the test. Then use that instance to call the entryPoint method.
+fieldDeclarations: Instance variables and class variables of the class containing the entryPoint. These are the fields that can be accessed or set when creating the test.
+setters: All setters of the entryPoint class that can modify the declared fields.
+imports: All non-core-java imports that may be required by the test.
+
+entryPoint: io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)
+thirdPartyMethod: org.eclipse.jetty.http2.server.HTTP2CServerConnectionFactory.<init>(org.eclipse.jetty.server.HttpConfiguration)
+path: io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration) -> org.eclipse.jetty.http2.server.HTTP2CServerConnectionFactory.<init>(org.eclipse.jetty.server.HttpConfiguration)
+methodSources:
+```java
+@Override
+public List<ConnectionFactory> configure(HttpConfiguration input) {
+    if (input.getCustomizer(SecureRequestCustomizer.class) != null) {
+        ALPNServerConnectionFactory alpn = new ALPNServerConnectionFactory(H2, H2_17, HTTP_1_1);
+        alpn.setDefaultProtocol(HTTP_1_1);
+        HTTP2ServerConnectionFactory https2 = new HTTP2ServerConnectionFactory(input);
+        return Arrays.asList(alpn, https2);
+    } else {
+        return Collections.singletonList(new HTTP2CServerConnectionFactory(input));
+    }
+}
+```
+constructors:
+```java
+JettyHttp2Configurer() {
+}
+```
+fieldDeclarations:
+```java
+private static final String H2 = "h2";
+private static final String H2_17 = "h2-17";
+private static final String HTTP_1_1 = "http/1.1";
+```
+setters:
+
+imports: org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory, org.eclipse.jetty.http2.server.HTTP2CServerConnectionFactory, org.eclipse.jetty.http2.server.HTTP2ServerConnectionFactory, org.eclipse.jetty.server.ConnectionFactory, org.eclipse.jetty.server.HttpConfiguration, org.eclipse.jetty.server.NegotiatingServerConnectionFactory, org.eclipse.jetty.server.SecureRequestCustomizer
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, and ONLY for objects required as constructor parameters when instantiating the class that contains the entry-point method, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: io.jooby.internal.jetty
+- class name MUST be: JettyHttp2Configurerconfigure_HTTP2CServerConnectionFactorymethodFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 3/5 — ITERATION 1
+Entry Point: io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)
+Third Party Method: org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory.setDefaultProtocol(java.lang.String)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the full chain of method calls starting from the specified entry point method and reaching the specified third-party method. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+entryPoint: Fully qualified public method where execution must begin.
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+path: Ordered list of method calls that must be traversed during execution.
+methodSources: Complete and exact source code for all methods in the call chain.
+constructors: All constructors of the class containing the entryPoint. Use one of these constructors to instantiate the class in the test. Then use that instance to call the entryPoint method.
+fieldDeclarations: Instance variables and class variables of the class containing the entryPoint. These are the fields that can be accessed or set when creating the test.
+setters: All setters of the entryPoint class that can modify the declared fields.
+imports: All non-core-java imports that may be required by the test.
+
+entryPoint: io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)
+thirdPartyMethod: org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory.setDefaultProtocol(java.lang.String)
+path: io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration) -> org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory.setDefaultProtocol(java.lang.String)
+methodSources:
+```java
+@Override
+public List<ConnectionFactory> configure(HttpConfiguration input) {
+    if (input.getCustomizer(SecureRequestCustomizer.class) != null) {
+        ALPNServerConnectionFactory alpn = new ALPNServerConnectionFactory(H2, H2_17, HTTP_1_1);
+        alpn.setDefaultProtocol(HTTP_1_1);
+        HTTP2ServerConnectionFactory https2 = new HTTP2ServerConnectionFactory(input);
+        return Arrays.asList(alpn, https2);
+    } else {
+        return Collections.singletonList(new HTTP2CServerConnectionFactory(input));
+    }
+}
+```
+constructors:
+```java
+JettyHttp2Configurer() {
+}
+```
+fieldDeclarations:
+```java
+private static final String H2 = "h2";
+private static final String H2_17 = "h2-17";
+private static final String HTTP_1_1 = "http/1.1";
+```
+setters:
+
+imports: org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory, org.eclipse.jetty.http2.server.HTTP2CServerConnectionFactory, org.eclipse.jetty.http2.server.HTTP2ServerConnectionFactory, org.eclipse.jetty.server.ConnectionFactory, org.eclipse.jetty.server.HttpConfiguration, org.eclipse.jetty.server.NegotiatingServerConnectionFactory, org.eclipse.jetty.server.SecureRequestCustomizer
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, and ONLY for objects required as constructor parameters when instantiating the class that contains the entry-point method, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: io.jooby.internal.jetty
+- class name MUST be: JettyHttp2Configurerconfigure_ALPNServerConnectionFactorysetDefaultProtocolFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 4/5 — ITERATION 1
+Entry Point: io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)
+Third Party Method: org.eclipse.jetty.http2.server.HTTP2ServerConnectionFactory.<init>(org.eclipse.jetty.server.HttpConfiguration)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the full chain of method calls starting from the specified entry point method and reaching the specified third-party method. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+entryPoint: Fully qualified public method where execution must begin.
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+path: Ordered list of method calls that must be traversed during execution.
+methodSources: Complete and exact source code for all methods in the call chain.
+constructors: All constructors of the class containing the entryPoint. Use one of these constructors to instantiate the class in the test. Then use that instance to call the entryPoint method.
+fieldDeclarations: Instance variables and class variables of the class containing the entryPoint. These are the fields that can be accessed or set when creating the test.
+setters: All setters of the entryPoint class that can modify the declared fields.
+imports: All non-core-java imports that may be required by the test.
+
+entryPoint: io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)
+thirdPartyMethod: org.eclipse.jetty.http2.server.HTTP2ServerConnectionFactory.<init>(org.eclipse.jetty.server.HttpConfiguration)
+path: io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration) -> org.eclipse.jetty.http2.server.HTTP2ServerConnectionFactory.<init>(org.eclipse.jetty.server.HttpConfiguration)
+methodSources:
+```java
+@Override
+public List<ConnectionFactory> configure(HttpConfiguration input) {
+    if (input.getCustomizer(SecureRequestCustomizer.class) != null) {
+        ALPNServerConnectionFactory alpn = new ALPNServerConnectionFactory(H2, H2_17, HTTP_1_1);
+        alpn.setDefaultProtocol(HTTP_1_1);
+        HTTP2ServerConnectionFactory https2 = new HTTP2ServerConnectionFactory(input);
+        return Arrays.asList(alpn, https2);
+    } else {
+        return Collections.singletonList(new HTTP2CServerConnectionFactory(input));
+    }
+}
+```
+constructors:
+```java
+JettyHttp2Configurer() {
+}
+```
+fieldDeclarations:
+```java
+private static final String H2 = "h2";
+private static final String H2_17 = "h2-17";
+private static final String HTTP_1_1 = "http/1.1";
+```
+setters:
+
+imports: org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory, org.eclipse.jetty.http2.server.HTTP2CServerConnectionFactory, org.eclipse.jetty.http2.server.HTTP2ServerConnectionFactory, org.eclipse.jetty.server.ConnectionFactory, org.eclipse.jetty.server.HttpConfiguration, org.eclipse.jetty.server.NegotiatingServerConnectionFactory, org.eclipse.jetty.server.SecureRequestCustomizer
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, and ONLY for objects required as constructor parameters when instantiating the class that contains the entry-point method, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: io.jooby.internal.jetty
+- class name MUST be: JettyHttp2Configurerconfigure_HTTP2ServerConnectionFactorymethodFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 5/5 — ITERATION 1
+Entry Point: io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)
+Third Party Method: org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory.<init>(java.lang.String[])
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the full chain of method calls starting from the specified entry point method and reaching the specified third-party method. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+entryPoint: Fully qualified public method where execution must begin.
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+path: Ordered list of method calls that must be traversed during execution.
+methodSources: Complete and exact source code for all methods in the call chain.
+constructors: All constructors of the class containing the entryPoint. Use one of these constructors to instantiate the class in the test. Then use that instance to call the entryPoint method.
+fieldDeclarations: Instance variables and class variables of the class containing the entryPoint. These are the fields that can be accessed or set when creating the test.
+setters: All setters of the entryPoint class that can modify the declared fields.
+imports: All non-core-java imports that may be required by the test.
+
+entryPoint: io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)
+thirdPartyMethod: org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory.<init>(java.lang.String[])
+path: io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration) -> org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory.<init>(java.lang.String[])
+methodSources:
+```java
+@Override
+public List<ConnectionFactory> configure(HttpConfiguration input) {
+    if (input.getCustomizer(SecureRequestCustomizer.class) != null) {
+        ALPNServerConnectionFactory alpn = new ALPNServerConnectionFactory(H2, H2_17, HTTP_1_1);
+        alpn.setDefaultProtocol(HTTP_1_1);
+        HTTP2ServerConnectionFactory https2 = new HTTP2ServerConnectionFactory(input);
+        return Arrays.asList(alpn, https2);
+    } else {
+        return Collections.singletonList(new HTTP2CServerConnectionFactory(input));
+    }
+}
+```
+constructors:
+```java
+JettyHttp2Configurer() {
+}
+```
+fieldDeclarations:
+```java
+private static final String H2 = "h2";
+private static final String H2_17 = "h2-17";
+private static final String HTTP_1_1 = "http/1.1";
+```
+setters:
+
+imports: org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory, org.eclipse.jetty.http2.server.HTTP2CServerConnectionFactory, org.eclipse.jetty.http2.server.HTTP2ServerConnectionFactory, org.eclipse.jetty.server.ConnectionFactory, org.eclipse.jetty.server.HttpConfiguration, org.eclipse.jetty.server.NegotiatingServerConnectionFactory, org.eclipse.jetty.server.SecureRequestCustomizer
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, and ONLY for objects required as constructor parameters when instantiating the class that contains the entry-point method, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: io.jooby.internal.jetty
+- class name MUST be: JettyHttp2Configurerconfigure_ALPNServerConnectionFactorymethodFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+

@@ -1,73 +1,174 @@
 {
-  "fullMethodsPaths" : [ {
-    "entryPoint" : "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
-    "thirdPartyMethod" : "org.eclipse.jetty.server.HttpConfiguration.getCustomizer(java.lang.Class)",
-    "directCaller" : "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
-    "path" : [ "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)", "org.eclipse.jetty.server.HttpConfiguration.getCustomizer(java.lang.Class)" ],
-    "methodSources" : [ "@Override\npublic List<ConnectionFactory> configure(HttpConfiguration input) {\n    // PATH: Test should invoke the next HttpConfiguration.getCustomizer(...) [step in execution path]\n    if (input.getCustomizer(SecureRequestCustomizer.class) != null) {\n        ALPNServerConnectionFactory alpn = new ALPNServerConnectionFactory(H2, H2_17, HTTP_1_1);\n        alpn.setDefaultProtocol(HTTP_1_1);\n        HTTP2ServerConnectionFactory https2 = new HTTP2ServerConnectionFactory(input);\n        return Arrays.asList(alpn, https2);\n    } else {\n        return Collections.singletonList(new HTTP2CServerConnectionFactory(input));\n    }\n}" ],
-    "constructors" : [ "JettyHttp2Configurer() {\n}" ],
-    "fieldDeclarations" : [ "private static final String H2 = \"h2\";", "private static final String H2_17 = \"h2-17\";", "private static final String HTTP_1_1 = \"http/1.1\";" ],
-    "setters" : [ ],
-    "imports" : [ "org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory", "org.eclipse.jetty.http2.server.HTTP2CServerConnectionFactory", "org.eclipse.jetty.http2.server.HTTP2ServerConnectionFactory", "org.eclipse.jetty.server.ConnectionFactory", "org.eclipse.jetty.server.HttpConfiguration", "org.eclipse.jetty.server.NegotiatingServerConnectionFactory", "org.eclipse.jetty.server.SecureRequestCustomizer" ],
-    "testTemplate" : "package io.jooby.internal.jetty;\n\npublic class JettyHttp2Configurerconfigure_HttpConfigurationgetCustomizerFikaTest {\n\n    @Test\n    public void testConfigure() {\n    }\n}",
-    "conditionCount" : 1,
-    "callCount" : 1,
-    "covered" : false
-  }, {
-    "entryPoint" : "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
-    "thirdPartyMethod" : "org.eclipse.jetty.http2.server.HTTP2CServerConnectionFactory.<init>(org.eclipse.jetty.server.HttpConfiguration)",
-    "directCaller" : "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
-    "path" : [ "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)", "org.eclipse.jetty.http2.server.HTTP2CServerConnectionFactory.<init>(org.eclipse.jetty.server.HttpConfiguration)" ],
-    "methodSources" : [ "@Override\npublic List<ConnectionFactory> configure(HttpConfiguration input) {\n    if (input.getCustomizer(SecureRequestCustomizer.class) != null) {\n        ALPNServerConnectionFactory alpn = new ALPNServerConnectionFactory(H2, H2_17, HTTP_1_1);\n        alpn.setDefaultProtocol(HTTP_1_1);\n        HTTP2ServerConnectionFactory https2 = new HTTP2ServerConnectionFactory(input);\n        return Arrays.asList(alpn, https2);\n    } else {\n        return Collections.singletonList(new HTTP2CServerConnectionFactory(input));\n    }\n}" ],
-    "constructors" : [ "JettyHttp2Configurer() {\n}" ],
-    "fieldDeclarations" : [ "private static final String H2 = \"h2\";", "private static final String H2_17 = \"h2-17\";", "private static final String HTTP_1_1 = \"http/1.1\";" ],
-    "setters" : [ ],
-    "imports" : [ "org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory", "org.eclipse.jetty.http2.server.HTTP2CServerConnectionFactory", "org.eclipse.jetty.http2.server.HTTP2ServerConnectionFactory", "org.eclipse.jetty.server.ConnectionFactory", "org.eclipse.jetty.server.HttpConfiguration", "org.eclipse.jetty.server.NegotiatingServerConnectionFactory", "org.eclipse.jetty.server.SecureRequestCustomizer" ],
-    "testTemplate" : "package io.jooby.internal.jetty;\n\npublic class JettyHttp2Configurerconfigure_HTTP2CServerConnectionFactorymethodFikaTest {\n\n    @Test\n    public void testConfigure() {\n    }\n}",
-    "conditionCount" : 1,
-    "callCount" : 1,
-    "covered" : false
-  }, {
-    "entryPoint" : "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
-    "thirdPartyMethod" : "org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory.setDefaultProtocol(java.lang.String)",
-    "directCaller" : "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
-    "path" : [ "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)", "org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory.setDefaultProtocol(java.lang.String)" ],
-    "methodSources" : [ "@Override\npublic List<ConnectionFactory> configure(HttpConfiguration input) {\n    if (input.getCustomizer(SecureRequestCustomizer.class) != null) {\n        ALPNServerConnectionFactory alpn = new ALPNServerConnectionFactory(H2, H2_17, HTTP_1_1);\n        alpn.setDefaultProtocol(HTTP_1_1);\n        HTTP2ServerConnectionFactory https2 = new HTTP2ServerConnectionFactory(input);\n        return Arrays.asList(alpn, https2);\n    } else {\n        return Collections.singletonList(new HTTP2CServerConnectionFactory(input));\n    }\n}" ],
-    "constructors" : [ "JettyHttp2Configurer() {\n}" ],
-    "fieldDeclarations" : [ "private static final String H2 = \"h2\";", "private static final String H2_17 = \"h2-17\";", "private static final String HTTP_1_1 = \"http/1.1\";" ],
-    "setters" : [ ],
-    "imports" : [ "org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory", "org.eclipse.jetty.http2.server.HTTP2CServerConnectionFactory", "org.eclipse.jetty.http2.server.HTTP2ServerConnectionFactory", "org.eclipse.jetty.server.ConnectionFactory", "org.eclipse.jetty.server.HttpConfiguration", "org.eclipse.jetty.server.NegotiatingServerConnectionFactory", "org.eclipse.jetty.server.SecureRequestCustomizer" ],
-    "testTemplate" : "package io.jooby.internal.jetty;\n\npublic class JettyHttp2Configurerconfigure_ALPNServerConnectionFactorysetDefaultProtocolFikaTest {\n\n    @Test\n    public void testConfigure() {\n    }\n}",
-    "conditionCount" : 1,
-    "callCount" : 1,
-    "covered" : false
-  }, {
-    "entryPoint" : "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
-    "thirdPartyMethod" : "org.eclipse.jetty.http2.server.HTTP2ServerConnectionFactory.<init>(org.eclipse.jetty.server.HttpConfiguration)",
-    "directCaller" : "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
-    "path" : [ "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)", "org.eclipse.jetty.http2.server.HTTP2ServerConnectionFactory.<init>(org.eclipse.jetty.server.HttpConfiguration)" ],
-    "methodSources" : [ "@Override\npublic List<ConnectionFactory> configure(HttpConfiguration input) {\n    if (input.getCustomizer(SecureRequestCustomizer.class) != null) {\n        ALPNServerConnectionFactory alpn = new ALPNServerConnectionFactory(H2, H2_17, HTTP_1_1);\n        alpn.setDefaultProtocol(HTTP_1_1);\n        HTTP2ServerConnectionFactory https2 = new HTTP2ServerConnectionFactory(input);\n        return Arrays.asList(alpn, https2);\n    } else {\n        return Collections.singletonList(new HTTP2CServerConnectionFactory(input));\n    }\n}" ],
-    "constructors" : [ "JettyHttp2Configurer() {\n}" ],
-    "fieldDeclarations" : [ "private static final String H2 = \"h2\";", "private static final String H2_17 = \"h2-17\";", "private static final String HTTP_1_1 = \"http/1.1\";" ],
-    "setters" : [ ],
-    "imports" : [ "org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory", "org.eclipse.jetty.http2.server.HTTP2CServerConnectionFactory", "org.eclipse.jetty.http2.server.HTTP2ServerConnectionFactory", "org.eclipse.jetty.server.ConnectionFactory", "org.eclipse.jetty.server.HttpConfiguration", "org.eclipse.jetty.server.NegotiatingServerConnectionFactory", "org.eclipse.jetty.server.SecureRequestCustomizer" ],
-    "testTemplate" : "package io.jooby.internal.jetty;\n\npublic class JettyHttp2Configurerconfigure_HTTP2ServerConnectionFactorymethodFikaTest {\n\n    @Test\n    public void testConfigure() {\n    }\n}",
-    "conditionCount" : 1,
-    "callCount" : 1,
-    "covered" : false
-  }, {
-    "entryPoint" : "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
-    "thirdPartyMethod" : "org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory.<init>(java.lang.String[])",
-    "directCaller" : "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
-    "path" : [ "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)", "org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory.<init>(java.lang.String[])" ],
-    "methodSources" : [ "@Override\npublic List<ConnectionFactory> configure(HttpConfiguration input) {\n    if (input.getCustomizer(SecureRequestCustomizer.class) != null) {\n        ALPNServerConnectionFactory alpn = new ALPNServerConnectionFactory(H2, H2_17, HTTP_1_1);\n        alpn.setDefaultProtocol(HTTP_1_1);\n        HTTP2ServerConnectionFactory https2 = new HTTP2ServerConnectionFactory(input);\n        return Arrays.asList(alpn, https2);\n    } else {\n        return Collections.singletonList(new HTTP2CServerConnectionFactory(input));\n    }\n}" ],
-    "constructors" : [ "JettyHttp2Configurer() {\n}" ],
-    "fieldDeclarations" : [ "private static final String H2 = \"h2\";", "private static final String H2_17 = \"h2-17\";", "private static final String HTTP_1_1 = \"http/1.1\";" ],
-    "setters" : [ ],
-    "imports" : [ "org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory", "org.eclipse.jetty.http2.server.HTTP2CServerConnectionFactory", "org.eclipse.jetty.http2.server.HTTP2ServerConnectionFactory", "org.eclipse.jetty.server.ConnectionFactory", "org.eclipse.jetty.server.HttpConfiguration", "org.eclipse.jetty.server.NegotiatingServerConnectionFactory", "org.eclipse.jetty.server.SecureRequestCustomizer" ],
-    "testTemplate" : "package io.jooby.internal.jetty;\n\npublic class JettyHttp2Configurerconfigure_ALPNServerConnectionFactorymethodFikaTest {\n\n    @Test\n    public void testConfigure() {\n    }\n}",
-    "conditionCount" : 1,
-    "callCount" : 1,
-    "covered" : false
-  } ]
+  "fullMethodsPaths": [
+    {
+      "entryPoint": "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
+      "thirdPartyMethod": "org.eclipse.jetty.server.HttpConfiguration.getCustomizer(java.lang.Class)",
+      "directCaller": "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
+      "path": [
+        "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
+        "org.eclipse.jetty.server.HttpConfiguration.getCustomizer(java.lang.Class)"
+      ],
+      "methodSources": [
+        "@Override\npublic List<ConnectionFactory> configure(HttpConfiguration input) {\n    // PATH: Test should invoke the next HttpConfiguration.getCustomizer(...) [step in execution path]\n    if (input.getCustomizer(SecureRequestCustomizer.class) != null) {\n        ALPNServerConnectionFactory alpn = new ALPNServerConnectionFactory(H2, H2_17, HTTP_1_1);\n        alpn.setDefaultProtocol(HTTP_1_1);\n        HTTP2ServerConnectionFactory https2 = new HTTP2ServerConnectionFactory(input);\n        return Arrays.asList(alpn, https2);\n    } else {\n        return Collections.singletonList(new HTTP2CServerConnectionFactory(input));\n    }\n}"
+      ],
+      "constructors": [
+        "JettyHttp2Configurer() {\n}"
+      ],
+      "fieldDeclarations": [
+        "private static final String H2 = \"h2\";",
+        "private static final String H2_17 = \"h2-17\";",
+        "private static final String HTTP_1_1 = \"http/1.1\";"
+      ],
+      "setters": [],
+      "imports": [
+        "org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory",
+        "org.eclipse.jetty.http2.server.HTTP2CServerConnectionFactory",
+        "org.eclipse.jetty.http2.server.HTTP2ServerConnectionFactory",
+        "org.eclipse.jetty.server.ConnectionFactory",
+        "org.eclipse.jetty.server.HttpConfiguration",
+        "org.eclipse.jetty.server.NegotiatingServerConnectionFactory",
+        "org.eclipse.jetty.server.SecureRequestCustomizer"
+      ],
+      "testTemplate": "package io.jooby.internal.jetty;\n\npublic class JettyHttp2Configurerconfigure_HttpConfigurationgetCustomizerFikaTest {\n\n    @Test\n    public void testConfigure() {\n    }\n}",
+      "conditionCount": 1,
+      "callCount": 1,
+      "covered": true
+    },
+    {
+      "entryPoint": "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
+      "thirdPartyMethod": "org.eclipse.jetty.http2.server.HTTP2CServerConnectionFactory.<init>(org.eclipse.jetty.server.HttpConfiguration)",
+      "directCaller": "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
+      "path": [
+        "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
+        "org.eclipse.jetty.http2.server.HTTP2CServerConnectionFactory.<init>(org.eclipse.jetty.server.HttpConfiguration)"
+      ],
+      "methodSources": [
+        "@Override\npublic List<ConnectionFactory> configure(HttpConfiguration input) {\n    if (input.getCustomizer(SecureRequestCustomizer.class) != null) {\n        ALPNServerConnectionFactory alpn = new ALPNServerConnectionFactory(H2, H2_17, HTTP_1_1);\n        alpn.setDefaultProtocol(HTTP_1_1);\n        HTTP2ServerConnectionFactory https2 = new HTTP2ServerConnectionFactory(input);\n        return Arrays.asList(alpn, https2);\n    } else {\n        return Collections.singletonList(new HTTP2CServerConnectionFactory(input));\n    }\n}"
+      ],
+      "constructors": [
+        "JettyHttp2Configurer() {\n}"
+      ],
+      "fieldDeclarations": [
+        "private static final String H2 = \"h2\";",
+        "private static final String H2_17 = \"h2-17\";",
+        "private static final String HTTP_1_1 = \"http/1.1\";"
+      ],
+      "setters": [],
+      "imports": [
+        "org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory",
+        "org.eclipse.jetty.http2.server.HTTP2CServerConnectionFactory",
+        "org.eclipse.jetty.http2.server.HTTP2ServerConnectionFactory",
+        "org.eclipse.jetty.server.ConnectionFactory",
+        "org.eclipse.jetty.server.HttpConfiguration",
+        "org.eclipse.jetty.server.NegotiatingServerConnectionFactory",
+        "org.eclipse.jetty.server.SecureRequestCustomizer"
+      ],
+      "testTemplate": "package io.jooby.internal.jetty;\n\npublic class JettyHttp2Configurerconfigure_HTTP2CServerConnectionFactorymethodFikaTest {\n\n    @Test\n    public void testConfigure() {\n    }\n}",
+      "conditionCount": 1,
+      "callCount": 1,
+      "covered": true
+    },
+    {
+      "entryPoint": "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
+      "thirdPartyMethod": "org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory.setDefaultProtocol(java.lang.String)",
+      "directCaller": "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
+      "path": [
+        "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
+        "org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory.setDefaultProtocol(java.lang.String)"
+      ],
+      "methodSources": [
+        "@Override\npublic List<ConnectionFactory> configure(HttpConfiguration input) {\n    if (input.getCustomizer(SecureRequestCustomizer.class) != null) {\n        ALPNServerConnectionFactory alpn = new ALPNServerConnectionFactory(H2, H2_17, HTTP_1_1);\n        alpn.setDefaultProtocol(HTTP_1_1);\n        HTTP2ServerConnectionFactory https2 = new HTTP2ServerConnectionFactory(input);\n        return Arrays.asList(alpn, https2);\n    } else {\n        return Collections.singletonList(new HTTP2CServerConnectionFactory(input));\n    }\n}"
+      ],
+      "constructors": [
+        "JettyHttp2Configurer() {\n}"
+      ],
+      "fieldDeclarations": [
+        "private static final String H2 = \"h2\";",
+        "private static final String H2_17 = \"h2-17\";",
+        "private static final String HTTP_1_1 = \"http/1.1\";"
+      ],
+      "setters": [],
+      "imports": [
+        "org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory",
+        "org.eclipse.jetty.http2.server.HTTP2CServerConnectionFactory",
+        "org.eclipse.jetty.http2.server.HTTP2ServerConnectionFactory",
+        "org.eclipse.jetty.server.ConnectionFactory",
+        "org.eclipse.jetty.server.HttpConfiguration",
+        "org.eclipse.jetty.server.NegotiatingServerConnectionFactory",
+        "org.eclipse.jetty.server.SecureRequestCustomizer"
+      ],
+      "testTemplate": "package io.jooby.internal.jetty;\n\npublic class JettyHttp2Configurerconfigure_ALPNServerConnectionFactorysetDefaultProtocolFikaTest {\n\n    @Test\n    public void testConfigure() {\n    }\n}",
+      "conditionCount": 1,
+      "callCount": 1,
+      "covered": true
+    },
+    {
+      "entryPoint": "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
+      "thirdPartyMethod": "org.eclipse.jetty.http2.server.HTTP2ServerConnectionFactory.<init>(org.eclipse.jetty.server.HttpConfiguration)",
+      "directCaller": "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
+      "path": [
+        "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
+        "org.eclipse.jetty.http2.server.HTTP2ServerConnectionFactory.<init>(org.eclipse.jetty.server.HttpConfiguration)"
+      ],
+      "methodSources": [
+        "@Override\npublic List<ConnectionFactory> configure(HttpConfiguration input) {\n    if (input.getCustomizer(SecureRequestCustomizer.class) != null) {\n        ALPNServerConnectionFactory alpn = new ALPNServerConnectionFactory(H2, H2_17, HTTP_1_1);\n        alpn.setDefaultProtocol(HTTP_1_1);\n        HTTP2ServerConnectionFactory https2 = new HTTP2ServerConnectionFactory(input);\n        return Arrays.asList(alpn, https2);\n    } else {\n        return Collections.singletonList(new HTTP2CServerConnectionFactory(input));\n    }\n}"
+      ],
+      "constructors": [
+        "JettyHttp2Configurer() {\n}"
+      ],
+      "fieldDeclarations": [
+        "private static final String H2 = \"h2\";",
+        "private static final String H2_17 = \"h2-17\";",
+        "private static final String HTTP_1_1 = \"http/1.1\";"
+      ],
+      "setters": [],
+      "imports": [
+        "org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory",
+        "org.eclipse.jetty.http2.server.HTTP2CServerConnectionFactory",
+        "org.eclipse.jetty.http2.server.HTTP2ServerConnectionFactory",
+        "org.eclipse.jetty.server.ConnectionFactory",
+        "org.eclipse.jetty.server.HttpConfiguration",
+        "org.eclipse.jetty.server.NegotiatingServerConnectionFactory",
+        "org.eclipse.jetty.server.SecureRequestCustomizer"
+      ],
+      "testTemplate": "package io.jooby.internal.jetty;\n\npublic class JettyHttp2Configurerconfigure_HTTP2ServerConnectionFactorymethodFikaTest {\n\n    @Test\n    public void testConfigure() {\n    }\n}",
+      "conditionCount": 1,
+      "callCount": 1,
+      "covered": true
+    },
+    {
+      "entryPoint": "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
+      "thirdPartyMethod": "org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory.<init>(java.lang.String[])",
+      "directCaller": "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
+      "path": [
+        "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
+        "org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory.<init>(java.lang.String[])"
+      ],
+      "methodSources": [
+        "@Override\npublic List<ConnectionFactory> configure(HttpConfiguration input) {\n    if (input.getCustomizer(SecureRequestCustomizer.class) != null) {\n        ALPNServerConnectionFactory alpn = new ALPNServerConnectionFactory(H2, H2_17, HTTP_1_1);\n        alpn.setDefaultProtocol(HTTP_1_1);\n        HTTP2ServerConnectionFactory https2 = new HTTP2ServerConnectionFactory(input);\n        return Arrays.asList(alpn, https2);\n    } else {\n        return Collections.singletonList(new HTTP2CServerConnectionFactory(input));\n    }\n}"
+      ],
+      "constructors": [
+        "JettyHttp2Configurer() {\n}"
+      ],
+      "fieldDeclarations": [
+        "private static final String H2 = \"h2\";",
+        "private static final String H2_17 = \"h2-17\";",
+        "private static final String HTTP_1_1 = \"http/1.1\";"
+      ],
+      "setters": [],
+      "imports": [
+        "org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory",
+        "org.eclipse.jetty.http2.server.HTTP2CServerConnectionFactory",
+        "org.eclipse.jetty.http2.server.HTTP2ServerConnectionFactory",
+        "org.eclipse.jetty.server.ConnectionFactory",
+        "org.eclipse.jetty.server.HttpConfiguration",
+        "org.eclipse.jetty.server.NegotiatingServerConnectionFactory",
+        "org.eclipse.jetty.server.SecureRequestCustomizer"
+      ],
+      "testTemplate": "package io.jooby.internal.jetty;\n\npublic class JettyHttp2Configurerconfigure_ALPNServerConnectionFactorymethodFikaTest {\n\n    @Test\n    public void testConfigure() {\n    }\n}",
+      "conditionCount": 1,
+      "callCount": 1,
+      "covered": true
+    }
+  ]
 }

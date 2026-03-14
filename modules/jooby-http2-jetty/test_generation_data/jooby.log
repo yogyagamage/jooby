@@ -1,0 +1,196 @@
+Processing all 5 test cases from input file
+Using DeepSeek API with model: deepseek-chat
+
+================================================================================
+PROCESSING TEST CASE 1/5
+================================================================================
+Entry Point: io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)
+Third Party Method: org.eclipse.jetty.server.HttpConfiguration.getCustomizer(java.lang.Class)
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 844 chars
+/part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-jetty
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-jetty/src/test/java/io/jooby/internal/jetty/JettyHttp2Configurerconfigure_HttpConfigurationgetCustomizerFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=3696
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'org.eclipse.jetty.server.HttpConfiguration.getCustomizer(java.lang.Class)' covered=True
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=True
+[Decide] approved=True (tests passed AND target method covered)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=True
+[Finalize] SUCCESS: Test passed and target method covered
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = True
+✓ Test approved at iteration 1
+  JSON path: /part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-jetty/third_party_apis_full_methods.json
+  Looking for thirdPartyMethod: org.eclipse.jetty.server.HttpConfiguration.getCustomizer(java.lang.Class)
+  Looking for directCaller: io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)
+[DEBUG]   ✓ MATCH FOUND at path 0
+✓ Updated 1 record(s) in JSON file as covered
+  Third Party Method: org.eclipse.jetty.server.HttpConfiguration.getCustomizer(java.lang.Class)
+  Direct Caller: io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)
+
+================================================================================
+PROCESSING TEST CASE 2/5
+================================================================================
+Entry Point: io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)
+Third Party Method: org.eclipse.jetty.http2.server.HTTP2CServerConnectionFactory.<init>(org.eclipse.jetty.server.HttpConfiguration)
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 930 chars
+/part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-jetty
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-jetty/src/test/java/io/jooby/internal/jetty/JettyHttp2Configurerconfigure_HTTP2CServerConnectionFactorymethodFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=3708
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'org.eclipse.jetty.http2.server.HTTP2CServerConnectionFactory.<init>(org.eclipse.jetty.server.HttpConfiguration)' covered=True
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=True
+[Decide] approved=True (tests passed AND target method covered)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=True
+[Finalize] SUCCESS: Test passed and target method covered
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = True
+✓ Test approved at iteration 1
+  JSON path: /part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-jetty/third_party_apis_full_methods.json
+  Looking for thirdPartyMethod: org.eclipse.jetty.http2.server.HTTP2CServerConnectionFactory.<init>(org.eclipse.jetty.server.HttpConfiguration)
+  Looking for directCaller: io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)
+[DEBUG]   ✓ MATCH FOUND at path 1
+✓ Updated 1 record(s) in JSON file as covered
+  Third Party Method: org.eclipse.jetty.http2.server.HTTP2CServerConnectionFactory.<init>(org.eclipse.jetty.server.HttpConfiguration)
+  Direct Caller: io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)
+
+================================================================================
+PROCESSING TEST CASE 3/5
+================================================================================
+Entry Point: io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)
+Third Party Method: org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory.setDefaultProtocol(java.lang.String)
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 975 chars
+/part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-jetty
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-jetty/src/test/java/io/jooby/internal/jetty/JettyHttp2Configurerconfigure_ALPNServerConnectionFactorysetDefaultProtocolFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=3728
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory.setDefaultProtocol(java.lang.String)' covered=True
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=True
+[Decide] approved=True (tests passed AND target method covered)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=True
+[Finalize] SUCCESS: Test passed and target method covered
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = True
+✓ Test approved at iteration 1
+  JSON path: /part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-jetty/third_party_apis_full_methods.json
+  Looking for thirdPartyMethod: org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory.setDefaultProtocol(java.lang.String)
+  Looking for directCaller: io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)
+[DEBUG]   ✓ MATCH FOUND at path 2
+✓ Updated 1 record(s) in JSON file as covered
+  Third Party Method: org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory.setDefaultProtocol(java.lang.String)
+  Direct Caller: io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)
+
+================================================================================
+PROCESSING TEST CASE 4/5
+================================================================================
+Entry Point: io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)
+Third Party Method: org.eclipse.jetty.http2.server.HTTP2ServerConnectionFactory.<init>(org.eclipse.jetty.server.HttpConfiguration)
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 1026 chars
+/part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-jetty
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-jetty/src/test/java/io/jooby/internal/jetty/JettyHttp2Configurerconfigure_HTTP2ServerConnectionFactorymethodFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=3706
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'org.eclipse.jetty.http2.server.HTTP2ServerConnectionFactory.<init>(org.eclipse.jetty.server.HttpConfiguration)' covered=True
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=True
+[Decide] approved=True (tests passed AND target method covered)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=True
+[Finalize] SUCCESS: Test passed and target method covered
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = True
+✓ Test approved at iteration 1
+  JSON path: /part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-jetty/third_party_apis_full_methods.json
+  Looking for thirdPartyMethod: org.eclipse.jetty.http2.server.HTTP2ServerConnectionFactory.<init>(org.eclipse.jetty.server.HttpConfiguration)
+  Looking for directCaller: io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)
+[DEBUG]   ✓ MATCH FOUND at path 3
+✓ Updated 1 record(s) in JSON file as covered
+  Third Party Method: org.eclipse.jetty.http2.server.HTTP2ServerConnectionFactory.<init>(org.eclipse.jetty.server.HttpConfiguration)
+  Direct Caller: io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)
+
+================================================================================
+PROCESSING TEST CASE 5/5
+================================================================================
+Entry Point: io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)
+Third Party Method: org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory.<init>(java.lang.String[])
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 1066 chars
+/part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-jetty
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-jetty/src/test/java/io/jooby/internal/jetty/JettyHttp2Configurerconfigure_ALPNServerConnectionFactorymethodFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=3704
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory.<init>(java.lang.String[])' covered=True
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=True
+[Decide] approved=True (tests passed AND target method covered)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=True
+[Finalize] SUCCESS: Test passed and target method covered
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = True
+✓ Test approved at iteration 1
+  JSON path: /part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-jetty/third_party_apis_full_methods.json
+  Looking for thirdPartyMethod: org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory.<init>(java.lang.String[])
+  Looking for directCaller: io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)
+[DEBUG]   ✓ MATCH FOUND at path 4
+✓ Updated 1 record(s) in JSON file as covered
+  Third Party Method: org.eclipse.jetty.alpn.server.ALPNServerConnectionFactory.<init>(java.lang.String[])
+  Direct Caller: io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)
+
+================================================================================
+=== OVERALL SUMMARY ===
+================================================================================
+Total Test Cases: 5
+Processed: 5
+Approved: 5
+Failed: 0
+Success Rate: 100.0%
+================================================================================
+
+Approval Details:
+  Test 1: Approved at iteration 1
+  Test 2: Approved at iteration 1
+  Test 3: Approved at iteration 1
+  Test 4: Approved at iteration 1
+  Test 5: Approved at iteration 1
+================================================================================
+
