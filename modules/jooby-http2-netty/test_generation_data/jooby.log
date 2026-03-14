@@ -1,0 +1,172 @@
+Processing all 3 test cases from input file
+Using DeepSeek API with model: deepseek-chat
+
+================================================================================
+PROCESSING TEST CASE 1/3
+================================================================================
+Entry Point: io.jooby.internal.netty.Http2PrefaceOrHttpHandler.<init>(java.util.function.Consumer, java.util.function.Consumer)
+Third Party Method: io.netty.handler.codec.ByteToMessageDecoder.<init>()
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 713 chars
+/part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-netty
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-netty/src/test/java/io/jooby/internal/netty/Http2PrefaceOrHttpHandlermethod_ByteToMessageDecodermethodFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=3694
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'io.netty.handler.codec.ByteToMessageDecoder.<init>()' covered=False
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=False
+[Decide] approved=False (tests passed but target method NOT covered, will retry if iteration<5)
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 451 chars
+/part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-netty
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-netty/src/test/java/io/jooby/internal/netty/Http2PrefaceOrHttpHandlermethod_ByteToMessageDecodermethodFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=3694
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'io.netty.handler.codec.ByteToMessageDecoder.<init>()' covered=False
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=False
+[Decide] approved=False (tests passed but target method NOT covered, will retry if iteration<5)
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 437 chars
+/part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-netty
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-netty/src/test/java/io/jooby/internal/netty/Http2PrefaceOrHttpHandlermethod_ByteToMessageDecodermethodFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=3694
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'io.netty.handler.codec.ByteToMessageDecoder.<init>()' covered=False
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=False
+[Decide] approved=False (tests passed but target method NOT covered, will retry if iteration<5)
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 437 chars
+/part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-netty
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-netty/src/test/java/io/jooby/internal/netty/Http2PrefaceOrHttpHandlermethod_ByteToMessageDecodermethodFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=3693
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'io.netty.handler.codec.ByteToMessageDecoder.<init>()' covered=False
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=False
+[Decide] approved=False (tests passed but target method NOT covered, will retry if iteration<5)
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 437 chars
+/part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-netty
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-netty/src/test/java/io/jooby/internal/netty/Http2PrefaceOrHttpHandlermethod_ByteToMessageDecodermethodFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=3694
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'io.netty.handler.codec.ByteToMessageDecoder.<init>()' covered=False
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=False
+[Decide] approved=False (tests passed but target method NOT covered, will retry if iteration<5)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=False
+[Finalize] Cleaned up unsuccessful test file: /part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-netty/src/test/java/io/jooby/internal/netty/Http2PrefaceOrHttpHandlermethod_ByteToMessageDecodermethodFikaTest.java
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = False
+
+=== FAILURE REASON ===
+Tests passed but target third-party method was NOT covered
+   Target: io.netty.handler.codec.ByteToMessageDecoder.<init>()
+
+
+================================================================================
+PROCESSING TEST CASE 2/3
+================================================================================
+Entry Point: io.jooby.internal.netty.Http2OrHttp11Handler.<init>(java.util.function.Consumer, java.util.function.Consumer)
+Third Party Method: io.netty.handler.ssl.ApplicationProtocolNegotiationHandler.<init>(java.lang.String)
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 613 chars
+/part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-netty
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-netty/src/test/java/io/jooby/internal/netty/Http2OrHttp11Handlermethod_ApplicationProtocolNegotiationHandlermethodFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=3718
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'io.netty.handler.ssl.ApplicationProtocolNegotiationHandler.<init>(java.lang.String)' covered=True
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=True
+[Decide] approved=True (tests passed AND target method covered)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=True
+[Finalize] SUCCESS: Test passed and target method covered
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = True
+✓ Test approved at iteration 1
+  JSON path: /part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-netty/third_party_apis_full_methods.json
+  Looking for thirdPartyMethod: io.netty.handler.ssl.ApplicationProtocolNegotiationHandler.<init>(java.lang.String)
+  Looking for directCaller: io.jooby.internal.netty.Http2OrHttp11Handler.<init>(java.util.function.Consumer, java.util.function.Consumer)
+[DEBUG]   ✓ MATCH FOUND at path 1
+✓ Updated 1 record(s) in JSON file as covered
+  Third Party Method: io.netty.handler.ssl.ApplicationProtocolNegotiationHandler.<init>(java.lang.String)
+  Direct Caller: io.jooby.internal.netty.Http2OrHttp11Handler.<init>(java.util.function.Consumer, java.util.function.Consumer)
+
+================================================================================
+PROCESSING TEST CASE 3/3
+================================================================================
+Entry Point: io.jooby.internal.netty.Http2OrHttp11Handler.configurePipeline(io.netty.channel.ChannelHandlerContext, java.lang.String)
+Third Party Method: io.netty.channel.ChannelHandlerContext.pipeline()
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 988 chars
+/part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-netty
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-netty/src/test/java/io/jooby/internal/netty/Http2OrHttp11HandlerconfigurePipeline_ChannelHandlerContextpipelineFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=4511
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'io.netty.channel.ChannelHandlerContext.pipeline()' covered=True
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=True
+[Decide] approved=True (tests passed AND target method covered)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=True
+[Finalize] SUCCESS: Test passed and target method covered
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = True
+✓ Test approved at iteration 1
+  JSON path: /part/01/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-netty/third_party_apis_full_methods.json
+  Looking for thirdPartyMethod: io.netty.channel.ChannelHandlerContext.pipeline()
+  Looking for directCaller: io.jooby.internal.netty.Http2OrHttp11Handler.configurePipeline(io.netty.channel.ChannelHandlerContext, java.lang.String)
+[DEBUG]   ✓ MATCH FOUND at path 2
+✓ Updated 1 record(s) in JSON file as covered
+  Third Party Method: io.netty.channel.ChannelHandlerContext.pipeline()
+  Direct Caller: io.jooby.internal.netty.Http2OrHttp11Handler.configurePipeline(io.netty.channel.ChannelHandlerContext, java.lang.String)
+
+================================================================================
+=== OVERALL SUMMARY ===
+================================================================================
+Total Test Cases: 3
+Processed: 3
+Approved: 2
+Failed: 1
+Success Rate: 66.7%
+================================================================================
+
+Approval Details:
+  Test 2: Approved at iteration 1
+  Test 3: Approved at iteration 1
+================================================================================
+

@@ -1,45 +1,102 @@
 {
-  "fullMethodsPaths" : [ {
-    "entryPoint" : "io.jooby.internal.netty.Http2PrefaceOrHttpHandler.<init>(java.util.function.Consumer, java.util.function.Consumer)",
-    "thirdPartyMethod" : "io.netty.handler.codec.ByteToMessageDecoder.<init>()",
-    "directCaller" : "io.jooby.internal.netty.Http2PrefaceOrHttpHandler.<init>(java.util.function.Consumer, java.util.function.Consumer)",
-    "path" : [ "io.jooby.internal.netty.Http2PrefaceOrHttpHandler.<init>(java.util.function.Consumer, java.util.function.Consumer)", "io.netty.handler.codec.ByteToMessageDecoder.<init>()" ],
-    "methodSources" : [ "public (Consumer<ChannelPipeline> http1, Consumer<ChannelPipeline> http2) // PATH: Test should invoke the next new ByteToMessageDecoder(...) [step in execution path]\n{\n    this.http1 = http1;\n    this.http2 = http2;\n}" ],
-    "constructors" : [ "public Http2PrefaceOrHttpHandler(Consumer<ChannelPipeline> http1, Consumer<ChannelPipeline> http2) {\n    this.http1 = http1;\n    this.http2 = http2;\n}" ],
-    "fieldDeclarations" : [ "private static final int PRI = 0x50524920;", "private Consumer<ChannelPipeline> http1;", "private Consumer<ChannelPipeline> http2;" ],
-    "setters" : [ "@Override\nprotected void decode(final ChannelHandlerContext ctx, final ByteBuf in, final List<Object> out) {\n    if (in.readableBytes() < 4) {\n        return;\n    }\n    if (in.getInt(in.readerIndex()) == PRI) {\n        http2.accept(ctx.pipeline());\n    } else {\n        http1.accept(ctx.pipeline());\n    }\n    ctx.pipeline().remove(this);\n}" ],
-    "imports" : [ "io.netty.buffer.ByteBuf", "io.netty.channel.ChannelHandler", "io.netty.channel.ChannelHandlerContext", "io.netty.channel.ChannelPipeline", "io.netty.handler.codec.ByteToMessageDecoder" ],
-    "testTemplate" : "package io.jooby.internal.netty;\n\npublic class Http2PrefaceOrHttpHandlermethod_ByteToMessageDecodermethodFikaTest {\n\n    @Test\n    public void testMethod() {\n    }\n}",
-    "conditionCount" : 0,
-    "callCount" : 1,
-    "covered" : false
-  }, {
-    "entryPoint" : "io.jooby.internal.netty.Http2OrHttp11Handler.<init>(java.util.function.Consumer, java.util.function.Consumer)",
-    "thirdPartyMethod" : "io.netty.handler.ssl.ApplicationProtocolNegotiationHandler.<init>(java.lang.String)",
-    "directCaller" : "io.jooby.internal.netty.Http2OrHttp11Handler.<init>(java.util.function.Consumer, java.util.function.Consumer)",
-    "path" : [ "io.jooby.internal.netty.Http2OrHttp11Handler.<init>(java.util.function.Consumer, java.util.function.Consumer)", "io.netty.handler.ssl.ApplicationProtocolNegotiationHandler.<init>(java.lang.String)" ],
-    "methodSources" : [ "public (Consumer<ChannelPipeline> http1, Consumer<ChannelPipeline> http2) // PATH: Test should invoke the next new ApplicationProtocolNegotiationHandler(...) [step in execution path]\n{\n    this(ApplicationProtocolNames.HTTP_1_1);\n    this.http2 = http2;\n    this.http1 = http1;\n}" ],
-    "constructors" : [ "public Http2OrHttp11Handler(Consumer<ChannelPipeline> http1, Consumer<ChannelPipeline> http2) {\n    super(ApplicationProtocolNames.HTTP_1_1);\n    this.http2 = http2;\n    this.http1 = http1;\n}" ],
-    "fieldDeclarations" : [ "private final Consumer<ChannelPipeline> http2;", "private final Consumer<ChannelPipeline> http1;" ],
-    "setters" : [ "@Override\npublic void configurePipeline(final ChannelHandlerContext ctx, final String protocol) {\n    if (ApplicationProtocolNames.HTTP_1_1.equals(protocol)) {\n        http1.accept(ctx.pipeline());\n    } else if (ApplicationProtocolNames.HTTP_2.equals(protocol)) {\n        http2.accept(ctx.pipeline());\n    } else {\n        throw new IllegalStateException(\"Unknown protocol: \" + protocol);\n    }\n}" ],
-    "imports" : [ "io.netty.channel.ChannelHandlerContext", "io.netty.channel.ChannelPipeline", "io.netty.handler.ssl.ApplicationProtocolNames", "io.netty.handler.ssl.ApplicationProtocolNegotiationHandler" ],
-    "testTemplate" : "package io.jooby.internal.netty;\n\npublic class Http2OrHttp11Handlermethod_ApplicationProtocolNegotiationHandlermethodFikaTest {\n\n    @Test\n    public void testMethod() {\n    }\n}",
-    "conditionCount" : 0,
-    "callCount" : 1,
-    "covered" : false
-  }, {
-    "entryPoint" : "io.jooby.internal.netty.Http2OrHttp11Handler.configurePipeline(io.netty.channel.ChannelHandlerContext, java.lang.String)",
-    "thirdPartyMethod" : "io.netty.channel.ChannelHandlerContext.pipeline()",
-    "directCaller" : "io.jooby.internal.netty.Http2OrHttp11Handler.configurePipeline(io.netty.channel.ChannelHandlerContext, java.lang.String)",
-    "path" : [ "io.jooby.internal.netty.Http2OrHttp11Handler.configurePipeline(io.netty.channel.ChannelHandlerContext, java.lang.String)", "io.netty.channel.ChannelHandlerContext.pipeline()" ],
-    "methodSources" : [ "@Override\npublic void configurePipeline(final ChannelHandlerContext ctx, final String protocol) {\n    if (ApplicationProtocolNames.HTTP_1_1.equals(protocol)) {\n        // PATH: Test should invoke the next ChannelHandlerContext.pipeline(...) [step in execution path]\n        http1.accept(ctx.pipeline());\n    } else if (ApplicationProtocolNames.HTTP_2.equals(protocol)) {\n        http2.accept(ctx.pipeline());\n    } else {\n        throw new IllegalStateException(\"Unknown protocol: \" + protocol);\n    }\n}" ],
-    "constructors" : [ "public Http2OrHttp11Handler(Consumer<ChannelPipeline> http1, Consumer<ChannelPipeline> http2) {\n    super(ApplicationProtocolNames.HTTP_1_1);\n    this.http2 = http2;\n    this.http1 = http1;\n}" ],
-    "fieldDeclarations" : [ "private final Consumer<ChannelPipeline> http2;", "private final Consumer<ChannelPipeline> http1;" ],
-    "setters" : [ "@Override\npublic void configurePipeline(final ChannelHandlerContext ctx, final String protocol) {\n    if (ApplicationProtocolNames.HTTP_1_1.equals(protocol)) {\n        http1.accept(ctx.pipeline());\n    } else if (ApplicationProtocolNames.HTTP_2.equals(protocol)) {\n        http2.accept(ctx.pipeline());\n    } else {\n        throw new IllegalStateException(\"Unknown protocol: \" + protocol);\n    }\n}" ],
-    "imports" : [ "io.netty.channel.ChannelHandlerContext", "io.netty.channel.ChannelPipeline", "io.netty.handler.ssl.ApplicationProtocolNames", "io.netty.handler.ssl.ApplicationProtocolNegotiationHandler" ],
-    "testTemplate" : "package io.jooby.internal.netty;\n\npublic class Http2OrHttp11HandlerconfigurePipeline_ChannelHandlerContextpipelineFikaTest {\n\n    @Test\n    public void testConfigurePipeline() {\n    }\n}",
-    "conditionCount" : 2,
-    "callCount" : 2,
-    "covered" : false
-  } ]
+  "fullMethodsPaths": [
+    {
+      "entryPoint": "io.jooby.internal.netty.Http2PrefaceOrHttpHandler.<init>(java.util.function.Consumer, java.util.function.Consumer)",
+      "thirdPartyMethod": "io.netty.handler.codec.ByteToMessageDecoder.<init>()",
+      "directCaller": "io.jooby.internal.netty.Http2PrefaceOrHttpHandler.<init>(java.util.function.Consumer, java.util.function.Consumer)",
+      "path": [
+        "io.jooby.internal.netty.Http2PrefaceOrHttpHandler.<init>(java.util.function.Consumer, java.util.function.Consumer)",
+        "io.netty.handler.codec.ByteToMessageDecoder.<init>()"
+      ],
+      "methodSources": [
+        "public (Consumer<ChannelPipeline> http1, Consumer<ChannelPipeline> http2) // PATH: Test should invoke the next new ByteToMessageDecoder(...) [step in execution path]\n{\n    this.http1 = http1;\n    this.http2 = http2;\n}"
+      ],
+      "constructors": [
+        "public Http2PrefaceOrHttpHandler(Consumer<ChannelPipeline> http1, Consumer<ChannelPipeline> http2) {\n    this.http1 = http1;\n    this.http2 = http2;\n}"
+      ],
+      "fieldDeclarations": [
+        "private static final int PRI = 0x50524920;",
+        "private Consumer<ChannelPipeline> http1;",
+        "private Consumer<ChannelPipeline> http2;"
+      ],
+      "setters": [
+        "@Override\nprotected void decode(final ChannelHandlerContext ctx, final ByteBuf in, final List<Object> out) {\n    if (in.readableBytes() < 4) {\n        return;\n    }\n    if (in.getInt(in.readerIndex()) == PRI) {\n        http2.accept(ctx.pipeline());\n    } else {\n        http1.accept(ctx.pipeline());\n    }\n    ctx.pipeline().remove(this);\n}"
+      ],
+      "imports": [
+        "io.netty.buffer.ByteBuf",
+        "io.netty.channel.ChannelHandler",
+        "io.netty.channel.ChannelHandlerContext",
+        "io.netty.channel.ChannelPipeline",
+        "io.netty.handler.codec.ByteToMessageDecoder"
+      ],
+      "testTemplate": "package io.jooby.internal.netty;\n\npublic class Http2PrefaceOrHttpHandlermethod_ByteToMessageDecodermethodFikaTest {\n\n    @Test\n    public void testMethod() {\n    }\n}",
+      "conditionCount": 0,
+      "callCount": 1,
+      "covered": false
+    },
+    {
+      "entryPoint": "io.jooby.internal.netty.Http2OrHttp11Handler.<init>(java.util.function.Consumer, java.util.function.Consumer)",
+      "thirdPartyMethod": "io.netty.handler.ssl.ApplicationProtocolNegotiationHandler.<init>(java.lang.String)",
+      "directCaller": "io.jooby.internal.netty.Http2OrHttp11Handler.<init>(java.util.function.Consumer, java.util.function.Consumer)",
+      "path": [
+        "io.jooby.internal.netty.Http2OrHttp11Handler.<init>(java.util.function.Consumer, java.util.function.Consumer)",
+        "io.netty.handler.ssl.ApplicationProtocolNegotiationHandler.<init>(java.lang.String)"
+      ],
+      "methodSources": [
+        "public (Consumer<ChannelPipeline> http1, Consumer<ChannelPipeline> http2) // PATH: Test should invoke the next new ApplicationProtocolNegotiationHandler(...) [step in execution path]\n{\n    this(ApplicationProtocolNames.HTTP_1_1);\n    this.http2 = http2;\n    this.http1 = http1;\n}"
+      ],
+      "constructors": [
+        "public Http2OrHttp11Handler(Consumer<ChannelPipeline> http1, Consumer<ChannelPipeline> http2) {\n    super(ApplicationProtocolNames.HTTP_1_1);\n    this.http2 = http2;\n    this.http1 = http1;\n}"
+      ],
+      "fieldDeclarations": [
+        "private final Consumer<ChannelPipeline> http2;",
+        "private final Consumer<ChannelPipeline> http1;"
+      ],
+      "setters": [
+        "@Override\npublic void configurePipeline(final ChannelHandlerContext ctx, final String protocol) {\n    if (ApplicationProtocolNames.HTTP_1_1.equals(protocol)) {\n        http1.accept(ctx.pipeline());\n    } else if (ApplicationProtocolNames.HTTP_2.equals(protocol)) {\n        http2.accept(ctx.pipeline());\n    } else {\n        throw new IllegalStateException(\"Unknown protocol: \" + protocol);\n    }\n}"
+      ],
+      "imports": [
+        "io.netty.channel.ChannelHandlerContext",
+        "io.netty.channel.ChannelPipeline",
+        "io.netty.handler.ssl.ApplicationProtocolNames",
+        "io.netty.handler.ssl.ApplicationProtocolNegotiationHandler"
+      ],
+      "testTemplate": "package io.jooby.internal.netty;\n\npublic class Http2OrHttp11Handlermethod_ApplicationProtocolNegotiationHandlermethodFikaTest {\n\n    @Test\n    public void testMethod() {\n    }\n}",
+      "conditionCount": 0,
+      "callCount": 1,
+      "covered": true
+    },
+    {
+      "entryPoint": "io.jooby.internal.netty.Http2OrHttp11Handler.configurePipeline(io.netty.channel.ChannelHandlerContext, java.lang.String)",
+      "thirdPartyMethod": "io.netty.channel.ChannelHandlerContext.pipeline()",
+      "directCaller": "io.jooby.internal.netty.Http2OrHttp11Handler.configurePipeline(io.netty.channel.ChannelHandlerContext, java.lang.String)",
+      "path": [
+        "io.jooby.internal.netty.Http2OrHttp11Handler.configurePipeline(io.netty.channel.ChannelHandlerContext, java.lang.String)",
+        "io.netty.channel.ChannelHandlerContext.pipeline()"
+      ],
+      "methodSources": [
+        "@Override\npublic void configurePipeline(final ChannelHandlerContext ctx, final String protocol) {\n    if (ApplicationProtocolNames.HTTP_1_1.equals(protocol)) {\n        // PATH: Test should invoke the next ChannelHandlerContext.pipeline(...) [step in execution path]\n        http1.accept(ctx.pipeline());\n    } else if (ApplicationProtocolNames.HTTP_2.equals(protocol)) {\n        http2.accept(ctx.pipeline());\n    } else {\n        throw new IllegalStateException(\"Unknown protocol: \" + protocol);\n    }\n}"
+      ],
+      "constructors": [
+        "public Http2OrHttp11Handler(Consumer<ChannelPipeline> http1, Consumer<ChannelPipeline> http2) {\n    super(ApplicationProtocolNames.HTTP_1_1);\n    this.http2 = http2;\n    this.http1 = http1;\n}"
+      ],
+      "fieldDeclarations": [
+        "private final Consumer<ChannelPipeline> http2;",
+        "private final Consumer<ChannelPipeline> http1;"
+      ],
+      "setters": [
+        "@Override\npublic void configurePipeline(final ChannelHandlerContext ctx, final String protocol) {\n    if (ApplicationProtocolNames.HTTP_1_1.equals(protocol)) {\n        http1.accept(ctx.pipeline());\n    } else if (ApplicationProtocolNames.HTTP_2.equals(protocol)) {\n        http2.accept(ctx.pipeline());\n    } else {\n        throw new IllegalStateException(\"Unknown protocol: \" + protocol);\n    }\n}"
+      ],
+      "imports": [
+        "io.netty.channel.ChannelHandlerContext",
+        "io.netty.channel.ChannelPipeline",
+        "io.netty.handler.ssl.ApplicationProtocolNames",
+        "io.netty.handler.ssl.ApplicationProtocolNegotiationHandler"
+      ],
+      "testTemplate": "package io.jooby.internal.netty;\n\npublic class Http2OrHttp11HandlerconfigurePipeline_ChannelHandlerContextpipelineFikaTest {\n\n    @Test\n    public void testConfigurePipeline() {\n    }\n}",
+      "conditionCount": 2,
+      "callCount": 2,
+      "covered": true
+    }
+  ]
 }

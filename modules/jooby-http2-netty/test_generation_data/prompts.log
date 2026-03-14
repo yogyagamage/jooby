@@ -1,0 +1,615 @@
+
+====================================================================================================
+PROMPTS LOG SESSION STARTED: 2026-03-14T13:12:42.198021
+====================================================================================================
+
+====================================================================================================
+TEST CASE 1/3 — ITERATION 1
+Entry Point: io.jooby.internal.netty.Http2PrefaceOrHttpHandler.<init>(java.util.function.Consumer, java.util.function.Consumer)
+Third Party Method: io.netty.handler.codec.ByteToMessageDecoder.<init>()
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the full chain of method calls starting from the specified entry point method and reaching the specified third-party method. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+entryPoint: Fully qualified public method where execution must begin.
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+path: Ordered list of method calls that must be traversed during execution.
+methodSources: Complete and exact source code for all methods in the call chain.
+constructors: All constructors of the class containing the entryPoint. Use one of these constructors to instantiate the class in the test. Then use that instance to call the entryPoint method.
+fieldDeclarations: Instance variables and class variables of the class containing the entryPoint. These are the fields that can be accessed or set when creating the test.
+setters: All setters of the entryPoint class that can modify the declared fields.
+imports: All non-core-java imports that may be required by the test.
+
+entryPoint: io.jooby.internal.netty.Http2PrefaceOrHttpHandler.<init>(java.util.function.Consumer, java.util.function.Consumer)
+thirdPartyMethod: io.netty.handler.codec.ByteToMessageDecoder.<init>()
+path: io.jooby.internal.netty.Http2PrefaceOrHttpHandler.<init>(java.util.function.Consumer, java.util.function.Consumer) -> io.netty.handler.codec.ByteToMessageDecoder.<init>()
+methodSources:
+```java
+public (Consumer<ChannelPipeline> http1, Consumer<ChannelPipeline> http2) // PATH: Test should invoke the next new ByteToMessageDecoder(...) [step in execution path]
+{
+    this.http1 = http1;
+    this.http2 = http2;
+}
+```
+constructors:
+```java
+public Http2PrefaceOrHttpHandler(Consumer<ChannelPipeline> http1, Consumer<ChannelPipeline> http2) {
+    this.http1 = http1;
+    this.http2 = http2;
+}
+```
+fieldDeclarations:
+```java
+private static final int PRI = 0x50524920;
+private Consumer<ChannelPipeline> http1;
+private Consumer<ChannelPipeline> http2;
+```
+setters:
+```java
+@Override
+protected void decode(final ChannelHandlerContext ctx, final ByteBuf in, final List<Object> out) {
+    if (in.readableBytes() < 4) {
+        return;
+    }
+    if (in.getInt(in.readerIndex()) == PRI) {
+        http2.accept(ctx.pipeline());
+    } else {
+        http1.accept(ctx.pipeline());
+    }
+    ctx.pipeline().remove(this);
+}
+```
+imports: io.netty.buffer.ByteBuf, io.netty.channel.ChannelHandler, io.netty.channel.ChannelHandlerContext, io.netty.channel.ChannelPipeline, io.netty.handler.codec.ByteToMessageDecoder
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, and ONLY for objects required as constructor parameters when instantiating the class that contains the entry-point method, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: io.jooby.internal.netty
+- class name MUST be: Http2PrefaceOrHttpHandlermethod_ByteToMessageDecodermethodFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 1/3 — ITERATION 2
+Entry Point: io.jooby.internal.netty.Http2PrefaceOrHttpHandler.<init>(java.util.function.Consumer, java.util.function.Consumer)
+Third Party Method: io.netty.handler.codec.ByteToMessageDecoder.<init>()
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the full chain of method calls starting from the specified entry point method and reaching the specified third-party method. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+entryPoint: Fully qualified public method where execution must begin.
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+path: Ordered list of method calls that must be traversed during execution.
+methodSources: Complete and exact source code for all methods in the call chain.
+constructors: All constructors of the class containing the entryPoint. Use one of these constructors to instantiate the class in the test. Then use that instance to call the entryPoint method.
+fieldDeclarations: Instance variables and class variables of the class containing the entryPoint. These are the fields that can be accessed or set when creating the test.
+setters: All setters of the entryPoint class that can modify the declared fields.
+imports: All non-core-java imports that may be required by the test.
+
+entryPoint: io.jooby.internal.netty.Http2PrefaceOrHttpHandler.<init>(java.util.function.Consumer, java.util.function.Consumer)
+thirdPartyMethod: io.netty.handler.codec.ByteToMessageDecoder.<init>()
+path: io.jooby.internal.netty.Http2PrefaceOrHttpHandler.<init>(java.util.function.Consumer, java.util.function.Consumer) -> io.netty.handler.codec.ByteToMessageDecoder.<init>()
+methodSources:
+```java
+public (Consumer<ChannelPipeline> http1, Consumer<ChannelPipeline> http2) // PATH: Test should invoke the next new ByteToMessageDecoder(...) [step in execution path]
+{
+    this.http1 = http1;
+    this.http2 = http2;
+}
+```
+constructors:
+```java
+public Http2PrefaceOrHttpHandler(Consumer<ChannelPipeline> http1, Consumer<ChannelPipeline> http2) {
+    this.http1 = http1;
+    this.http2 = http2;
+}
+```
+fieldDeclarations:
+```java
+private static final int PRI = 0x50524920;
+private Consumer<ChannelPipeline> http1;
+private Consumer<ChannelPipeline> http2;
+```
+setters:
+```java
+@Override
+protected void decode(final ChannelHandlerContext ctx, final ByteBuf in, final List<Object> out) {
+    if (in.readableBytes() < 4) {
+        return;
+    }
+    if (in.getInt(in.readerIndex()) == PRI) {
+        http2.accept(ctx.pipeline());
+    } else {
+        http1.accept(ctx.pipeline());
+    }
+    ctx.pipeline().remove(this);
+}
+```
+imports: io.netty.buffer.ByteBuf, io.netty.channel.ChannelHandler, io.netty.channel.ChannelHandlerContext, io.netty.channel.ChannelPipeline, io.netty.handler.codec.ByteToMessageDecoder
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, and ONLY for objects required as constructor parameters when instantiating the class that contains the entry-point method, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: io.jooby.internal.netty
+- class name MUST be: Http2PrefaceOrHttpHandlermethod_ByteToMessageDecodermethodFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+================================================================================
+COVERAGE CHECK FAILED - Test passed but target method NOT covered
+================================================================================
+
+NOT covered methods (1):
+  ✗ io.netty.handler.codec.ByteToMessageDecoder.<init>()
+
+No methods in the call chain were reached.
+Ensure the test properly invokes the entry point 'io.jooby.internal.netty.Http2PrefaceOrHttpHandler.<init>(java.util.function.Consumer, java.util.function.Consumer)' to reach 'io.netty.handler.codec.ByteToMessageDecoder.<init>()'.
+================================================================================
+
+
+
+====================================================================================================
+TEST CASE 1/3 — ITERATION 3
+Entry Point: io.jooby.internal.netty.Http2PrefaceOrHttpHandler.<init>(java.util.function.Consumer, java.util.function.Consumer)
+Third Party Method: io.netty.handler.codec.ByteToMessageDecoder.<init>()
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the full chain of method calls starting from the specified entry point method and reaching the specified third-party method. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+entryPoint: Fully qualified public method where execution must begin.
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+path: Ordered list of method calls that must be traversed during execution.
+methodSources: Complete and exact source code for all methods in the call chain.
+constructors: All constructors of the class containing the entryPoint. Use one of these constructors to instantiate the class in the test. Then use that instance to call the entryPoint method.
+fieldDeclarations: Instance variables and class variables of the class containing the entryPoint. These are the fields that can be accessed or set when creating the test.
+setters: All setters of the entryPoint class that can modify the declared fields.
+imports: All non-core-java imports that may be required by the test.
+
+entryPoint: io.jooby.internal.netty.Http2PrefaceOrHttpHandler.<init>(java.util.function.Consumer, java.util.function.Consumer)
+thirdPartyMethod: io.netty.handler.codec.ByteToMessageDecoder.<init>()
+path: io.jooby.internal.netty.Http2PrefaceOrHttpHandler.<init>(java.util.function.Consumer, java.util.function.Consumer) -> io.netty.handler.codec.ByteToMessageDecoder.<init>()
+methodSources:
+```java
+public (Consumer<ChannelPipeline> http1, Consumer<ChannelPipeline> http2) // PATH: Test should invoke the next new ByteToMessageDecoder(...) [step in execution path]
+{
+    this.http1 = http1;
+    this.http2 = http2;
+}
+```
+constructors:
+```java
+public Http2PrefaceOrHttpHandler(Consumer<ChannelPipeline> http1, Consumer<ChannelPipeline> http2) {
+    this.http1 = http1;
+    this.http2 = http2;
+}
+```
+fieldDeclarations:
+```java
+private static final int PRI = 0x50524920;
+private Consumer<ChannelPipeline> http1;
+private Consumer<ChannelPipeline> http2;
+```
+setters:
+```java
+@Override
+protected void decode(final ChannelHandlerContext ctx, final ByteBuf in, final List<Object> out) {
+    if (in.readableBytes() < 4) {
+        return;
+    }
+    if (in.getInt(in.readerIndex()) == PRI) {
+        http2.accept(ctx.pipeline());
+    } else {
+        http1.accept(ctx.pipeline());
+    }
+    ctx.pipeline().remove(this);
+}
+```
+imports: io.netty.buffer.ByteBuf, io.netty.channel.ChannelHandler, io.netty.channel.ChannelHandlerContext, io.netty.channel.ChannelPipeline, io.netty.handler.codec.ByteToMessageDecoder
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, and ONLY for objects required as constructor parameters when instantiating the class that contains the entry-point method, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: io.jooby.internal.netty
+- class name MUST be: Http2PrefaceOrHttpHandlermethod_ByteToMessageDecodermethodFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+================================================================================
+COVERAGE CHECK FAILED - Test passed but target method NOT covered
+================================================================================
+
+NOT covered methods (1):
+  ✗ io.netty.handler.codec.ByteToMessageDecoder.<init>()
+
+No methods in the call chain were reached.
+Ensure the test properly invokes the entry point 'io.jooby.internal.netty.Http2PrefaceOrHttpHandler.<init>(java.util.function.Consumer, java.util.function.Consumer)' to reach 'io.netty.handler.codec.ByteToMessageDecoder.<init>()'.
+================================================================================
+
+
+
+====================================================================================================
+TEST CASE 1/3 — ITERATION 4
+Entry Point: io.jooby.internal.netty.Http2PrefaceOrHttpHandler.<init>(java.util.function.Consumer, java.util.function.Consumer)
+Third Party Method: io.netty.handler.codec.ByteToMessageDecoder.<init>()
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the full chain of method calls starting from the specified entry point method and reaching the specified third-party method. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+entryPoint: Fully qualified public method where execution must begin.
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+path: Ordered list of method calls that must be traversed during execution.
+methodSources: Complete and exact source code for all methods in the call chain.
+constructors: All constructors of the class containing the entryPoint. Use one of these constructors to instantiate the class in the test. Then use that instance to call the entryPoint method.
+fieldDeclarations: Instance variables and class variables of the class containing the entryPoint. These are the fields that can be accessed or set when creating the test.
+setters: All setters of the entryPoint class that can modify the declared fields.
+imports: All non-core-java imports that may be required by the test.
+
+entryPoint: io.jooby.internal.netty.Http2PrefaceOrHttpHandler.<init>(java.util.function.Consumer, java.util.function.Consumer)
+thirdPartyMethod: io.netty.handler.codec.ByteToMessageDecoder.<init>()
+path: io.jooby.internal.netty.Http2PrefaceOrHttpHandler.<init>(java.util.function.Consumer, java.util.function.Consumer) -> io.netty.handler.codec.ByteToMessageDecoder.<init>()
+methodSources:
+```java
+public (Consumer<ChannelPipeline> http1, Consumer<ChannelPipeline> http2) // PATH: Test should invoke the next new ByteToMessageDecoder(...) [step in execution path]
+{
+    this.http1 = http1;
+    this.http2 = http2;
+}
+```
+constructors:
+```java
+public Http2PrefaceOrHttpHandler(Consumer<ChannelPipeline> http1, Consumer<ChannelPipeline> http2) {
+    this.http1 = http1;
+    this.http2 = http2;
+}
+```
+fieldDeclarations:
+```java
+private static final int PRI = 0x50524920;
+private Consumer<ChannelPipeline> http1;
+private Consumer<ChannelPipeline> http2;
+```
+setters:
+```java
+@Override
+protected void decode(final ChannelHandlerContext ctx, final ByteBuf in, final List<Object> out) {
+    if (in.readableBytes() < 4) {
+        return;
+    }
+    if (in.getInt(in.readerIndex()) == PRI) {
+        http2.accept(ctx.pipeline());
+    } else {
+        http1.accept(ctx.pipeline());
+    }
+    ctx.pipeline().remove(this);
+}
+```
+imports: io.netty.buffer.ByteBuf, io.netty.channel.ChannelHandler, io.netty.channel.ChannelHandlerContext, io.netty.channel.ChannelPipeline, io.netty.handler.codec.ByteToMessageDecoder
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, and ONLY for objects required as constructor parameters when instantiating the class that contains the entry-point method, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: io.jooby.internal.netty
+- class name MUST be: Http2PrefaceOrHttpHandlermethod_ByteToMessageDecodermethodFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+================================================================================
+COVERAGE CHECK FAILED - Test passed but target method NOT covered
+================================================================================
+
+NOT covered methods (1):
+  ✗ io.netty.handler.codec.ByteToMessageDecoder.<init>()
+
+No methods in the call chain were reached.
+Ensure the test properly invokes the entry point 'io.jooby.internal.netty.Http2PrefaceOrHttpHandler.<init>(java.util.function.Consumer, java.util.function.Consumer)' to reach 'io.netty.handler.codec.ByteToMessageDecoder.<init>()'.
+================================================================================
+
+
+
+====================================================================================================
+TEST CASE 1/3 — ITERATION 5
+Entry Point: io.jooby.internal.netty.Http2PrefaceOrHttpHandler.<init>(java.util.function.Consumer, java.util.function.Consumer)
+Third Party Method: io.netty.handler.codec.ByteToMessageDecoder.<init>()
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the full chain of method calls starting from the specified entry point method and reaching the specified third-party method. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+entryPoint: Fully qualified public method where execution must begin.
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+path: Ordered list of method calls that must be traversed during execution.
+methodSources: Complete and exact source code for all methods in the call chain.
+constructors: All constructors of the class containing the entryPoint. Use one of these constructors to instantiate the class in the test. Then use that instance to call the entryPoint method.
+fieldDeclarations: Instance variables and class variables of the class containing the entryPoint. These are the fields that can be accessed or set when creating the test.
+setters: All setters of the entryPoint class that can modify the declared fields.
+imports: All non-core-java imports that may be required by the test.
+
+entryPoint: io.jooby.internal.netty.Http2PrefaceOrHttpHandler.<init>(java.util.function.Consumer, java.util.function.Consumer)
+thirdPartyMethod: io.netty.handler.codec.ByteToMessageDecoder.<init>()
+path: io.jooby.internal.netty.Http2PrefaceOrHttpHandler.<init>(java.util.function.Consumer, java.util.function.Consumer) -> io.netty.handler.codec.ByteToMessageDecoder.<init>()
+methodSources:
+```java
+public (Consumer<ChannelPipeline> http1, Consumer<ChannelPipeline> http2) // PATH: Test should invoke the next new ByteToMessageDecoder(...) [step in execution path]
+{
+    this.http1 = http1;
+    this.http2 = http2;
+}
+```
+constructors:
+```java
+public Http2PrefaceOrHttpHandler(Consumer<ChannelPipeline> http1, Consumer<ChannelPipeline> http2) {
+    this.http1 = http1;
+    this.http2 = http2;
+}
+```
+fieldDeclarations:
+```java
+private static final int PRI = 0x50524920;
+private Consumer<ChannelPipeline> http1;
+private Consumer<ChannelPipeline> http2;
+```
+setters:
+```java
+@Override
+protected void decode(final ChannelHandlerContext ctx, final ByteBuf in, final List<Object> out) {
+    if (in.readableBytes() < 4) {
+        return;
+    }
+    if (in.getInt(in.readerIndex()) == PRI) {
+        http2.accept(ctx.pipeline());
+    } else {
+        http1.accept(ctx.pipeline());
+    }
+    ctx.pipeline().remove(this);
+}
+```
+imports: io.netty.buffer.ByteBuf, io.netty.channel.ChannelHandler, io.netty.channel.ChannelHandlerContext, io.netty.channel.ChannelPipeline, io.netty.handler.codec.ByteToMessageDecoder
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, and ONLY for objects required as constructor parameters when instantiating the class that contains the entry-point method, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: io.jooby.internal.netty
+- class name MUST be: Http2PrefaceOrHttpHandlermethod_ByteToMessageDecodermethodFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+================================================================================
+COVERAGE CHECK FAILED - Test passed but target method NOT covered
+================================================================================
+
+NOT covered methods (1):
+  ✗ io.netty.handler.codec.ByteToMessageDecoder.<init>()
+
+No methods in the call chain were reached.
+Ensure the test properly invokes the entry point 'io.jooby.internal.netty.Http2PrefaceOrHttpHandler.<init>(java.util.function.Consumer, java.util.function.Consumer)' to reach 'io.netty.handler.codec.ByteToMessageDecoder.<init>()'.
+================================================================================
+
+
+
+====================================================================================================
+TEST CASE 2/3 — ITERATION 1
+Entry Point: io.jooby.internal.netty.Http2OrHttp11Handler.<init>(java.util.function.Consumer, java.util.function.Consumer)
+Third Party Method: io.netty.handler.ssl.ApplicationProtocolNegotiationHandler.<init>(java.lang.String)
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the full chain of method calls starting from the specified entry point method and reaching the specified third-party method. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+entryPoint: Fully qualified public method where execution must begin.
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+path: Ordered list of method calls that must be traversed during execution.
+methodSources: Complete and exact source code for all methods in the call chain.
+constructors: All constructors of the class containing the entryPoint. Use one of these constructors to instantiate the class in the test. Then use that instance to call the entryPoint method.
+fieldDeclarations: Instance variables and class variables of the class containing the entryPoint. These are the fields that can be accessed or set when creating the test.
+setters: All setters of the entryPoint class that can modify the declared fields.
+imports: All non-core-java imports that may be required by the test.
+
+entryPoint: io.jooby.internal.netty.Http2OrHttp11Handler.<init>(java.util.function.Consumer, java.util.function.Consumer)
+thirdPartyMethod: io.netty.handler.ssl.ApplicationProtocolNegotiationHandler.<init>(java.lang.String)
+path: io.jooby.internal.netty.Http2OrHttp11Handler.<init>(java.util.function.Consumer, java.util.function.Consumer) -> io.netty.handler.ssl.ApplicationProtocolNegotiationHandler.<init>(java.lang.String)
+methodSources:
+```java
+public (Consumer<ChannelPipeline> http1, Consumer<ChannelPipeline> http2) // PATH: Test should invoke the next new ApplicationProtocolNegotiationHandler(...) [step in execution path]
+{
+    this(ApplicationProtocolNames.HTTP_1_1);
+    this.http2 = http2;
+    this.http1 = http1;
+}
+```
+constructors:
+```java
+public Http2OrHttp11Handler(Consumer<ChannelPipeline> http1, Consumer<ChannelPipeline> http2) {
+    super(ApplicationProtocolNames.HTTP_1_1);
+    this.http2 = http2;
+    this.http1 = http1;
+}
+```
+fieldDeclarations:
+```java
+private final Consumer<ChannelPipeline> http2;
+private final Consumer<ChannelPipeline> http1;
+```
+setters:
+```java
+@Override
+public void configurePipeline(final ChannelHandlerContext ctx, final String protocol) {
+    if (ApplicationProtocolNames.HTTP_1_1.equals(protocol)) {
+        http1.accept(ctx.pipeline());
+    } else if (ApplicationProtocolNames.HTTP_2.equals(protocol)) {
+        http2.accept(ctx.pipeline());
+    } else {
+        throw new IllegalStateException("Unknown protocol: " + protocol);
+    }
+}
+```
+imports: io.netty.channel.ChannelHandlerContext, io.netty.channel.ChannelPipeline, io.netty.handler.ssl.ApplicationProtocolNames, io.netty.handler.ssl.ApplicationProtocolNegotiationHandler
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, and ONLY for objects required as constructor parameters when instantiating the class that contains the entry-point method, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: io.jooby.internal.netty
+- class name MUST be: Http2OrHttp11Handlermethod_ApplicationProtocolNegotiationHandlermethodFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
+====================================================================================================
+TEST CASE 3/3 — ITERATION 1
+Entry Point: io.jooby.internal.netty.Http2OrHttp11Handler.configurePipeline(io.netty.channel.ChannelHandlerContext, java.lang.String)
+Third Party Method: io.netty.channel.ChannelHandlerContext.pipeline()
+====================================================================================================
+You are an expert Java developer who writes good unit tests in order to maximize code coverage. You are specialized in Maven and JUnit 5 testing framework.
+
+Generate a JUnit 5 test that executes the full chain of method calls starting from the specified entry point method and reaching the specified third-party method. No assertions, inspections, or verifications are required. The test’s only goal is to try invoking the given third-party method during execution. 
+
+You are provided with:
+entryPoint: Fully qualified public method where execution must begin.
+thirdPartyMethod: Fully qualified third-party method that must be invoked.
+path: Ordered list of method calls that must be traversed during execution.
+methodSources: Complete and exact source code for all methods in the call chain.
+constructors: All constructors of the class containing the entryPoint. Use one of these constructors to instantiate the class in the test. Then use that instance to call the entryPoint method.
+fieldDeclarations: Instance variables and class variables of the class containing the entryPoint. These are the fields that can be accessed or set when creating the test.
+setters: All setters of the entryPoint class that can modify the declared fields.
+imports: All non-core-java imports that may be required by the test.
+
+entryPoint: io.jooby.internal.netty.Http2OrHttp11Handler.configurePipeline(io.netty.channel.ChannelHandlerContext, java.lang.String)
+thirdPartyMethod: io.netty.channel.ChannelHandlerContext.pipeline()
+path: io.jooby.internal.netty.Http2OrHttp11Handler.configurePipeline(io.netty.channel.ChannelHandlerContext, java.lang.String) -> io.netty.channel.ChannelHandlerContext.pipeline()
+methodSources:
+```java
+@Override
+public void configurePipeline(final ChannelHandlerContext ctx, final String protocol) {
+    if (ApplicationProtocolNames.HTTP_1_1.equals(protocol)) {
+        // PATH: Test should invoke the next ChannelHandlerContext.pipeline(...) [step in execution path]
+        http1.accept(ctx.pipeline());
+    } else if (ApplicationProtocolNames.HTTP_2.equals(protocol)) {
+        http2.accept(ctx.pipeline());
+    } else {
+        throw new IllegalStateException("Unknown protocol: " + protocol);
+    }
+}
+```
+constructors:
+```java
+public Http2OrHttp11Handler(Consumer<ChannelPipeline> http1, Consumer<ChannelPipeline> http2) {
+    super(ApplicationProtocolNames.HTTP_1_1);
+    this.http2 = http2;
+    this.http1 = http1;
+}
+```
+fieldDeclarations:
+```java
+private final Consumer<ChannelPipeline> http2;
+private final Consumer<ChannelPipeline> http1;
+```
+setters:
+```java
+@Override
+public void configurePipeline(final ChannelHandlerContext ctx, final String protocol) {
+    if (ApplicationProtocolNames.HTTP_1_1.equals(protocol)) {
+        http1.accept(ctx.pipeline());
+    } else if (ApplicationProtocolNames.HTTP_2.equals(protocol)) {
+        http2.accept(ctx.pipeline());
+    } else {
+        throw new IllegalStateException("Unknown protocol: " + protocol);
+    }
+}
+```
+imports: io.netty.channel.ChannelHandlerContext, io.netty.channel.ChannelPipeline, io.netty.handler.ssl.ApplicationProtocolNames, io.netty.handler.ssl.ApplicationProtocolNegotiationHandler
+
+Hard constraints:
+- The test class MUST NOT extend any other class (no 'extends' keyword).
+- The test class MUST NOT override any methods (no @Override annotations).
+- Do NOT create anonymous inner classes (e.g., new ClassName() { ... }).
+- Use real objects whenever possible.
+- Use mocks only when necessary, and ONLY for objects required as constructor parameters when instantiating the class that contains the entry-point method, provided those objects are not directly related to the target method call.
+- Do NOT mock or spy on the class under test.
+- Do NOT alter, stub, or control the behavior of ANY method in the call path.
+- Use only the following test-related libraries: junit-jupiter, mockito-core, and mockito-junit-jupiter. Do not use any other testing or mocking libraries.
+- Do NOT add any assertions, verifications, or inspections of state/logs/output.
+- package declaration MUST be: io.jooby.internal.netty
+- class name MUST be: Http2OrHttp11HandlerconfigurePipeline_ChannelHandlerContextpipelineFikaTest
+- exactly ONE @Test method
+- Return ONLY the complete Java source code.
+- Do NOT include explanations, markdown, or extra text.
+
+
+Previous Maven test output (if any; fix compilation/runtime issues while keeping ALL constraints):
+
+
+
