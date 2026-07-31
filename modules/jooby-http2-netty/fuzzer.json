@@ -1,0 +1,32 @@
+[{
+      "entryPoint": "io.jooby.internal.netty.Http2OrHttp11Handler.<init>(java.util.function.Consumer, java.util.function.Consumer)",
+      "thirdPartyMethod": "io.netty.handler.ssl.ApplicationProtocolNegotiationHandler.<init>(java.lang.String)",
+      "directCaller": "io.jooby.internal.netty.Http2OrHttp11Handler.<init>(java.util.function.Consumer, java.util.function.Consumer)",
+      "path": [
+        "io.jooby.internal.netty.Http2OrHttp11Handler.<init>(java.util.function.Consumer, java.util.function.Consumer)",
+        "io.netty.handler.ssl.ApplicationProtocolNegotiationHandler.<init>(java.lang.String)"
+      ],
+      "methodSources": [
+        "public (Consumer<ChannelPipeline> http1, Consumer<ChannelPipeline> http2) // PATH: Test should invoke the next new ApplicationProtocolNegotiationHandler(...) [step in execution path]\n{\n    this(ApplicationProtocolNames.HTTP_1_1);\n    this.http2 = http2;\n    this.http1 = http1;\n}"
+      ],
+      "constructors": [
+        "public Http2OrHttp11Handler(Consumer<ChannelPipeline> http1, Consumer<ChannelPipeline> http2) {\n    super(ApplicationProtocolNames.HTTP_1_1);\n    this.http2 = http2;\n    this.http1 = http1;\n}"
+      ],
+      "fieldDeclarations": [
+        "private final Consumer<ChannelPipeline> http2;",
+        "private final Consumer<ChannelPipeline> http1;"
+      ],
+      "setters": [
+        "@Override\npublic void configurePipeline(final ChannelHandlerContext ctx, final String protocol) {\n    if (ApplicationProtocolNames.HTTP_1_1.equals(protocol)) {\n        http1.accept(ctx.pipeline());\n    } else if (ApplicationProtocolNames.HTTP_2.equals(protocol)) {\n        http2.accept(ctx.pipeline());\n    } else {\n        throw new IllegalStateException(\"Unknown protocol: \" + protocol);\n    }\n}"
+      ],
+      "imports": [
+        "io.netty.channel.ChannelHandlerContext",
+        "io.netty.channel.ChannelPipeline",
+        "io.netty.handler.ssl.ApplicationProtocolNames",
+        "io.netty.handler.ssl.ApplicationProtocolNegotiationHandler"
+      ],
+      "testTemplate": "package io.jooby.internal.netty;\n\npublic class Http2OrHttp11Handlermethod_ApplicationProtocolNegotiationHandlermethodFikaTest {\n\n    @Test\n    public void testMethod() {\n    }\n}",
+      "conditionCount": 0,
+      "callCount": 1,
+      "covered": true
+    }]

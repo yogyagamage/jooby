@@ -1,0 +1,59 @@
+[{
+      "entryPoint": "io.jooby.utow.Utow.start(io.jooby.Jooby)",
+      "thirdPartyMethod": "io.undertow.Undertow.start()",
+      "directCaller": "io.jooby.utow.Utow.start(io.jooby.Jooby)",
+      "path": [
+        "io.jooby.utow.Utow.start(io.jooby.Jooby)",
+        "io.undertow.Undertow.start()"
+      ],
+      "methodSources": [
+        "@Override\npublic Server start(@Nonnull\nJooby application) {\n    try // PATH: Test should invoke the next Undertow.start(...) [step in execution path]\n    {\n        applications.add(application);\n        addShutdownHook();\n        HttpHandler handler = new UtowHandler(applications.get(0), options.getBufferSize(), options.getMaxRequestSize(), options.getDefaultHeaders());\n        if (options.getCompressionLevel() != null) {\n            int compressionLevel = options.getCompressionLevel();\n            handler = new EncodingHandler(handler, new ContentEncodingRepository().addEncodingHandler(\"gzip\", new GzipEncodingProvider(compressionLevel), _100).addEncodingHandler(\"deflate\", new DeflateEncodingProvider(compressionLevel), _10));\n        }\n        if (options.isExpectContinue() == Boolean.TRUE) {\n            handler = new HttpContinueReadHandler(handler);\n        }\n        Undertow.Builder builder = /**\n         * Worker:\n         */\n        /**\n         * Server:\n         */\n        // HTTP/1.1 is keep-alive by default, turn this option off\n        /**\n         * Socket :\n         */\n        Undertow.builder().setBufferSize(options.getBufferSize()).setSocketOption(Options.BACKLOG, BACKLOG).setServerOption(UndertowOptions.ALWAYS_SET_KEEP_ALIVE, false).setServerOption(UndertowOptions.ALLOW_EQUALS_IN_COOKIE_VALUE, true).setServerOption(UndertowOptions.ALWAYS_SET_DATE, options.getDefaultHeaders()).setServerOption(UndertowOptions.RECORD_REQUEST_START_TIME, false).setServerOption(UndertowOptions.DECODE_URL, false).setIoThreads(options.getIoThreads()).setWorkerOption(Options.WORKER_NAME, \"worker\").setWorkerThreads(options.getWorkerThreads()).setHandler(handler);\n        if (!options.isHttpsOnly()) {\n            builder.addHttpListener(options.getPort(), options.getHost());\n        }\n        if ((options.isHttp2() == null) || (options.isHttp2() == Boolean.TRUE)) {\n            stream(spliteratorUnknownSize(ServiceLoader.load(Http2Configurer.class).iterator(), Spliterator.ORDERED), false).filter(it -> it.support(Undertow.Builder.class)).findFirst().ifPresent(extension -> {\n                extension.configure(builder);\n                options.setHttp2(Boolean.TRUE);\n            });\n        }\n        SSLContext sslContext = options.getSSLContext(application.getEnvironment().getClassLoader());\n        if (sslContext != null) {\n            builder.addHttpsListener(options.getSecurePort(), options.getHost(), sslContext);\n            SslOptions ssl = options.getSsl();\n            builder.setSocketOption(Options.SSL_ENABLED_PROTOCOLS, Sequence.of(ssl.getProtocol()));\n            Optional.ofNullable(options.getSsl()).map(SslOptions::getClientAuth).map(this::toSslClientAuthMode).ifPresent(clientAuth -> builder.setSocketOption(Options.SSL_CLIENT_AUTH_MODE, clientAuth));\n        } else if (options.isHttpsOnly()) {\n            throw new IllegalArgumentException(\"Server configured for httpsOnly, but ssl options not set\");\n        }\n        server = builder.build();\n        server.start();\n        // NOT IDEAL, but we need to fire onStart after server.start to get access to Worker\n        fireStart(applications, server.getWorker());\n        fireReady(Collections.singletonList(application));\n        return this;\n    } catch (RuntimeException x) {\n        Throwable sourceException = x;\n        Throwable cause = Optional.ofNullable(x.getCause()).orElse(x);\n        if (Server.isAddressInUse(cause)) {\n            sourceException = new BindException(\"Address already in use: \" + options.getPort());\n        }\n        throw SneakyThrows.propagate(sourceException);\n    }\n}"
+      ],
+      "constructors": [
+        "Utow() {\n}"
+      ],
+      "fieldDeclarations": [
+        "private static final int BACKLOG = 8192;",
+        "private static final int _100 = 100;",
+        "private static final int _10 = 10;",
+        "private Undertow server;",
+        "private List<Jooby> applications = new ArrayList<>();",
+        "private ServerOptions options = new ServerOptions().setIoThreads(ServerOptions.IO_THREADS).setServer(\"utow\");"
+      ],
+      "setters": [
+        "private void shutdownServer() {\n    if (server != null) {\n        try {\n            server.stop();\n        } finally {\n            server = null;\n        }\n    }\n}"
+      ],
+      "imports": [
+        "io.jooby.Environment",
+        "io.jooby.Http2Configurer",
+        "io.jooby.Jooby",
+        "io.jooby.Router",
+        "io.jooby.Server",
+        "io.jooby.Server.Base",
+        "io.jooby.ServerOptions",
+        "io.jooby.SneakyThrows",
+        "io.jooby.SslOptions",
+        "io.jooby.SslOptions.ClientAuth",
+        "io.jooby.internal.utow.UtowHandler",
+        "io.undertow.Undertow",
+        "io.undertow.Undertow.Builder",
+        "io.undertow.UndertowOptions",
+        "io.undertow.server.HttpHandler",
+        "io.undertow.server.handlers.HttpContinueReadHandler",
+        "io.undertow.server.handlers.encoding.ContentEncodingProvider",
+        "io.undertow.server.handlers.encoding.ContentEncodingRepository",
+        "io.undertow.server.handlers.encoding.DeflateEncodingProvider",
+        "io.undertow.server.handlers.encoding.EncodingHandler",
+        "io.undertow.server.handlers.encoding.GzipEncodingProvider",
+        "javax.net.ssl.SSLContext",
+        "org.xnio.Option",
+        "org.xnio.Options",
+        "org.xnio.Sequence",
+        "org.xnio.SslClientAuthMode",
+        "org.xnio.XnioWorker"
+      ],
+      "testTemplate": "package io.jooby.utow;\n\npublic class Utowstart_UndertowstartFikaTest {\n\n    @Test\n    public void testStart() {\n    }\n}",
+      "conditionCount": 7,
+      "callCount": 1,
+      "covered": true
+    }]
