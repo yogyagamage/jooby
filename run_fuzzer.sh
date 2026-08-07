@@ -1,13 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# ──────────────────────────────────────────────────────────────
-# Configuration — update these per project
-# ──────────────────────────────────────────────────────────────
-MODULE_PATH="/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-utow"
-CLASSPATH="/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-utow/target/jooby-utow-3.0.0-SNAPSHOT-jar-with-dependencies.jar"
-# MODULE_PATH="/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-utow"
-# CLASSPATH="/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-utow/target/jooby-utow-3.0.0-SNAPSHOT-jar-with-dependencies.jar"  # Path to compiled .jar or classes directory
+
+MODULE_PATH=""
+CLASSPATH=""
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 JAZZER="$SCRIPT_DIR/jazzer"
 JAZZER_AGENT="$SCRIPT_DIR/jazzer_standalone.jar"
@@ -15,9 +11,9 @@ COVERAGE_DIR="$MODULE_PATH/fuzz-coverage-reports"
 REPORT_FILE="$MODULE_PATH/fuzzer_report.json"
 DEFAULT_MAX_TIME=60  # fallback if no matching JSONL record found
 
-# ──────────────────────────────────────────────────────────────
+
 # Derived paths
-# ──────────────────────────────────────────────────────────────
+
 FUZZER_JSON="$MODULE_PATH/fuzzer.json"
 JSONL_DIR="$MODULE_PATH/test_generation_data"
 
@@ -36,10 +32,10 @@ echo "[*] Using JSONL: $JSONL_FILE"
 
 mkdir -p "$COVERAGE_DIR"
 
-# ──────────────────────────────────────────────────────────────
+
 # Step 1: Extract targets and compute max_total_time from JSONL
 # Outputs one JSON line per fuzzer entry with all needed fields
-# ──────────────────────────────────────────────────────────────
+
 TARGETS=$(python3 - "$FUZZER_JSON" "$JSONL_FILE" "$DEFAULT_MAX_TIME" <<'PYEOF'
 import json, sys
 from datetime import datetime
@@ -99,9 +95,9 @@ NUM_TARGETS=$(echo "$TARGETS" | python3 -c "import json,sys; print(len(json.load
 echo "[*] Found $NUM_TARGETS fuzzing targets"
 echo ""
 
-# ──────────────────────────────────────────────────────────────
+
 # Step 2: Run jazzer for each target and collect results
-# ──────────────────────────────────────────────────────────────
+
 RESULTS="[]"
 
 for IDX in $(seq 0 $((NUM_TARGETS - 1))); do
@@ -124,14 +120,12 @@ for IDX in $(seq 0 $((NUM_TARGETS - 1))); do
 
     mkdir -p "$CORPUS_DIR"
 
-    echo "=========================================================="
     echo "[*] Target $((IDX + 1))/$NUM_TARGETS"
     echo "[*] SOURCE ENTRYPOINT : $ENTRY_POINT"
     echo "[*] DIRECT CALLER     : $DIRECT_CALLER"
     echo "[*] THIRD PARTY METHOD: $THIRD_PARTY"
     echo "[*] TARGET LINE       : $LINE_NUMBER"
     echo "[*] MAX TIME          : ${MAX_TIME}s (source: $TIME_SOURCE)"
-    echo "=========================================================="
 
     FUZZ_EXIT=0
     CRASH_FOUND="false"
@@ -153,9 +147,9 @@ for IDX in $(seq 0 $((NUM_TARGETS - 1))); do
         CRASH_FOUND="true"
     fi
 
-    # ──────────────────────────────────────────────────────────
+    
     # Step 3: Evaluate coverage
-    # ──────────────────────────────────────────────────────────
+    
     COVERAGE_STATUS="unknown"
     COVERAGE_DETAIL=""
 
@@ -227,14 +221,12 @@ print(json.dumps(results))
   "$CRASH_FOUND" "$FUZZER_SUCCESS" "$TEXT_REPORT")
 done
 
-# ──────────────────────────────────────────────────────────────
+
 # Step 4: Write final report
-# ──────────────────────────────────────────────────────────────
+
 echo "$RESULTS" | python3 -m json.tool > "$REPORT_FILE"
 
-echo "=========================================================="
 echo "[*] SUMMARY"
-echo "=========================================================="
 
 python3 -c "
 import json, sys
