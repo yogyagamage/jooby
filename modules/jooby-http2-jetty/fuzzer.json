@@ -30,6 +30,7 @@
       "testTemplate": "package io.jooby.internal.jetty;\n\npublic class JettyHttp2Configurerconfigure_HttpConfigurationgetCustomizerFikaTest {\n\n    @Test\n    public void testConfigure() {\n    }\n}",
       "conditionCount": 1,
       "callCount": 1,
+      "lineNumber": 33,
       "covered": true
     },{
       "entryPoint": "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
@@ -63,5 +64,6 @@
       "testTemplate": "package io.jooby.internal.jetty;\n\npublic class JettyHttp2Configurerconfigure_HTTP2CServerConnectionFactorymethodFikaTest {\n\n    @Test\n    public void testConfigure() {\n    }\n}",
       "conditionCount": 1,
       "callCount": 1,
+      "lineNumber": 37, 
       "covered": true
     }]

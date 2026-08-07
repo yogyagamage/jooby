@@ -1,0 +1,67 @@
+[
+    {
+        "entryPoint": "io.jooby.internal.netty.NettyPipeline.initChannel(io.netty.channel.socket.SocketChannel)",
+        "directCaller": "io.jooby.internal.netty.NettyPipeline.createServerCodec()",
+        "thirdPartyMethod": "io.netty.handler.codec.http.HttpServerCodec.<init>(int, int, int, boolean)",
+        "lineNumber": 119,
+        "maxTime": 150,
+        "timeSource": "jsonl",
+        "coverageStatus": "class_not_tracked",
+        "coverageDetail": "NettyPipeline.java not found in coverage report",
+        "crashFound": false,
+        "fuzzerSuccess": false,
+        "coverageReportFile": "/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-netty/fuzz-coverage-reports/NettyPipeline_119_report.txt"
+    },
+    {
+        "entryPoint": "io.jooby.internal.netty.NettyContext.setResponseLength(long)",
+        "directCaller": "io.jooby.internal.netty.NettyContext.setResponseLength(long)",
+        "thirdPartyMethod": "io.netty.handler.codec.http.DefaultHttpHeaders.set(java.lang.CharSequence, java.lang.Object)",
+        "lineNumber": 482,
+        "maxTime": 59,
+        "timeSource": "jsonl",
+        "coverageStatus": "covered",
+        "coverageDetail": "Line 482 fully covered",
+        "crashFound": true,
+        "fuzzerSuccess": true,
+        "coverageReportFile": "/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-netty/fuzz-coverage-reports/NettyContext_482_report.txt"
+    },
+    {
+        "entryPoint": "io.jooby.internal.netty.NettyWebSocketCompressor.<init>(int)",
+        "directCaller": "io.jooby.internal.netty.NettyWebSocketCompressor.<init>(int)",
+        "thirdPartyMethod": "io.netty.handler.codec.compression.ZlibCodecFactory.isSupportingWindowSizeAndMemLevel()",
+        "lineNumber": 17,
+        "maxTime": 118,
+        "timeSource": "jsonl",
+        "coverageStatus": "covered",
+        "coverageDetail": "Line 17 fully covered",
+        "crashFound": false,
+        "fuzzerSuccess": true,
+        "coverageReportFile": "/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-netty/fuzz-coverage-reports/NettyWebSocketCompressor_17_report.txt"
+    },
+    {
+        "entryPoint": "io.jooby.internal.netty.NettyContext.getClientCertificates()",
+        "directCaller": "io.jooby.internal.netty.NettyContext.getClientCertificates()",
+        "thirdPartyMethod": "io.netty.handler.ssl.SslHandler.engine()",
+        "lineNumber": 298,
+        "maxTime": 132,
+        "timeSource": "jsonl",
+        "coverageStatus": "covered",
+        "coverageDetail": "Line 298 fully covered",
+        "crashFound": true,
+        "fuzzerSuccess": true,
+        "coverageReportFile": "/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-netty/fuzz-coverage-reports/NettyContext_298_report.txt"
+    },
+    {
+        "entryPoint": "io.jooby.internal.netty.NettyServerSentEmitter.operationComplete(io.netty.util.concurrent.Future)",
+        "directCaller": "io.jooby.internal.netty.NettyServerSentEmitter.operationComplete(io.netty.util.concurrent.Future)",
+        "thirdPartyMethod": "io.netty.util.concurrent.Future.cause()",
+        "lineNumber": 100,
+        "maxTime": 148,
+        "timeSource": "jsonl",
+        "coverageStatus": "covered",
+        "coverageDetail": "Line 100 fully covered",
+        "crashFound": false,
+        "fuzzerSuccess": true,
+        "coverageReportFile": "/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-netty/fuzz-coverage-reports/NettyServerSentEmitter_100_report.txt"
+    }
+]

@@ -28,5 +28,6 @@
       "testTemplate": "package io.jooby.internal.netty;\n\npublic class Http2OrHttp11Handlermethod_ApplicationProtocolNegotiationHandlermethodFikaTest {\n\n    @Test\n    public void testMethod() {\n    }\n}",
       "conditionCount": 0,
       "callCount": 1,
+      "lineNumber": 21,
       "covered": true
     }]

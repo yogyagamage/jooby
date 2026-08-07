@@ -1,0 +1,15 @@
+[
+    {
+        "entryPoint": "io.jooby.internal.netty.Http2OrHttp11Handler.<init>(java.util.function.Consumer, java.util.function.Consumer)",
+        "directCaller": "io.jooby.internal.netty.Http2OrHttp11Handler.<init>(java.util.function.Consumer, java.util.function.Consumer)",
+        "thirdPartyMethod": "io.netty.handler.ssl.ApplicationProtocolNegotiationHandler.<init>(java.lang.String)",
+        "lineNumber": 21,
+        "maxTime": 20,
+        "timeSource": "jsonl",
+        "coverageStatus": "uncovered_class",
+        "coverageDetail": "Http2OrHttp11Handler.java line coverage is 0.00%",
+        "crashFound": true,
+        "fuzzerSuccess": false,
+        "coverageReportFile": "/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-netty/fuzz-coverage-reports/Http2OrHttp11Handler_21_report.txt"
+    }
+]

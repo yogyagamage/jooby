@@ -55,5 +55,6 @@
       "testTemplate": "package io.jooby.utow;\n\npublic class Utowstart_UndertowstartFikaTest {\n\n    @Test\n    public void testStart() {\n    }\n}",
       "conditionCount": 7,
       "callCount": 1,
+      "lineNumber": 146,
       "covered": true
     }]

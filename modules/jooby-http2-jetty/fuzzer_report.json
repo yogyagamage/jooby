@@ -1,0 +1,28 @@
+[
+    {
+        "entryPoint": "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
+        "directCaller": "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
+        "thirdPartyMethod": "org.eclipse.jetty.server.HttpConfiguration.getCustomizer(java.lang.Class)",
+        "lineNumber": 33,
+        "maxTime": 18,
+        "timeSource": "jsonl",
+        "coverageStatus": "covered",
+        "coverageDetail": "Line 33 fully covered",
+        "crashFound": false,
+        "fuzzerSuccess": true,
+        "coverageReportFile": "/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-jetty/fuzz-coverage-reports/JettyHttp2Configurer_33_report.txt"
+    },
+    {
+        "entryPoint": "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
+        "directCaller": "io.jooby.internal.jetty.JettyHttp2Configurer.configure(org.eclipse.jetty.server.HttpConfiguration)",
+        "thirdPartyMethod": "org.eclipse.jetty.http2.server.HTTP2CServerConnectionFactory.<init>(org.eclipse.jetty.server.HttpConfiguration)",
+        "lineNumber": 37,
+        "maxTime": 18,
+        "timeSource": "jsonl",
+        "coverageStatus": "covered",
+        "coverageDetail": "Line 37 fully covered",
+        "crashFound": false,
+        "fuzzerSuccess": true,
+        "coverageReportFile": "/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-http2-jetty/fuzz-coverage-reports/JettyHttp2Configurer_37_report.txt"
+    }
+]

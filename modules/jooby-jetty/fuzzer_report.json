@@ -1,0 +1,41 @@
+[
+    {
+        "entryPoint": "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+        "directCaller": "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+        "thirdPartyMethod": "org.eclipse.jetty.server.handler.gzip.GzipHandler.setHandler(org.eclipse.jetty.server.Handler)",
+        "lineNumber": 187,
+        "maxTime": 81,
+        "timeSource": "jsonl",
+        "coverageStatus": "no_report",
+        "coverageDetail": "Coverage report was not generated",
+        "crashFound": true,
+        "fuzzerSuccess": false,
+        "coverageReportFile": "/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-jetty/fuzz-coverage-reports/Jetty_187_report.txt"
+    },
+    {
+        "entryPoint": "io.jooby.internal.jetty.JettyContext.getProtocol()",
+        "directCaller": "io.jooby.internal.jetty.JettyContext.getProtocol()",
+        "thirdPartyMethod": "org.eclipse.jetty.server.Request.getProtocol()",
+        "lineNumber": 283,
+        "maxTime": 33,
+        "timeSource": "jsonl",
+        "coverageStatus": "covered",
+        "coverageDetail": "Line 283 fully covered",
+        "crashFound": true,
+        "fuzzerSuccess": true,
+        "coverageReportFile": "/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-jetty/fuzz-coverage-reports/JettyContext_283_report.txt"
+    },
+    {
+        "entryPoint": "io.jooby.internal.jetty.JettyFileUpload.stream()",
+        "directCaller": "io.jooby.internal.jetty.JettyFileUpload.stream()",
+        "thirdPartyMethod": "org.eclipse.jetty.http.MultiPartFormInputStream.MultiPart.getInputStream()",
+        "lineNumber": 47,
+        "maxTime": 141,
+        "timeSource": "jsonl",
+        "coverageStatus": "covered",
+        "coverageDetail": "Line 47 fully covered",
+        "crashFound": false,
+        "fuzzerSuccess": true,
+        "coverageReportFile": "/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-jetty/fuzz-coverage-reports/JettyFileUpload_47_report.txt"
+    }
+]

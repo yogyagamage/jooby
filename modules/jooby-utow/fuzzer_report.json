@@ -1,0 +1,15 @@
+[
+    {
+        "entryPoint": "io.jooby.utow.Utow.start(io.jooby.Jooby)",
+        "directCaller": "io.jooby.utow.Utow.start(io.jooby.Jooby)",
+        "thirdPartyMethod": "io.undertow.Undertow.start()",
+        "lineNumber": 146,
+        "maxTime": 126,
+        "timeSource": "jsonl",
+        "coverageStatus": "covered",
+        "coverageDetail": "Line 146 fully covered",
+        "crashFound": false,
+        "fuzzerSuccess": true,
+        "coverageReportFile": "/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-utow/fuzz-coverage-reports/Utow_146_report.txt"
+    }
+]
