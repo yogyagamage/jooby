@@ -1,0 +1,1030 @@
+Processing all 30 test cases from input file
+Using OpenRouter API with model: deepseek/deepseek-v3.2
+
+================================================================================
+PROCESSING TEST CASE 1/30
+================================================================================
+Entry Point: io.jooby.Environment.systemProperties()
+Third Party Method: com.typesafe.config.ConfigParseOptions.setOriginDescription(java.lang.String)
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 691 chars
+/Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/EnvironmentsystemProperties_ConfigParseOptionssetOriginDescriptionFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=3766
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'com.typesafe.config.ConfigParseOptions.setOriginDescription(java.lang.String)' covered=True
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=True
+[Decide] approved=True (tests passed AND target method covered)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=True
+[Finalize] SUCCESS: Test passed and target method covered
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = True
+✓ Test approved at iteration 1
+  JSON path: /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/third_party_apis_full_methods.json
+  Looking for thirdPartyMethod: com.typesafe.config.ConfigParseOptions.setOriginDescription(java.lang.String)
+  Looking for directCaller: io.jooby.Environment.systemProperties()
+[DEBUG]   ✓ MATCH FOUND at path 0
+✓ Updated 1 record(s) in JSON file as covered
+  Third Party Method: com.typesafe.config.ConfigParseOptions.setOriginDescription(java.lang.String)
+  Direct Caller: io.jooby.Environment.systemProperties()
+
+================================================================================
+PROCESSING TEST CASE 2/30
+================================================================================
+Entry Point: io.jooby.Jooby.problemDetailsIsEnabled()
+Third Party Method: com.typesafe.config.Config.getBoolean(java.lang.String)
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 1724 chars
+/Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/JoobyproblemDetailsIsEnabled_ConfiggetBooleanFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=3910
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'com.typesafe.config.Config.getBoolean(java.lang.String)' covered=True
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=True
+[Decide] approved=True (tests passed AND target method covered)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=True
+[Finalize] SUCCESS: Test passed and target method covered
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = True
+✓ Test approved at iteration 1
+  JSON path: /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/third_party_apis_full_methods.json
+  Looking for thirdPartyMethod: com.typesafe.config.Config.getBoolean(java.lang.String)
+  Looking for directCaller: io.jooby.Jooby.problemDetailsIsEnabled()
+[DEBUG]   ✓ MATCH FOUND at path 1
+✓ Updated 1 record(s) in JSON file as covered
+  Third Party Method: com.typesafe.config.Config.getBoolean(java.lang.String)
+  Direct Caller: io.jooby.Jooby.problemDetailsIsEnabled()
+
+================================================================================
+PROCESSING TEST CASE 3/30
+================================================================================
+Entry Point: io.jooby.handler.RateLimitHandler.apply(io.jooby.Context)
+Third Party Method: io.github.bucket4j.Bucket.tryConsumeAndReturnRemaining(long)
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 1471 chars
+/Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/handler/RateLimitHandlerapply_BuckettryConsumeAndReturnRemainingFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=3762
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'io.github.bucket4j.Bucket.tryConsumeAndReturnRemaining(long)' covered=True
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=True
+[Decide] approved=True (tests passed AND target method covered)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=True
+[Finalize] SUCCESS: Test passed and target method covered
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = True
+✓ Test approved at iteration 1
+  JSON path: /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/third_party_apis_full_methods.json
+  Looking for thirdPartyMethod: io.github.bucket4j.Bucket.tryConsumeAndReturnRemaining(long)
+  Looking for directCaller: io.jooby.handler.RateLimitHandler.apply(io.jooby.Context)
+[DEBUG]   ✓ MATCH FOUND at path 2
+✓ Updated 1 record(s) in JSON file as covered
+  Third Party Method: io.github.bucket4j.Bucket.tryConsumeAndReturnRemaining(long)
+  Direct Caller: io.jooby.handler.RateLimitHandler.apply(io.jooby.Context)
+
+================================================================================
+PROCESSING TEST CASE 4/30
+================================================================================
+Entry Point: io.jooby.handler.RateLimitHandler.apply(io.jooby.Context)
+Third Party Method: io.github.bucket4j.ConsumptionProbe.getNanosToWaitForRefill()
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 2033 chars
+/Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/handler/RateLimitHandlerapply_ConsumptionProbegetNanosToWaitForRefillFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=3772
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'io.github.bucket4j.ConsumptionProbe.getNanosToWaitForRefill()' covered=True
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=True
+[Decide] approved=True (tests passed AND target method covered)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=True
+[Finalize] SUCCESS: Test passed and target method covered
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = True
+✓ Test approved at iteration 1
+  JSON path: /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/third_party_apis_full_methods.json
+  Looking for thirdPartyMethod: io.github.bucket4j.ConsumptionProbe.getNanosToWaitForRefill()
+  Looking for directCaller: io.jooby.handler.RateLimitHandler.apply(io.jooby.Context)
+[DEBUG]   ✓ MATCH FOUND at path 3
+✓ Updated 1 record(s) in JSON file as covered
+  Third Party Method: io.github.bucket4j.ConsumptionProbe.getNanosToWaitForRefill()
+  Direct Caller: io.jooby.handler.RateLimitHandler.apply(io.jooby.Context)
+
+================================================================================
+PROCESSING TEST CASE 5/30
+================================================================================
+Entry Point: io.jooby.internal.ServiceRegistryImpl.getOrNull(io.jooby.ServiceKey)
+Third Party Method: jakarta.inject.Provider.get()
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 993 chars
+/Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/internal/ServiceRegistryImplgetOrNull_ProvidergetFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=3732
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'jakarta.inject.Provider.get()' covered=True
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=True
+[Decide] approved=True (tests passed AND target method covered)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=True
+[Finalize] SUCCESS: Test passed and target method covered
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = True
+✓ Test approved at iteration 1
+  JSON path: /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/third_party_apis_full_methods.json
+  Looking for thirdPartyMethod: jakarta.inject.Provider.get()
+  Looking for directCaller: io.jooby.internal.ServiceRegistryImpl.getOrNull(io.jooby.ServiceKey)
+[DEBUG]   ✓ MATCH FOUND at path 4
+✓ Updated 1 record(s) in JSON file as covered
+  Third Party Method: jakarta.inject.Provider.get()
+  Direct Caller: io.jooby.internal.ServiceRegistryImpl.getOrNull(io.jooby.ServiceKey)
+
+================================================================================
+PROCESSING TEST CASE 6/30
+================================================================================
+Entry Point: io.jooby.handler.RateLimitHandler.apply(io.jooby.Context)
+Third Party Method: io.github.bucket4j.ConsumptionProbe.getRemainingTokens()
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 1617 chars
+/Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/handler/RateLimitHandlerapply_ConsumptionProbegetRemainingTokensFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=3762
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'io.github.bucket4j.ConsumptionProbe.getRemainingTokens()' covered=True
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=True
+[Decide] approved=True (tests passed AND target method covered)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=True
+[Finalize] SUCCESS: Test passed and target method covered
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = True
+✓ Test approved at iteration 1
+  JSON path: /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/third_party_apis_full_methods.json
+  Looking for thirdPartyMethod: io.github.bucket4j.ConsumptionProbe.getRemainingTokens()
+  Looking for directCaller: io.jooby.handler.RateLimitHandler.apply(io.jooby.Context)
+[DEBUG]   ✓ MATCH FOUND at path 5
+✓ Updated 1 record(s) in JSON file as covered
+  Third Party Method: io.github.bucket4j.ConsumptionProbe.getRemainingTokens()
+  Direct Caller: io.jooby.handler.RateLimitHandler.apply(io.jooby.Context)
+
+================================================================================
+PROCESSING TEST CASE 7/30
+================================================================================
+Entry Point: io.jooby.Cookie.create(java.lang.String, com.typesafe.config.Config)
+Third Party Method: com.typesafe.config.Config.getString(java.lang.String)
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 747 chars
+/Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/Cookiecreate_ConfiggetStringFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=3690
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'com.typesafe.config.Config.getString(java.lang.String)' covered=True
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=True
+[Decide] approved=True (tests passed AND target method covered)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=True
+[Finalize] SUCCESS: Test passed and target method covered
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = True
+✓ Test approved at iteration 1
+  JSON path: /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/third_party_apis_full_methods.json
+  Looking for thirdPartyMethod: com.typesafe.config.Config.getString(java.lang.String)
+  Looking for directCaller: io.jooby.Cookie.create(java.lang.String, com.typesafe.config.Config)
+[DEBUG]   ✓ MATCH FOUND at path 6
+✓ Updated 1 record(s) in JSON file as covered
+  Third Party Method: com.typesafe.config.Config.getString(java.lang.String)
+  Direct Caller: io.jooby.Cookie.create(java.lang.String, com.typesafe.config.Config)
+
+================================================================================
+PROCESSING TEST CASE 8/30
+================================================================================
+Entry Point: io.jooby.Environment.getProperty(java.lang.String, java.lang.String)
+Third Party Method: com.typesafe.config.Config.getString(java.lang.String)
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 628 chars
+/Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/EnvironmentgetProperty_ConfiggetStringFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=3710
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'com.typesafe.config.Config.getString(java.lang.String)' covered=True
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=True
+[Decide] approved=True (tests passed AND target method covered)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=True
+[Finalize] SUCCESS: Test passed and target method covered
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = True
+✓ Test approved at iteration 1
+  JSON path: /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/third_party_apis_full_methods.json
+  Looking for thirdPartyMethod: com.typesafe.config.Config.getString(java.lang.String)
+  Looking for directCaller: io.jooby.Environment.getProperty(java.lang.String, java.lang.String)
+[DEBUG]   ✓ MATCH FOUND at path 7
+✓ Updated 1 record(s) in JSON file as covered
+  Third Party Method: com.typesafe.config.Config.getString(java.lang.String)
+  Direct Caller: io.jooby.Environment.getProperty(java.lang.String, java.lang.String)
+
+================================================================================
+PROCESSING TEST CASE 9/30
+================================================================================
+Entry Point: io.jooby.handler.RateLimitHandler.apply(io.jooby.Context)
+Third Party Method: io.github.bucket4j.ConsumptionProbe.isConsumed()
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 1439 chars
+/Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/handler/RateLimitHandlerapply_ConsumptionProbeisConsumedFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=569
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'io.github.bucket4j.ConsumptionProbe.isConsumed()' covered=False
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=False
+[Decide] approved=False (tests failed, will retry if iteration<1)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=False
+[Finalize] Cleaned up unsuccessful test file: /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/handler/RateLimitHandlerapply_ConsumptionProbeisConsumedFikaTest.java
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = False
+
+=== FAILURE REASON ===
+Tests failed to compile or run successfully
+
+
+================================================================================
+PROCESSING TEST CASE 10/30
+================================================================================
+Entry Point: io.jooby.Jooby.getTmpdir()
+Third Party Method: com.typesafe.config.Config.getString(java.lang.String)
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 7098 chars
+/Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/JoobygetTmpdir_ConfiggetStringFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] FAILED - hard constraints violated
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=False
+[Decide] approved=False (hard constraint violation, will retry if iteration<1)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=False
+[Finalize] Cleaned up unsuccessful test file: /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/JoobygetTmpdir_ConfiggetStringFikaTest.java
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = False
+
+=== FAILURE REASON ===
+Tests failed to compile or run successfully
+
+
+================================================================================
+PROCESSING TEST CASE 11/30
+================================================================================
+Entry Point: io.jooby.Environment.getProperty(java.lang.String)
+Third Party Method: com.typesafe.config.Config.getString(java.lang.String)
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 585 chars
+/Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/EnvironmentgetProperty_ConfiggetStringFikaTest2.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=3712
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'com.typesafe.config.Config.getString(java.lang.String)' covered=True
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=True
+[Decide] approved=True (tests passed AND target method covered)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=True
+[Finalize] SUCCESS: Test passed and target method covered
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = True
+✓ Test approved at iteration 1
+  JSON path: /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/third_party_apis_full_methods.json
+  Looking for thirdPartyMethod: com.typesafe.config.Config.getString(java.lang.String)
+  Looking for directCaller: io.jooby.Environment.getProperty(java.lang.String)
+[DEBUG]   ✓ MATCH FOUND at path 10
+✓ Updated 1 record(s) in JSON file as covered
+  Third Party Method: com.typesafe.config.Config.getString(java.lang.String)
+  Direct Caller: io.jooby.Environment.getProperty(java.lang.String)
+
+================================================================================
+PROCESSING TEST CASE 12/30
+================================================================================
+Entry Point: io.jooby.Jooby.ready(io.jooby.Server)
+Third Party Method: com.typesafe.config.Config.getAnyRef(java.lang.String)
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 940 chars
+/Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/Joobyready_ConfiggetAnyRefFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=3872
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'com.typesafe.config.Config.getAnyRef(java.lang.String)' covered=True
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=True
+[Decide] approved=True (tests passed AND target method covered)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=True
+[Finalize] SUCCESS: Test passed and target method covered
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = True
+✓ Test approved at iteration 1
+  JSON path: /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/third_party_apis_full_methods.json
+  Looking for thirdPartyMethod: com.typesafe.config.Config.getAnyRef(java.lang.String)
+  Looking for directCaller: io.jooby.Jooby.ready(io.jooby.Server)
+[DEBUG]   ✓ MATCH FOUND at path 11
+✓ Updated 1 record(s) in JSON file as covered
+  Third Party Method: com.typesafe.config.Config.getAnyRef(java.lang.String)
+  Direct Caller: io.jooby.Jooby.ready(io.jooby.Server)
+
+================================================================================
+PROCESSING TEST CASE 13/30
+================================================================================
+Entry Point: io.jooby.Jooby.ready(io.jooby.Server)
+Third Party Method: com.typesafe.config.Config.hasPath(java.lang.String)
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 763 chars
+/Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/Joobyready_ConfighasPathFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=454
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'com.typesafe.config.Config.hasPath(java.lang.String)' covered=False
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=False
+[Decide] approved=False (tests failed, will retry if iteration<1)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=False
+[Finalize] Cleaned up unsuccessful test file: /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/Joobyready_ConfighasPathFikaTest.java
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = False
+
+=== FAILURE REASON ===
+Tests failed to compile or run successfully
+
+
+================================================================================
+PROCESSING TEST CASE 14/30
+================================================================================
+Entry Point: io.jooby.problem.ProblemDetailsHandler.from(com.typesafe.config.Config)
+Third Party Method: com.typesafe.config.Config.getConfig(java.lang.String)
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 562 chars
+/Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/problem/ProblemDetailsHandlerfrom_ConfiggetConfigFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=3732
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'com.typesafe.config.Config.getConfig(java.lang.String)' covered=True
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=True
+[Decide] approved=True (tests passed AND target method covered)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=True
+[Finalize] SUCCESS: Test passed and target method covered
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = True
+✓ Test approved at iteration 1
+  JSON path: /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/third_party_apis_full_methods.json
+  Looking for thirdPartyMethod: com.typesafe.config.Config.getConfig(java.lang.String)
+  Looking for directCaller: io.jooby.problem.ProblemDetailsHandler.from(com.typesafe.config.Config)
+[DEBUG]   ✓ MATCH FOUND at path 13
+✓ Updated 1 record(s) in JSON file as covered
+  Third Party Method: com.typesafe.config.Config.getConfig(java.lang.String)
+  Direct Caller: io.jooby.problem.ProblemDetailsHandler.from(com.typesafe.config.Config)
+
+================================================================================
+PROCESSING TEST CASE 15/30
+================================================================================
+Entry Point: io.jooby.problem.ProblemDetailsHandler.from(com.typesafe.config.Config)
+Third Party Method: com.typesafe.config.Config.hasPath(java.lang.String)
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 598 chars
+/Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/problem/ProblemDetailsHandlerfrom_ConfighasPathFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=1807
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'com.typesafe.config.Config.hasPath(java.lang.String)' covered=False
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=False
+[Decide] approved=False (tests failed, will retry if iteration<1)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=False
+[Finalize] Cleaned up unsuccessful test file: /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/problem/ProblemDetailsHandlerfrom_ConfighasPathFikaTest.java
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = False
+
+=== FAILURE REASON ===
+Tests failed to compile or run successfully
+
+
+================================================================================
+PROCESSING TEST CASE 16/30
+================================================================================
+Entry Point: io.jooby.problem.ProblemDetailsHandler.from(com.typesafe.config.Config)
+Third Party Method: com.typesafe.config.Config.getBoolean(java.lang.String)
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 468 chars
+/Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/problem/ProblemDetailsHandlerfrom_ConfiggetBooleanFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=3734
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'com.typesafe.config.Config.getBoolean(java.lang.String)' covered=True
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=True
+[Decide] approved=True (tests passed AND target method covered)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=True
+[Finalize] SUCCESS: Test passed and target method covered
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = True
+✓ Test approved at iteration 1
+  JSON path: /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/third_party_apis_full_methods.json
+  Looking for thirdPartyMethod: com.typesafe.config.Config.getBoolean(java.lang.String)
+  Looking for directCaller: io.jooby.problem.ProblemDetailsHandler.from(com.typesafe.config.Config)
+[DEBUG]   ✓ MATCH FOUND at path 15
+✓ Updated 1 record(s) in JSON file as covered
+  Third Party Method: com.typesafe.config.Config.getBoolean(java.lang.String)
+  Direct Caller: io.jooby.problem.ProblemDetailsHandler.from(com.typesafe.config.Config)
+
+================================================================================
+PROCESSING TEST CASE 17/30
+================================================================================
+Entry Point: io.jooby.Environment.loadEnvironment(io.jooby.EnvironmentOptions)
+Third Party Method: com.typesafe.config.Config.getString(java.lang.String)
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 831 chars
+/Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/EnvironmentloadEnvironment_ConfiggetStringFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=572
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'com.typesafe.config.Config.getString(java.lang.String)' covered=False
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=False
+[Decide] approved=False (tests failed, will retry if iteration<1)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=False
+[Finalize] Cleaned up unsuccessful test file: /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/EnvironmentloadEnvironment_ConfiggetStringFikaTest.java
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = False
+
+=== FAILURE REASON ===
+Tests failed to compile or run successfully
+
+
+================================================================================
+PROCESSING TEST CASE 18/30
+================================================================================
+Entry Point: io.jooby.handler.Cors.from(com.typesafe.config.Config)
+Third Party Method: com.typesafe.config.Config.getConfig(java.lang.String)
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 465 chars
+/Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/handler/Corsfrom_ConfiggetConfigFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=3698
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'com.typesafe.config.Config.getConfig(java.lang.String)' covered=True
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=True
+[Decide] approved=True (tests passed AND target method covered)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=True
+[Finalize] SUCCESS: Test passed and target method covered
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = True
+✓ Test approved at iteration 1
+  JSON path: /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/third_party_apis_full_methods.json
+  Looking for thirdPartyMethod: com.typesafe.config.Config.getConfig(java.lang.String)
+  Looking for directCaller: io.jooby.handler.Cors.from(com.typesafe.config.Config)
+[DEBUG]   ✓ MATCH FOUND at path 17
+✓ Updated 1 record(s) in JSON file as covered
+  Third Party Method: com.typesafe.config.Config.getConfig(java.lang.String)
+  Direct Caller: io.jooby.handler.Cors.from(com.typesafe.config.Config)
+
+================================================================================
+PROCESSING TEST CASE 19/30
+================================================================================
+Entry Point: io.jooby.handler.Cors.from(com.typesafe.config.Config)
+Third Party Method: com.typesafe.config.Config.getDuration(java.lang.String, java.util.concurrent.TimeUnit)
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 450 chars
+/Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/handler/Corsfrom_ConfiggetDurationFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=3702
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'com.typesafe.config.Config.getDuration(java.lang.String, java.util.concurrent.TimeUnit)' covered=True
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=True
+[Decide] approved=True (tests passed AND target method covered)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=True
+[Finalize] SUCCESS: Test passed and target method covered
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = True
+✓ Test approved at iteration 1
+  JSON path: /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/third_party_apis_full_methods.json
+  Looking for thirdPartyMethod: com.typesafe.config.Config.getDuration(java.lang.String, java.util.concurrent.TimeUnit)
+  Looking for directCaller: io.jooby.handler.Cors.from(com.typesafe.config.Config)
+[DEBUG]   ✓ MATCH FOUND at path 18
+✓ Updated 1 record(s) in JSON file as covered
+  Third Party Method: com.typesafe.config.Config.getDuration(java.lang.String, java.util.concurrent.TimeUnit)
+  Direct Caller: io.jooby.handler.Cors.from(com.typesafe.config.Config)
+
+================================================================================
+PROCESSING TEST CASE 20/30
+================================================================================
+Entry Point: io.jooby.handler.Cors.from(com.typesafe.config.Config)
+Third Party Method: com.typesafe.config.Config.getBoolean(java.lang.String)
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 751 chars
+/Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/handler/Corsfrom_ConfiggetBooleanFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=3700
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'com.typesafe.config.Config.getBoolean(java.lang.String)' covered=True
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=True
+[Decide] approved=True (tests passed AND target method covered)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=True
+[Finalize] SUCCESS: Test passed and target method covered
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = True
+✓ Test approved at iteration 1
+  JSON path: /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/third_party_apis_full_methods.json
+  Looking for thirdPartyMethod: com.typesafe.config.Config.getBoolean(java.lang.String)
+  Looking for directCaller: io.jooby.handler.Cors.from(com.typesafe.config.Config)
+[DEBUG]   ✓ MATCH FOUND at path 19
+✓ Updated 1 record(s) in JSON file as covered
+  Third Party Method: com.typesafe.config.Config.getBoolean(java.lang.String)
+  Direct Caller: io.jooby.handler.Cors.from(com.typesafe.config.Config)
+
+================================================================================
+PROCESSING TEST CASE 21/30
+================================================================================
+Entry Point: io.jooby.ServiceRegistry.mapOf(java.lang.Class, io.jooby.Reified)
+Third Party Method: jakarta.inject.Provider.getClass()
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 2963 chars
+/Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/ServiceRegistrymultiBinder_ProvidergetClassFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] FAILED - hard constraints violated
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=False
+[Decide] approved=False (hard constraint violation, will retry if iteration<1)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=False
+[Finalize] Cleaned up unsuccessful test file: /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/ServiceRegistrymultiBinder_ProvidergetClassFikaTest.java
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = False
+
+=== FAILURE REASON ===
+Tests failed to compile or run successfully
+
+
+================================================================================
+PROCESSING TEST CASE 22/30
+================================================================================
+Entry Point: io.jooby.Environment.getProperties(java.lang.String)
+Third Party Method: com.typesafe.config.Config.getConfig(java.lang.String)
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 574 chars
+/Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/EnvironmentgetProperties_ConfiggetConfigFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=3714
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'com.typesafe.config.Config.getConfig(java.lang.String)' covered=True
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=True
+[Decide] approved=True (tests passed AND target method covered)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=True
+[Finalize] SUCCESS: Test passed and target method covered
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = True
+✓ Test approved at iteration 1
+  JSON path: /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/third_party_apis_full_methods.json
+  Looking for thirdPartyMethod: com.typesafe.config.Config.getConfig(java.lang.String)
+  Looking for directCaller: io.jooby.Environment.getProperties(java.lang.String, java.lang.String)
+[DEBUG]   ✓ MATCH FOUND at path 21
+✓ Updated 1 record(s) in JSON file as covered
+  Third Party Method: com.typesafe.config.Config.getConfig(java.lang.String)
+  Direct Caller: io.jooby.Environment.getProperties(java.lang.String, java.lang.String)
+
+================================================================================
+PROCESSING TEST CASE 23/30
+================================================================================
+Entry Point: io.jooby.Environment.loadEnvironment(io.jooby.EnvironmentOptions)
+Third Party Method: com.typesafe.config.ConfigFactory.parseProperties(java.util.Properties, com.typesafe.config.ConfigParseOptions)
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 519 chars
+/Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/EnvironmentsystemProperties_ConfigFactoryparsePropertiesFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=3746
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'com.typesafe.config.ConfigFactory.parseProperties(java.util.Properties, com.typesafe.config.ConfigParseOptions)' covered=True
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=True
+[Decide] approved=True (tests passed AND target method covered)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=True
+[Finalize] SUCCESS: Test passed and target method covered
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = True
+✓ Test approved at iteration 1
+  JSON path: /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/third_party_apis_full_methods.json
+  Looking for thirdPartyMethod: com.typesafe.config.ConfigFactory.parseProperties(java.util.Properties, com.typesafe.config.ConfigParseOptions)
+  Looking for directCaller: io.jooby.Environment.systemProperties()
+[DEBUG]   ✓ MATCH FOUND at path 22
+✓ Updated 1 record(s) in JSON file as covered
+  Third Party Method: com.typesafe.config.ConfigFactory.parseProperties(java.util.Properties, com.typesafe.config.ConfigParseOptions)
+  Direct Caller: io.jooby.Environment.systemProperties()
+
+================================================================================
+PROCESSING TEST CASE 24/30
+================================================================================
+Entry Point: io.jooby.Environment.loadEnvironment(io.jooby.EnvironmentOptions)
+Third Party Method: com.typesafe.config.ConfigFactory.parseMap(java.util.Map, java.lang.String)
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 2628 chars
+/Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/Environmentdefaults_ConfigFactoryparseMapFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=889
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'com.typesafe.config.ConfigFactory.parseMap(java.util.Map, java.lang.String)' covered=False
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=False
+[Decide] approved=False (tests failed, will retry if iteration<1)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=False
+[Finalize] Cleaned up unsuccessful test file: /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/Environmentdefaults_ConfigFactoryparseMapFikaTest.java
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = False
+
+=== FAILURE REASON ===
+Tests failed to compile or run successfully
+
+
+================================================================================
+PROCESSING TEST CASE 25/30
+================================================================================
+Entry Point: io.jooby.Environment.loadEnvironment(io.jooby.EnvironmentOptions)
+Third Party Method: com.typesafe.config.ConfigFactory.parseFile(java.io.File)
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 1892 chars
+/Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/EnvironmentfileConfig_ConfigFactoryparseFileFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=585
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'com.typesafe.config.ConfigFactory.parseFile(java.io.File)' covered=False
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=False
+[Decide] approved=False (tests failed, will retry if iteration<1)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=False
+[Finalize] Cleaned up unsuccessful test file: /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/EnvironmentfileConfig_ConfigFactoryparseFileFikaTest.java
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = False
+
+=== FAILURE REASON ===
+Tests failed to compile or run successfully
+
+
+================================================================================
+PROCESSING TEST CASE 26/30
+================================================================================
+Entry Point: io.jooby.internal.RouterImpl.start(io.jooby.Jooby, io.jooby.Server)
+Third Party Method: com.typesafe.config.Config.hasPath(java.lang.String)
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 1080 chars
+/Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/internal/RouterImpl_JoobyproblemDetailsIsEnabled_ConfighasPathFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=3944
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'com.typesafe.config.Config.hasPath(java.lang.String)' covered=False
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=False
+[Decide] approved=False (tests passed but target method NOT covered, will retry if iteration<1)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=False
+[Finalize] Cleaned up unsuccessful test file: /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/internal/RouterImpl_JoobyproblemDetailsIsEnabled_ConfighasPathFikaTest.java
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = False
+
+=== FAILURE REASON ===
+Tests passed but target third-party method was NOT covered
+   Target: com.typesafe.config.Config.hasPath(java.lang.String)
+
+
+================================================================================
+PROCESSING TEST CASE 27/30
+================================================================================
+Entry Point: io.jooby.internal.RouterImpl.start(io.jooby.Jooby, io.jooby.Server)
+Third Party Method: com.typesafe.config.Config.getStringList(java.lang.String)
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 1054 chars
+/Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/internal/RouterImpl_ProblemDetailsHandlerfrom_ConfiggetStringListFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=1493
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'com.typesafe.config.Config.getStringList(java.lang.String)' covered=False
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=False
+[Decide] approved=False (tests failed, will retry if iteration<1)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=False
+[Finalize] Cleaned up unsuccessful test file: /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/internal/RouterImpl_ProblemDetailsHandlerfrom_ConfiggetStringListFikaTest.java
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = False
+
+=== FAILURE REASON ===
+Tests failed to compile or run successfully
+
+
+================================================================================
+PROCESSING TEST CASE 28/30
+================================================================================
+Entry Point: io.jooby.Jooby.runApp(java.lang.String[], io.jooby.Server, java.util.List)
+Third Party Method: com.typesafe.config.Config.getMemorySize(java.lang.String)
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 1291 chars
+/Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/Jooby_ServerOptionsfrom_ConfiggetMemorySizeFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=556
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'com.typesafe.config.Config.getMemorySize(java.lang.String)' covered=False
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=False
+[Decide] approved=False (tests failed, will retry if iteration<1)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=False
+[Finalize] Cleaned up unsuccessful test file: /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/Jooby_ServerOptionsfrom_ConfiggetMemorySizeFikaTest.java
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = False
+
+=== FAILURE REASON ===
+Tests failed to compile or run successfully
+
+
+================================================================================
+PROCESSING TEST CASE 29/30
+================================================================================
+Entry Point: io.jooby.Jooby.setEnvironmentOptions(io.jooby.EnvironmentOptions)
+Third Party Method: com.typesafe.config.ConfigFactory.parseResources(java.lang.ClassLoader, java.lang.String)
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 638 chars
+/Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/Jooby_EnvironmentclasspathConfig_ConfigFactoryparseResourcesFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=3940
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'com.typesafe.config.ConfigFactory.parseResources(java.lang.ClassLoader, java.lang.String)' covered=True
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=True
+[Decide] approved=True (tests passed AND target method covered)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=True
+[Finalize] SUCCESS: Test passed and target method covered
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = True
+✓ Test approved at iteration 1
+  JSON path: /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/third_party_apis_full_methods.json
+  Looking for thirdPartyMethod: com.typesafe.config.ConfigFactory.parseResources(java.lang.ClassLoader, java.lang.String)
+  Looking for directCaller: io.jooby.Environment.classpathConfig(java.lang.ClassLoader, java.lang.String[], java.lang.String)
+[DEBUG]   ✓ MATCH FOUND at path 28
+✓ Updated 1 record(s) in JSON file as covered
+  Third Party Method: com.typesafe.config.ConfigFactory.parseResources(java.lang.ClassLoader, java.lang.String)
+  Direct Caller: io.jooby.Environment.classpathConfig(java.lang.ClassLoader, java.lang.String[], java.lang.String)
+
+================================================================================
+PROCESSING TEST CASE 30/30
+================================================================================
+Entry Point: io.jooby.Jooby.start(io.jooby.Server)
+Third Party Method: com.typesafe.config.Config.getIntList(java.lang.String)
+================================================================================
+
+[DEBUG-STREAM] Processing node: generate, has iteration_log: True, approved=False
+[Generate] produced 1899 chars
+/Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby
+[DEBUG-STREAM] Processing node: write, has iteration_log: True, approved=False
+[Write] wrote to /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/Jooby_ProblemDetailsHandlerfrom_ConfiggetIntListFikaTest.java
+[DEBUG-STREAM] Processing node: validate_constraints, has iteration_log: True, approved=False
+[Validate] PASSED - hard constraints satisfied
+[DEBUG-STREAM] Processing node: run, has iteration_log: True, approved=False
+[Run] feedback_chars=481
+[DEBUG-STREAM] Processing node: check_coverage, has iteration_log: True, approved=False
+[Coverage] target 'com.typesafe.config.Config.getIntList(java.lang.String)' covered=False
+[DEBUG-STREAM] Processing node: decide, has iteration_log: True, approved=False
+[Decide] approved=False (tests failed, will retry if iteration<1)
+[DEBUG-STREAM] Processing node: finalize, has iteration_log: True, approved=False
+[Finalize] Cleaned up unsuccessful test file: /Users/yogyagamage/Documents/UdeM/Fika/experiments/jooby/jooby/src/test/java/io/jooby/Jooby_ProblemDetailsHandlerfrom_ConfiggetIntListFikaTest.java
+
+[DEBUG] Stream completed. final_state is set
+[DEBUG] final_state keys: ['repo_root', 'mvn_cmd', 'max_iterations', 'run_only_generated_test', 'entryPoint', 'thirdPartyMethod', 'directCaller', 'path', 'methodSources', 'constructors', 'setters', 'fieldDeclarations', 'imports', 'testTemplate', 'conditionCount', 'callCount', 'covered', 'test_package', 'test_class_name', 'iteration', 'java_source', 'last_run_output', 'last_exit_code', 'success', 'approved', 'test_rel_path', 'trace', 'target_method_covered', 'coverage_total_lines', 'coverage_error', 'path_coverage_details', 'iteration_log', 'last_prompt']
+[DEBUG] approved (after bool()) = False
+
+=== FAILURE REASON ===
+Tests failed to compile or run successfully
+
+
+================================================================================
+=== OVERALL SUMMARY ===
+================================================================================
+Total Test Cases: 30
+Processed: 30
+Approved: 18
+Failed: 12
+Success Rate: 60.0%
+================================================================================
+
+Approval Details:
+  Test 1: Approved at iteration 1
+  Test 2: Approved at iteration 1
+  Test 3: Approved at iteration 1
+  Test 4: Approved at iteration 1
+  Test 5: Approved at iteration 1
+  Test 6: Approved at iteration 1
+  Test 7: Approved at iteration 1
+  Test 8: Approved at iteration 1
+  Test 11: Approved at iteration 1
+  Test 12: Approved at iteration 1
+  Test 14: Approved at iteration 1
+  Test 16: Approved at iteration 1
+  Test 18: Approved at iteration 1
+  Test 19: Approved at iteration 1
+  Test 20: Approved at iteration 1
+  Test 22: Approved at iteration 1
+  Test 23: Approved at iteration 1
+  Test 29: Approved at iteration 1
+================================================================================
+
+Total elapsed time: 00:10:09.864
