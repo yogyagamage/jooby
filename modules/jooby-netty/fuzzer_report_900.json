@@ -1,0 +1,14 @@
+[
+    {
+        "entryPoint": "io.jooby.internal.netty.NettyPipeline.initChannel(io.netty.channel.socket.SocketChannel)",
+        "directCaller": "io.jooby.internal.netty.NettyPipeline.createServerCodec()",
+        "thirdPartyMethod": "io.netty.handler.codec.http.HttpServerCodec.<init>(int, int, int, boolean)",
+        "lineNumber": 119,
+        "maxTime": 900,
+        "coverageStatus": "class_not_tracked",
+        "coverageDetail": "NettyPipeline.java not found in coverage report",
+        "crashFound": true,
+        "fuzzerSuccess": false,
+        "coverageReportFile": "/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-netty/fuzz-coverage-reports/NettyPipeline_119_report.txt"
+    }
+]

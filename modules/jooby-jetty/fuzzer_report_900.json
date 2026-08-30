@@ -1,0 +1,14 @@
+[
+    {
+        "entryPoint": "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+        "directCaller": "io.jooby.jetty.Jetty.start(io.jooby.Jooby)",
+        "thirdPartyMethod": "org.eclipse.jetty.server.handler.gzip.GzipHandler.setHandler(org.eclipse.jetty.server.Handler)",
+        "lineNumber": 187,
+        "maxTime": 900,
+        "coverageStatus": "no_report",
+        "coverageDetail": "Coverage report was not generated",
+        "crashFound": true,
+        "fuzzerSuccess": false,
+        "coverageReportFile": "/Tmp/gamageyo/fika/experiments/jooby/modules/jooby-jetty/fuzz-coverage-reports/Jetty_187_report.txt"
+    }
+]
